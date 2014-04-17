@@ -24,13 +24,11 @@
     "bugs": {
         "url": "https://github.com/mobify/stencil/issues"
     },
-    "dependencies": {
-        "grunt": "~0.4.4",
-        "grunt-contrib-sass": "~0.7.3"
-    },
+    "dependencies": {},
     "devDependencies": {
         "grunt": "~0.4.4",
         "load-grunt-tasks": "~0.4.0",
+        "grunt-contrib-sass": "~0.7.3",
         "grunt-autoprefixer": "~0.7.2"
     },
     "license": "MIT"
