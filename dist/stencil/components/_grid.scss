@@ -1,0 +1,50 @@
+
+$grid-gutter: 1.5rem !default;
+
+
+// Grid
+// ----
+//
+// Simple grid layout without gutters. Allows single or multiple grid rows.
+// Apply width to grid items using width utils, or extend the component with a
+// modifier and style named grid spans.
+
+.c-grid {
+  box-sizing: border-box;
+
+    &:before,
+    &:after {
+      content: ' ';
+      display: table;
+    }
+
+    &:after {
+      clear: both;
+    }
+}
+
+.c-grid__span {
+    display: block;
+    float: left;
+}
+
+
+// With horizontal and vertical gutters
+// ------------------------------------
+
+.c-grid.c--gutter {
+    margin-left: $grid-gutter * -0.5;
+    margin-right: $grid-gutter * -0.5;
+
+    // Prevent horizontal gutters from creating extra space above the top row by
+    // pulling the grid up by its generated content. This frees us to apply
+    // spacing utils on the grid without breaking it.
+
+    &:before {
+      margin-top: $grid-gutter * -1;
+    }
+}
+
+.c-grid.c--gutter .c-grid__span {
+  padding: ($grid-gutter * 1) ($grid-gutter * 0.5) 0;
+}
