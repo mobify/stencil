@@ -1,0 +1,43 @@
+
+// Widths
+// ------
+
+.u-width-1of3,
+.u-width-2of6 {
+  width: (100%/3);
+}
+
+.u-width-2of3,
+.u-width-4of6 {
+  width: 2 * (100%/3);
+}
+
+.u-width-1of4 {
+  width: 25%;
+}
+
+.u-width-1of2,
+.u-width-2of4,
+.u-width-3of6 {
+  width: 50%;
+}
+
+.u-width-3of4 {
+  width: 75%;
+}
+
+.u-width-1of6 {
+  width: (100%/6);
+}
+
+.u-width-5of6 {
+  width: 5 * (100%/6);
+}
+
+
+// 1. Override some browser quirks, e.g. with <button>.
+
+.u-width-full {
+  display: block;
+  width: 100%; // 1
+}
