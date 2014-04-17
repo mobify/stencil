@@ -1,0 +1,51 @@
+
+// Contain floats and margins
+
+.u-cf {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Create a positioning context for child elements.
+
+.u-pc {
+  position: relative !important;
+}
+
+// Simple Block Formatting Context (BFC)
+//
+// - won’t overlap adjacent floats, including margins;
+// - will contain its floated children;
+// - will contain its childrens’ margins;
+//
+// N.B. This implementation will clip overflow.
+
+.u-bfc {
+  overflow: hidden !important;
+}
+
+
+// Create a Flex Formatting Context. Affords the same properties as BFCs. Use
+// when clipping overflow must be avoided.
+
+.u-ffc {
+  display: flex !important;
+}
+
+
+// Floats
+
+.u-float-start {
+  float: left !important;
+}
+
+.u-float-end {
+  float: right !important;
+}
