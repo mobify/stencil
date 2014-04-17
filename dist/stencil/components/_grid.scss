@@ -45,6 +45,6 @@ $grid-gutter: 1.5rem !default;
     }
 }
 
-.c-grid.c--gutter .c-grid__span {
+.c-grid.c--gutter > .c-grid__span {
   padding: ($grid-gutter * 1) ($grid-gutter * 0.5) 0;
 }
