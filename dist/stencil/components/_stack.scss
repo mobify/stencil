@@ -1,0 +1,30 @@
+
+$stack-border: 1px solid hsl(0, 0%, 80%) !default;
+
+
+// Stacked items
+// -------------
+
+.c-stack {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.c-stack__item {
+    display: block;
+    padding-top: $v-space * 0.5;
+    padding-bottom: $v-space * 0.5;
+}
+
+
+// With rules between items
+// ------------------------
+
+.c-stack.c--ruled > .c-stack__item {
+    border-top: $stack-border;
+
+    &:first-child {
+        border-top-width: 0;
+    }
+}
