@@ -8,16 +8,16 @@
 
     <link rel="stylesheet" href="utils-layout.css">
     <style>
-        .u-float-start {
-            float: left !important;
-        }
-
-        .u-margin-all-sm {
-            margin: 0.7rem !important;
+        .u-margin-start-md {
+            margin-right: 1.4rem !important;
         }
 
         .u-margin-end-md {
             margin-right: 1.4rem !important;
+        }
+
+        .u-margin-all-sm {
+            margin: 0.7rem !important;
         }
 
         .u-outline {
@@ -37,13 +37,41 @@
     <h1>Layout Utilities</h1>
 
     <article class="c-spec">
+        <h2 class="c-spec__describe">.u-float-start</h2>
+
+        <div class="c-spec__case">
+            <p class="c-spec__should"><a href="#subject-1">It</a> should float the item left.</p>
+            <div class="c-spec__run">
+
+                <div class="placeholder u-float-start u-margin-end-md" id="subject-1"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-spec">
+        <h2 class="c-spec__describe">.u-float-end</h2>
+
+        <div class="c-spec__case">
+            <p class="c-spec__should"><a href="#subject-2">It</a> should float the item right.</p>
+            <div class="c-spec__run">
+
+                <div class="placeholder u-float-end u-margin-start-md" id="subject-2"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-spec">
         <h2 class="c-spec__describe">.u-cf</h2>
 
         <div class="c-spec__case">
-            <p class="c-spec__should"><a href="#subject-1">It</a> should contain floated children and their margins.</p>
+            <p class="c-spec__should"><a href="#subject-3">It</a> should contain floated children and their margins.</p>
             <div class="c-spec__run">
 
-                <div class="u-cf" id="subject-1">
+                <div class="u-cf" id="subject-3">
                     <div class="placeholder u-float-start u-margin-all-sm"></div>
                     <div class="placeholder u-float-start u-margin-all-sm"></div>
                     <div class="placeholder u-float-start u-margin-all-sm"></div>
@@ -57,24 +85,22 @@
         <h2 class="c-spec__describe">.u-bfc</h2>
 
         <div class="c-spec__case">
-            <p class="c-spec__should"><a href="#subject-2">It</a> should not overlap floats. Its content should not wrap below floats.</p>
+            <p class="c-spec__should"><a href="#subject-4">It</a> should not overlap floats. Its content should not wrap below floats.</p>
             <div class="c-spec__run">
 
                 <div class="u-float-start u-margin-end-md">
                     <div class="placeholder"></div>
                 </div>
-                <div class="u-bfc" id="subject-2">
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </div>
+                <p class="u-bfc" id="subject-4">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
 
             </div>
         </div>
 
         <div class="c-spec__case">
-            <p class="c-spec__should"><a href="#subject-3">It</a> should contain its floated children.</p>
+            <p class="c-spec__should"><a href="#subject-5">It</a> should contain its floated children.</p>
             <div class="c-spec__run">
 
-                <div class="u-bfc" id="subject-3">
+                <div class="u-bfc" id="subject-5">
                     <div class="u-float-start u-margin-all-sm">
                         <div class="placeholder u-float-start u-margin-all-sm"></div>
                         <div class="placeholder u-float-start u-margin-all-sm"></div>
@@ -85,10 +111,10 @@
         </div>
 
         <div class="c-spec__case">
-            <p class="c-spec__should"><a href="#subject-4">It</a> should clip overflow.</p>
+            <p class="c-spec__should"><a href="#subject-6">It</a> should clip overflow.</p>
             <div class="c-spec__run">
 
-                <div class="u-bfc" id="subject-4">
+                <div class="u-bfc" id="subject-6">
                     <div class="placeholder u-outline"></div>
                 </div>
 
@@ -100,24 +126,22 @@
         <h2 class="c-spec__describe">.u-ffc</h2>
 
         <div class="c-spec__case">
-            <p class="c-spec__should"><a href="#subject-2">It</a> should not overlap floats. Its content should not wrap below floats.</p>
+            <p class="c-spec__should"><a href="#subject-7">It</a> should not overlap floats. Its content should not wrap below floats.</p>
             <div class="c-spec__run">
 
                 <div class="u-float-start u-margin-end-md">
                     <div class="placeholder"></div>
                 </div>
-                <div class="u-ffc" id="subject-2">
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </div>
+                <p class="u-ffc" id="subject-7">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
 
             </div>
         </div>
 
         <div class="c-spec__case">
-            <p class="c-spec__should"><a href="#subject-3">It</a> should contain its floated children.</p>
+            <p class="c-spec__should"><a href="#subject-8">It</a> should contain its floated children.</p>
             <div class="c-spec__run">
 
-                <div class="u-ffc" id="subject-3">
+                <div class="u-ffc" id="subject-8">
                     <div class="u-float-start u-margin-all-sm">
                         <div class="placeholder u-float-start u-margin-all-sm"></div>
                         <div class="placeholder u-float-start u-margin-all-sm"></div>
@@ -128,10 +152,10 @@
         </div>
 
         <div class="c-spec__case">
-            <p class="c-spec__should"><a href="#subject-4">It</a> should not clip overflow.</p>
+            <p class="c-spec__should"><a href="#subject-9">It</a> should not clip overflow.</p>
             <div class="c-spec__run">
 
-                <div class="u-ffc" id="subject-4">
+                <div class="u-ffc" id="subject-9">
                     <div class="placeholder u-outline"></div>
                 </div>
 

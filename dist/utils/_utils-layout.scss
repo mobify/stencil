@@ -1,5 +1,23 @@
 
-// Contain floats and margins
+// Floats
+// ------
+//
+// Writing-direction independent floats. For RTL stylesheets, simply
+// re-define with the opposite direction. Templates need not be changed.
+
+.u-float-start {
+  float: left !important;
+}
+
+.u-float-end {
+  float: right !important;
+}
+
+
+// Contain floats
+// --------------
+//
+// Contain all floated children and their margins.
 
 .u-cf {
   &:before,
@@ -13,39 +31,38 @@
   }
 }
 
-// Create a positioning context for child elements.
+
+// Positioning context
+// -------------------
+//
+// Create a new positioning context.
 
 .u-pc {
   position: relative !important;
 }
 
-// Simple Block Formatting Context (BFC)
+
+// Block Formatting Context
+// ------------------------
+//
+// Create a new Block Formatting Context. BFCs:
 //
 // - won’t overlap adjacent floats;
-// - will contain its floated children;
-// - will contain its childrens’ margins;
+// - will contain floated children and their margins.
 //
-// N.B. This implementation will clip overflow.
+// N.B. Will clip overflow.
 
 .u-bfc {
   overflow: hidden !important;
 }
 
 
-// Create a Flex Formatting Context. Affords the same properties as BFCs. Use
-// when clipping overflow must be avoided.
+// Flex Formatting Context
+// -----------------------
+//
+// Create a new Flex Formatting Context. Affords the same properties as a BFC
+// but will not clip overflow.
 
 .u-ffc {
   display: flex !important;
-}
-
-
-// Floats
-
-.u-float-start {
-  float: left !important;
-}
-
-.u-float-end {
-  float: right !important;
 }
