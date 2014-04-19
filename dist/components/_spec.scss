@@ -22,6 +22,10 @@ $border: 1px solid hsl(0, 0%, 80%) !default;
 
 .c-spec {}
 
+.c-spec + .c-spec {
+    margin: 2.8rem 0;
+}
+
 .c-spec__describe {
     margin: $v-space 0 ($v-space * 0.5);
 }

@@ -64,11 +64,7 @@ a {
 
 @import '../dist/components/spec';
 
-.c-spec + .c-spec {
-    margin: 2.8rem 0;
-}
-
-.c-placeholder {
+.c-fixture-box {
     padding: 0.5rem;
     background: hsl(0, 0%, 80%);
     outline: 1px solid hsl(0, 0%, 70%);
