@@ -1,7 +1,6 @@
 
-@if variable-exists('grid-gutter') { $grid-gutter: $grid-gutter; }
-@else if variable-exists('v-space') { $grid-gutter: $v-space; }
-@else { $grid-gutter: 1.5rem; }
+$v-space: 1.5rem !default;
+$grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
 
 
 // Grid
