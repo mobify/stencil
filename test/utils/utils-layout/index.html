@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="utils-layout.css">
     <style>
         .u-margin-start-md {
-            margin-right: 1.4rem !important;
+            margin-left: 1.4rem !important;
         }
 
         .u-margin-end-md {
@@ -20,6 +20,12 @@
             margin: 0.7rem !important;
         }
 
+        .u-abs-top-end {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
         .u-outline {
             border: 1px solid hsl(200, 80%, 65%) !important;
             box-shadow: 0 0 20px 10px hsla(200, 80%, 45%, 0.5) !important;
@@ -28,8 +34,15 @@
         .placeholder {
             width: 100px;
             height: 100px;
+            padding: 0.5em;
             border: 1px solid hsl(0, 0%, 80%);
             background: hsl(0, 0%, 85%);
+            color: hsla(0, 0%, 0%, 0.65);
+        }
+
+        .placeholder--abs {
+            border: 1px solid hsl(0, 90%, 80%);
+            background: hsl(0, 90%, 85%);
         }
     </style>
 </head>
@@ -82,6 +95,23 @@
     </article>
 
     <article class="c-spec">
+        <h2 class="c-spec__describe">.u-pc</h2>
+
+        <div class="c-spec__case">
+            <p class="c-spec__should"><a href="#it-9">It</a> should create a new positioning context.</p>
+            <div class="c-spec__run">
+
+                <div class="u-pc" id="it-9">
+                    <div class="placeholder placeholder--abs u-abs-top-end">1</div>
+                    <div class="placeholder">2</div>
+                    <div class="placeholder">3</div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-spec">
         <h2 class="c-spec__describe">.u-bfc</h2>
 
         <div class="c-spec__case">
@@ -97,14 +127,12 @@
         </div>
 
         <div class="c-spec__case">
-            <p class="c-spec__should"><a href="#it-5">It</a> should contain its floated children.</p>
+            <p class="c-spec__should"><a href="#it-5">It</a> should contain its floated children and their margins.</p>
             <div class="c-spec__run">
 
                 <div class="u-bfc" id="it-5">
-                    <div class="u-float-start u-margin-all-sm">
-                        <div class="placeholder u-float-start u-margin-all-sm"></div>
-                        <div class="placeholder u-float-start u-margin-all-sm"></div>
-                    </div>
+                    <div class="placeholder u-float-start u-margin-all-sm"></div>
+                    <div class="placeholder u-float-start u-margin-all-sm"></div>
                 </div>
 
             </div>
@@ -138,14 +166,12 @@
         </div>
 
         <div class="c-spec__case">
-            <p class="c-spec__should"><a href="#it-8">It</a> should contain its floated children.</p>
+            <p class="c-spec__should"><a href="#it-8">It</a> should contain its floated children and their margins.</p>
             <div class="c-spec__run">
 
                 <div class="u-ffc" id="it-8">
-                    <div class="u-float-start u-margin-all-sm">
-                        <div class="placeholder u-float-start u-margin-all-sm"></div>
-                        <div class="placeholder u-float-start u-margin-all-sm"></div>
-                    </div>
+                    <div class="placeholder u-float-start u-margin-all-sm"></div>
+                    <div class="placeholder u-float-start u-margin-all-sm"></div>
                 </div>
 
             </div>
