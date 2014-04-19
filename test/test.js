@@ -1,6 +1,6 @@
 
-var itLinks = document.querySelectorAll('[href^="#subject-"]');
-var its = document.querySelectorAll('[id^="subject-"]');
+var itLinks = document.querySelectorAll('[href^="#it-"]');
+var its = document.querySelectorAll('[id^="it-"]');
 var each = Array.prototype.forEach;
 
 each.call(itLinks, function(link) {

@@ -1,6 +1,12 @@
 
 @import '../bower_components/normalize.css/normalize.css';
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 html {
     margin: 2.5% 5%;
     line-height: 1.4;
