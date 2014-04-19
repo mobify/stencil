@@ -66,8 +66,8 @@ a {
 
 .c-fixture-box {
     padding: 0.5rem;
-    background: hsl(0, 0%, 80%);
-    outline: 1px solid hsl(0, 0%, 70%);
+    border: 1px solid hsl(200, 20%, 70%);
+    background: hsl(200, 20%, 80%);
     font-size: 0.8em;
     color: hsla(0, 0%, 0%, 0.65);
 }
