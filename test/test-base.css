@@ -1,0 +1,19 @@
+
+html {
+    margin: 2.5% 5%;
+    line-height: 1.4;
+}
+
+body {
+    max-width: 480px;
+    margin: auto;
+}
+
+h2 {
+    margin: 1.4rem 0;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid #ccc;
+}
+h2:first-child {
+    margin-top: 0;
+}

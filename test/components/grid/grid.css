@@ -1,0 +1,30 @@
+.c-grid {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.c-grid:before, .c-grid:after {
+  content: ' ';
+  display: table;
+}
+.c-grid:after {
+  clear: both;
+}
+
+.c-grid__span {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+}
+
+.c-grid.c--gutters {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+.c-grid.c--gutters:before {
+  margin-top: -1.5rem;
+}
+
+.c-grid.c--gutters > .c-grid__span {
+  padding: 1.5rem 0.75rem 0;
+}

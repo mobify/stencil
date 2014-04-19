@@ -1,27 +1,27 @@
 {
-    "name": "stencil",
-    "version": "0.0.0",
-    "description": "A set of common, reusable style patterns for Mobify’s client services team",
-    "authors": [
-        "Mobify",
-        "Jeff Kamo <jeffkamo@mobify.com>",
-        "Ryan Frederick <ryan@ryanfrederick.com>",
-        "Kyle Peatt <kpeatt@gmail.com>"
-    ],
-    "keywords": [
-        "mobify",
-        "components",
-        "patterns"
-    ],
-    "main": "dist/_stencil.scss",
-    "dependencies": {},
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "package.json",
-        "tests",
-        "test"
-    ],
-    "license": "MIT"
+  "name": "stencil",
+  "version": "0.0.0",
+  "description": "A set of common, reusable style patterns for Mobify’s client services team",
+  "authors": [
+    "Mobify",
+    "Jeff Kamo <jeffkamo@mobify.com>",
+    "Ryan Frederick <ryan@ryanfrederick.com>",
+    "Kyle Peatt <kpeatt@gmail.com>"
+  ],
+  "keywords": [
+    "mobify",
+    "components",
+    "patterns"
+  ],
+  "main": "",
+  "dependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "package.json",
+    "tests",
+    "test"
+  ],
+  "license": "MIT"
 }
