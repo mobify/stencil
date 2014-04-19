@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Utils Test</title>
+    <link rel="stylesheet" href="../../test.css">
+
+    <link rel="stylesheet" href="utils-layout.css">
+    <style>
+        .placeholder {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid hsl(0, 0%, 80%);
+            background: hsl(0, 0%, 85%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Layout Utilities</h1>
+
+    <article class="test-case">
+        <h2 class="test-case__describe">Contain Floats</h2>
+        <p class="test-case__should"><a href="#subject-1">It</a> should contain floated children and their margins.</p>
+        <div class="test-case__run">
+
+            <div class="u-cf" id="subject-1">
+                <div class="placeholder"></div>
+                <div class="placeholder"></div>
+                <div class="placeholder"></div>
+            </div>
+
+        </div>
+    </article>
+
+    <script src="../../test.js"></script>
+</body>
+</html>

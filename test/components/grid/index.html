@@ -4,12 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Component Test</title>
-    <link rel="stylesheet" href="../../test-base.css">
+    <link rel="stylesheet" href="../../test.css">
 
     <link rel="stylesheet" href="grid.css">
     <style>
-        .u-width-1of4 {
-            width: 25% !important;
+        .u-width-1of3 {
+            width: 33.333% !important;
+        }
+
+        .u-margin-top-lg {
+            margin-top: 2.8rem !important;
+        }
+
+        .u-margin-bottom-lg {
+            margin-bottom: 2.8rem !important;
         }
 
         .placeholder {
@@ -22,54 +30,86 @@
     </style>
 </head>
 <body>
-    <h2>Grid</h2>
-    <div class="c-grid">
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-    </div>
+    <h1>Grid Component</h1>
 
-    <h2>Grid with gutters</h2>
-    <div class="c-grid c--gutters">
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
+    <article class="test-case">
+        <h2 class="test-case__describe">Grid</h2>
+        <p class="test-case__should"><a href="#subject-1">It</a> should lay out a set of items in a 4-up grid.</p>
+        <div class="test-case__run">
+
+            <div class="c-grid" id="subject-1">
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+            </div>
+
         </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
+    </article>
+
+    <article class="test-case">
+        <h2 class="test-case__describe">Grid with gutters</h2>
+        <p class="test-case__should"><a href="#subject-2">It</a> should lay out a set of items in a 4-up grid. Items should be separated by a gutter space. No apparent extra space should be visible at the edges of the grid component.</p>
+        <div class="test-case__run">
+
+            <div class="c-grid c--gutters" id="subject-2">
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+            </div>
+
         </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
+    </article>
+
+    <article class="test-case">
+        <h2 class="test-case__describe">Grid with margins set</h2>
+        <p class="test-case__should"><a href="#subject-3">It</a> should allow vertical margins to be set on it without spacing issues.</p>
+        <div class="test-case__run">
+
+            <div class="c-grid c--gutters u-margin-top-lg u-margin-bottom-lg" id="subject-3">
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+                <div class="c-grid__span u-width-1of3">
+                    <div class="placeholder"></div>
+                </div>
+            </div>
+
         </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-        <div class="c-grid__span u-width-1of4">
-            <div class="placeholder"></div>
-        </div>
-    </div>
+    </article>
+
+    <script src="../../test.js"></script>
 </body>
 </html>

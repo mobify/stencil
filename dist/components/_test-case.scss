@@ -1,0 +1,18 @@
+
+.test-case {}
+
+.test-case__describe {
+    margin: 1.4rem 0 0.7rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.test-case__should {}
+
+.test-case__run {
+    margin: 1.4rem 0;
+}
+
+.test-case__run *.is-selected {
+    background-color: hsla(45, 100%, 85%, 0.5);
+}

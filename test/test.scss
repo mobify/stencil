@@ -1,0 +1,55 @@
+
+@import '../bower_components/normalize.css/normalize.css';
+
+html {
+    margin: 2.5% 5%;
+    line-height: 1.4;
+}
+
+body {
+    max-width: 480px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 2.8rem;
+    font-size: 2rem;
+    line-height: 2.1rem;
+}
+
+h2 {
+    margin: 0.7rem 0;
+    font-size: 1.25rem;
+}
+h2:first-child {
+    margin-top: 0;
+}
+
+p {
+    margin: 0.7rem 0;
+}
+p:first-child {
+    margin-top: 0;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: hsl(200, 80%, 45%);
+    text-decoration: none;
+    background-image: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 0%, 0) 50%,
+        hsla(200, 80%, 45%, 0.5) 50%
+    );
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 95%;
+}
+
+@import '../dist/components/test-case';
+
+.test-case + .test-case {
+    margin: 2.8rem 0;
+}
