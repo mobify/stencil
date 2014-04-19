@@ -1,6 +1,8 @@
 
+$h-space: 1.5rem !default;
 $v-space: 1.5rem !default;
 $border: 1px solid hsl(0, 0%, 80%) !default;
+$spec-border: 1px solid hsla(0, 0%, 0%, 0.15) !default;
 
 
 // Spec
@@ -20,29 +22,37 @@ $border: 1px solid hsl(0, 0%, 80%) !default;
 //     </div>
 // </article>
 
-.c-spec {}
+.c-spec {
+    margin-left: ($h-space * -0.5);
+    margin-right: ($h-space * -0.5);
+    border: $spec-border;
+    border-radius: 3px;
+}
 
 .c-spec + .c-spec {
-    margin: 2.8rem 0;
+    margin-top: $v-space * 2;
 }
 
 .c-spec__describe {
-    margin: $v-space 0 ($v-space * 0.5);
+    margin: 0 ($v-space * 0.5);
+    padding: ($v-space * 0.5) 0;
+    border-bottom: $spec-border;
 }
 
 .c-spec__case + .c-spec__case {
-    margin-top: ($v-space * 1.5);
+    border-top: $spec-border;
 }
 
 .c-spec__should {
+    margin: 0;
+    padding: ($v-space * 0.5) ($h-space * 0.5);
+    border-bottom: $spec-border;
     font-weight: 500;
 }
 
 .c-spec__run {
-    margin: 0 ($v-space * -0.5);
-    padding: $v-space * 0.5;
-    border: 1px solid hsla(0, 0%, 0%, 0.15);
-    border-radius: 3px;
+    margin: 0;
+    padding: ($v-space * 0.75) ($h-space * 0.75);
     box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, 0.075);
     background: hsl(0, 0%, 98%);
     color: hsl(0, 0%, 45%);
