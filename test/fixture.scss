@@ -10,6 +10,8 @@
 html {
     margin: 2.5% 5%;
     line-height: 1.4;
+    color: hsl(0, 0%, 20%);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -25,7 +27,7 @@ h1 {
 
 h2 {
     margin: 0.7rem 0;
-    font-size: 1.25rem;
+    font-size: 1.333rem;
 }
 h2:first-child {
     margin-top: 0;
@@ -49,10 +51,27 @@ a {
     background-repeat: repeat-x;
     background-size: 2px 2px;
     background-position: 0 95%;
+
+    &:focus,
+    &:hover {
+        color: hsl(200, 80%, 55%);
+    }
+
+    &:active {
+        color: hsl(200, 80%, 40%);
+    }
 }
 
 @import '../dist/components/spec';
 
 .c-spec + .c-spec {
     margin: 2.8rem 0;
+}
+
+.c-placeholder {
+    padding: 0.5rem;
+    background: hsl(0, 0%, 80%);
+    outline: 1px solid hsl(0, 0%, 70%);
+    font-size: 0.8em;
+    color: hsla(0, 0%, 0%, 0.65);
 }

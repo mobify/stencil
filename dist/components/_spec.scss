@@ -11,10 +11,10 @@ $border: 1px solid hsl(0, 0%, 80%) !default;
 // <article class="c-spec">
 //     <h2 class="c-spec__describe">.c-component</h2>
 //     <div class="c-spec__case">
-//         <p class="c-spec__should"><a href="#it-1">It</a> should be like x</p>
+//         <p class="c-spec__should">It should be like x</p>
 //         <div class="c-spec__run">
 //
-//             <div class="c-component" id="it-1"></div>
+//             <div class="c-component"></div>
 //
 //         </div>
 //     </div>
@@ -30,9 +30,9 @@ $border: 1px solid hsl(0, 0%, 80%) !default;
     margin-top: ($v-space * 1.5);
 }
 
-.c-spec__should {}
-
-.c-spec__it-link {}
+.c-spec__should {
+    font-weight: 500;
+}
 
 .c-spec__run {
     margin: 0 ($v-space * -0.5);
@@ -41,8 +41,5 @@ $border: 1px solid hsl(0, 0%, 80%) !default;
     border-radius: 3px;
     box-shadow: inset 0 1px 2px hsla(0, 0%, 0%, 0.075);
     background: hsl(0, 0%, 98%);
-}
-
-.c-spec__run *.is-selected {
-    background-color: hsla(45, 100%, 85%, 0.5);
+    color: hsl(0, 0%, 45%);
 }
