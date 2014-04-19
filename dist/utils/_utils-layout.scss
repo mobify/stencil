@@ -57,6 +57,9 @@
 //
 // Create a new Flex Formatting Context. Affords the same properties as a BFC
 // but will not clip overflow.
+//
+// N.B. Works best when it has only one child element. Create an inner wrapper
+// as needed.
 
 .u-ffc {
   display: flex !important;
