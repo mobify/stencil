@@ -45,6 +45,10 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
 
 // Grid with horizontal and vertical gutters
 //
+// 1. Prevent horizontal gutters from creating extra space above the top row by
+//    pulling the grid up. Applying the negative margin using generated content
+//    frees us to apply spacing utils to the grid without breaking it.
+//
 // Markup:
 // <div class="c-grid c--gutters">
 //     <div class="c-grid__span u-width-1of3">
@@ -56,12 +60,8 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
     margin-left: $grid-gutter * -0.5;
     margin-right: $grid-gutter * -0.5;
 
-    // Prevent horizontal gutters from creating extra space above the top row by
-    // pulling the grid up. Applying the negative margin using generated content
-    // frees us to apply spacing utils to the grid without breaking it.
-
     &:before {
-      margin-top: $grid-gutter * -1;
+      margin-top: $grid-gutter * -1; // 1
     }
 }
 

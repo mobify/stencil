@@ -3,10 +3,15 @@ $h-space: 1.5rem !default;
 $v-space: 1.5rem !default;
 
 
-// Margins
-// -------
-
-// ### Vertical
+// Vertical Margins
+//
+// Granular control over vertical spacing independent of a component.
+// Suffixes:
+//
+// 0:  none
+// sm: small
+// md: medium
+// lg: large
 
 .u-margin-top-0  { margin-top: 0 !important; }
 .u-margin-top-sm { margin-top: $v-space * 0.5 !important; }
@@ -18,11 +23,19 @@ $v-space: 1.5rem !default;
 .u-margin-bottom-md { margin-bottom: $v-space !important; }
 .u-margin-bottom-lg { margin-bottom: $v-space * 2 !important; }
 
-// ### Horizontal
+
+// Horizontal Margins
 //
-// -th : thick space : 1/3em
-// -en : en space    : 1/2em
-// -em : em space    : 1em
+// Granular control over horizontal spacing independent of a component.
+// Suffixes:
+//
+// 0:  none
+// th: thick space
+// en: en space
+// em: em space
+// sm: small
+// md: medium
+// lg: large
 
 .u-margin-start-0  { margin-left: 0 !important; }
 .u-margin-start-th { margin-left: 0.333em !important; }
@@ -39,17 +52,3 @@ $v-space: 1.5rem !default;
 .u-margin-end-sm { margin-right: $h-space * 0.5 !important; }
 .u-margin-end-md { margin-right: $h-space !important; }
 .u-margin-end-lg { margin-right: $h-space * 2 !important; }
-
-
-// Padding
-// -------
-
-.u-padding-top-0  { padding-top: 0 !important; }
-.u-padding-top-sm { padding-top: $v-space * 0.5 !important; }
-.u-padding-top-md { padding-top: $v-space !important; }
-.u-padding-top-lg { padding-top: $v-space * 2 !important; }
-
-.u-padding-bottom-0  { padding-bottom: 0 !important; }
-.u-padding-bottom-sm { padding-bottom: $v-space * 0.5 !important; }
-.u-padding-bottom-md { padding-bottom: $v-space !important; }
-.u-padding-bottom-lg { padding-bottom: $v-space * 2 !important; }

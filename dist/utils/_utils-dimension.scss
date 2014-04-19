@@ -1,6 +1,7 @@
 
-// Widths
-// ------
+// Fractional widths
+//
+// Utils for applying fluid widths.
 
 .u-width-1of3,
 .u-width-2of6 {
@@ -35,6 +36,10 @@
 }
 
 
+// Full-width
+//
+// Force an element to full width.
+//
 // 1. Override some browser quirks, e.g. with <button>.
 
 .u-width-full {

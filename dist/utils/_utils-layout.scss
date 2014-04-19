@@ -1,8 +1,8 @@
 
 // Floats
 //
-// Writing-direction independent floats. For RTL stylesheets, simply
-// re-define with the opposite direction. Templates need not be changed.
+// Writing-direction independent floats. For RTL stylesheets, re-define
+// these styles with the opposite direction. Templates need not be changed.
 
 .u-float-start {
   float: left !important;
