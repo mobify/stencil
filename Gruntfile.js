@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         scss: {
             files: [
                 'dist/**/*.scss',
-                'test/fixture.scss'
+                'test/**/*.scss'
             ],
             tasks: ['default']
         }
