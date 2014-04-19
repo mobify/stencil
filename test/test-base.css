@@ -1,4 +1,6 @@
 
+@import '../bower_components/normalize.css/normalize.css';
+
 html {
     margin: 2.5% 5%;
     line-height: 1.4;
