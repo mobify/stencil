@@ -52,3 +52,22 @@ $stack-border: if( variable-exists('stack-border'), $stack-border, $border );
         border-top-width: 0;
     }
 }
+
+
+// Boredered Stack
+//
+// A vertical set of items bounded by an outer border.
+//
+// Markup:
+// <div class="c-stack c--bounded">
+//     <div class="c-stack__item">
+//     <div class="c-stack__item">
+// </div>
+
+.c-stack.c--bordered {
+    border: $stack-border
+}
+
+.c-stack.c--bordered > .c-stack__item {
+    padding: $v-space * 0.5;
+}

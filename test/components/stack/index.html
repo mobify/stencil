@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stencil Stack Component Tests</title>
+    <link rel="stylesheet" href="../../fixture.css">
+
+    <link rel="stylesheet" href="stack.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1><a href="https://github.com/mobify/stencil">Stencil</a> Stack Component Tests</h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-stack</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render a vertical set of items separated by space.</p>
+            <div class="c-test__run">
+
+                <ul class="c-stack">
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-stack.c--ruled</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render a vertical set of items separated by space and horizontal rules.</p>
+            <div class="c-test__run">
+
+                <ul class="c-stack c--ruled">
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-stack.c--bordered</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render a vertical set of items separated by space and bounded by an outer border.</p>
+            <div class="c-test__run">
+
+                <ul class="c-stack c--bordered">
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-stack.c--bordered.c--ruled</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should be possible to combine ruled and bordered variations.</p>
+            <div class="c-test__run">
+
+                <ul class="c-stack c--bordered c--ruled">
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                    <li class="c-stack__item">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </article>
+</body>
+</html>
