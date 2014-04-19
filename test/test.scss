@@ -48,8 +48,8 @@ a {
     background-position: 0 95%;
 }
 
-@import '../dist/components/test-case';
+@import '../dist/components/spec';
 
-.test-case + .test-case {
+.c-spec + .c-spec {
     margin: 2.8rem 0;
 }
