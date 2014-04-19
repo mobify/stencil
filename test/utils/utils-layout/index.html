@@ -40,12 +40,12 @@
 <body>
     <h1><a href="https://github.com/mobify/stencil">Stencil</a> Layout Utility Tests</h1>
 
-    <article class="c-spec">
-        <h2 class="c-spec__describe">.u-float-start</h2>
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-float-start</h2>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should float left.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should float left.</p>
+            <div class="c-test__run">
 
                 <div class="c-fixture-box u-float-start u-margin-end-md">1</div>
                 <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
@@ -54,12 +54,12 @@
         </div>
     </article>
 
-    <article class="c-spec">
-        <h2 class="c-spec__describe">.u-float-end</h2>
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-float-end</h2>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should float right.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should float right.</p>
+            <div class="c-test__run">
 
                 <div class="c-fixture-box u-float-end u-margin-start-md">1</div>
                 <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
@@ -68,12 +68,12 @@
         </div>
     </article>
 
-    <article class="c-spec">
-        <h2 class="c-spec__describe">.u-cf</h2>
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-cf</h2>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should contain floated children and their margins.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should contain floated children and their margins.</p>
+            <div class="c-test__run">
 
                 <div class="u-cf">
                     <div class="c-fixture-box u-float-start u-margin-all-sm">1</div>
@@ -85,12 +85,12 @@
         </div>
     </article>
 
-    <article class="c-spec">
-        <h2 class="c-spec__describe">.u-pc</h2>
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-pc</h2>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should create a new positioning context.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should create a new positioning context.</p>
+            <div class="c-test__run">
 
                 <div class="u-pc">
                     <div class="c-fixture-box placeholder--abs u-abs-top-end">1 <div>positioned top right</div></div>
@@ -102,12 +102,12 @@
         </div>
     </article>
 
-    <article class="c-spec">
-        <h2 class="c-spec__describe">.u-bfc</h2>
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-bfc</h2>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should not overlap floats. Its content should not wrap below floats.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should not overlap floats. Its content should not wrap below floats.</p>
+            <div class="c-test__run">
 
                 <div class="u-float-start u-margin-end-md">
                     <div class="c-fixture-box">1</div>
@@ -117,9 +117,9 @@
             </div>
         </div>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should contain its floated children and their margins.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should contain its floated children and their margins.</p>
+            <div class="c-test__run">
 
                 <div class="u-bfc">
                     <div class="c-fixture-box u-float-start u-margin-all-sm">1</div>
@@ -129,9 +129,9 @@
             </div>
         </div>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should clip overflow.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should clip overflow.</p>
+            <div class="c-test__run">
 
                 <div class="u-bfc">
                     <div class="c-fixture-box u-outline">1</div>
@@ -141,12 +141,12 @@
         </div>
     </article>
 
-    <article class="c-spec">
-        <h2 class="c-spec__describe">.u-ffc</h2>
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-ffc</h2>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should not overlap floats. Its content should not wrap below floats.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should not overlap floats. Its content should not wrap below floats.</p>
+            <div class="c-test__run">
 
                 <div class="u-float-start u-margin-end-md">
                     <div class="c-fixture-box">1</div>
@@ -156,9 +156,9 @@
             </div>
         </div>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should contain its floated children and their margins.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should contain its floated children and their margins.</p>
+            <div class="c-test__run">
 
                 <div class="u-ffc">
                     <div class="c-fixture-box u-float-start u-margin-all-sm">1</div>
@@ -168,9 +168,9 @@
             </div>
         </div>
 
-        <div class="c-spec__case">
-            <p class="c-spec__should">It should not clip overflow.</p>
-            <div class="c-spec__run">
+        <div class="c-test__case">
+            <p class="c-test__should">It should not clip overflow.</p>
+            <div class="c-test__run">
 
                 <div class="u-ffc">
                     <div class="c-fixture-box u-outline">1</div>
