@@ -1,6 +1,5 @@
 
 // Floats
-// ------
 //
 // Writing-direction independent floats. For RTL stylesheets, simply
 // re-define with the opposite direction. Templates need not be changed.
@@ -15,7 +14,6 @@
 
 
 // Contain floats
-// --------------
 //
 // Contain all floated children and their margins.
 
@@ -33,7 +31,6 @@
 
 
 // Positioning context
-// -------------------
 //
 // Create a new positioning context.
 
@@ -43,7 +40,6 @@
 
 
 // Block Formatting Context
-// ------------------------
 //
 // Create a new Block Formatting Context. BFCs:
 //
@@ -58,7 +54,6 @@
 
 
 // Flex Formatting Context
-// -----------------------
 //
 // Create a new Flex Formatting Context. Affords the same properties as a BFC
 // but will not clip overflow.

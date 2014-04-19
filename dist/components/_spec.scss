@@ -1,10 +1,31 @@
 
+$v-space: 1.5rem !default;
+$border: 1px solid hsl(0, 0%, 80%) !default;
+
+
+// Spec
+//
+// Component for structuring visual tests for other components.
+//
+// Markup:
+// <article class="c-spec">
+//     <h2 class="c-spec__describe">.c-component</h2>
+//     <div class="c-spec__case">
+//         <p class="c-spec__should"><a href="#subject-1">It</a> should be like x</p>
+//         <div class="c-spec__run">
+//
+//             <div class="c-component" id="subject-1"></div>
+//
+//         </div>
+//     </div>
+// </article>
+
 .c-spec {}
 
 .c-spec__describe {
-    margin: 1.4rem 0 0.7rem;
-    padding-bottom: 0.35rem;
-    border-bottom: 1px solid #ccc;
+    margin: $v-space 0 ($v-space * 0.5);
+    padding-bottom: $v-space * 0.25;
+    border-bottom: $border;
 }
 
 .c-spec__case {}
@@ -12,7 +33,7 @@
 .c-spec__should {}
 
 .c-spec__run {
-    margin: 1.4rem 0;
+    margin: $v-space 0;
 }
 
 .c-spec__run *.is-selected {

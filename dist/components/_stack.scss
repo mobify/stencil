@@ -1,9 +1,20 @@
 
-$stack-border: 1px solid hsl(0, 0%, 80%) !default;
+@if variable-exists('stack-border') { $stack-border: $stack-border; }
+@else if variable-exists('border') { $stack-border: $border; }
+@else { $stack-border: 1px solid hsl(0, 0%, 80%); }
+
+$v-space: 1.5rem !default;
 
 
-// Stacked items
-// -------------
+// Stack
+//
+// A vertical set of items separated by space.
+//
+// Markup:
+// <div class="c-stack">
+//     <div class="c-stack__item">
+//     <div class="c-stack__item">
+// </div>
 
 .c-stack {
     margin: 0;
@@ -15,11 +26,26 @@ $stack-border: 1px solid hsl(0, 0%, 80%) !default;
     display: block;
     padding-top: $v-space * 0.5;
     padding-bottom: $v-space * 0.5;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+    }
 }
 
 
-// With rules between items
-// ------------------------
+// Ruled Stack
+//
+// A vertical set of items separated by space and horizontal rules.
+//
+// Markup:
+// <div class="c-stack c--ruled">
+//     <div class="c-stack__item">
+//     <div class="c-stack__item">
+// </div>
 
 .c-stack.c--ruled > .c-stack__item {
     border-top: $stack-border;

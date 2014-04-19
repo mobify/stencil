@@ -1,13 +1,27 @@
 
-$grid-gutter: 1.5rem !default;
+@if variable-exists('grid-gutter') { $grid-gutter: $grid-gutter; }
+@else if variable-exists('v-space') { $grid-gutter: $v-space; }
+@else { $grid-gutter: 1.5rem; }
 
 
 // Grid
-// ----
 //
 // Simple grid layout without gutters. Allows single or multiple grid rows.
 // Apply width to grid items using width utils, or extend the component with a
 // modifier and style named grid spans.
+//
+// Markup:
+// <div class="c-grid">
+//     <div class="c-grid__span u-width-1of3">
+//     <div class="c-grid__span u-width-1of3">
+//     <div class="c-grid__span u-width-1of3">
+// </div>
+//
+// <div class="c-grid c--custom">
+//     <div class="c-grid__span c--col-a">
+//     <div class="c-grid__span c--col-b">
+//     <div class="c-grid__span c--col-c">
+// </div>
 
 .c-grid {
   box-sizing: border-box;
@@ -30,8 +44,14 @@ $grid-gutter: 1.5rem !default;
 }
 
 
-// With horizontal and vertical gutters
-// ------------------------------------
+// Grid with horizontal and vertical gutters
+//
+// Markup:
+// <div class="c-grid c--gutters">
+//     <div class="c-grid__span u-width-1of3">
+//     <div class="c-grid__span u-width-1of3">
+//     <div class="c-grid__span u-width-1of3">
+// </div>
 
 .c-grid.c--gutters {
     margin-left: $grid-gutter * -0.5;
