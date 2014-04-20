@@ -35,6 +35,11 @@
             width: 100px;
             height: 100px;
         }
+
+        .c-fixture-box.c--small {
+            width: 66px;
+            height: 66px;
+        }
     </style>
 </head>
 <body>
@@ -145,7 +150,7 @@
     </article>
 
     <article class="c-test">
-        <h2 class="c-test__describe">.u-ffc</h2>
+        <h2 class="c-test__describe">.u-bfc-noclip</h2>
 
         <div class="c-test__case">
             <p class="c-test__should">It should not overlap floats. Its content should not wrap below floats.</p>
@@ -154,7 +159,7 @@
                 <div class="u-float-start u-margin-end-md">
                     <div class="c-fixture-box">1</div>
                 </div>
-                <p class="u-ffc">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                <p class="u-bfc-noclip">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
 
             </div>
         </div>
@@ -163,7 +168,7 @@
             <p class="c-test__should">It should contain its floated children and their margins.</p>
             <div class="c-test__run">
 
-                <div class="u-ffc">
+                <div class="u-bfc-noclip">
                     <div class="c-fixture-box u-float-start u-margin-all-sm">1</div>
                     <div class="c-fixture-box u-float-start u-margin-all-sm">2</div>
                 </div>
@@ -175,11 +180,48 @@
             <p class="c-test__should">It should not clip overflow.</p>
             <div class="c-test__run">
 
-                <div class="u-ffc">
+                <div class="u-bfc-noclip">
                     <div class="c-fixture-box u-outline">1</div>
                 </div>
 
             </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should not have any side effects.</p>
+            <table class="c-test__a-b">
+                <thead>
+                    <tr><th>.u-bfc-noclip</th><th>.u-bfc</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="c-test__run">
+
+                            <div class="u-float-start u-margin-end-md">
+                                <div class="c-fixture-box c--small">1</div>
+                            </div>
+                            <div class="u-bfc-noclip">
+                                <div class="c-fixture-box c--small">1</div>
+                                <div class="c-fixture-box c--small">2</div>
+                                <div class="c-fixture-box c--small">3</div>
+                            </div>
+
+                        </td>
+                        <td class="c-test__run">
+
+                            <div class="u-float-start u-margin-end-md">
+                                <div class="c-fixture-box c--small">1</div>
+                            </div>
+                            <div class="u-bfc">
+                                <div class="c-fixture-box c--small">1</div>
+                                <div class="c-fixture-box c--small">2</div>
+                                <div class="c-fixture-box c--small">3</div>
+                            </div>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </article>
 </body>

@@ -41,10 +41,8 @@
 
 // Block Formatting Context
 //
-// Create a new Block Formatting Context. BFCs:
-//
-// - won’t overlap adjacent floats;
-// - will contain floated children and their margins.
+// Create a new Block Formatting Context. BFCs won’t overlap adjacent floats and
+// will contain floated children and their margins.
 //
 // N.B. Will clip overflow.
 
@@ -53,14 +51,16 @@
 }
 
 
-// Flex Formatting Context
+// Block Formatting Context without clipping
 //
-// Create a new Flex Formatting Context. Affords the same properties as a BFC
-// but will not clip overflow.
 //
-// N.B. Works best when it has only one child element. Create an inner wrapper
-// as needed.
+// 1. Create a new block formatting context (NBFC).
+// 2. Avoid shrink-wrap behaviour of table-cell.
+//
+// N.B. This breaks down in some browsers when elements within this element
+// exceed its width.
 
-.u-ffc {
-  display: flex !important;
+.u-bfc-noclip {
+  display: table-cell !important;
+  width: 10000px !important;
 }
