@@ -2,8 +2,8 @@
 @import '../bower_components/normalize.css/normalize.css';
 
 @font-face {
-    font-family: 'Dust Stencil';
-    src: url('dust-stencil.woff') format('woff');
+    font-family: 'Stencil';
+    src: url('stencil.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
@@ -86,7 +86,7 @@ a {
 .c-fixture-title__sub {
     display: inline-block;
     background: none;
-    font-family: 'Dust Stencil', Georgia, serif;
+    font-family: Stencil, Georgia, serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
