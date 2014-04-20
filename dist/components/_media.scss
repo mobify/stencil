@@ -8,6 +8,16 @@ $h-space: 1.5rem !default;
 //
 // http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
 // http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+//
+// Markup:
+// <div class="c-media">
+//     <div class="c-media__figure">
+//         <img src="{src}" alt="{alt}">
+//     </div>
+//     <div class="c-media__body">
+//         {content}
+//     </div>
+// </div>
 
 .c-media {
     display: flex;
