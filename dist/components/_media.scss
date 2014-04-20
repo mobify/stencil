@@ -1,0 +1,39 @@
+
+$h-space: 1.5rem !default;
+
+
+// Media
+//
+// The media object, implemented with Flexbox.
+//
+// http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+// http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+
+.c-media {
+    display: flex;
+    align-items: flex-start;
+}
+
+.c-media__figure {
+    margin-right: $h-space;
+}
+
+.c-media__body {
+    flex: 1 0 0;
+}
+
+
+// Vertically center figure and body.
+
+.c-media.c--align-middle {
+    align-items: center;
+}
+
+
+// Reverse the source order of figure and body.
+
+.c-media.c--reversed > .c-media__figure {
+    order: 1;
+    margin-right: 0;
+    margin-left: $h-space;
+}
