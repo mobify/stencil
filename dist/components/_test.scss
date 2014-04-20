@@ -30,7 +30,7 @@ $test-border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
 }
 
 .c-test + .c-test {
-    margin-top: $v-space * 2;
+    margin-top: $v-space * 1.5;
 }
 
 .c-test__describe {
