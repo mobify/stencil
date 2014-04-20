@@ -5,7 +5,14 @@ $h-space: 1.5rem !default;
 // Arrange
 //
 // Arrange and align single rows of content blocks. Useful for equal-height
-// columns, vertical centering and horizontal fit/fill.
+// columns and horizontal fit/fill.
+//
+// Markup:
+// <div class="c-arrange">
+//     <div class="c-arrange__item">…</div>
+//     <div class="c-arrange__item u-width-1of2">…</div>
+//     <div class="c-arrange__item c--shrink">…</div>
+// </div>
 
 .c-arrange {
     display: flex;
