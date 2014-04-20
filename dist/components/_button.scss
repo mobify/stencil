@@ -22,11 +22,12 @@ $button-font-size: inherit !default;
 // 3. Inherit font styles from ancestor.
 // 4. Normalize `line-height` (for `input`, it can't be changed from `normal`
 //    in Firefox 4+).
-// 5. Ensure text content can wrap within the button.
-// 6. Prevent button text from being selectable.
-// 7. Corrects inability to style clickable `input` types in iOS.
-// 8. Inherit font color from ancestor for all states
-// 9. “Disabled” state for links must be managed in JavaScript.
+// 5. Vertically center contents regardless of padding.
+// 6. Ensure text content can wrap within the button.
+// 7. Prevent button text from being selectable.
+// 8. Corrects inability to style clickable `input` types in iOS.
+// 9. Inherit font color from ancestor for all states
+// 10. “Disabled” state for links must be managed in JavaScript.
 
 .c-button {
     position: relative;
@@ -41,10 +42,11 @@ $button-font-size: inherit !default;
     font-size: $button-font-size; // 3
     line-height: normal; // 4
     text-align: center;
-    white-space: normal; // 5
-    user-select: none; // 6
+    align-items: center; // 5
+    white-space: normal; // 6
+    user-select: none; // 7
     cursor: pointer;
-    -webkit-appearance: none; // 7
+    -webkit-appearance: none; // 8
 
 
     // States
@@ -53,12 +55,12 @@ $button-font-size: inherit !default;
     &:hover,
     &:focus,
     &:active {
-        color: $button-font-color; // 8
+        color: $button-font-color; // 9
         text-decoration: none;
     }
 
     &:disabled,
-    &.is-disabled { // 9
+    &.is-disabled { // 10
         cursor: default;
         opacity: 0.6;
     }
