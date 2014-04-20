@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stencil Arrange Component Tests</title>
+    <link rel="stylesheet" href="../../fixture.css">
+
+    <link rel="stylesheet" href="arrange.css">
+    <style>
+        .u-margin-top-md { margin-top: 1.5rem !important; }
+        .u-margin-bottom-md { margin-bottom: 1.5rem !important; }
+
+        .c-fixture-box {
+            min-height: 4.2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Arrange Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-arrange</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should arrange items in equal-width, equal-height columns.</p>
+            <div class="c-test__run">
+
+                <div class="c-arrange">
+                    <div class="c-arrange__item c-fixture-box">
+                        1
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        2
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        3
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should support shrinking one or more items.</p>
+            <div class="c-test__run">
+
+                <div class="c-arrange">
+                    <div class="c-arrange__item c--shrink c-fixture-box">
+                        1
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        2
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        3
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-arrange.c--align-top</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should aligns items to the top and collapse their height.</p>
+            <div class="c-test__run">
+
+                <div class="c-arrange c--align-top">
+                    <div class="c-arrange__item c-fixture-box">
+                        1
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        2
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        3
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-arrange.c--align-middle</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should vertically center items and collapse their height.</p>
+            <div class="c-test__run">
+
+                <div class="c-arrange c--align-middle">
+                    <div class="c-arrange__item c-fixture-box">
+                        1
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        2
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        3
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-arrange.c--align-bottom</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should aligns items to the bottom and collapse their height.</p>
+            <div class="c-test__run">
+
+                <div class="c-arrange c--align-bottom">
+                    <div class="c-arrange__item c-fixture-box">
+                        1
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        2
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        3
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-arrange.c--gutters</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should support gutters.</p>
+            <div class="c-test__run">
+
+                <div class="c-arrange c--gutters">
+                    <div class="c-arrange__item c-fixture-box">
+                        1
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        2
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        3
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+</body>
+</html>

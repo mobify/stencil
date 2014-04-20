@@ -1,0 +1,57 @@
+
+$h-space: 1.5rem !default;
+
+
+// Arrange
+//
+// Arrange and align single rows of content blocks. Useful for equal-height
+// columns, vertical centering and horizontal fit/fill.
+
+.c-arrange {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.c-arrange__item {
+    flex: 1;
+}
+
+
+// Item proportion modifiers
+//
+// Apply these to arrange items.
+
+.c-arrange__item.c--shrink {
+    flex: initial;
+}
+
+
+// Vertical alignment modifiers
+//
+// Apply these to the arrange component.
+
+.c-arrange.c--align-top {
+    align-items: flex-start;
+}
+
+.c-arrange.c--align-middle {
+    align-items: center;
+}
+
+.c-arrange.c--align-bottom {
+    align-items: flex-end;
+}
+
+
+// With gutters
+
+.c-arrange.c--gutters {
+    margin-left: ($h-space * -0.5);
+    margin-right: ($h-space * -0.5);
+}
+
+.c-arrange.c--gutters > .c-arrange__item {
+    margin: 0 ($h-space * 0.5);
+}
