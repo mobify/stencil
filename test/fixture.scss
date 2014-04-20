@@ -8,15 +8,17 @@
 }
 
 html {
-    margin: 1.4rem 5% 2.8rem;
+    margin: 1.4rem 3% 2.8rem;
     line-height: 1.4;
     color: hsl(0, 0%, 20%);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
-    max-width: 30rem;
+    max-width: 32rem;
     margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 h1 {
