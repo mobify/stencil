@@ -13,52 +13,54 @@ $button-font-size: inherit !default;
 //
 // Markup:
 // <button class="c-button" type="[button|submit]">{buttonText}</button>
-// <input class="c-button" type="submit">{buttonText}</button>
+// <input class="c-button" type="submit" value="{Input element}">
 // <a class="c-button" href="{url}">{buttonText}</a>
 //
 // Notes:
 // 1. Normalize `box-sizing`.
-// 2. Inherit font color from ancestor.
+// 2. Ensure consistent vertical alignment in modern browsers.
 // 3. Inherit font styles from ancestor.
 // 4. Normalize `line-height` (for `input`, it can't be changed from `normal`
 //    in Firefox 4+).
-// 6. Ensure text content can wrap within the button.
-// 7. Prevent button text from being selectable.
-// 8. Corrects inability to style clickable `input` types in iOS.
+// 5. Ensure text content can wrap within the button.
+// 6. Prevent button text from being selectable.
+// 7. Corrects inability to style clickable `input` types in iOS.
+// 8. Inherit font color from ancestor for all states
 // 9. “Disabled” state for links must be managed in JavaScript.
 
 .c-button {
     position: relative;
     box-sizing: border-box; // 1
-    display: inline-block;
+    display: inline-block; // 2
+    display: inline-flex; // 2
     margin: 0;
     padding: $button-padding;
     border: $button-border;
     background: none;
-    color: $button-font-color; // 2
     font-family: $button-font-family; // 3
     font-size: $button-font-size; // 3
     line-height: normal; // 4
     text-align: center;
-    text-decoration: none;
-    white-space: normal; // 6
-    user-select: none; // 7
+    white-space: normal; // 5
+    user-select: none; // 6
     cursor: pointer;
-    -webkit-appearance: none; // 8
+    -webkit-appearance: none; // 7
 
 
     // States
 
+    &,
     &:hover,
     &:focus,
     &:active {
-      text-decoration: none;
+        color: $button-font-color; // 8
+        text-decoration: none;
     }
 
     &:disabled,
     &.is-disabled { // 9
-      cursor: default;
-      opacity: 0.6;
+        cursor: default;
+        opacity: 0.6;
     }
 
 
