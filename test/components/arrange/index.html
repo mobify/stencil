@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stencil Arrange Component Tests</title>
     <link rel="stylesheet" href="../../fixture.css">
+    <link rel="stylesheet" href="../../utils/utils-dimension/utils-dimension.css">
 
     <link rel="stylesheet" href="arrange.css">
     <style>
@@ -38,6 +39,28 @@
                     <div class="c-arrange__item c-fixture-box">
                         3
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should support dimension utilities on items.</p>
+            <div class="c-test__run">
+
+                <div class="c-arrange">
+                    <div class="c-arrange__item c-fixture-box">
+                        1
+                        <p>no specified width</p>
+                    </div>
+                    <div class="c-arrange__item c-fixture-box u-width-1of2">
+                        2
+                        <p><strong>.u-width-1of2</strong></p>
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        3
+                        <p>no specified width</p>
                     </div>
                 </div>
 
