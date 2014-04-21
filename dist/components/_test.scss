@@ -1,0 +1,93 @@
+
+$h-space: 1.5rem !default;
+$v-space: 1.5rem !default;
+
+$test-border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
+
+
+// Test
+//
+// Component for structuring visual tests for other components.
+//
+// Markup:
+// <article class="c-test">
+//     <h2 class="c-test__describe">.c-component</h2>
+//     <div class="c-test__case">
+//         <p class="c-test__should">It should be like x</p>
+//         <div class="c-test__run">
+//
+//             <div class="c-component"></div>
+//
+//         </div>
+//     </div>
+// </article>
+
+.c-test {
+    margin-left: ($h-space * -0.75);
+    margin-right: ($h-space * -0.75);
+    border: $test-border;
+    border-radius: 3px;
+}
+
+.c-test + .c-test {
+    margin-top: $v-space * 1.5;
+}
+
+.c-test__describe {
+    margin: 0;
+    padding: $v-space * 0.5 $h-space * 0.75;
+    border-bottom: $test-border;
+}
+
+.c-test__case + .c-test__case {
+    border-top: $test-border;
+}
+
+.c-test__should {
+    margin: 0;
+    padding: ($v-space * 0.5) ($h-space * 0.75);
+    font-weight: bold;
+}
+
+.c-test__a-b {
+    width: 100%;
+    table-layout: fixed;
+    margin-top: $v-space * 0.25;
+    counter-reset: column-counter;
+
+    th {
+        position: relative;
+        padding: 0.25em 0 0.5em;
+        font-weight: normal;
+
+        &:before {
+            content: counter(column-counter, upper-alpha);
+            counter-increment: column-counter;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2em;
+            padding: 0.25em 0 0.5em;
+            background: hsl(0, 0%, 96%);
+            color: hsl(0, 0%, 45%);
+            text-align: center;
+        }
+    }
+
+    th + th,
+    td + td {
+        border-left: 1px solid hsl(0, 0%, 85%);
+    }
+
+    tbody {
+        font-size: 0.8em;
+    }
+}
+
+.c-test__run {
+    margin: 0;
+    padding: ($h-space * 0.75);
+    background: hsl(0, 0%, 96%);
+    color: hsl(0, 0%, 45%);
+}

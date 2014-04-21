@@ -1,0 +1,66 @@
+
+// Floats
+//
+// Writing-direction independent floats. For RTL stylesheets, re-define
+// these styles with the opposite direction. Templates need not be changed.
+
+.u-float-start {
+  float: left !important;
+}
+
+.u-float-end {
+  float: right !important;
+}
+
+
+// Contain floats
+//
+// Contain all floated children and their margins.
+
+.u-cf {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+
+// Positioning context
+//
+// Create a new positioning context.
+
+.u-pc {
+  position: relative !important;
+}
+
+
+// Block Formatting Context
+//
+// Create a new Block Formatting Context. BFCs won’t overlap adjacent floats and
+// will contain floated children and their margins.
+//
+// N.B. Will clip overflow.
+
+.u-bfc {
+  overflow: hidden !important;
+}
+
+
+// Block Formatting Context without clipping
+//
+//
+// 1. Create a new block formatting context (NBFC).
+// 2. Avoid shrink-wrap behaviour of table-cell.
+//
+// N.B. This breaks down in some browsers when elements within this element
+// exceed its width.
+
+.u-bfc-noclip {
+  display: table-cell !important;
+  width: 10000px !important;
+}

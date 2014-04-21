@@ -1,0 +1,66 @@
+.c-grid {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.c-grid:before, .c-grid:after {
+  content: ' ';
+  display: table;
+}
+.c-grid:after {
+  clear: both;
+}
+
+.c-grid__span {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.c-grid.c--2up .c-grid__span {
+  width: 50%;
+}
+.c-grid.c--2up .c-grid__span:nth-child(2n + 1) {
+  clear: both;
+}
+
+.c-grid.c--3up .c-grid__span {
+  width: 33.33333%;
+}
+.c-grid.c--3up .c-grid__span:nth-child(3n + 1) {
+  clear: both;
+}
+
+.c-grid.c--4up .c-grid__span {
+  width: 25%;
+}
+.c-grid.c--4up .c-grid__span:nth-child(4n + 1) {
+  clear: both;
+}
+
+.c-grid.c--5up .c-grid__span {
+  width: 20%;
+}
+.c-grid.c--5up .c-grid__span:nth-child(5n + 1) {
+  clear: both;
+}
+
+.c-grid.c--6up .c-grid__span {
+  width: 16.66667%;
+}
+.c-grid.c--6up .c-grid__span:nth-child(6n + 1) {
+  clear: both;
+}
+
+.c-grid.c--gutters {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+.c-grid.c--gutters:before {
+  margin-top: -1.5rem;
+}
+
+.c-grid.c--gutters > .c-grid__span {
+  padding: 1.5rem 0.75rem 0;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "stencil",
+  "version": "0.0.0",
+  "description": "A set of common, reusable style patterns for Mobify’s client services team",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mobify/stencil.git"
+  },
+  "keywords": [
+    "mobify",
+    "components",
+    "patterns"
+  ],
+  "authors": [
+    "Mobify",
+    "Jeff Kamo <jeffkamo@mobify.com>",
+    "Ryan Frederick <ryan@ryanfrederick.com>",
+    "Kyle Peatt <kpeatt@gmail.com>"
+  ],
+  "bugs": {
+    "url": "https://github.com/mobify/stencil/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "load-grunt-tasks": "~0.4.0",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-autoprefixer": "~0.7.2",
+    "grunt-contrib-watch": "~0.6.1"
+  },
+  "license": "MIT"
+}

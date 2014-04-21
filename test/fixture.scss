@@ -1,0 +1,101 @@
+
+@import '../bower_components/normalize.css/normalize.css';
+
+@font-face {
+    font-family: 'Stencil';
+    src: url('stencil.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 1.4rem 3% 2.8rem;
+    line-height: 1.4;
+    color: hsl(0, 0%, 20%);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+    max-width: 32rem;
+    margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h1 {
+    margin: 0 0 2.8rem 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.1rem;
+}
+
+h2 {
+    margin: 0.7rem 0;
+    font-size: 1.4rem;
+}
+h2:first-child {
+    margin-top: 0;
+}
+
+h3 {
+    margin: 0.7rem 0;
+    font-size: 1.15rem;
+}
+h3:first-child {
+    margin-top: 0;
+}
+
+p {
+    margin: 0 0 0.7rem 0;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: hsl(200, 80%, 45%);
+    text-decoration: none;
+    background-image: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 0%, 0) 50%,
+        hsla(200, 80%, 45%, 0.5) 50%
+    );
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 95%;
+
+    &:focus,
+    &:hover {
+        color: hsl(200, 80%, 55%);
+    }
+
+    &:active {
+        color: hsl(200, 80%, 40%);
+    }
+}
+
+@import '../dist/components/test';
+
+.c-fixture-title {}
+
+.c-fixture-title__sub {
+    display: inline-block;
+    background: none;
+    font-family: Stencil, Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.c-fixture-box {
+    padding: 0.5rem;
+    border: 1px solid hsl(200, 20%, 70%);
+    background: hsl(200, 20%, 80%);
+    font-size: 0.8em;
+    color: hsla(0, 0%, 0%, 0.65);
+}
