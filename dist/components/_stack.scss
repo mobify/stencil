@@ -59,7 +59,7 @@ $stack-border: if( variable-exists('stack-border'), $stack-border, $border );
 // A vertical set of items bounded by an outer border.
 //
 // Markup:
-// <div class="c-stack c--bounded">
+// <div class="c-stack c--bordered">
 //     <div class="c-stack__item">
 //     <div class="c-stack__item">
 // </div>
