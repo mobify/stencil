@@ -1,58 +1,58 @@
 
-$v-space: 1.5rem !default;
-$grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
+$font-size: 14px !default;
+$line-height: $font-size * 1.5 !default;
+$v-space: $line-height * 0.5 !default;
+
+// N.B. So that gutters are consistent by default, $v-space is used for both
+// horizontal and vertical gutters. These can be changed by setting variables
+// prior to import or by overriding/extending the component.
+
+$grid-font-size: if( variable-exists(grid-font-size), $grid-font-size, $font-size );
+$grid-h-gutter: if( variable-exists(grid-h-gutter), $grid-h-gutter, $v-space );
+$grid-v-gutter: if( variable-exists(grid-v-gutter), $grid-v-gutter, $v-space );
 
 
 // Grid
 //
-// Simple grid layout without gutters. Allows single or multiple grid rows.
-// For asymmetrical grids, add modifiers to grid spans.
+// Grid system component for composing layouts. Build simple n-up grids of
+// equal-size items or compose layouts using a formal grid system. Combine with
+// dimension utilities for setting spans, or create a custom grid with a
+// modifier and named spans.
 //
 // Markup:
-// <div class="c-grid c--{n}-up">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
+// <div class="c-grid">
+//     <div class="c-grid__span width-2of6">
+//     <div class="c-grid__span width-3of6">
+//     <div class="c-grid__span width-1of6">
 // </div>
 
 .c-grid {
-  box-sizing: border-box;
-
-    &:before,
-    &:after {
-      content: ' ';
-      display: table;
-    }
-
-    &:after {
-      clear: both;
-    }
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    letter-spacing: -0.125rem;
+    text-align: initial;
 }
 
 .c-grid__span {
     box-sizing: border-box;
-    display: block;
-    float: left;
+    display: inline-table;
     width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: $grid-font-size;
+    letter-spacing: normal;
+    text-align: initial;
+    vertical-align: top;
 }
-
-@for $n from 2 through 6 {
-    .c-grid.c--#{$n}up .c-grid__span {
-        width: (100%/$n);
-
-        &:nth-child(#{$n}n + 1) {
-            clear: both;
-        }
-    }
-}
-
 
 
 // Grid with horizontal and vertical gutters
 //
 // 1. Prevent horizontal gutters from creating extra space above the top row by
-//    pulling the grid up. Applying the negative margin using generated content
-//    frees us to apply spacing utils to the grid without breaking it.
+//    pulling the grid up. Using generated content allows margins to be set on
+//    the grid component without breaking it.
 //
 // Markup:
 // <div class="c-grid c--gutters">
@@ -62,14 +62,16 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
 // </div>
 
 .c-grid.c--gutters {
-    margin-left: $grid-gutter * -0.5;
-    margin-right: $grid-gutter * -0.5;
+    margin-left: $grid-h-gutter * -0.5;
+    margin-right: $grid-h-gutter * -0.5;
 
     &:before {
-      margin-top: $grid-gutter * -1; // 1
+        content: ' ';
+        display: table;
+        margin-top: $grid-v-gutter * -1; // 1
     }
 }
 
 .c-grid.c--gutters > .c-grid__span {
-  padding: ($grid-gutter * 1) ($grid-gutter * 0.5) 0;
+    padding: ($grid-v-gutter * 1) ($grid-h-gutter * 0.5) 0;
 }
