@@ -1,4 +1,3 @@
-
 // Ratio
 //
 // Fluid element with an intrinsic width/height ratio.
@@ -21,7 +20,7 @@
     overflow: hidden;
 
     // 1
-    &:before {
+    &::before {
         content: '';
         display: block;
         width: 100%;
@@ -47,20 +46,20 @@
 
 // 1 × 1 Ratio
 
-.c-ratio.c--1by1:before {
+.c-ratio.c--1by1::before {
     padding-bottom: 100%;
 }
 
 
 // 4 × 3 Ratio
 
-.c-ratio.c--4by3:before {
+.c-ratio.c--4by3::before {
     padding-bottom: 75%;
 }
 
 
 // 16 × 9 Ratio
 
-.c-ratio.c--16by9:before {
+.c-ratio.c--16by9::before {
     padding-bottom: 56.25%;
 }
