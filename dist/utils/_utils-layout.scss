@@ -1,4 +1,3 @@
-
 // Floats
 //
 // Writing-direction independent floats. For RTL stylesheets, re-define
@@ -18,13 +17,13 @@
 // Contain all floated children and their margins.
 
 .u-cf {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: ' ';
     display: table;
   }
 
-  &:after {
+  &::after {
     clear: both;
   }
 }
