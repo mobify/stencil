@@ -51,7 +51,6 @@
 // when inside a flexbox. In other words, prevent them
 // from growing or shrinking.
 
-[class^="u-width-"],
-[class*=" u-width-"] {
+[class*="u-width-"] {
     flex: none !important;
 }
