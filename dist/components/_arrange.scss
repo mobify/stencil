@@ -35,9 +35,7 @@ $h-space: 1.5rem !default;
 }
 
 
-// Vertical alignment modifiers
-//
-// Apply these to the arrange component.
+// Vertically align all items.
 
 .c-arrange.c--align-top {
     align-items: flex-start;
@@ -49,6 +47,21 @@ $h-space: 1.5rem !default;
 
 .c-arrange.c--align-bottom {
     align-items: flex-end;
+}
+
+
+// Vertically align individual items, overriding global alignment.
+
+.c-arrange__item.c--align-top {
+    align-self: flex-start;
+}
+
+.c-arrange__item.c--align-middle {
+    align-self: center;
+}
+
+.c-arrange__item.c--align-bottom {
+    align-self: flex-end;
 }
 
 
