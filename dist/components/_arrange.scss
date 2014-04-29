@@ -52,6 +52,17 @@ $h-space: 1.5rem !default;
 }
 
 
+// Re-arrange the display order of up to six items. Add additional modifiers in
+// your own stylesheet to re-order more.
+
+.c-arrange__item.c--order-1 { order: 1; }
+.c-arrange__item.c--order-2 { order: 2; }
+.c-arrange__item.c--order-3 { order: 3; }
+.c-arrange__item.c--order-4 { order: 4; }
+.c-arrange__item.c--order-5 { order: 5; }
+.c-arrange__item.c--order-6 { order: 6; }
+
+
 // With gutters
 
 .c-arrange.c--gutters {
