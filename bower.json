@@ -14,7 +14,9 @@
     "patterns"
   ],
   "main": "",
-  "dependencies": {},
+  "dependencies": {
+    "spline": "~0.2.1"
+  },
   "devDependencies": {
     "modularized-normalize-scss": "~3.0.1"
   },
