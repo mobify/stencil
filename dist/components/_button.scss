@@ -1,6 +1,7 @@
 
 $button-padding: 0.5rem 0.75rem !default;
 $button-border: 1px solid hsl(0, 0%, 80%) !default;
+$button-font-color: inherit !default;
 $button-font-family: inherit !default;
 $button-font-size: inherit !default;
 
@@ -21,9 +22,10 @@ $button-font-size: inherit !default;
 // 3. Normalize `line-height` (for `input`, it can't be changed from `normal`
 //    in Firefox 4+).
 // 4. Vertically center contents regardless of padding.
-// 5. Prevent button text from being selectable.
-// 6. Corrects inability to style tappable `input` types in iOS.
-// 9. Inherit font color from ancestor for all states
+// 5. Ensure button text can wrap (`input` defaults to `pre`).
+// 6. Prevent button text from being selectable.
+// 7. Corrects inability to style tappable `input` types in iOS.
+// 8. Inherit font color from ancestor for all states
 //
 // N.B. “Disabled” state for links must be managed in JavaScript.
 
@@ -39,8 +41,9 @@ $button-font-size: inherit !default;
     line-height: normal; // 3
     text-align: center;
     align-items: center; // 4
-    user-select: none; // 5
-    -webkit-appearance: none; // 6
+    white-space: normal; // 5
+    user-select: none; // 6
+    -webkit-appearance: none; // 7
 
 
     // States
@@ -49,6 +52,7 @@ $button-font-size: inherit !default;
     &:hover,
     &:focus,
     &:active {
+        color: $button-font-color;
         text-decoration: none;
     }
 
