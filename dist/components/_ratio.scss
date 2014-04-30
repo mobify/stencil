@@ -3,7 +3,7 @@
 // Fluid element with an intrinsic width/height ratio.
 //
 // 1. The aspect-ratio hack is applied to a pseudo-element because it allows
-//    the component to respect `max-height`.
+//    the component to accept padding and respect `min/max-height`.
 //
 // Markup:
 // <div class="c-ratio c--1by1">
