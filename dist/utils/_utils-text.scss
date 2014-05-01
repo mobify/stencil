@@ -1,0 +1,41 @@
+
+// All Caps
+//
+// Set text uppercase, letterspaced for legibility.
+// See http://webtypography.net/2.1.6
+
+.u-text-all-caps {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+// Text Flow Alignment
+//
+// Writing-direction independent text alignment. For RTL stylesheets, re-define
+// these styles with the opposite direction. Templates need not be changed.
+
+.u-text-align-start {
+  text-align: left !important;
+}
+
+.u-text-align-center {
+  text-align: center !important;
+}
+
+.u-text-align-end {
+  text-align: right !important;
+}
+
+
+// Vertical Alignment
+//
+// Vertical aligment of text and replaced (inline-block) elements within a line.
+
+.u-align-middle {
+  vertical-align: middle !important;
+}
+
+.u-align-baseline {
+  vertical-align: baseline !important;
+}

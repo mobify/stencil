@@ -1,0 +1,72 @@
+$v-space: 1.5rem !default;
+$border: 1px solid hsl(0, 0%, 80%) !default;
+$stack-border: if( variable-exists('stack-border'), $stack-border, $border );
+
+
+// Stack
+//
+// A vertical set of items separated by space.
+//
+// Markup:
+// <div class="c-stack">
+//     <div class="c-stack__item">
+//     <div class="c-stack__item">
+// </div>
+
+.c-stack {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.c-stack__item {
+    display: block;
+    padding-top: $v-space * 0.5;
+    padding-bottom: $v-space * 0.5;
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+
+// Ruled Stack
+//
+// A vertical set of items separated by space and horizontal rules.
+//
+// Markup:
+// <div class="c-stack c--ruled">
+//     <div class="c-stack__item">
+//     <div class="c-stack__item">
+// </div>
+
+.c-stack.c--ruled > .c-stack__item {
+    border-top: $stack-border;
+
+    &:first-child {
+        border-top-width: 0;
+    }
+}
+
+
+// Bordered Stack
+//
+// A vertical set of items bounded by an outer border.
+//
+// Markup:
+// <div class="c-stack c--bordered">
+//     <div class="c-stack__item">
+//     <div class="c-stack__item">
+// </div>
+
+.c-stack.c--bordered {
+    border: $stack-border
+}
+
+.c-stack.c--bordered > .c-stack__item {
+    padding: $v-space * 0.5;
+}
