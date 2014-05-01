@@ -49,7 +49,6 @@ $button-font-size: inherit !default;
     // States
 
     &,
-    &:hover,
     &:focus,
     &:active {
         color: $button-font-color;
