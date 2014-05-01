@@ -49,22 +49,6 @@ $h-space: 1.5rem !default;
     align-items: flex-end;
 }
 
-
-// Vertically align individual items, overriding global alignment.
-
-.c-arrange__item.c--align-top {
-    align-self: flex-start;
-}
-
-.c-arrange__item.c--align-middle {
-    align-self: center;
-}
-
-.c-arrange__item.c--align-bottom {
-    align-self: flex-end;
-}
-
-
 // Re-arrange the display order of up to six items. Add additional modifiers in
 // your own stylesheet to re-order more.
 
