@@ -1,4 +1,3 @@
-
 $v-space: 1.5rem !default;
 $border: 1px solid hsl(0, 0%, 80%) !default;
 $stack-border: if( variable-exists('stack-border'), $stack-border, $border );
@@ -54,7 +53,7 @@ $stack-border: if( variable-exists('stack-border'), $stack-border, $border );
 }
 
 
-// Boredered Stack
+// Bordered Stack
 //
 // A vertical set of items bounded by an outer border.
 //
