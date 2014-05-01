@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../fixture.css">
+
+    <link rel="stylesheet" href="button.css">
+    <style>
+        .u-fixture-alt-font {
+            color: hsl(30, 60%, 50%);
+            font-family: Georgia, serif;
+            font-size: 14px;
+        }
+
+        .u-fixture-cap-width {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Button Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-button</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render a standard button across element types.</p>
+            <div class="c-test__run">
+                <button class="c-button" type="button">Button element</button>
+                <input class="c-button" type="submit" value="Input element">
+                <a class="c-button" href="#">Anchor element</a>
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should inherit font family, color and size by default.</p>
+            <div class="c-test__run">
+                <div class="u-fixture-alt-font">
+                    <p>Text styles to inherit</p>
+                    <button class="c-button" type="button">Button element</button>
+                    <input class="c-button" type="submit" value="Input element">
+                    <a class="c-button" href="#">Anchor element</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should allow button text to wrap.</p>
+            <div class="c-test__run">
+                <button class="c-button u-fixture-cap-width" type="button">Long button element text</button>
+                <input class="c-button u-fixture-cap-width" type="submit" value="Long input element text">
+                <a class="c-button u-fixture-cap-width" href="#">Long anchor element text</a>
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should align well with adjacent text.</p>
+            <div class="c-test__run">
+                <p>Lorem <button class="c-button" type="button">Button element</button> ipsum dolor sit amet.</p>
+                <p>Lorem <input class="c-button" type="submit" value="Input element"> ipsum dolor sit amet.</p>
+                <p>Lorem <a class="c-button" href="#">Anchor element</a> ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-button.is-disabled</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should appear disabled.</p>
+            <div class="c-test__run">
+                <button class="c-button" type="button" disabled>Button element</button>
+                <input class="c-button" type="submit" value="Input element" disabled>
+                <a class="c-button is-disabled">Anchor element</a>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
