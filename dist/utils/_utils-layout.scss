@@ -8,11 +8,11 @@
 // these styles with the opposite direction. Templates need not be changed.
 
 .u-float-start {
-  float: left !important;
+    float: left !important;
 }
 
 .u-float-end {
-  float: right !important;
+    float: right !important;
 }
 
 
@@ -21,7 +21,7 @@
 // Contain all floated children and their margins.
 
 .u-clearfix {
-  @include clearfix;
+    @include clearfix;
 }
 
 
@@ -30,7 +30,7 @@
 // Create a new positioning context.
 
 .u-position-context {
-  position: relative !important;
+    position: relative !important;
 }
 
 
@@ -42,5 +42,5 @@
 // N.B. Will clip overflow.
 
 .u-block-context {
-  overflow: hidden !important;
+    overflow: hidden !important;
 }
