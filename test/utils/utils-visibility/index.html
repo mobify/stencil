@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility Utility Tests · Stencil</title>
+    <link rel="stylesheet" href="../../fixture.css">
+
+    <link rel="stylesheet" href="utils-visibility.css">
+    <style>
+        .c-fixture-box {
+            min-height: 1.4rem;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Visibility Utility Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-visually-hidden</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should not be visible in flow.</p>
+            <div class="c-test__run">
+                <div class="c-fixture-box u-visually-hidden">Lorem ipsum dolor sit amet.</div>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
