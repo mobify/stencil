@@ -1,0 +1,30 @@
+
+// Align
+//
+// Align an item vertically within a container. Items are centered by default.
+//
+// Markup:
+// <div class="c-align">
+//     <div class="c-align__item c--top">…</div>
+//     <div class="c-align__item">…</div>
+//     <div class="c-align__item c--bottom">…</div>
+// </div>
+
+.c-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-align__item {}
+
+
+// Alignment modifiers
+
+.c-align__item.c--align-top {
+  align-self: flex-start;
+}
+
+.c-align__item.c--align-bottom {
+  align-self: flex-end;
+}
