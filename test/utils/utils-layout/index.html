@@ -96,13 +96,13 @@
     </article>
 
     <article class="c-test">
-        <h2 class="c-test__describe">.u-pc</h2>
+        <h2 class="c-test__describe">.u-position-context</h2>
 
         <div class="c-test__case">
             <p class="c-test__should">It should create a new positioning context.</p>
             <div class="c-test__run">
 
-                <div class="u-pc">
+                <div class="u-position-context">
                     <div class="c-fixture-box placeholder--abs u-abs-top-end">1 <div>positioned top right</div></div>
                     <div class="c-fixture-box">2</div>
                     <div class="c-fixture-box">3</div>
@@ -113,7 +113,7 @@
     </article>
 
     <article class="c-test">
-        <h2 class="c-test__describe">.u-bfc</h2>
+        <h2 class="c-test__describe">.u-block-context</h2>
 
         <div class="c-test__case">
             <p class="c-test__should">It should not overlap floats. Its content should not wrap below floats.</p>
@@ -122,7 +122,7 @@
                 <div class="u-float-start u-margin-end-md">
                     <div class="c-fixture-box">1</div>
                 </div>
-                <p class="u-bfc">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+                <p class="u-block-context">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
 
             </div>
         </div>
@@ -131,7 +131,7 @@
             <p class="c-test__should">It should contain its floated children and their margins.</p>
             <div class="c-test__run">
 
-                <div class="u-bfc">
+                <div class="u-block-context">
                     <div class="c-fixture-box u-float-start u-margin-all-sm">1</div>
                     <div class="c-fixture-box u-float-start u-margin-all-sm">2</div>
                 </div>
@@ -143,7 +143,7 @@
             <p class="c-test__should">It should clip overflow.</p>
             <div class="c-test__run">
 
-                <div class="u-bfc">
+                <div class="u-block-context">
                     <div class="c-fixture-box u-outline">1</div>
                 </div>
 
