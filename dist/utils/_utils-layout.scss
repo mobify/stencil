@@ -29,7 +29,7 @@
 //
 // Create a new positioning context.
 
-.u-pc {
+.u-position-context {
   position: relative !important;
 }
 
@@ -41,6 +41,6 @@
 //
 // N.B. Will clip overflow.
 
-.u-bfc {
+.u-block-context {
   overflow: hidden !important;
 }
