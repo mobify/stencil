@@ -1,7 +1,4 @@
 
-@import 'spline/dist/utilities/clearfix';
-
-
 // Floats
 //
 // Writing-direction independent floats. For RTL stylesheets, re-define
@@ -19,9 +16,17 @@
 // Contain floats
 //
 // Contain all floated children and their margins.
+//
+// External dependencies:
+//
+// - Mixin `clearfix` from Spline.
 
-.u-clearfix {
-    @include clearfix;
+@if mixin-exists(clearfix) {
+    .u-clearfix {
+        @include clearfix;
+    }
+} @else {
+    @warn 'Mixin `clearfix` from Spline not found. Run `bower install` and ensure the clearfix partial is imported in your project.'
 }
 
 
