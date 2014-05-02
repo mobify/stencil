@@ -3,10 +3,11 @@
 // Fluid element with an intrinsic width/height ratio.
 //
 // 1. The aspect-ratio hack is applied to a pseudo-element because it allows
-//    the component to accept padding and respect `min/max-height`.
+//    the component to accept `min/max-height`.
+// 2. The ratio is 1 × 1 by default.
 //
 // Markup:
-// <div class="c-ratio c--1by1">
+// <div class="c-ratio c--4by3">
 //     <div class="c-ratio__item"></div>
 // </div>
 //
@@ -19,11 +20,12 @@
     display: block;
     overflow: hidden;
 
-    // 1
-    &::before {
+
+    &::before { // 1
         content: '';
         display: block;
         width: 100%;
+        padding-bottom: 100%; // 2
     }
 }
 
@@ -41,13 +43,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-
-// 1 × 1 Ratio
-
-.c-ratio.c--1by1::before {
-    padding-bottom: 100%;
 }
 
 
