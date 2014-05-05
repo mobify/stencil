@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratio Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="ratio.css">
+    <style>
+        .u-margin-above-m {
+            margin-top: 1.4rem;
+        }
+
+        .c-ratio.c--max-height {
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Ratio Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-ratio</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should be fluid-width, but constrained to a width:height ratio of 1:1.</p>
+            <div class="c-test__run">
+
+                <div class="c-ratio">
+                    <div class="c-ratio__item c-fixture-box"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It work automatically with children that are <code>&lt;iframe&gt;</code>, <code>&lt;object&gt;</code> or <code>&lt;embed&gt;</code>.</p>
+            <div class="c-test__run">
+
+                <div class="c-ratio">
+                    <iframe src="http://mobify.com" width="320px" height="480px"></iframe>
+                </div>
+
+                <div class="c-ratio u-margin-above-m">
+                    <object type="image/svg+xml" data="../../fixture.svg">Hello World from an SVG file!</object>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should support max-height.</p>
+            <div class="c-test__run">
+
+                <div class="c-ratio c--max-height">
+                    <div class="c-ratio__item c-fixture-box"></div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-ratio.c--4by3</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render width a width:height ratio of 4:3 (SD video).</p>
+            <div class="c-test__run">
+
+                <div class="c-ratio c--4by3">
+                    <div class="c-ratio__item c-fixture-box"></div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-ratio.c--16by9</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render width a width:height ratio of 16:9 (HD video).</p>
+            <div class="c-test__run">
+
+                <div class="c-ratio c--16by9">
+                    <div class="c-ratio__item c-fixture-box"></div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+</body>
+</html>

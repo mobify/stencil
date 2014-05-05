@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="align.css">
+    <style>
+        .u-fixture-min-height {
+            min-height: 10rem;
+        }
+
+        .c-fixture-box.c--fixture-sized {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Align Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-align</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should middle-align items by default.</p>
+            <div class="c-test__run">
+
+                <div class="c-align u-fixture-min-height">
+                    <div class="c-align__item c-fixture-box c--fixture-sized">1</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should automatically align items of unknown dimensions.</p>
+            <div class="c-test__run">
+
+                <div class="c-align u-fixture-min-height">
+                    <div class="c-align__item c-fixture-box" contenteditable="true">Click or tap to edit text.</div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-align__item.c-align--top</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should top-align items.</p>
+            <div class="c-test__run">
+
+                <div class="c-align u-fixture-min-height">
+                    <div class="c-align__item c--align-top c-fixture-box" contenteditable="true">Click or tap to edit text.</div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-align__item.c--align-bottom</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should bottom-align items.</p>
+            <div class="c-test__run">
+
+                <div class="c-align u-fixture-min-height">
+                    <div class="c-align__item c--align-bottom c-fixture-box" contenteditable="true">Click or tap to edit text.</div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+</body>
+</html>

@@ -7,7 +7,10 @@ module.exports = function(grunt) {
 
     sass: {
         options: {
-            style: 'expanded'
+            style: 'expanded',
+            loadPath: [
+                './'
+            ]
         },
         compile_tests: {
             files: [{
