@@ -20,7 +20,7 @@ $v-space: 1.5rem !default;
 }
 
 .u-margin-top-sm {
-    margin-top: $v-space * 0.5 !important;
+    margin-top: ($v-space / 2) !important;
 }
 
 .u-margin-top-md {
@@ -36,7 +36,7 @@ $v-space: 1.5rem !default;
 }
 
 .u-margin-bottom-sm {
-    margin-bottom: $v-space * 0.5 !important;
+    margin-bottom: ($v-space / 2) !important;
 }
 
 .u-margin-bottom-md {
@@ -89,7 +89,7 @@ $v-space: 1.5rem !default;
 }
 
 .u-margin-start-sm {
-    margin-left: $h-space * 0.5 !important;
+    margin-left: ($h-space / 2) !important;
 }
 
 .u-margin-start-md {
@@ -117,7 +117,7 @@ $v-space: 1.5rem !default;
 }
 
 .u-margin-end-sm {
-    margin-right: $h-space * 0.5 !important;
+    margin-right: ($h-space / 2) !important;
 }
 
 .u-margin-end-md {
