@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Utility Tests · Stencil</title>
+    <link rel="stylesheet" href="../../fixture.css">
+
+    <link rel="stylesheet" href="utils-layout.css">
+    <style>
+        .u-margin-start-md {
+            margin-left: 1.4rem !important;
+        }
+
+        .u-margin-end-md {
+            margin-right: 1.4rem !important;
+        }
+
+        .u-margin-all-sm {
+            margin: 0.7rem !important;
+        }
+
+        .u-abs-top-end {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .u-outline {
+            border-color: hsl(200, 80%, 60%) !important;
+            -webkit-box-shadow: 0 0 25px hsl(200, 80%, 45%) !important;
+            -moz-box-shadow: 0 0 25px hsl(200, 80%, 45%) !important;
+            box-shadow: 0 0 25px hsl(200, 80%, 45%) !important;
+        }
+
+        .c-fixture-box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .c-fixture-box.c--small {
+            width: 66px;
+            height: 66px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Layout Utility Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-float-start</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should float left.</p>
+            <div class="c-test__run">
+
+                <div class="c-fixture-box u-float-start u-margin-end-md">1</div>
+                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-float-end</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should float right.</p>
+            <div class="c-test__run">
+
+                <div class="c-fixture-box u-float-end u-margin-start-md">1</div>
+                <p>Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-clearfix</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should contain floated children and their margins.</p>
+            <div class="c-test__run">
+
+                <div class="u-clearfix">
+                    <div class="c-fixture-box u-float-start u-margin-all-sm">1</div>
+                    <div class="c-fixture-box u-float-start u-margin-all-sm">2</div>
+                    <div class="c-fixture-box u-float-start u-margin-all-sm">3</div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-position-context</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should create a new positioning context.</p>
+            <div class="c-test__run">
+
+                <div class="u-position-context">
+                    <div class="c-fixture-box placeholder--abs u-abs-top-end">1 <div>positioned top right</div></div>
+                    <div class="c-fixture-box">2</div>
+                    <div class="c-fixture-box">3</div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.u-block-context</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should not overlap floats. Its content should not wrap below floats.</p>
+            <div class="c-test__run">
+
+                <div class="u-float-start u-margin-end-md">
+                    <div class="c-fixture-box">1</div>
+                </div>
+                <p class="u-block-context">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqia. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris uip ex ea commodo consequat. Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet.</p>
+
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should contain its floated children and their margins.</p>
+            <div class="c-test__run">
+
+                <div class="u-block-context">
+                    <div class="c-fixture-box u-float-start u-margin-all-sm">1</div>
+                    <div class="c-fixture-box u-float-start u-margin-all-sm">2</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should clip overflow.</p>
+            <div class="c-test__run">
+
+                <div class="u-block-context">
+                    <div class="c-fixture-box u-outline">1</div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+</body>
+</html>
