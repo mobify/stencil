@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+
+    <!-- Test component styles are already included with fixture CSS. -->
+    <!-- <link rel="stylesheet" href="test.css"> -->
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Test Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-test</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should provide a visual framework for testing other components.</p>
+            <div class="c-test__run">
+
+                <div class="c-example c-fixture-box">Example component</div>
+
+            </div>
+        </div>
+        <div class="c-test__case">
+            <p class="c-test__should">It should allow multiple test cases per test (this is the second of several test cases).</p>
+            <div class="c-test__run">
+
+                <div class="c-example c-fixture-box">Example component</div>
+
+            </div>
+        </div>
+        <div class="c-test__case">
+            <p class="c-test__should">It should allow comparison testing per test case, to compare alternate implementations.</p>
+            <table class="c-test__a-b">
+                <thead>
+                    <tr><th>.example-component</th><th>.reference-component</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="c-test__run">
+
+                            <div class="c-example c-fixture-box">Example Component</div>
+
+                        </td>
+                        <td class="c-test__run">
+
+                            <div class="c-example c-fixture-box">Reference Component</div>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </article>
+</body>
+</html>
