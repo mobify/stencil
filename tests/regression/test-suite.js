@@ -24,9 +24,9 @@ function getScreenshotName(index) {
 }
 
 phantomcss.init({
-    libraryRoot: 'node_modules/phantomcss',
-    screenshotRoot: 'test/regression/screenshots',
-    failedComparisonsRoot: 'test/regression/screenshots/failures',
+    libraryRoot: '../../node_modules/phantomcss',
+    screenshotRoot: './screenshots',
+    failedComparisonsRoot: './failures',
     fileNameGetter: function(root, fileName) {
         var name;
 
@@ -52,7 +52,7 @@ casper
     .zoom(2)
     .viewport(1200, 1200);
 
-casper.thenOpen('http://localhost:8000/test/tests/components/arrange/');
+casper.thenOpen('../../tests/visual/components/arrange/index.html');
 
 casper.then(function() {
     testCount = this.evaluate(tagAndCountTests);
