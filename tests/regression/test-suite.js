@@ -1,26 +1,36 @@
 
 var phantomcss = require('../../node_modules/phantomcss/phantomcss.js');
-var shotCount = 0;
 
-function tagAndCountTests() {
+function prepareScreenshots() {
     var tests = document.querySelectorAll('.c-test');
+    var testCount = 1;
+    var caseCount = 1;
+    var shotCount = 0;
 
     [].forEach.call(tests, function(test, index) {
-        test.setAttribute('data-test-id', index);
+        var targets = test.querySelectorAll('.c-test__run');
+
+        [].forEach.call(targets, function(target) {
+            target.setAttribute('data-shot-id', shotCount);
+            target.setAttribute('data-shot-counter', testCount + '.' + caseCount);
+
+            caseCount++;
+            shotCount++;
+        });
+
+        caseCount = 1;
+        testCount++;
     });
 
-    return document.querySelectorAll('[data-test-id]').length;
+    return document.querySelectorAll('[data-shot-id]').length;
 }
 
 function getScreenshotName(index) {
-    var test = document.querySelector('[data-test-id="' + index + '"]');
-    var testDescription = test.querySelector('.c-test__describe').textContent;
+    var subject = document.querySelector('[data-shot-id="' + index + '"]');
+    var prefix = subject.getAttribute('data-shot-counter');
+    var suffix = subject.getAttribute('data-shot-name') || false;
 
-    return testDescription
-        .trim()
-        .replace('.', '')
-        .replace(/(\W)+/g, '-')
-        .toLowerCase();
+    return prefix + '-' + (suffix ? suffix : 'arrange');
 }
 
 phantomcss.init({
@@ -30,9 +40,8 @@ phantomcss.init({
     fileNameGetter: function(root, fileName) {
         var name;
 
-        fileName = fileName || "screenshot";
-        shotCount++;
-        name = root + fs.separator + shotCount + '-' + fileName;
+        fileName = fileName || 'screenshot';
+        name = root + fs.separator + fileName;
 
         if ( fs.isFile(name + '.png') ) {
             return name + '.diff.png';
@@ -43,9 +52,8 @@ phantomcss.init({
 });
 
 casper.on('remote.message', function(message) {
-  this.echo('Remote console.log: ' + message);
+    this.echo('Remote console.log: ' + message);
 });
-
 
 casper
     .start()
@@ -55,12 +63,12 @@ casper
 casper.thenOpen('../../tests/visual/components/arrange/index.html');
 
 casper.then(function() {
-    testCount = this.evaluate(tagAndCountTests);
+    var shotCount = this.evaluate(prepareScreenshots);
 
-    for (var i = 0; i < testCount; i++) {
-        var screenshotName = this.evaluate( getScreenshotName, i );
+    for (var i = 0; i < shotCount; i++) {
+        var shotName = this.evaluate(getScreenshotName, i);
 
-        phantomcss.screenshot('[data-test-id="' + i + '"]', screenshotName);
+        phantomcss.screenshot('[data-shot-id="' + i + '"]', shotName);
     };
 });
 

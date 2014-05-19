@@ -21,17 +21,25 @@ $h-space: 1.5rem !default;
     padding: 0;
 }
 
+// 1. Ensure inline elements are treated as block-level.
+// 2. Prevent width collapsing in old implementations.
+
 .c-arrange__item {
+    display: block; // 1
     flex: 1;
+    width: 100%; // 2
 }
 
 
 // Item proportion modifiers
 //
 // Apply these to arrange items.
+//
+// 1. Ensure width collapses in old implementations.
 
 .c-arrange__item.c--shrink {
     flex: initial;
+    width: auto; // 1
 }
 
 
