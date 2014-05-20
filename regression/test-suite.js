@@ -2,15 +2,24 @@
 var fs = require('fs');
 var utils = require('utils');
 var phantomcss = require('../../node_modules/phantomcss/phantomcss.js');
-
-var visualTestsDir = '../visual';
 var clientHelpers = {};
 
-function getParentDir(filePath) {
+function getFileName(filePath) {
+    var fileName = '';
+
     if ( fs.exists(filePath) && fs.isFile(filePath) ) {
         var segments = filePath.split(fs.separator);
-        return segments[segments.length - 2];
+        fileName = segments[segments.length - 1];
+
+
+        if ( fileName.slice(0, fileName.indexOf('.') ) === 'index' ) {
+            fileName = segments[segments.length - 2];
+        }
+    } else {
+        fileName = false;
     }
+
+    return fileName;
 }
 
 function getTestFiles(path) {
@@ -53,18 +62,17 @@ clientHelpers.prepareScreenshots = function prepareScreenshots() {
     return document.querySelectorAll('[data-shot-id]').length;
 }
 
-clientHelpers.getScreenshotName = function getScreenshotName(index) {
+clientHelpers.getScreenshotName = function getScreenshotName(testFile, index) {
     var subject = document.querySelector('[data-shot-id="' + index + '"]');
-    var prefix = subject.getAttribute('data-shot-counter');
-    var suffix = subject.getAttribute('data-shot-name') || false;
+    var counter = subject.getAttribute('data-shot-counter');
+    var name = subject.getAttribute('data-shot-name') || false;
 
-    return prefix + '-' + (suffix ? suffix : 'arrange');
+    return testFile + '/' + counter + '-' + (name ? name : testFile);
 }
 
 phantomcss.init({
     libraryRoot: '../../node_modules/phantomcss',
     screenshotRoot: './screenshots',
-    failedComparisonsRoot: './failures',
     fileNameGetter: function(root, fileName) {
         var name;
 
@@ -79,7 +87,7 @@ phantomcss.init({
     }
 });
 
-casper.on('remote.message', function clientLog(message) {
+casper.on('remote.message', function(message) {
     this.echo('Remote console.log: ' + message);
 });
 
@@ -88,19 +96,21 @@ casper
     .zoom(2)
     .viewport(1200, 1200);
 
-// var testFiles = getTestFiles(visualTestsDir);
-var testFiles = ['../visual/components/arrange/index.html'];
+var visualTestsDir = '../visual';
+var testFiles = getTestFiles(visualTestsDir);
 
-testFiles.forEach(function(file) {
-    casper.log( getParentDir(file) , 'error');
+testFiles.forEach(function(path) {
+    var file = getFileName(path);
 
-    casper.thenOpen(file);
+    casper.thenOpen(path);
 
     casper.then(function takeScreenshots() {
         var shotCount = this.evaluate(clientHelpers.prepareScreenshots);
 
         for (var i = 0; i < shotCount; i++) {
-            var shotName = this.evaluate(clientHelpers.getScreenshotName, i);
+            var shotName = this.evaluate(clientHelpers.getScreenshotName, file, i);
+
+            casper.log(shotName, 'error');
 
             phantomcss.screenshot('[data-shot-id="' + i + '"]', shotName);
         };
