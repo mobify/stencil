@@ -110,8 +110,6 @@ testFiles.forEach(function(path) {
         for (var i = 0; i < shotCount; i++) {
             var shotName = this.evaluate(clientHelpers.getScreenshotName, file, i);
 
-            casper.log(shotName, 'error');
-
             phantomcss.screenshot('[data-shot-id="' + i + '"]', shotName);
         };
     });
