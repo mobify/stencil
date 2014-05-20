@@ -91,16 +91,12 @@ casper.on('remote.message', function(message) {
     this.echo('Remote console.log: ' + message);
 });
 
-casper
-    .start()
-    .zoom(2)
-    .viewport(1200, 1200);
+casper.start().zoom(2).viewport(1200, 1200);
 
 var visualTestsDir = '../visual';
-var slash = fs.separator;
-
 var singleTest = casper.cli.options.only || false;
 var testFiles = [];
+var slash = fs.separator;
 
 if (singleTest) {
     testFiles = [visualTestsDir + slash + singleTest + slash + 'index.html'];
@@ -110,7 +106,7 @@ if (singleTest) {
 
 testFiles.forEach(function(path) {
     if ( !fs.exists(path) || !fs.isFile(path) ) {
-        throw new Error('Component not found. Make sure you pass type and path e.g. components/arrange');
+        throw new Error('Visual test not found. Make sure you pass type and path e.g. components/arrange');
     }
 
     var file = getFileName(path);
