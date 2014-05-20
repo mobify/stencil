@@ -97,9 +97,22 @@ casper
     .viewport(1200, 1200);
 
 var visualTestsDir = '../visual';
-var testFiles = getTestFiles(visualTestsDir);
+var slash = fs.separator;
+
+var singleTest = casper.cli.options.only || false;
+var testFiles = [];
+
+if (singleTest) {
+    testFiles = [visualTestsDir + slash + singleTest + slash + 'index.html'];
+} else {
+    testFiles = getTestFiles(visualTestsDir);
+}
 
 testFiles.forEach(function(path) {
+    if ( !fs.exists(path) || !fs.isFile(path) ) {
+        throw new Error('Component not found. Make sure you pass type and path e.g. components/arrange');
+    }
+
     var file = getFileName(path);
 
     casper.thenOpen(path);
