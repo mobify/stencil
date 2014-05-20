@@ -51,7 +51,7 @@ module.exports = function(grunt) {
 
     shell: {
         phantomcss: {
-            command: 'casperjs test test-suite.js',
+            command: 'casperjs --verbose --log-level="info" test test-suite.js',
             options: {
                 execOptions: {
                     cwd: 'tests/regression'
