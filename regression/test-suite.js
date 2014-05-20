@@ -1,7 +1,35 @@
 
+var fs = require('fs');
+var utils = require('utils');
 var phantomcss = require('../../node_modules/phantomcss/phantomcss.js');
 
-function prepareScreenshots() {
+var visualTestsDir = '../visual';
+var clientHelpers = {};
+
+function getParentDir(filePath) {
+    if ( fs.exists(filePath) && fs.isFile(filePath) ) {
+        var segments = filePath.split(fs.separator);
+        return segments[segments.length - 2];
+    }
+}
+
+function getTestFiles(path) {
+    var files = [];
+
+    if ( fs.exists(path) && fs.isFile(path) && utils.fileExt(path) === 'html' ) {
+        files.push(path);
+    } else if ( fs.isDirectory(path) ) {
+        fs.list(path).forEach(function(file) {
+            if (file !== '.' && file !== '..') { // Avoid loops.
+                files = files.concat( getTestFiles(path + '/' + file) );
+            }
+        });
+    }
+
+    return files;
+};
+
+clientHelpers.prepareScreenshots = function prepareScreenshots() {
     var tests = document.querySelectorAll('.c-test');
     var testCount = 1;
     var caseCount = 1;
@@ -25,7 +53,7 @@ function prepareScreenshots() {
     return document.querySelectorAll('[data-shot-id]').length;
 }
 
-function getScreenshotName(index) {
+clientHelpers.getScreenshotName = function getScreenshotName(index) {
     var subject = document.querySelector('[data-shot-id="' + index + '"]');
     var prefix = subject.getAttribute('data-shot-counter');
     var suffix = subject.getAttribute('data-shot-name') || false;
@@ -51,7 +79,7 @@ phantomcss.init({
     }
 });
 
-casper.on('remote.message', function(message) {
+casper.on('remote.message', function clientLog(message) {
     this.echo('Remote console.log: ' + message);
 });
 
@@ -60,16 +88,23 @@ casper
     .zoom(2)
     .viewport(1200, 1200);
 
-casper.thenOpen('../../tests/visual/components/arrange/index.html');
+// var testFiles = getTestFiles(visualTestsDir);
+var testFiles = ['../visual/components/arrange/index.html'];
 
-casper.then(function() {
-    var shotCount = this.evaluate(prepareScreenshots);
+testFiles.forEach(function(file) {
+    casper.log( getParentDir(file) , 'error');
 
-    for (var i = 0; i < shotCount; i++) {
-        var shotName = this.evaluate(getScreenshotName, i);
+    casper.thenOpen(file);
 
-        phantomcss.screenshot('[data-shot-id="' + i + '"]', shotName);
-    };
+    casper.then(function takeScreenshots() {
+        var shotCount = this.evaluate(clientHelpers.prepareScreenshots);
+
+        for (var i = 0; i < shotCount; i++) {
+            var shotName = this.evaluate(clientHelpers.getScreenshotName, i);
+
+            phantomcss.screenshot('[data-shot-id="' + i + '"]', shotName);
+        };
+    });
 });
 
 casper.then(function compare() {
