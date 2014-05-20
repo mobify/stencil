@@ -47,9 +47,21 @@ module.exports = function(grunt) {
             ],
             tasks: ['default']
         }
+    },
+
+    shell: {
+        phantomcss: {
+            command: 'casperjs test test-suite.js',
+            options: {
+                execOptions: {
+                    cwd: 'tests/regression'
+                }
+            }
+        }
     }
   });
 
   // Default task
   grunt.registerTask('default', ['sass', 'autoprefixer']);
+  grunt.registerTask('test', ['shell:phantomcss']);
 };
