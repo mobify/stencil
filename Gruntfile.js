@@ -75,9 +75,13 @@ module.exports = function(grunt) {
 
     grunt.registerTask('default', ['sass', 'autoprefixer']);
 
-    // Run all tests with `grunt test` or only one. Examples:
-    // $ `grunt test:component/arrange`
-    // $ `grunt test:utils/dimension`
+    // Run all tests or only one. Examples:
+    //
+    // $ `grunt test` // run all tests.
+    // $ `grunt test:all` // ditto
+    // $ `grunt test:all:info` // verbose output
+    // $ `grunt test:components/arrange` // only test the arrange component
+    // $ `grunt test:utils/layout:info` // only test layout utils (verbose)
 
     grunt.registerTask('test', function(only, logLevel) {
         var task = 'shell:test';
