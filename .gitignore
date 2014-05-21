@@ -4,4 +4,5 @@ bower_components
 .sass-cache
 *.css
 .DS_Store
-.diff.png
+*.diff.png
+*.fail.png
