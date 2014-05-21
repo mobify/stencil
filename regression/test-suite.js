@@ -70,6 +70,10 @@ clientHelpers.getScreenshotName = function getScreenshotName(testFile, index) {
     return testFile + '/' + counter + '-' + (name ? name : testFile);
 }
 
+casper.on('remote.message', function(message) {
+    this.echo('Remote console.log: ' + message);
+});
+
 phantomcss.init({
     libraryRoot: '../../node_modules/phantomcss',
     screenshotRoot: './screenshots',
@@ -87,19 +91,15 @@ phantomcss.init({
     }
 });
 
-casper.on('remote.message', function(message) {
-    this.echo('Remote console.log: ' + message);
-});
-
 casper.start().zoom(2).viewport(1200, 1200);
 
 var visualTestsDir = '../visual';
-var singleTest = casper.cli.options.only || false;
+var scope = casper.cli.options.scope || false;
 var testFiles = [];
 var slash = fs.separator;
 
-if (singleTest && singleTest !== 'all') {
-    testFiles = [visualTestsDir + slash + singleTest + slash + 'index.html'];
+if (scope && scope !== 'all') {
+    testFiles = [visualTestsDir + slash + scope + slash + 'index.html'];
 } else {
     testFiles = getTestFiles(visualTestsDir);
 }
