@@ -51,12 +51,12 @@ module.exports = function(grunt) {
 
         shell: {
             test: {
-                command: function(only, logLevel) {
+                command: function(scope, verbosity) {
                     var command;
 
-                    only = only ? '--only=' + only : ''; 
-                    logLevel = logLevel ? '--log-level=' + logLevel : ''; 
-                    command = 'casperjs test ' + only + ' ' + logLevel + ' --verbose test-suite.js';
+                    scope = scope ? '--scope=' + scope : '';
+                    verbosity = (verbosity === 'terse') ? '' : '--verbose';
+                    command = 'casperjs test ' + scope + ' --log-level=info ' + verbosity + ' test-suite.js';
 
                     return command;
                 },
@@ -79,15 +79,15 @@ module.exports = function(grunt) {
     //
     // $ `grunt test` // run all tests.
     // $ `grunt test:all` // ditto
-    // $ `grunt test:all:info` // verbose output
+    // $ `grunt test:all:terse` // prevent verbose output
     // $ `grunt test:components/arrange` // only test the arrange component
-    // $ `grunt test:utils/layout:info` // only test layout utils (verbose)
+    // $ `grunt test:utils/layout:terse` // only test layout utils (terse mode)
 
-    grunt.registerTask('test', function(only, logLevel) {
+    grunt.registerTask('test', function(scope, verbosity) {
         var task = 'shell:test';
 
-        task = only ? (task + ':' + only) : task;
-        task = logLevel ? (task + ':' + logLevel) : task;
+        task = scope ? (task + ':' + scope) : task;
+        task = verbosity ? (task + ':' + verbosity) : task;
 
         grunt.task.run(task);
     });
