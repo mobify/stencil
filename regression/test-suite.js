@@ -98,7 +98,7 @@ var singleTest = casper.cli.options.only || false;
 var testFiles = [];
 var slash = fs.separator;
 
-if (singleTest) {
+if (singleTest && singleTest !== 'all') {
     testFiles = [visualTestsDir + slash + singleTest + slash + 'index.html'];
 } else {
     testFiles = getTestFiles(visualTestsDir);
