@@ -52,13 +52,14 @@ module.exports = function(grunt) {
         shell: {
             test: {
                 command: function(scope, verbosity) {
-                    var command;
+                    var cmd = 'casperjs test test-suite.js';
 
-                    scope = scope ? '--scope=' + scope : '';
-                    verbosity = (verbosity === 'terse') ? '' : '--verbose';
-                    command = 'casperjs test ' + scope + ' --log-level=info ' + verbosity + ' test-suite.js';
+                    cmd += ' --pre=_begin.js --post=_end.js';
+                    cmd += ' --log-level=info';
+                    cmd += scope ? (' --scope=' + scope) : '';
+                    cmd += (verbosity === 'terse') ? '' : ' --verbose';
 
-                    return command;
+                    return cmd;
                 },
                 options: {
                     // Prevent phantomcss raising a grunt error on first run.
