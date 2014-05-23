@@ -21,6 +21,7 @@ $button-font-size: inherit !default;
 // 2. Inherit font styles from ancestor.
 // 3. Normalize `line-height` (for `input`, it can't be changed from `normal`
 //    in Firefox 4+).
+// 4. Vertically center contents regardless of padding.
 // 5. Ensure button text can wrap (`input` defaults to `pre`).
 // 6. Prevent button text from being selectable.
 // 7. Corrects inability to style tappable `input` types in iOS.
@@ -30,6 +31,7 @@ $button-font-size: inherit !default;
 
 .c-button {
     display: inline-block; // 1
+    display: inline-flex; // 1
     margin: 0;
     padding: $button-padding;
     border: $button-border;
@@ -38,6 +40,7 @@ $button-font-size: inherit !default;
     font-size: $button-font-size; // 2
     line-height: normal; // 3
     text-align: center;
+    align-items: center; // 4
     white-space: normal; // 5
     user-select: none; // 6
     -webkit-appearance: none; // 7
