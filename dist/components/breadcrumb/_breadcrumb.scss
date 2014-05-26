@@ -1,0 +1,34 @@
+// Breadcrumb
+// ==========
+//
+// Hmm...
+
+.c-breadcrumb {
+}
+
+
+// Breadcrumb: Link
+// ----------------
+//
+// The breadcrumb link class is most often put on either the breadcrumb anchor
+// tag itself, or the breadcrumb anchor's <li> tag.
+//
+// Notes:
+//
+// 1. Ensure that the breadcrumb links flow beside either other
+// 2. Remove <a>'s default underline style
+
+.c-breadcrumb__item::after {
+    display: inline-block; // 1
+    
+    a#{&} {
+        text-decoration: none; // 2
+    }
+    
+    &::after {
+        content: icon-content(chevron-right);
+    }
+}
+
+.c-breadcrumb__item.c--current {
+}
