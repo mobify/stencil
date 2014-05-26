@@ -1,0 +1,25 @@
+{!}
+
+    Alert Component Template
+    ========================
+    
+    This is the Alert component, which is used to display messages of varying importance.
+    
+    
+    How to Use
+    ----------
+    
+    1. Copy and Paste the below markup into your Adaptive.js project's
+       template directory
+    2. Add the template via includes in views or templates as needed
+    3. If relevant, it may be helpful to include in Almanac (Living Styleguide)
+
+{!}
+
+<div class="c-alert c--positive">
+    This is a positive message :)
+</div>
+
+<div class="c-alert c--negative">
+    This is a negative message :(
+</div>

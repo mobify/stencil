@@ -1,0 +1,36 @@
+// Alert
+// =====
+//
+// Alert messages intended to bring attention to important information
+
+.c-alert {
+    padding: $space $med-h-space;
+    border-width: 1px;
+    
+    border-radius: $border-radius;
+    border-style: solid;
+}
+
+
+// Alert: Affirmative
+// ------------------
+//
+// Typically for confirmation messages
+
+.c-alert.c--positive {
+    border-color: $success-border-color;
+    
+    color: $success-color;
+}
+
+
+// Alert: Warning
+// --------------
+//
+// Typically for error messages
+
+.c-alert.c--negative {
+    border-color: $error-border-color;
+    
+    color: $error-color;
+}
