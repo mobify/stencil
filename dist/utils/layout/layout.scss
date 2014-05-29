@@ -26,7 +26,7 @@
         @include clearfix;
     }
 } @else {
-    @warn 'Mixin `clearfix` from Spline not found. Run `bower install` and ensure the clearfix partial is imported in your project.'
+    @warn 'Mixin `clearfix` from Spline not found. Run `bower install` and ensure the clearfix partial is imported in your project.';
 }
 
 
