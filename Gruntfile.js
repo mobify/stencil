@@ -9,13 +9,13 @@ module.exports = function(grunt) {
         options: {
             style: 'expanded',
             loadPath: [
-                'bower_components/'
+                './'
             ]
         },
         compile_tests: {
             files: [{
                 expand: true,
-                src: 'test/**/*.scss',
+                src: 'tests/**/*.scss',
                 dest: '.',
                 ext: '.css'
             }]
@@ -34,7 +34,7 @@ module.exports = function(grunt) {
         prefix_tests: {
             files: [{
                 expand: true,
-                src: 'test/**/*.css' // overwrite compiled css
+                src: 'tests/**/*.css' // overwrite compiled css
             }]
         },
     },
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
         scss: {
             files: [
                 'dist/**/*.scss',
-                'test/**/*.scss'
+                'tests/**/*.scss'
             ],
             tasks: ['default']
         }
