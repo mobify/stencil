@@ -9,7 +9,7 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
 // For asymmetrical grids, add modifiers to grid spans.
 //
 // Markup:
-// <div class="c-grid c--{n}-up">
+// <div class="c-grid c--{n}up">
 //     <div class="c-grid__span">
 //     <div class="c-grid__span">
 //     <div class="c-grid__span">
