@@ -17,6 +17,10 @@
 //
 // 1. Ensure that the breadcrumb links flow beside either other
 // 2. Remove <a>'s default underline style
+//
+// To Do
+//
+// - [ ] Change pseudo element to be a CSS shape rather than icon font
 
 .c-breadcrumb__item::after {
     display: inline-block; // 1
