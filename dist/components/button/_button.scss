@@ -28,6 +28,9 @@ $button-font-size: inherit !default;
 // 8. Inherit font color from ancestor for all states
 //
 // N.B. “Disabled” state for links must be managed in JavaScript.
+//
+// Attribution:
+// https://github.com/suitcss/components-button/
 
 .c-button {
     display: inline-block; // 1
