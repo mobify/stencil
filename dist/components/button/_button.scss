@@ -1,6 +1,7 @@
 
 $button-padding: 0.5rem 0.75rem !default;
-$button-border: 1px solid hsl(0, 0%, 80%) !default;
+$button-border: if( variable-exists(border), $border, 1px solid hsl(0, 0%, 80%) ) !default;
+$button-border-radius: if( variable-exists(border-radius), $border-radius, 0 ) !default;
 $button-font-color: inherit !default;
 $button-font-family: inherit !default;
 $button-font-size: inherit !default;
@@ -33,7 +34,7 @@ $button-font-size: inherit !default;
     margin: 0;
     padding: $button-padding;
     border: $button-border;
-    border-radius: 0; // 1
+    border-radius: $button-border-radius; // 1
     background: none;
     font-family: $button-font-family; // 2
     font-size: $button-font-size; // 2
