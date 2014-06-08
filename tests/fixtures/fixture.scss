@@ -1,5 +1,5 @@
 
-@import '../bower_components/modularized-normalize-scss/normalize';
+@import 'bower_components/modularized-normalize-scss/normalize';
 
 @font-face {
     font-family: 'Stencil';
@@ -80,7 +80,7 @@ a {
     }
 }
 
-@import '../dist/components/test';
+@import 'dist/components/test/test';
 
 .c-fixture-title {}
 

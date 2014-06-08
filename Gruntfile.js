@@ -7,12 +7,15 @@ module.exports = function(grunt) {
 
     sass: {
         options: {
-            style: 'expanded'
+            style: 'expanded',
+            loadPath: [
+                './'
+            ]
         },
         compile_tests: {
             files: [{
                 expand: true,
-                src: 'test/**/*.scss',
+                src: 'tests/**/*.scss',
                 dest: '.',
                 ext: '.css'
             }]
@@ -31,7 +34,7 @@ module.exports = function(grunt) {
         prefix_tests: {
             files: [{
                 expand: true,
-                src: 'test/**/*.css' // overwrite compiled css
+                src: 'tests/**/*.css' // overwrite compiled css
             }]
         },
     },
@@ -40,7 +43,7 @@ module.exports = function(grunt) {
         scss: {
             files: [
                 'dist/**/*.scss',
-                'test/**/*.scss'
+                'tests/**/*.scss'
             ],
             tasks: ['default']
         }

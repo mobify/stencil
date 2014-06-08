@@ -1,0 +1,57 @@
+
+// Fractional widths
+//
+// Utils for applying fluid widths.
+
+.u-width-1of3,
+.u-width-2of6 {
+    width: (100%/3) !important;
+}
+
+.u-width-2of3,
+.u-width-4of6 {
+    width: 2 * (100%/3) !important;
+}
+
+.u-width-1of4 {
+    width: 25% !important;
+}
+
+.u-width-1of2,
+.u-width-2of4,
+.u-width-3of6 {
+    width: 50% !important;
+}
+
+.u-width-3of4 {
+    width: 75% !important;
+}
+
+.u-width-1of6 {
+    width: (100%/6) !important;
+}
+
+.u-width-5of6 {
+    width: 5 * (100%/6) !important;
+}
+
+
+// Full-width
+//
+// Force an element to full width.
+//
+// 1. Override some browser quirks, e.g. with <button>.
+
+.u-width-full {
+    display: block !important;
+    width: 100% !important; // 1
+}
+
+
+// Ensure all `.u-width-` classes keep their explicit width 
+// when inside a flexbox. In other words, prevent them
+// from growing or shrinking.
+
+[class*="u-width-"] {
+    flex: none !important;
+}

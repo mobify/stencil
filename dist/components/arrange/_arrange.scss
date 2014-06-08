@@ -1,0 +1,72 @@
+
+$h-space: 1.5rem !default;
+
+
+// Arrange
+//
+// Arrange and align single rows of content blocks. Useful for equal-height
+// columns and horizontal fit/fill.
+//
+// Markup:
+// <div class="c-arrange">
+//     <div class="c-arrange__item">…</div>
+//     <div class="c-arrange__item u-width-1of2">…</div>
+//     <div class="c-arrange__item c--shrink">…</div>
+// </div>
+
+.c-arrange {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.c-arrange__item {
+    flex: 1;
+}
+
+
+// Item proportion modifiers
+//
+// Apply these to arrange items.
+
+.c-arrange__item.c--shrink {
+    flex: initial;
+}
+
+
+// Vertically align all items.
+
+.c-arrange.c--align-top {
+    align-items: flex-start;
+}
+
+.c-arrange.c--align-middle {
+    align-items: center;
+}
+
+.c-arrange.c--align-bottom {
+    align-items: flex-end;
+}
+
+// Re-arrange the display order of up to six items. Add additional modifiers in
+// your own stylesheet to re-order more.
+
+.c-arrange__item.c--order-1 { order: 1; }
+.c-arrange__item.c--order-2 { order: 2; }
+.c-arrange__item.c--order-3 { order: 3; }
+.c-arrange__item.c--order-4 { order: 4; }
+.c-arrange__item.c--order-5 { order: 5; }
+.c-arrange__item.c--order-6 { order: 6; }
+
+
+// With gutters
+
+.c-arrange.c--gutters {
+    margin-left: ($h-space * -0.5);
+    margin-right: ($h-space * -0.5);
+}
+
+.c-arrange.c--gutters > .c-arrange__item {
+    margin: 0 ($h-space * 0.5);
+}
