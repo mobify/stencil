@@ -1,15 +1,20 @@
-# stencil
+# Stencil
 
-A collection of loosely-coupled composable UI components for mobile browsers.
+Versatile, configurable, composable UI components for mobile browsers.
 
-- Describe components and utilities
-- Explain loosely-coupled
-- Explain composable
-- Link to more docs? E.g. naming conventions?
+Stencil provides a set of building blocks for mobile UI that helps you implement common patterns faster, more reliably, and without dictating design specifics. It also provides a set of conventions based on modular and object-oriented approaches to CSS that allow you to build your own robust, testable components.
 
-## Prerequisites
+Link to More documentation here?
 
-Stencil is written in Sass, and requires Sass 3.3. For development prerequisites, see the section on Contributing.
+    - Design principles?
+    - Refer to mobify/mobify-code-style for naming conventions?
+    - List of components, their name, purpose, configurable variables and variants?
+
+
+## Requirements
+
+Stencil is written in Sass (SCSS syntax), and requires Sass 3.3.
+
 
 ## Installation
 
@@ -19,31 +24,26 @@ Install with [Bower](http://bower.io):
 bower install --save mobify/stencil
 ```
 
-## Usage
+Once installed, the Stencil library lives in your project’s `bower_components` directory. Individual components will provide a stylesheet partial (Sass), example markup (Dust) and (optionally) JavaScript.
 
-
-### Importing Stencil partials
-
-Although all components are packaged together for easy installation, you’ll need to import what you want to use from within your project’s Sass. This is easy using the `@import` directive. If you have a stylesheet at my-project/styles/main.scss, your import statement will look something like this:
+Use the Sass `@import` directive to include a component’s styles. For example, in `my-project/styles/stylesheet.scss`, I can import the Grid component like so:
 
 ```scss
 @import '../bower_components/stencil/dist/components/grid/grid';
 ```
 
-It’s recommended to import Stencil’s components after your Sass variables and before any of your local project components. This allows you control over Stencil’s variables while allowing you to build on the foundation Stencil provides.
+Always import Stencil components *after* your Sass variables and *before* any of your own components. This ensures that Stencil receives the values you want for any of its configurable variables while allowing you to reliably build on what it provides.
+
+Use {TBA method} to include any scripts the component may provide.
+
 
 ### Implementing a Stencil component
 
-Once you’ve imported a component, you use it by copying the basic HTML patterns listed with each component’s example template, e.g. stencil/dist/components/grid/grid.dust. Stencil is built as robustly as possible, so if your document semantics require different tag names, no problem.
+Stencil components are like any component you build yourself, except (as with all dependecies) you should never modify them directly. You can *configure* a Stencil component’s CSS by overriding its configurable variables in your own stylesheets. You can also *extend* components by styling them as you see fit and creating new variations on existing components. Feel free to override Stencil styles as well, although Stencil tries to be as minimal as possible so you shouldn’t often need to.
 
-Stencil components aim to provide a lot of the stuff you use on every project and none of the rest, so you’ll want to apply your own styles on top of Stencil. To build on what Stencil provides, simply write your own stylesheet that targets existing Stencil classes. This is most useful for applying the theme layer such as colours, borders, backgrounds and other non-structural styles. You’re encouraged to override existing Stencil style declarations if you need to, but you shouldn’t find yourself doing it broadly. If you’re running into that problem, please [file an issue](#).
+One of Stencil’s advantages is that you can work more with HTML and write less custom CSS. Once your theming is in place and you’ve build any custom components you need, you might find you can compose whole screens of UI by simply writing HTML implementing the markup patterns (structure and classes) defined by the component.
 
-You can also configure a Stencil component by providing alternate values for its variables. Define these in your project’s Sass, before you import Stencil components. Your values will be used without having to write any overrides.
-
-Add another page with extended usage tips, including:
-    - configuring with Grunt and grunt-contrib-sass
-    - adding bower_components to the Sass load path to shorten import statements.
-
+Note that Stencil’s components are designed to be robust. As long as you *structure* your markup as according to a component’s Dust file and apply the correct classes, you should be free to use the most appropriate, semantic HTML elements for your use case.
 
 ## License
 
