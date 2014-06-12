@@ -85,11 +85,11 @@ module.exports = function(grunt) {
     // $ `grunt test:utils/layout:terse` // only test layout utils (terse mode)
 
     grunt.registerTask('test', function(scope, verbosity) {
-        var task = 'shell:test';
+            var task = 'shell:test';
 
-        task = scope ? (task + ':' + scope) : task;
-        task = verbosity ? (task + ':' + verbosity) : task;
+            task = scope ? (task + ':' + scope) : task;
+            task = verbosity ? (task + ':' + verbosity) : task;
 
-        grunt.task.run(task);
+            grunt.task.run(['sass', 'autoprefixer', task]);
     });
 };
