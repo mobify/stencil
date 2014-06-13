@@ -14,8 +14,9 @@ testFiles.forEach(function(path) {
         var shotCount = this.evaluate(clientHelpers.prepareScreenshots);
 
         for (var i = 0; i < shotCount; i++) {
+            var fallback = file.replace('/', '-');
             var shotName = file + slash + this.evaluate(
-                clientHelpers.getScreenshotName, i, file
+                clientHelpers.getScreenshotName, i, fallback
             );
 
             phantomcss.screenshot('[data-shot-id="' + i + '"]', shotName);
