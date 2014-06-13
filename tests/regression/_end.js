@@ -1,6 +1,6 @@
 
 casper.then(function compare() {
-    phantomcss.compareAll();
+    phantomcss.compareSession();
 });
 
 casper.then(function done() {
