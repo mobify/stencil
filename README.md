@@ -1,6 +1,6 @@
 # Stencil
 
-Configurable, composable, and customizable UI components for mobile browsers.
+Configurable, composable and customizable UI components for mobile browsers.
 
 Stencil provides a set of building blocks for mobile UI that helps you implement common patterns faster, more reliably, and without dictating design specifics. It also provides a set of conventions based on modular and object-oriented approaches to CSS that allow you to build your own robust, testable components.
 
@@ -26,7 +26,7 @@ Use the Sass `@import` directive to include a component’s styles. For example,
 
 Always import Stencil components *after* your Sass variables and *before* any of your own components. This ensures that Stencil receives the values you want for any of its configurable variables while allowing you to reliably build on what it provides.
 
-### Implementing a Stencil component
+## Implementing a Stencil component
 
 Stencil components are like any component you build yourself, except (as with all dependecies) you should never modify them directly. You can *configure* a Stencil component’s CSS by overriding its configurable variables in your own stylesheets. You can also *extend* components by styling them as you see fit and creating new variations on existing components. Feel free to override Stencil styles as well, although Stencil tries to be as minimal as possible so you shouldn’t often need to.
 
