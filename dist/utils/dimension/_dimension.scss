@@ -1,6 +1,10 @@
+
 // Fractional widths
 //
-// Utils for applying fluid widths.
+// Apply fluid widths to components or sub-components.
+//
+// Attribution:
+// https://github.com/suitcss/utils-size
 
 .u-width-1of3,
 .u-width-2of6 {
@@ -37,7 +41,7 @@
 
 // Full-width
 //
-// Force an element to full width.
+// Force an element to be full width.
 //
 // 1. Override some browser quirks, e.g. with <button>.
 
@@ -48,8 +52,7 @@
 
 
 // Ensure all `.u-width-` classes keep their explicit width 
-// when inside a flexbox. In other words, prevent them
-// from growing or shrinking.
+// when inside a flexbox, preventing them from growing or shrinking.
 
 [class*="u-width-"] {
     flex: none !important;
