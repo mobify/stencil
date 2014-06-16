@@ -1,0 +1,36 @@
+{!}
+
+    Alert Component Template
+    ========================
+    
+    This is the Alert component, which is used to display messages of varying
+    importance.
+    
+    Note that the aria attributes are required! They allow screen readers to
+    make sense of this largely visual component.
+    
+    In fact, you'll notice that the component is actually hidden from screen
+    readers by the aria-hidden="true" which means that User Agents will only
+    read the aria-valuetext out loud.
+    
+    
+    How to Use
+    ----------
+    
+    1. Copy and Paste the below markup into your Adaptive.js project's
+       template directory
+    2. Add the template via includes in views or templates as needed
+    3. If relevant, it may be helpful to include in Almanac (Living Styleguide)
+
+{!}
+
+<div role="progressbar" aria-valuetext="Step {currentStep} of {maxStep}" aria-valuenow="{currentStep}">
+    <div class="c-progress" aria-hidden="true">
+        {#steps}
+            <div class="c-progress__step {stepClass}">
+                <span class="c-progress__index">{index}</span>
+                <span class="c-progress__label">{label}</span>
+            </div>
+        {/steps}
+    </div>
+</div>
