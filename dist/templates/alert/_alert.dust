@@ -16,10 +16,8 @@
 
 {!}
 
-<div class="c-alert c--positive">
-    This is a positive message :)
-</div>
-
-<div class="c-alert c--negative">
-    This is a negative message :(
-</div>
+{#alert}
+    <div class="c-alert {class}">
+        {message}
+    </div>
+{/alert}
