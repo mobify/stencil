@@ -1,0 +1,55 @@
+// Icon
+// ====
+//
+// For icons to work, the bellow dependencies are required. The dependencies are
+// what load the fonts, apply default font settings, and add the default list
+// of available icons.
+//
+// Defaults can be overriden with custom settings. Example: custom icon fonts,
+// custom formats, custom icon lists, etc.
+//
+// Dependencies:
+//
+// * _icon-font.scss (Spline)
+//     * $icon-font
+//     * $icon-font-path
+//     * $icon-font-list
+// * _font.scss (Spline)
+//     * $font-formats
+
+
+// Icon Component
+// --------------
+//
+// This is the base icon class which must be applied to the element first.
+
+.c-icon,
+[data-icon-name] {
+    @include icon-base;
+}
+
+
+// Replace Icon
+// ------------
+
+.c-icon--replace,
+[data-icon-replace="true"] {
+    @include icon-replace;
+}
+
+
+// Icon Names
+// ----------
+//
+// The icon name is a data attribute added to the element in tandem with the
+// icon component class (.c-icon)
+//
+// Icon Names and generated based on the $icon-list map. Therefore, to see the
+// full list of available icons, see $icon-list in _variables.scss
+
+@each $name, $character in $icon-list {
+    [data-icon-name="#{$name}"]::before {
+        content: icon-address($name);
+        speak: none;
+    }
+}
