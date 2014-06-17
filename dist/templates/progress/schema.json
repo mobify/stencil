@@ -1,12 +1,12 @@
 {
     "progress": {
-        "maxStep": 4,
-        "currentStep": 2,
+        "maxStep": 0,
+        "currentStep": 0,
         "steps": [
-            { "index": "1", "label": "Bag",      "stepClass": "c--completed" },
-            { "index": "2", "label": "Shipping", "stepClass": "c--current" },
-            { "index": "3", "label": "Payment",  "stepClass": "" },
-            { "index": "4", "label": "Review",   "stepClass": "" }
+            { "index": "1", "label": "", "stepClass": "" },
+            { "index": "2", "label": "", "stepClass": "" },
+            { "index": "3", "label": "", "stepClass": "" },
+            { "index": "4", "label": "", "stepClass": "" }
         ]
     }
 }
