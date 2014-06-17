@@ -18,8 +18,9 @@
 {!}
 
 <ol class="c-breadcrumb" role="navigation" aria-label="Site Breadcrumbs">
-    <li class="c-breadcrumb__item"><a href="#">Breadcrumb Level 1</a></li>
-    <li class="c-breadcrumb__item"><a href="#">Breadcrumb Level 2</a></li>
-    <li class="c-breadcrumb__item"><a href="#">Breadcrumb Level 3</a></li>
-    <li class="c-breadcrumb__item"><a href="#">Breadcrumb Level 4</a></li>
+    {#breadcrumb}
+        <li class="c-breadcrumb__item {class}">
+            <a href="{url}">{label}</a>
+        </li>
+    {/breadcrumb}
 </ol>
