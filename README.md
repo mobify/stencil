@@ -1,13 +1,10 @@
 stencil
 =======
 
-How to Install
---------------
+## Installation
 
-In the command line...
+Install with [Bower](http://bower.io):
 
 ```
 bower install --save mobify/stencil
 ```
-
-More to come.
