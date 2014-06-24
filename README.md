@@ -50,4 +50,4 @@ Note that Stencil’s components are designed to be robust. As long as you *stru
 
 ## License
 
-MIT
+*MIT License. Stencil is Copyright © 2014 Mobify. It is free software and may be redistributed under the terms specified in the LICENSE file.*
