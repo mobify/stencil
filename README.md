@@ -4,12 +4,6 @@ Configurable, composable, and customizable UI components for mobile browsers.
 
 Stencil provides a set of building blocks for mobile UI that helps you implement common patterns faster, more reliably, and without dictating design specifics. It also provides a set of conventions based on modular and object-oriented approaches to CSS that allow you to build your own robust, testable components.
 
-Link to More documentation here?
-
-    - Design principles?
-    - Refer to mobify/mobify-code-style for naming conventions?
-    - List of components, their name, purpose, configurable variables and variants?
-
 ## Requirements
 
 Stencil is written in Sass (SCSS syntax), and requires Sass 3.3.
@@ -31,9 +25,6 @@ Use the Sass `@import` directive to include a component’s styles. For example,
 ```
 
 Always import Stencil components *after* your Sass variables and *before* any of your own components. This ensures that Stencil receives the values you want for any of its configurable variables while allowing you to reliably build on what it provides.
-
-Use {TBA method} to include any scripts the component may provide.
-
 
 ### Implementing a Stencil component
 
