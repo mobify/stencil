@@ -54,7 +54,7 @@ module.exports = function(grunt) {
                 command: function(scope, verbosity) {
                     var cmd = [
                         'casperjs test test-suite.js',
-                        '--pre=_begin.js --post=_end.js',
+                        '--pre=_pre-roll.js --post=_post-roll.js',
                         '--log-level=info'
                     ];
 

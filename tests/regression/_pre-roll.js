@@ -191,5 +191,5 @@ phantomcss.init({
     fileNameGetter: formatFileName
 });
 
-// End the casper preroll. Test suite will run next.
+// End the pre-roll setup. Test suite will run next.
 casper.test.done();

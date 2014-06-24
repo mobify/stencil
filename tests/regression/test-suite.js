@@ -1,5 +1,5 @@
 
-// See _begin.js for preroll prep work.
+// See pre-roll for setup work that runs before the suite.
 
 // Start a browser session and prep for retina screenshots.
 casper.start().zoom(2).viewport(1200, 1200);
@@ -33,5 +33,5 @@ testFiles.forEach(function(path) {
     });
 });
 
-// End the test suite. Test postroll will run next.
+// End the test suite. Test post-roll will run next.
 casper.test.done();
