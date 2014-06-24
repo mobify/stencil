@@ -1,4 +1,8 @@
 
+// Wrap up after each test suite run.
+
+// If fixture screenshots exist for the tests that were run, run visual diffs
+// and flag tests as pass/fail.
 casper.then(function compare() {
     phantomcss.compareSession();
 });
