@@ -2,7 +2,9 @@
 // All Caps
 //
 // Set text uppercase, letterspaced for legibility.
-// See http://webtypography.net/2.1.6
+//
+// Attribution:
+// http://webtypography.net/2.1.6
 
 .u-text-all-caps {
   text-transform: uppercase;
@@ -14,6 +16,10 @@
 //
 // Writing-direction independent text alignment. For RTL stylesheets, re-define
 // these styles with the opposite direction. Templates need not be changed.
+//
+// Attribution:
+// https://github.com/suitcss/utils-text
+// http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/
 
 .u-text-align-start {
   text-align: left !important;
@@ -31,6 +37,9 @@
 // Vertical Alignment
 //
 // Vertical aligment of text and replaced (inline-block) elements within a line.
+//
+// Attribution:
+// https://github.com/suitcss/utils-align
 
 .u-align-middle {
   vertical-align: middle !important;
