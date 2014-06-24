@@ -3,5 +3,6 @@ node_modules
 bower_components
 .sass-cache
 *.css
-
 .DS_Store
+*.diff.png
+*.fail.png

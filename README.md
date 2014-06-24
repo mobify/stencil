@@ -1,6 +1,6 @@
 # Stencil
 
-Configurable, composable and customizable UI components for mobile browsers.
+Configurable, composable, and customizable UI components for mobile browsers.
 
 Stencil provides a set of building blocks for mobile UI that helps you implement common patterns faster, more reliably, and without dictating design specifics. It also provides a set of conventions based on modular and object-oriented approaches to CSS that allow you to build your own robust, testable components.
 
@@ -10,11 +10,9 @@ Link to More documentation here?
     - Refer to mobify/mobify-code-style for naming conventions?
     - List of components, their name, purpose, configurable variables and variants?
 
-
 ## Requirements
 
 Stencil is written in Sass (SCSS syntax), and requires Sass 3.3.
-
 
 ## Installation
 
@@ -44,6 +42,20 @@ Stencil components are like any component you build yourself, except (as with al
 One of Stencil’s advantages is that you can work more with HTML and write less custom CSS. Once your theming is in place and you’ve build any custom components you need, you might find you can compose whole screens of UI by simply writing HTML implementing the markup patterns (structure and classes) defined by the component.
 
 Note that Stencil’s components are designed to be robust. As long as you *structure* your markup as according to a component’s Dust file and apply the correct classes, you should be free to use the most appropriate, semantic HTML elements for your use case.
+
+## Testing
+
+### Setting up our visual testing suite
+
+- Important: Install CasperJS and its dependency PhantomJS. These are not package-managed and must be installed separately. This is especially true since the test suite requires the latest dev version of CasperJS to work correctly. Use only the “install with Git” instructions on this page: http://docs.casperjs.org/en/latest/installation.html
+- Verify that Casper is installed by typing `casperjs` on the command line. You should see a message with the Casper and Phantom version numbers
+- In the Stencil directory, run `npm install`.
+
+### Running tests
+
+- In the stencil directory, run `grunt test` to run all tests. This may take some time as it will run through visual diffs for all components provided in Stencil.
+- If you want to test a single component, run `grunt test:components/arrange` where `components/arrange` is the directory of the component you want to test.
+- Verbose terminal output is on by default. You can suppress this by appending `:terse` to the end of your grunt command, e.g. `grunt test:components/arrange:terse`.
 
 ## License
 

@@ -6,9 +6,6 @@ $h-space: 1.5rem !default;
 //
 // The media object, implemented with Flexbox.
 //
-// http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
-// http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
-//
 // Markup:
 // <div class="c-media">
 //     <div class="c-media__figure">
@@ -18,6 +15,10 @@ $h-space: 1.5rem !default;
 //         {content}
 //     </div>
 // </div>
+//
+// Attribution:
+// http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
+// http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
 
 .c-media {
     display: flex;
