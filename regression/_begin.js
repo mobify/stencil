@@ -70,10 +70,10 @@ function getFileName(filePath) {
         var segments = filePath.split(slash);
         var endpoint = segments.length - 1;
 
-        fileName = segments[endpoint - 1] + '/' + segments[endpoint];
+        fileName = segments[endpoint - 1] + slash + segments[endpoint];
 
         if ( fileName.match(/index.html$/) ) {
-            fileName = segments[endpoint - 2] + '/' + segments[endpoint - 1];
+            fileName = segments[endpoint - 2] + slash + segments[endpoint - 1];
         }
     } else {
         fileName = false;
