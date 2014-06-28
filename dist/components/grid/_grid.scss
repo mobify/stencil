@@ -41,7 +41,7 @@ $grid-v-gutter: if( variable-exists(grid-v-gutter), $grid-v-gutter, $v-space );
     margin: 0; // 2
     padding: 0; // 2
     font-size: 0; // 3
-    letter-spacing: -0.125rem; // 4
+    letter-spacing: -3px; // 4
     text-align: initial; // 5
 }
 
