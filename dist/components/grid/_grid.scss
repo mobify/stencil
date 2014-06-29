@@ -1,13 +1,28 @@
 
+// Neue Blank webfont
+//
+// In Android 2.3 through 4.4 it is not possible to remove whitespace between
+// inline-block elements with CSS alone. We accomplish it by using a webfont
+// which consists of a minimal set of zero-width characters. To ensure the font
+// renders immediately, it’s inlined as a data-uri.
+
+@import 'neue-blank';
+
+
+// Fallback variables
+
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $font-size: 14px !default;
 $line-height: $font-size * 1.5 !default;
 $v-space: $line-height * 0.5 !default;
 
+
+// Configurable variables
+//
 // Note: so that gutters are consistent by default, $v-space is used for both
 // horizontal and vertical gutters. These can be changed by setting variables
 // prior to import or by overriding/extending the component.
 
-$grid-font-size: if( variable-exists(grid-font-size), $grid-font-size, $font-size );
 $grid-h-gutter: if( variable-exists(grid-h-gutter), $grid-h-gutter, $v-space );
 $grid-v-gutter: if( variable-exists(grid-v-gutter), $grid-v-gutter, $v-space );
 
@@ -32,16 +47,16 @@ $grid-v-gutter: if( variable-exists(grid-v-gutter), $grid-v-gutter, $v-space );
 // Notes:
 // 1. Account for elements that are not block by default.
 // 2. Account for elements that may have margins and/or padding by default.
-// 3. Remove horizontal space between spans in most browers.
-// 4. Remove horizontal space between spans in Android through version 4.2.
+// 3. Remove horizontal space between spans in Android through version 4.2.
+// 4. Remove horizontal space between spans in most browers.
 // 5. Ensure grid spans begin at the correct side based on writing direction.
 
 .c-grid {
     display: block; // 1
     margin: 0; // 2
     padding: 0; // 2
-    font-size: 0; // 3
-    letter-spacing: -3px; // 4
+    font-family: 'neue-blank'; // 3
+    font-size: 0; // 4
     text-align: initial; // 5
 }
 
@@ -51,8 +66,8 @@ $grid-v-gutter: if( variable-exists(grid-v-gutter), $grid-v-gutter, $v-space );
 // 1. Lay out grid spans as inline-level boxes.
 // 2. Grid spans are full-width by default.
 // 3. Account for elements that may have margins and/or padding by default.
-// 4. Restore font-size set to 0 on the container.
-// 5. Restore letter-spacing
+// 4. Restore font-family.
+// 5. Restore font-size.
 // 6. Ensure grid spans begin at the correct side based on writing direction.
 // 7. Align grid spans to the top of the container, overriding default baseline
 //    alignment.
@@ -63,8 +78,8 @@ $grid-v-gutter: if( variable-exists(grid-v-gutter), $grid-v-gutter, $v-space );
     width: 100%; // 2
     margin: 0; // 3
     padding: 0; // 3
-    font-size: $grid-font-size; // 4
-    letter-spacing: initial; // 5
+    font-family: $font-family; // 4
+    font-size: $font-size; // 5
     text-align: initial; // 6
     vertical-align: top; // 7
 }
