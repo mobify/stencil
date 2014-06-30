@@ -29,16 +29,23 @@ $grid-v-gutter: if( variable-exists(grid-v-gutter), $grid-v-gutter, $v-space );
 
 // Grid
 //
-// Grid system component for composing layouts. Build simple n-up grids of
-// equal-size items or compose layouts using a formal grid system. Combine with
-// dimension utilities for setting spans, or create a custom grid with a
-// modifier and named spans.
+// Lay out other components in rows of columns. Build regular grids of equal-
+// size items or complex layouts implementing a formal grid system. Use
+// dimension utilities for setting span widths, or create a custom layout using
+// modifiers on the container and on spans.
 //
-// Markup:
+// Regular grid:
 // <div class="c-grid">
-//     <div class="c-grid__span width-2of6">
-//     <div class="c-grid__span width-3of6">
-//     <div class="c-grid__span width-1of6">
+//     <div class="c-grid__span u-width-1of3">
+//     <div class="c-grid__span u-width-1of3">
+//     <div class="c-grid__span u-width-1of3">
+// </div>
+//
+// Irregular grid:
+// <div class="c-grid">
+//     <div class="c-grid__span u-width-1of4">
+//     <div class="c-grid__span u-width-1of2">
+//     <div class="c-grid__span u-width-1of4">
 // </div>
 
 
@@ -93,14 +100,17 @@ $grid-v-gutter: if( variable-exists(grid-v-gutter), $grid-v-gutter, $v-space );
 //     <div class="c-grid__span">
 //     <div class="c-grid__span">
 // </div>
+
+// Grid container
 //
-// 1. Prevent vertical space between grid rows from creating extra space above 
-//    the top row by pulling the grid up to compensate. Using generated content 
-//    allows margins to be set on the grid component without breaking it.
+// 1. Ensure the padding used to create gutters applies only between items and
+//    is negated at the edges of the container. The vertical compensation is
+//    done with a pseudo-element to help avoid margins applied to the container
+//    from messing with the compensation.
 
 .c-grid.c--gutters {
-    margin-left: $grid-h-gutter * -0.5;
-    margin-right: $grid-h-gutter * -0.5;
+    margin-left: $grid-h-gutter * -0.5; // 1
+    margin-right: $grid-h-gutter * -0.5; // 1
 
     &:before {
         content: ' ';
@@ -109,6 +119,12 @@ $grid-v-gutter: if( variable-exists(grid-v-gutter), $grid-v-gutter, $v-space );
     }
 }
 
+// Grid span
+//
+// 1. Create gutters between rows and columns. The horizontal space is
+//    distributed to equally between left and right to make it writing-direction
+//    independent.
+
 .c-grid.c--gutters > .c-grid__span {
-    padding: ($grid-v-gutter * 1) ($grid-h-gutter * 0.5) 0;
+    padding: ($grid-v-gutter * 1) ($grid-h-gutter * 0.5) 0; // 1
 }
