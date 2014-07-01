@@ -35,10 +35,10 @@
 
 // Ratio item
 //
-// Should have a single child element. Works without the sub-component class
-// when child is an iframe, object or embed to account for situations where it’s
-// difficult to edit the ratio item’s attributes, e.g. when the element is
-// dynamically generated.
+// Should be the sole child of a Ratio container. Works without the sub-
+// component class if the node type is iframe, object or embed to account for
+// situations where it’s difficult to edit the element’s attributes, e.g.
+// when it’s dynamically generated.
 
 .c-ratio__item,
 .c-ratio > iframe,
