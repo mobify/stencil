@@ -8,6 +8,11 @@
 
     <link rel="stylesheet" href="ratio.css">
     <style>
+        iframe {
+            margin: 0;
+            border: 0;
+        }
+
         .u-margin-above-m {
             margin-top: 1.4rem;
         }
@@ -31,33 +36,42 @@
             <div class="c-test__run">
 
                 <div class="c-ratio">
-                    <div class="c-ratio__item c-fixture-box"></div>
+                    <div class="c-ratio__item c-fixture-box">1 × 1</div>
                 </div>
 
             </div>
         </div>
 
         <div class="c-test__case">
-            <p class="c-test__should">It work automatically with children that are <code>&lt;iframe&gt;</code>, <code>&lt;object&gt;</code> or <code>&lt;embed&gt;</code>.</p>
+            <p class="c-test__should">The following &lt;iframe&gt; should retain a width:height ratio of 1:1</p>
             <div class="c-test__run">
 
+                <p>iframe containing an html document with no intrinsic width or height:</p>
                 <div class="c-ratio">
-                    <iframe src="http://mobify.com" width="320px" height="480px"></iframe>
-                </div>
-
-                <div class="c-ratio u-margin-above-m">
-                    <object type="image/svg+xml" data="../../fixture.svg">Hello World from an SVG file!</object>
+                    <iframe src="../../../fixtures/fixture.html"></iframe>
                 </div>
 
             </div>
         </div>
 
         <div class="c-test__case">
-            <p class="c-test__should">It should support max-height.</p>
+            <p class="c-test__should">The following &lt;object&gt; should retain a width:height ratio of 1:1</p>
+            <div class="c-test__run">
+
+                <p>object containing a 400 × 300px svg document:</p>
+                <div class="c-ratio u-margin-above-m">
+                    <object type="image/svg+xml" data="../../../fixtures/fixture.svg" style="background: #fff;"></object>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should allow max-height to constrain the ratio.</p>
             <div class="c-test__run">
 
                 <div class="c-ratio c--max-height">
-                    <div class="c-ratio__item c-fixture-box"></div>
+                    <div class="c-ratio__item c-fixture-box">1 × 1, max-height 300px</div>
                 </div>
 
             </div>
@@ -72,7 +86,7 @@
             <div class="c-test__run">
 
                 <div class="c-ratio c--4by3">
-                    <div class="c-ratio__item c-fixture-box"></div>
+                    <div class="c-ratio__item c-fixture-box">4 × 3</div>
                 </div>
 
             </div>
@@ -87,7 +101,7 @@
             <div class="c-test__run">
 
                 <div class="c-ratio c--16by9">
-                    <div class="c-ratio__item c-fixture-box"></div>
+                    <div class="c-ratio__item c-fixture-box">16 × 9</div>
                 </div>
 
             </div>
