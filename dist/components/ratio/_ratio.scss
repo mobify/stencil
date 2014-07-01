@@ -1,29 +1,28 @@
 
 // Ratio
 //
-// Fluid element with an intrinsic width/height ratio.
-//
-// 1. The aspect-ratio hack is applied to a pseudo-element because it allows
-//    the component to accept `min/max-height`.
-// 2. The ratio is 1 × 1 by default.
+// Fluid-width element with an intrinsic width/height ratio. Create custom 
+// ratios by defining additional modifiers.
 //
 // Markup:
-// <div class="c-ratio c--4by3">
-//     <div class="c-ratio__item"></div>
-// </div>
-//
 // <div class="c-ratio c--16by9">
-//     [<iframe>|<object>|<embed>]
+//     [<el class="c-ratio__item">|<iframe>|<object>|<embed>]
 // </div>
 //
 // Attribution:
 // https://github.com/suitcss/components-flex-embed
 
+
+// Ratio container
+//
+// 1. The aspect-ratio hack is applied to a pseudo-element because it allows
+//    the component to accept `min/max-height`.
+// 2. The ratio is 1 × 1 by default.
+
 .c-ratio {
     position: relative;
     display: block;
     overflow: hidden;
-
 
     &::before { // 1
         content: '';
@@ -34,8 +33,12 @@
 }
 
 
-// Works automatically for iframes, objects and embeds to account for situations
-// where it’s not easy to edit the ratio item’s class attribute.
+// Ratio item
+//
+// Should have a single child element. Works without the sub-component class
+// when child is an iframe, object or embed to account for situations where it’s
+// difficult to edit the ratio item’s attributes, e.g. when the element is
+// dynamically generated.
 
 .c-ratio__item,
 .c-ratio > iframe,
@@ -50,14 +53,14 @@
 }
 
 
-// 4 × 3 Ratio
+// Modifier: 4 × 3 ratio
 
 .c-ratio.c--4by3::before {
     padding-bottom: 75%;
 }
 
 
-// 16 × 9 Ratio
+// Modifier: 16 × 9 ratio
 
 .c-ratio.c--16by9::before {
     padding-bottom: 56.25%;
