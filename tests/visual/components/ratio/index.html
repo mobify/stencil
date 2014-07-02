@@ -16,10 +16,6 @@
         .u-margin-above-m {
             margin-top: 1.4rem;
         }
-
-        .c-ratio.c--max-height {
-            max-height: 300px;
-        }
     </style>
 </head>
 <body>
@@ -43,35 +39,11 @@
         </div>
 
         <div class="c-test__case">
-            <p class="c-test__should">The following &lt;iframe&gt; should retain a width:height ratio of 1:1</p>
-            <div class="c-test__run">
-
-                <p>iframe containing an html document with no intrinsic width or height:</p>
-                <div class="c-ratio">
-                    <iframe src="../../../fixtures/fixture.html"></iframe>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="c-test__case">
-            <p class="c-test__should">The following &lt;object&gt; should retain a width:height ratio of 1:1</p>
-            <div class="c-test__run">
-
-                <p>object containing a 400 × 300px svg document:</p>
-                <div class="c-ratio u-margin-above-m">
-                    <object type="image/svg+xml" data="../../../fixtures/fixture.svg" style="background: #fff;"></object>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="c-test__case">
             <p class="c-test__should">It should allow max-height to constrain the ratio.</p>
             <div class="c-test__run">
 
-                <div class="c-ratio c--max-height">
-                    <div class="c-ratio__item c-fixture-box">1 × 1, max-height 300px</div>
+                <div class="c-ratio" style="max-height: 200px">
+                    <div class="c-ratio__item c-fixture-box">1 × 1, max-height 200px</div>
                 </div>
 
             </div>
