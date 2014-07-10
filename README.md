@@ -34,6 +34,43 @@ One of Stencil’s advantages is that you can work more with HTML and write less
 
 Note that Stencil’s components are designed to be robust. As long as you *structure* your markup as according to a component’s example markup and apply the correct classes, you should be free to use the most appropriate, semantic HTML elements for your use case.
 
+### Configuring and extending
+
+Components are customizable in two ways: *configuration* and *extension*. Configure a component by setting a component’s variables *before* you import the component, and extend by adding/overriding styles or adding new modifiers *after* importing the component. The order is important, because each component will use its default values for variables unless you provide your own. For example, assume you have the following in your main stylesheet:
+
+```scss
+@import 'variables'; // Do this first, so Stencil is aware of your settings.
+@import '../bower_components/stencil/dist/components/button/button'; // Import Stencil components before yours.
+@import 'my-components/button'; // Add styles to Stencil components after importing them.
+```
+
+The contents of these files might look like this:
+
+```scss
+// _variables.scss
+
+// Configure some variables for Stencil’s button:
+$button-padding: 5px 10px;
+$button-border-radius: 5px;
+```
+
+```scss
+// my-components/_button.scss
+
+// Override or add to a Stencil style:
+.c-button {
+    border: 0; // override
+    background-color: hsl(200, 70%, 50%); // add
+}
+
+// Extend with a new modifier, in this case for a button that uses the site’s brand color:
+.c-button.c--brand-color {
+    background: $brand;
+    color: #fff;
+}
+```
+
+
 ## Testing
 
 ### Setting up our visual testing suite
