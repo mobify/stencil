@@ -71,6 +71,17 @@ $button-border-radius: 5px;
 ```
 
 
+## Naming conventions
+
+Stencil uses Mobify’s variation on the BEM (Block/Element/Modifier) convention. Read more about the details of the convention in our open source [CSS style guide](https://github.com/mobify/mobify-code-style/blob/master/css/Readme.md#component-oriented-naming).
+
+Stencil adds one extra convention to this: utility classes. These special classes are conceptually a bit like a Sass mixin: they all you to “mix in” or enhance an existing component with a focused set of new styles. Unlike mixins, Stencil utility classes are applied as classes in your markup. Some things to note:
+
+1. Utility classes should apply a focused set of CSS properties that are applicable across a wide range of components;
+2. Utility classes use a `u-` prefix instead of the `c-` prefix used for a component’s class name.
+3. Utility classes almost always use `!important` in their styles. This is to ensure their styles always apply on top of other styles. Use utiliy classes surgically to adjust existing components, and use with care.
+
+
 ## Testing
 
 ### Setting up our visual testing suite
