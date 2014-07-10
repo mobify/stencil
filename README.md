@@ -1,6 +1,6 @@
 # Stencil
 
-Configurable, composable and customizable UI components for mobile browsers.
+Customizable, composable and testable UI components for mobile browsers.
 
 Stencil provides a set of building blocks for mobile UI that helps you implement common patterns faster, more reliably, and without dictating design specifics. It also provides a set of conventions based on modular and object-oriented approaches to CSS that allow you to build your own robust, testable components.
 
