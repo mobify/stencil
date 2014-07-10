@@ -75,7 +75,9 @@ $button-border-radius: 5px;
 
 Stencil uses Mobify’s variation on the BEM (Block/Element/Modifier) convention. Read more about the details of the convention in our open source [CSS style guide](https://github.com/mobify/mobify-code-style/blob/master/css/Readme.md#component-oriented-naming).
 
-Stencil adds one extra convention to this: utility classes. These special classes are conceptually a bit like a Sass mixin: they all you to “mix in” or enhance an existing component with a focused set of new styles. Unlike mixins, Stencil utility classes are applied as classes in your markup. Some things to note:
+Stencil adds one extra convention to this: utility classes. These special classes are conceptually a bit like a Sass mixin: they allow you to “mix in” new styles into an existing component. Unlike mixins, Stencil utility classes are applied as classes in your markup. An example of a utility class is `u-width-full`. It does exactly what you’d think: makes an element take up the full width of its container. This utility class can be used in conjunction with the Grid component (along with other width utilities) for building layout, and can also be applied for example to make buttons full-width without needing a custom full-width button modifier.
+
+Some things to note about utility classes:
 
 1. Utility classes should apply a focused set of CSS properties that are applicable across a wide range of components;
 2. Utility classes use a `u-` prefix instead of the `c-` prefix used for a component’s class name.
