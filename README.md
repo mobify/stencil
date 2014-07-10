@@ -65,7 +65,7 @@ $button-border-radius: 5px;
 
 // Extend with a new modifier, in this case for a button that uses the site’s brand color:
 .c-button.c--brand-color {
-    background: $brand;
+    background: $brand-color;
     color: #fff;
 }
 ```
