@@ -80,7 +80,7 @@ Stencil adds one extra convention to this: utility classes. These special classe
 Some things to note about utility classes:
 
 1. Utility classes should apply a focused set of CSS properties that are applicable across a wide range of components;
-2. Utility classes use a `u-` prefix instead of the `c-` prefix used for a component’s class name.
+2. Utility classes use a `u-` prefix instead of the `c-` prefix used for a component’s class name;
 3. Utility classes almost always use `!important` in their styles. This is to ensure their styles always apply on top of other styles. Use utiliy classes surgically to adjust existing components, and use with care.
 
 
