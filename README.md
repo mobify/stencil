@@ -16,7 +16,7 @@ Install with [Bower](http://bower.io):
 bower install --save mobify/stencil
 ```
 
-Once installed, the Stencil library lives in your project’s `bower_components` directory. Individual components will provide a stylesheet partial (Sass), example markup (Dust) and (optionally) JavaScript.
+Once installed, the Stencil library lives in your project’s `bower_components` directory. Individual components will provide a stylesheet partial (Sass) including example markup and (optionally) JavaScript.
 
 Use the Sass `@import` directive to include a component’s styles. For example, in `my-project/styles/stylesheet.scss`, I can import the Grid component like so:
 
@@ -26,13 +26,13 @@ Use the Sass `@import` directive to include a component’s styles. For example,
 
 Always import Stencil components *after* your Sass variables and *before* any of your own components. This ensures that Stencil receives the values you want for any of its configurable variables while allowing you to reliably build on what it provides.
 
-## Implementing a Stencil component
+## Using a Stencil component
 
 Stencil components are like any component you build yourself, except (as with all dependecies) you should never modify them directly. You can *configure* a Stencil component’s CSS by overriding its configurable variables in your own stylesheets. You can also *extend* components by styling them as you see fit and creating new variations on existing components. Feel free to override Stencil styles as well, although Stencil tries to be as minimal as possible so you shouldn’t often need to.
 
 One of Stencil’s advantages is that you can work more with HTML and write less custom CSS. Once your theming is in place and you’ve build any custom components you need, you might find you can compose whole screens of UI by simply writing HTML implementing the markup patterns (structure and classes) defined by the component.
 
-Note that Stencil’s components are designed to be robust. As long as you *structure* your markup as according to a component’s Dust file and apply the correct classes, you should be free to use the most appropriate, semantic HTML elements for your use case.
+Note that Stencil’s components are designed to be robust. As long as you *structure* your markup as according to a component’s example markup and apply the correct classes, you should be free to use the most appropriate, semantic HTML elements for your use case.
 
 ## Testing
 
