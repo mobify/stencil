@@ -15,7 +15,7 @@
   ],
   "main": "",
   "dependencies": {
-    "spline": "~0.2.1"
+    "spline": "~0.3"
   },
   "devDependencies": {
     "modularized-normalize-scss": "~3.0.1"
