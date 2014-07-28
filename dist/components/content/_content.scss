@@ -32,7 +32,7 @@ $content-max-width: none !default;
 // (line length) of text. Content is centered when the container exceeds the
 // maximum width.
 
-@if (type-of($content-max-width) == number) {
+@if type-of($content-max-width) == number {
     .c-content.c--capped {
         margin-left: auto;
         margin-right: auto;
