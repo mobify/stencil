@@ -69,7 +69,7 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
 
             @for $i from 2 through $n {
                 > .c-grid__span:nth-of-type(#{$n}n-#{$i - 1}) {
-                    left: -($grid-gutter * $idx);
+                    left: -($grid-gutter * ($i - 1));
                 }
             }
         }
