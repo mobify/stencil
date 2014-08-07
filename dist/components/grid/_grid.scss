@@ -68,9 +68,7 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
             padding-left: $grid-gutter * ($n - 1);
 
             @for $i from 2 through $n {
-                $idx: $i - 1;
-
-                > .c-grid__span:nth-of-type(#{$n}n-#{$idx}) {
+                > .c-grid__span:nth-of-type(#{$n}n-#{$i - 1}) {
                     left: -($grid-gutter * $idx);
                 }
             }
