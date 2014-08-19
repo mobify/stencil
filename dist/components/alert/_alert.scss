@@ -3,12 +3,27 @@
 //
 // Alert messages intended to bring attention to important information
 
+$alert-v-space: if( variable-exists(space), $space, 10px ) !default;
+$alert-h-space: if( variable-exists(space), $space, 10px ) !default;
+
+$alert-border-width:  1px !default;
+$alert-border-radius: if( variable-exists(border-radius), $border-radius, 0 ) !default;
+$alert-border-style:  solid !default;
+
+$alert-neutral-color:  if( variable-exists(border-color), $border-color, gray ) !default;
+$alert-positive-color: if( variable-exists(positive-color), $success-color, green ) !default;
+$alert-negative-color: if( variable-exists(negative-color), $negative-color, red ) !default;
+
+$alert-border-color:          $alert-neutral-color !default;
+$alert-positive-border-color: $alert-positive-color !default;
+$alert-negative-border-color: $alert-negative-color !default;
+
 .c-alert {
-    padding: $space $med-h-space;
-    border-width: 1px;
-    
+    padding: $alert-v-space $alert-h-space;
+    border-width: $alert-border-width;
+    border-color: $alert-border-color;
+    border-style: $alert-border-style;
     border-radius: $border-radius;
-    border-style: solid;
 }
 
 
@@ -18,9 +33,9 @@
 // Typically for confirmation messages
 
 .c-alert.c--positive {
-    border-color: $success-border-color;
-    
-    color: $success-color;
+    border-color: $alert-positive-border-color;
+
+    color: $alert-positive-color;
 }
 
 
@@ -30,7 +45,7 @@
 // Typically for error messages
 
 .c-alert.c--negative {
-    border-color: $error-border-color;
-    
-    color: $error-color;
+    border-color: $alert-negative-border-color;
+
+    color: $alert-negative-color;
 }
