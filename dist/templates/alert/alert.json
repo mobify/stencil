@@ -1,7 +1,16 @@
 {
     "alert": [
-        { "message": "", "class": "" },
-        { "message": "", "class": "" },
-        { "message": "", "class": "" }
+        {
+            "message": "Hurray! This is a success message!",
+            "class": "c--affirmation"
+        },
+        {
+            "message": "Uh oh, something went terribly wrong!",
+            "class": "c--warning"
+        },
+        {
+            "message": "Hmm, you might want to keep something in mind!",
+            "class": "c--caution"
+        }
     ]
 }
