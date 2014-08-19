@@ -22,13 +22,13 @@
 //
 // - [ ] Change pseudo element to be a CSS shape rather than icon font
 
-.c-breadcrumb__item::after {
+.c-breadcrumb__item {
     display: inline-block; // 1
-    
+
     a#{&} {
         text-decoration: none; // 2
     }
-    
+
     &::after {
         content: icon-content(chevron-right);
     }
