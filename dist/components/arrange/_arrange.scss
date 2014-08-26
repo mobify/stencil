@@ -19,9 +19,10 @@ $h-space: 1.5rem !default;
 
 .c-arrange {
     display: flex;
-    list-style: none;
     margin: 0;
     padding: 0;
+
+    list-style: none;
 }
 
 // 1. Ensure inline elements are treated as block-level.
@@ -74,8 +75,8 @@ $h-space: 1.5rem !default;
 // With gutters
 
 .c-arrange.c--gutters {
-    margin-left: ($h-space * -0.5);
     margin-right: ($h-space * -0.5);
+    margin-left: ($h-space * -0.5);
 }
 
 .c-arrange.c--gutters > .c-arrange__item {

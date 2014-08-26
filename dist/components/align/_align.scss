@@ -14,20 +14,17 @@
 // http://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
 
 .c-align {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.c-align__item {}
-
 
 // Alignment modifiers
 
 .c-align__item.c--align-top {
-  align-self: flex-start;
+    align-self: flex-start;
 }
 
 .c-align__item.c--align-bottom {
-  align-self: flex-end;
+    align-self: flex-end;
 }

@@ -26,9 +26,10 @@ $test-border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
 // https://github.com/suitcss/components-test/
 
 .c-test {
-    margin-left: ($h-space * -0.75);
     margin-right: ($h-space * -0.75);
+    margin-left: ($h-space * -0.75);
     border: $test-border;
+
     border-radius: 3px;
 }
 
@@ -49,18 +50,22 @@ $test-border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
 .c-test__should {
     margin: 0;
     padding: ($v-space * 0.5) ($h-space * 0.75);
+
     font-weight: bold;
 }
 
 .c-test__a-b {
-    width: 100%;
     table-layout: fixed;
+    width: 100%;
     margin-top: $v-space * 0.25;
+
     font-size: 0.9em;
 
     th {
         position: relative;
+
         padding: 0.25em 0 0.5em;
+
         font-weight: normal;
     }
 
@@ -73,6 +78,8 @@ $test-border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
 .c-test__run {
     margin: 0;
     padding: ($h-space * 0.75);
+
     background: hsl(0, 0%, 96%);
+
     color: hsl(0, 0%, 45%);
 }

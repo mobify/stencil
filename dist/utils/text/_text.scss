@@ -7,8 +7,8 @@
 // http://webtypography.net/2.1.6
 
 .u-text-all-caps {
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 
@@ -22,15 +22,15 @@
 // http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/
 
 .u-text-align-start {
-  text-align: left !important;
+    text-align: left !important;
 }
 
 .u-text-align-center {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 .u-text-align-end {
-  text-align: right !important;
+    text-align: right !important;
 }
 
 
@@ -42,9 +42,9 @@
 // https://github.com/suitcss/utils-align
 
 .u-align-middle {
-  vertical-align: middle !important;
+    vertical-align: middle !important;
 }
 
 .u-align-baseline {
-  vertical-align: baseline !important;
+    vertical-align: baseline !important;
 }

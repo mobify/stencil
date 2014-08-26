@@ -1,7 +1,7 @@
 
 // Ratio
 //
-// Fluid-width element with an intrinsic width/height ratio. Create custom 
+// Fluid-width element with an intrinsic width/height ratio. Create custom
 // ratios by defining additional modifiers.
 //
 // Markup:
@@ -21,11 +21,13 @@
 
 .c-ratio {
     position: relative;
+
     display: block;
     overflow: hidden;
 
     &::before { // 1
         content: '';
+
         display: block;
         width: 100%;
         padding-bottom: 100%; // 2
@@ -37,8 +39,8 @@
 //
 // Should be the sole child of a Ratio container.
 //
-// @todo There are issues in iOS when placing <iframe> or <object> elements 
-// within a ratio component. Solutions depend on context, but we need a good 
+// @todo There are issues in iOS when placing <iframe> or <object> elements
+// within a ratio component. Solutions depend on context, but we need a good
 // one, at least for iframes.
 
 .c-ratio__item {
@@ -46,6 +48,7 @@
     top: 0;
     bottom: 0;
     left: 0;
+
     width: 100%;
     min-height: 100%;
 }
