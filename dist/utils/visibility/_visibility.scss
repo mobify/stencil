@@ -1,11 +1,20 @@
-
-// Visually Hidden
-//
-// Remove from flow but leave available to screen readers.
+// Visibility Utils
+// ===
 //
 // Attribution:
-// https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
-// https://github.com/suitcss/utils-state/
+//
+// - https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
+// - https://github.com/suitcss/utils-state/
+
+
+// Hide visually and from screen readers.
+
+.u-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// Remove from flow but leave available to screen readers.
 
 .u-visually-hidden {
     position: absolute !important;
