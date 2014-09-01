@@ -12,14 +12,24 @@
 //     <div class="c-grid__span u-width-1of2">
 //     <div class="c-grid__span u-width-1of4">
 // </div>
+//
+// Attribution:
+//
+// - https://github.com/suitcss/components-grid/
 
-// In Android Browser (2.3–4.3) it is not possible to remove whitespace between
-// inline-block elements with CSS alone. We accomplish it by using a webfont
-// which consists of a single zero-width character (\0020, the space character).
-// To ensure the font renders immediately, it’s inlined as a data-uri.
+
+// In Android Browser (2.3 through 4.0.x) it is not possible to remove
+// whitespace between inline-block elements with CSS alone. We accomplish it by
+// using a webfont which consists of a single zero-width character (\0020, the
+// space character). To ensure the font renders immediately, it’s inlined as
+// a data-uri.
 
 @import 'neue-blank';
 
+
+// Configurable variables
+// ---
+//
 // By default horizontal and vertical gutters are both set using $v-space so
 // they are consistent with one another.
 
@@ -34,7 +44,7 @@ $font-size: 1rem !default;
 //
 // 1. Account for elements that are not block by default.
 // 2. Account for elements that may have margins and/or padding by default.
-// 3. Remove horizontal space between spans in Android through version 4.2.
+// 3. Remove horizontal space between spans in Android through version 4.0.x
 // 4. Remove horizontal space between spans in most browers.
 // 5. Ensure grid spans begin at the correct side based on writing direction.
 
