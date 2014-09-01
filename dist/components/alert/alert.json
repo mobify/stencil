@@ -1,16 +1,16 @@
 {
     "alert": [
         {
-            "message": "Hurray! This is a positive message!",
-            "class": "c--positive"
+            "message": "Hmm, you might want to keep something in mind!",
+            "class": ""
+        },
+        {
+            "message": "Hurray! Something was successful!",
+            "class": "c--success"
         },
         {
             "message": "Uh oh, something went terribly wrong!",
-            "class": "c--negative"
-        },
-        {
-            "message": "Hmm, you might want to keep something in mind!",
-            "class": "c--neutral"
+            "class": "c--error"
         }
     ]
 }
