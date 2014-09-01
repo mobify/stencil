@@ -1,29 +1,45 @@
 
-$h-space: 1.5rem !default;
-
-
 // Arrange
+// ===
 //
-// Arrange and align single rows of content blocks. Useful for equal-height
-// columns and horizontal fit/fill.
+// Arrange and align a row of items with a lot of control. Provides a
+// declarative, robust cross-browser way of using flexbox.
 //
-// Markup:
-// <div class="c-arrange">
+// Example markup:
+//
+// <div class="c-arrange c--align-middle c--gutters">
 //     <div class="c-arrange__item">…</div>
 //     <div class="c-arrange__item u-width-1of2">…</div>
 //     <div class="c-arrange__item c--shrink">…</div>
 // </div>
 //
 // Attribution:
-// https://github.com/suitcss/components-arrange/
+//
+// - https://github.com/suitcss/components-arrange/
+
+
+// Configurable variables
+// ---
+
+$arrange__gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
+
+
+// Arrange root
+// ---
+//
+// 1. Remove default styles present on common root elements.
 
 .c-arrange {
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    list-style: none; // 1
+    margin: 0; // 1
+    padding: 0; // 1
 }
 
+
+// Arrange Item
+// ---
+//
 // 1. Ensure inline elements are treated as block-level.
 // 2. Prevent width collapsing in old implementations.
 
@@ -34,19 +50,8 @@ $h-space: 1.5rem !default;
 }
 
 
-// Item proportion modifiers
-//
-// Apply these to arrange items.
-//
-// 1. Ensure width collapses in old implementations.
-
-.c-arrange__item.c--shrink {
-    flex: initial;
-    width: auto; // 1
-}
-
-
-// Vertically align all items.
+// Modifiers: vertical alignment
+// ---
 
 .c-arrange.c--align-top {
     align-items: flex-start;
@@ -60,6 +65,23 @@ $h-space: 1.5rem !default;
     align-items: flex-end;
 }
 
+
+// Item modifier: shrink
+// ---
+//
+// Shrink Arrange items to a minimum size.
+//
+// 1. Ensure width collapses in old implementations.
+
+.c-arrange__item.c--shrink {
+    flex: initial;
+    width: auto; // 1
+}
+
+
+// Item modifiers: display order
+// ---
+//
 // Re-arrange the display order of up to six items. Add additional modifiers in
 // your own stylesheet to re-order more.
 
@@ -71,13 +93,15 @@ $h-space: 1.5rem !default;
 .c-arrange__item.c--order-6 { order: 6; }
 
 
-// With gutters
+// Modifier: gutters
+//
+// Add standard horizontal space between items.
 
 .c-arrange.c--gutters {
-    margin-left: ($h-space * -0.5);
-    margin-right: ($h-space * -0.5);
+    margin-left: ($arrange__gutter * -0.5);
+    margin-right: ($arrange__gutter * -0.5);
 }
 
 .c-arrange.c--gutters > .c-arrange__item {
-    margin: 0 ($h-space * 0.5);
+    margin: 0 ($arrange__gutter * 0.5);
 }
