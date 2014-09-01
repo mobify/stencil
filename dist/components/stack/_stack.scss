@@ -1,17 +1,22 @@
-$v-space: 1.5rem !default;
-$border: 1px solid hsl(0, 0%, 80%) !default;
-$stack-border: if( variable-exists('stack-border'), $stack-border, $border );
-
 
 // Stack
+// ===
 //
-// A vertical set of items separated by space.
+// A vertical set of items separated by space with optional dividers.
 //
-// Markup:
-// <div class="c-stack">
+// Example Markup:
+//
+// <div class="c-stack c--ruled">
 //     <div class="c-stack__item">
 //     <div class="c-stack__item">
 // </div>
+
+$stack__gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
+$stack__border: if( variable-exists(border), $border, 1px solid hsl(0, 0%, 80%) ) !default;
+
+
+// Stack root
+// ---
 
 .c-stack {
     margin: 0;
@@ -19,10 +24,14 @@ $stack-border: if( variable-exists('stack-border'), $stack-border, $border );
     list-style: none;
 }
 
+
+// Stack item
+// ---
+
 .c-stack__item {
     display: block;
-    padding-top: $v-space * 0.5;
-    padding-bottom: $v-space * 0.5;
+    padding-top: $stack__gutter;
+    padding-bottom: $stack__gutter;
 
     &:first-child {
         padding-top: 0;
@@ -34,18 +43,13 @@ $stack-border: if( variable-exists('stack-border'), $stack-border, $border );
 }
 
 
-// Ruled Stack
+// Modifier: ruled
+// ---
 //
-// A vertical set of items separated by space and horizontal rules.
-//
-// Markup:
-// <div class="c-stack c--ruled">
-//     <div class="c-stack__item">
-//     <div class="c-stack__item">
-// </div>
+// Adds horizontal rules (borders) between the items.
 
 .c-stack.c--ruled > .c-stack__item {
-    border-top: $stack-border;
+    border-top: $stack__border;
 
     &:first-child {
         border-top-width: 0;
@@ -53,20 +57,15 @@ $stack-border: if( variable-exists('stack-border'), $stack-border, $border );
 }
 
 
-// Bordered Stack
+// Modifier: bordered
+// ---
 //
-// A vertical set of items bounded by an outer border.
-//
-// Markup:
-// <div class="c-stack c--bordered">
-//     <div class="c-stack__item">
-//     <div class="c-stack__item">
-// </div>
+// Adds outer borders around the entire stack.
 
 .c-stack.c--bordered {
-    border: $stack-border
+    border: $stack__border;
 }
 
 .c-stack.c--bordered > .c-stack__item {
-    padding: $v-space * 0.5;
+    padding: $stack__gutter;
 }
