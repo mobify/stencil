@@ -6,12 +6,12 @@
 // - https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
 // - https://github.com/suitcss/utils-state/
 
+// Hide visually and from screen readers. The html5 `hidden` attribute is
+// preferred to the u-hidden class because it exactly matches our intent and
+// has machine-readable semantics.
 
-// Hide visually and from screen readers.
-
-.u-hidden {
+[hidden] {
     display: none !important;
-    visibility: hidden;
 }
 
 // Remove from flow but leave available to screen readers.
