@@ -22,16 +22,25 @@
 .c-align {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 
-// Modifiers: vertical alignment
+// Modifiers: alignment
 // ---
 
 .c-align.c--top {
-    align-items: top;
+    align-items: flex-start;
 }
 
 .c-align.c--bottom {
-    align-items: bottom;
+    align-items: flex-end;
+}
+
+.c-align.c--start {
+    justify-content: flex-start;
+}
+
+.c-align.c--end {
+    justify-content: flex-end;
 }
