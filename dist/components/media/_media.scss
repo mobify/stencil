@@ -24,7 +24,7 @@
 // Configurable variables
 // ---
 
-$media__gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
+$media__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 
 
 // Media root
@@ -40,7 +40,7 @@ $media__gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 // ---
 
 .c-media__figure {
-    margin-right: $media__gutter;
+    margin-right: $media__h-gutter;
 }
 
 
@@ -70,5 +70,5 @@ $media__gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 .c-media.c--reversed > .c-media__figure {
     order: 1;
     margin-right: 0;
-    margin-left: $media__gutter;
+    margin-left: $media__h-gutter;
 }

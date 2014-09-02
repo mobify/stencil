@@ -21,7 +21,7 @@
 // Configurable variables
 // ---
 
-$arrange__gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
+$arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 
 
 // Arrange root
@@ -98,10 +98,10 @@ $arrange__gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 // Add standard horizontal space between items.
 
 .c-arrange.c--gutters {
-    margin-left: ($arrange__gutter * -0.5);
-    margin-right: ($arrange__gutter * -0.5);
+    margin-left: ($arrange__h-gutter * -0.5);
+    margin-right: ($arrange__h-gutter * -0.5);
 }
 
 .c-arrange.c--gutters > .c-arrange__item {
-    margin: 0 ($arrange__gutter * 0.5);
+    margin: 0 ($arrange__h-gutter * 0.5);
 }
