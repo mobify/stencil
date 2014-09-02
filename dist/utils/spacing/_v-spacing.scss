@@ -2,45 +2,45 @@
 // Vertical Spacing utils
 // ===
 //
-// Granular control of vertical spacing independent of a component. Values
-// default to a scale based on global spacing, and are configurable.
+// Granular control of vertical spacing independent of a component. Suggested
+// spacing sizes:
 //
-// Suffixes:
+// 0: none
+// s: small
+// m: medium
+// l: large
 //
-// 0:   none
-// sm:  small
-// md:  medium
-// lg:  large
-// xlg: extra-large
+// Example markup:
+//
+// <h1 class="u-margin-top-s u-margin-bottom-l">Welcome</h1>
+
+
+// Private variables
+// ---
+
+$v-spacing__unit: if( variable-exists(v-unit), $v-unit, 5px );
 
 
 // Configurable variables
 // ---
 
-$v-spacing__md: if( variable-exists(v-space, $v-space), 10px ) !default;
-$v-spacing__sm: $v-spacing__md / 2 !default;
-$v-spacing__lg: $v-spacing__md * 2 !default;
-$v-spacing__xlg: $v-spacing__md * 3 !default;
-$v-spacing__xxlg: $v-spacing__md * 4 !default;
+$v-spacing__map: (
+    0: 0,
+    s: round($v-spacing__unit),
+    m: round($v-spacing__unit) * 2,
+    l: round($v-spacing__unit) * 3
+) !default;
 
 
-// Top margins
+// Margins
 // ---
 
-.u-margin-top-0    { margin-top: 0 !important; }
-.u-margin-top-sm   { margin-top: $v-spacing__sm !important; }
-.u-margin-top-md   { margin-top: $v-spacing__md !important; }
-.u-margin-top-lg   { margin-top: $v-spacing__lg !important; }
-.u-margin-top-xlg  { margin-top: $v-spacing__xlg !important; }
-.u-margin-top-xxlg { margin-top: $v-spacing__xxlg !important; }
+@each $size, $value in $v-spacing__map {
+    .u-margin-top-#{$size} {
+        margin-top: $value !important;
+    }
 
-
-// Bottom margins
-// ---
-
-.u-margin-bottom-0    { margin-bottom: 0 !important; }
-.u-margin-bottom-sm   { margin-bottom: $v-spacing__sm !important; }
-.u-margin-bottom-md   { margin-bottom: $v-spacing__md !important; }
-.u-margin-bottom-lg   { margin-bottom: $v-spacing__lg !important; }
-.u-margin-bottom-xlg  { margin-bottom: $v-spacing__xlg !important; }
-.u-margin-bottom-xxlg { margin-bottom: $v-spacing__xxlg !important; }
+    .u-margin-bottom-#{$size} {
+        margin-bottom: $value !important;
+    }
+}

@@ -2,52 +2,57 @@
 // Horizontal Spacing utils
 // ===
 //
-// Granular control of horizontal spacing independent of a component. Values
-// include a default scale based on global spacing plus values based on relative
-// typographic sizes; all spacings are configurable.
-//
-// `start` and `end` are writing-direction independent forms for `left` and
-// `right`. For right-to-left localizations, create an alternate version of this
-// stylesheet with the property directions reversed, e.g.
-//
-// Suffixes:
+// Granular control of horizontal spacing independent of a component. Suggested
+// spacing sizes:
 //
 // 0:  none
 // th: thick space (about 1.5× a “normal” word space)
 // en: en space (half an em)
 // em: em space
-// sm: small
-// md: medium
-// lg: large
+// s:  small
+// m:  medium
+// l:  large
+//
+// Example markup:
+//
+// <span class="c-icon u-margin-right-en"></span> Menu
+
+
+// Private variables
+// ---
+
+$h-spacing__unit: if( variable-exists(h-unit), $h-unit, 8px );
 
 
 // Configurable variables
 // ---
 
-$h-spacing__md: if( variable-exists(h-space, $h-space), 21px ) !default;
-$h-spacing__sm: $h-spacing__md / 2 !default;
-$h-spacing__lg: $h-spacing__md * 1.5 !default;
+$h-spacing__map: (
+    0: 0,
+    th: 0.333em,
+    en: 0.5em,
+    em: 1em,
+    s: round($h-spacing__unit),
+    m: round($h-spacing__unit) * 2,
+    l: round($h-spacing__unit) * 3
+) !default;
 
 
-// Left margins
+// Margins
 // ---
+//
+// `start` and `end` are writing-direction independent forms for `left` and
+// `right`. For right-to-left localizations, create an alternate version of this
+// stylesheet with the property directions reversed, e.g.
+//
+// .u-margin-start-#{$size} { margin-right: $value !important; }
 
-.u-margin-start-0  { margin-left: 0 !important; }
-.u-margin-start-th { margin-left: 0.333em !important; }
-.u-margin-start-en { margin-left: 0.5em !important; }
-.u-margin-start-em { margin-left: 1em !important; }
-.u-margin-start-sm { margin-left: $h-spacing__sm !important; }
-.u-margin-start-md { margin-left: $h-spacing__md !important; }
-.u-margin-start-lg { margin-left: $h-spacing__lg !important; }
+@each $size, $value in $h-spacing__map {
+    .u-margin-start-#{$size} {
+        margin-left: $value !important;
+    }
 
-
-// Left margins
-// ---
-
-.u-margin-end-0  { margin-right: 0 !important; }
-.u-margin-end-th { margin-right: 0.333em !important; }
-.u-margin-end-en { margin-right: 0.5em !important; }
-.u-margin-end-em { margin-right: 1em !important; }
-.u-margin-end-sm { margin-right: $h-spacing__sm !important; }
-.u-margin-end-md { margin-right: $h-spacing__md !important; }
-.u-margin-end-lg { margin-right: $h-spacing__lg !important; }
+    .u-margin-end-#{$size} {
+        margin-right: $value !important;
+    }
+}
