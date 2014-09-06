@@ -15,7 +15,7 @@
   ],
   "main": "",
   "dependencies": {
-    "spline": "~0.2.1"
+    "spline": "^0"
   },
   "devDependencies": {
     "modularized-normalize-scss": "~3.0.1"
@@ -25,6 +25,7 @@
     "node_modules",
     "bower_components",
     "package.json",
+    "Gruntfile.js",
     "tests",
     "test"
   ],
