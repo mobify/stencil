@@ -3,43 +3,51 @@
 //
 // Alert messages intended to bring attention to important information
 
-$alert-v-space: if( variable-exists(space), $space, 10px ) !default;
-$alert-h-space: if( variable-exists(space), $space, 10px ) !default;
 
-$alert-border-width:  1px !default;
-$alert-border-style:  solid !default;
+// Configurable Variables
+// ----------------------
 
-$alert-neutral-color:  if( variable-exists(border-color), $border-color, gray ) !default;
-$alert-success-color: if( variable-exists(success-color), $success-color, green ) !default;
-$alert-error-color: if( variable-exists(error-color), $error-color, red ) !default;
+$alert__v-space: if( variable-exists(space), $space, 10px ) !default;
+$alert__h-space: if( variable-exists(space), $space, 10px ) !default;
+
+$alert__border-width: 1px   !default;
+$alert__border-style: solid !default;
+
+$alert__neutral-color: if( variable-exists(border-color),  $border-color,  gray )  !default;
+$alert__success-color: if( variable-exists(success-color), $success-color, green ) !default;
+$alert__error-color:   if( variable-exists(error-color),   $error-color,   red )   !default;
+
+
+// Alert Root
+// ----------
 
 .c-alert {
-    padding: $alert-v-space $alert-h-space;
-    border-width: $alert-border-width;
-    border-color: $alert-neutral-color;
-    border-style: $alert-border-style;
+    padding: $alert__v-space $alert__h-space;
+    border-width: $alert__border-width;
+    border-color: $alert__neutral-color;
+    border-style: $alert__border-style;
 }
 
 
-// Alert: Success
-// --------------
+// Alert Modifier: Success
+// -----------------------
 //
 // Typically for confirmation messages
 
 .c-alert.c--success {
-    border-color: $alert-success-color;
+    border-color: $alert__success-color;
 
-    color: $alert-success-color;
+    color: $alert__success-color;
 }
 
 
-// Alert: Error
-// ------------
+// Alert Modifier: Error
+// ---------------------
 //
 // Typically for error messages
 
 .c-alert.c--error {
-    border-color: $alert-error-color;
+    border-color: $alert__error-color;
 
-    color: $alert-error-color;
+    color: $alert__error-color;
 }
