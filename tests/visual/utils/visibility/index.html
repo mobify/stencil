@@ -20,12 +20,23 @@
     </h1>
 
     <article class="c-test">
+        <h2 class="c-test__describe">[hidden]</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">There should be no content rendered immediately below:</p>
+            <div class="c-test__run">
+                <div class="c-fixture-box" hidden><mark>This text should not be visible to any user agent.</mark></div>
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
         <h2 class="c-test__describe">.u-visually-hidden</h2>
 
         <div class="c-test__case">
-            <p class="c-test__should">It should not be visible in flow.</p>
+            <p class="c-test__should">The content immediately below should only be rendered for screen readers:</p>
             <div class="c-test__run">
-                <div class="c-fixture-box u-visually-hidden">Lorem ipsum dolor sit amet.</div>
+                <div class="c-fixture-box u-visually-hidden"><mark>This text should only appear to screen readers.</mark></div>
             </div>
         </div>
     </article>
