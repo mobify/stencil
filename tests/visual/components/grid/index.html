@@ -8,12 +8,25 @@
 
     <link rel="stylesheet" href="grid.css">
     <style>
-        .u-margin-top-md {
+        .u-margin-v-md {
             margin-top: 1.4rem !important;
+            margin-bottom: 1.4rem !important;
         }
 
-        .u-margin-bottom-md {
-            margin-bottom: 1.4rem !important;
+        .u-width-1of2 {
+            width: 50% !important;
+        }
+
+        .u-width-1of3 {
+            width: 33.333% !important;
+        }
+
+        .u-width-1of4 {
+            width: 25% !important;
+        }
+
+        .u-width-1of6 {
+            width: 16.666% !important;
         }
 
         .c-fixture-box {
@@ -49,25 +62,22 @@
 
             </div>
         </div>
-    </article>
 
-    <article class="c-test">
-        <h2 class="c-test__describe">.c-grid.c--{n}up</h2>
         <div class="c-test__case">
-            <p class="c-test__should">It should lay out spans in an <var>n</var>-up grid where <var>n</var> is 1 through 6.</p>
+            <p class="c-test__should">It should lay out spans with applied widths in a grid.</p>
             <div class="c-test__run">
 
-                <div class="c-grid c--4up">
-                    <div class="c-grid__span">
+                <div class="c-grid">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">1</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">2</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">3</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">4</div>
                     </div>
                 </div>
@@ -79,23 +89,54 @@
             <p class="c-test__should">It should automatically wrap spans across multiple rows.</p>
             <div class="c-test__run">
 
-                <div class="c-grid c--4up">
-                    <div class="c-grid__span">
+                <div class="c-grid">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">1</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">2</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">3</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">4</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">5</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
+                        <div class="c-fixture-box">6</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should support any combination of span widths.</p>
+            <div class="c-test__run">
+
+                <div class="c-grid">
+                    <div class="c-grid__span u-width-1of6">
+                        <div class="c-fixture-box">1</div>
+                    </div>
+                    <div class="c-grid__span u-width-1of2">
+                        <div class="c-fixture-box">2</div>
+                    </div>
+                    <div class="c-grid__span u-width-1of3">
+                        <div class="c-fixture-box">3</div>
+                    </div>
+                    <div class="c-grid__span u-width-1of3">
+                        <div class="c-fixture-box">4</div>
+                    </div>
+                    <div class="c-grid__span u-width-1of6">
+                        <div class="c-fixture-box">5</div>
+                    </div>
+                    <div class="c-grid__span u-width-1of3">
+                        <div class="c-fixture-box">6</div>
+                    </div>
+                    <div class="c-grid__span u-width-1of6">
                         <div class="c-fixture-box">6</div>
                     </div>
                 </div>
@@ -107,29 +148,29 @@
             <p class="c-test__should">It should lay out variable-height spans in discrete rows.</p>
             <div class="c-test__run">
 
-                <div class="c-grid c--4up c--variable">
-                    <div class="c-grid__span">
+                <div class="c-grid c--variable">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">1</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">2</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">3</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">4</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">5</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">6</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">7</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of4">
                         <div class="c-fixture-box">8</div>
                     </div>
                 </div>
@@ -141,25 +182,25 @@
             <p class="c-test__should">It should support nested grids.</p>
             <div class="c-test__run">
 
-                <div class="c-grid c--2up">
-                    <div class="c-grid__span">
+                <div class="c-grid">
+                    <div class="c-grid__span u-width-1of2">
                         <div class="c-fixture-box">1</div>
-                        <div class="c-grid c--2up">
-                            <div class="c-grid__span">
+                        <div class="c-grid">
+                            <div class="c-grid__span u-width-1of2">
                                 <div class="c-fixture-box">3 <div>nested</div></div>
                             </div>
-                            <div class="c-grid__span">
+                            <div class="c-grid__span u-width-1of2">
                                 <div class="c-fixture-box">4 <div>nested</div></div>
                             </div>
                         </div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of2">
                         <div class="c-fixture-box">2</div>
-                        <div class="c-grid c--2up">
-                            <div class="c-grid__span">
+                        <div class="c-grid">
+                            <div class="c-grid__span u-width-1of2">
                                 <div class="c-fixture-box">5 <div>nested</div></div>
                             </div>
-                            <div class="c-grid__span">
+                            <div class="c-grid__span u-width-1of2">
                                 <div class="c-fixture-box">6 <div>nested</div></div>
                             </div>
                         </div>
@@ -177,20 +218,20 @@
             <p class="c-test__should">It should render gutters between spans, but no extra space should be visible around the grid component.</p>
             <div class="c-test__run">
 
-                <div class="c-grid c--3up c--gutters">
-                    <div class="c-grid__span">
+                <div class="c-grid c--gutters">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">1</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">2</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">3</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">4</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">5</div>
                     </div>
                 </div>
@@ -202,20 +243,20 @@
             <p class="c-test__should">It should allow vertical margins to be set on it without affecting inner grid spacing.</p>
             <div class="c-test__run">
 
-                <div class="c-grid c--3up c--gutters u-margin-top-md u-margin-bottom-md">
-                    <div class="c-grid__span">
+                <div class="c-grid c--gutters u-margin-v-md">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">1</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">2</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">3</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">4</div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of3">
                         <div class="c-fixture-box">5</div>
                     </div>
                 </div>
@@ -227,25 +268,25 @@
             <p class="c-test__should">Gutters shouldn’t be applied to nested grids.</p>
             <div class="c-test__run">
 
-                <div class="c-grid c--2up c--gutters">
-                    <div class="c-grid__span">
+                <div class="c-grid c--gutters">
+                    <div class="c-grid__span u-width-1of2">
                         <div class="c-fixture-box">1</div>
-                        <div class="c-grid c--2up">
-                            <div class="c-grid__span">
+                        <div class="c-grid">
+                            <div class="c-grid__span u-width-1of2">
                                 <div class="c-fixture-box">3 <div>nested</div></div>
                             </div>
-                            <div class="c-grid__span">
+                            <div class="c-grid__span u-width-1of2">
                                 <div class="c-fixture-box">4 <div>nested</div></div>
                             </div>
                         </div>
                     </div>
-                    <div class="c-grid__span">
+                    <div class="c-grid__span u-width-1of2">
                         <div class="c-fixture-box">2</div>
-                        <div class="c-grid c--2up">
-                            <div class="c-grid__span">
+                        <div class="c-grid">
+                            <div class="c-grid__span u-width-1of2">
                                 <div class="c-fixture-box">5 <div>nested</div></div>
                             </div>
-                            <div class="c-grid__span">
+                            <div class="c-grid__span u-width-1of2">
                                 <div class="c-fixture-box">6 <div>nested</div></div>
                             </div>
                         </div>

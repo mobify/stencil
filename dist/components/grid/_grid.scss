@@ -1,78 +1,107 @@
-
-$v-space: 1.5rem !default;
-$grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
-
-
 // Grid
+// ===
 //
-// Simple grid layout without gutters. Allows single or multiple grid rows.
-// For asymmetrical grids, add modifiers to grid spans.
+// Provides a framework for grid-based layouts. Use Stencil’s dimension utils
+// for setting span widths, or create a custom layout using modifiers on the
+// container and on spans.
 //
-// Markup:
-// <div class="c-grid c--{n}up">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
+// Example markup:
+//
+// <div class="c-grid">
+//     <div class="c-grid__span u-width-1of4">
+//     <div class="c-grid__span u-width-1of2">
+//     <div class="c-grid__span u-width-1of4">
 // </div>
 //
 // Attribution:
-// https://github.com/suitcss/components-grid/
+//
+// - https://github.com/suitcss/components-grid/
+
+
+// In Android Browser (2.3 through 4.0.x) it is not possible to remove
+// whitespace between inline-block elements with CSS alone. We accomplish it by
+// using a webfont which consists of a single zero-width character (\0020, the
+// space character). To ensure the font renders immediately, it’s inlined as
+// a data-uri.
+
+@import 'neue-blank';
+
+
+// Configurable variables
+// ---
+//
+// By default horizontal and vertical gutters are both set using $v-space so
+// they are consistent with one another.
+
+$grid__h-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
+$grid__v-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
+$font-family: sans-serif !default;
+$font-size: 1rem !default;
+
+
+// Grid component
+// ---
+//
+// 1. Account for elements that are not block by default.
+// 2. Account for elements that may have margins and/or padding by default.
+// 3. Remove horizontal space between spans in Android through version 4.0.x
+// 4. Remove horizontal space between spans in most browers.
+// 5. Ensure grid spans begin at the correct side based on writing direction.
 
 .c-grid {
-  box-sizing: border-box;
-
-    &:before,
-    &:after {
-      content: ' ';
-      display: table;
-    }
-
-    &:after {
-      clear: both;
-    }
+    display: block; // 1
+    margin: 0; // 2
+    padding: 0; // 2
+    font-family: 'neue-blank'; // 3
+    font-size: 0; // 4
+    text-align: initial; // 5
 }
+
+// 1. Lay out grid spans as inline-level boxes.
+// 2. Grid spans are full-width by default.
+// 3. Account for elements that may have margins and/or padding by default.
+// 4. Restore font-family.
+// 5. Restore font-size.
+// 6. Ensure grid spans begin at the correct side based on writing direction.
+// 7. Align grid spans to the top of the container, overriding default baseline
+//    alignment.
 
 .c-grid__span {
+    display: inline-block; // 1
     box-sizing: border-box;
-    display: block;
-    float: left;
-    width: 100%;
-}
-
-@for $n from 2 through 6 {
-    .c-grid.c--#{$n}up .c-grid__span {
-        width: (100%/$n);
-
-        &:nth-child(#{$n}n+1) {
-            clear: both;
-        }
-    }
+    width: 100%; // 2
+    margin: 0; // 3
+    padding: 0; // 3
+    font-family: $font-family; // 4
+    font-size: $font-size; // 5
+    text-align: initial; // 6
+    vertical-align: top; // 7
 }
 
 
-
-// Grid with horizontal and vertical gutters
+// Modifier: horizontal and vertical gutters
+// ---
 //
-// 1. Prevent horizontal gutters from creating extra space above the top row by
-//    pulling the grid up. Applying the negative margin using generated content
-//    frees us to apply spacing utils to the grid without breaking it.
-//
-// Markup:
-// <div class="c-grid c--gutters">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
-// </div>
+// 1. Ensure the padding used to create gutters applies only between items and
+//    is negated at the edges of the container. The vertical compensation is
+//    done with a pseudo-element to help avoid margins applied to the container
+//    from messing with the compensation.
 
 .c-grid.c--gutters {
-    margin-left: $grid-gutter * -0.5;
-    margin-right: $grid-gutter * -0.5;
+    margin-left: $grid__h-gutter * -0.5; // 1
+    margin-right: $grid__h-gutter * -0.5; // 1
 
     &:before {
-      margin-top: $grid-gutter * -1; // 1
+        content: ' ';
+        display: table;
+        margin-top: $grid__v-gutter * -1; // 1
     }
 }
 
+// 1. Create gutters between rows and columns. The horizontal space is
+//    distributed to equally between left and right to make it writing-direction
+//    independent.
+
 .c-grid.c--gutters > .c-grid__span {
-  padding: ($grid-gutter * 1) ($grid-gutter * 0.5) 0;
+    padding: ($grid__v-gutter * 1) ($grid__h-gutter * 0.5) 0; // 1
 }
