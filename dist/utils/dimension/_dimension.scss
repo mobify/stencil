@@ -51,7 +51,7 @@
 }
 
 
-// Ensure all `.u-width-` classes keep their explicit width 
+// Ensure all `.u-width-` classes keep their explicit width
 // when inside a flexbox, preventing them from growing or shrinking.
 
 [class*="u-width-"] {

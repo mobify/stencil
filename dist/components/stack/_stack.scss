@@ -16,6 +16,7 @@ $stack-border: if( variable-exists('stack-border'), $stack-border, $border );
 .c-stack {
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
@@ -64,7 +65,7 @@ $stack-border: if( variable-exists('stack-border'), $stack-border, $border );
 // </div>
 
 .c-stack.c--bordered {
-    border: $stack-border
+    border: $stack-border;
 }
 
 .c-stack.c--bordered > .c-stack__item {

@@ -37,14 +37,18 @@ $button-font-size: inherit !default;
     margin: 0;
     padding: $button-padding;
     border: $button-border;
+
     border-radius: $button-border-radius; // 1
     background: none;
+
     font-family: $button-font-family; // 2
     font-size: $button-font-size; // 2
     line-height: normal; // 3
-    text-align: center;
     white-space: normal; // 4
+    text-align: center;
+
     user-select: none; // 5
+
     -webkit-appearance: none; // 6
 
     &,
@@ -56,7 +60,8 @@ $button-font-size: inherit !default;
 
     &:disabled,
     &.is-disabled {
-        pointer-events: none;
         opacity: 0.6;
+
+        pointer-events: none;
     }
 }
