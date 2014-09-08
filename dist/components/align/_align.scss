@@ -1,33 +1,46 @@
 
 // Align
+// ===
 //
-// Align an item vertically within a container. Items are centered by default.
+// Align a set of items vertically within a container. Items are centered
+// by default.
 //
 // Markup:
+//
 // <div class="c-align">
-//     <div class="c-align__item c--top">…</div>
-//     <div class="c-align__item">…</div>
-//     <div class="c-align__item c--bottom">…</div>
+//     {items}
 // </div>
 //
 // Attribution:
-// http://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
+//
+// - http://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
+
+
+// Align root
+// ---
 
 .c-align {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.c-align__item {}
 
+// Modifiers: alignment
+// ---
 
-// Alignment modifiers
-
-.c-align__item.c--align-top {
-  align-self: flex-start;
+.c-align.c--top {
+    align-items: flex-start;
 }
 
-.c-align__item.c--align-bottom {
-  align-self: flex-end;
+.c-align.c--bottom {
+    align-items: flex-end;
+}
+
+.c-align.c--start {
+    justify-content: flex-start;
+}
+
+.c-align.c--end {
+    justify-content: flex-end;
 }
