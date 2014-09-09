@@ -1,0 +1,52 @@
+
+// Content
+// ===
+//
+// Povides a container with consistent left- and right-hand margins. Useful as a
+// generic container for most types of content.
+
+
+// Configurable variables
+// ---
+
+$content__margin: if(variable-exists(h-space), round($h-space / 2), 1rem) !default;
+$content__max-width: none !default;
+
+
+// Content root
+// ---
+
+.c-content {
+    display: block;
+    padding-left: $content__margin;
+    padding-right: $content__margin;
+}
+
+
+// Full-bleed element
+// ---
+//
+// Negates the default side margins of a content area, pushing the content flush
+// with the sides of the original container.
+
+.c-content__bleed {
+    display: block;
+    margin-left: -$content__margin;
+    margin-right: -$content__margin;
+}
+
+
+// Modifier: capped width
+// ---
+//
+// Create a content area with a maximum width; useful for limiting the measure
+// (line length) of text. Content is centered when the container exceeds the
+// maximum width.
+
+@if type-of($content__max-width) == number {
+    .c-content.c--capped {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: $content__max-width;
+    }
+}
