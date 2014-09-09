@@ -13,10 +13,11 @@ $select__font-size: if( variable-exists(form-font-size), $form-font-size, inheri
     position: relative;
 
     display: flex;
+    overflow: hidden;
     align-items: center;
-    height: $select__height;
-    max-width: 100%;
     box-sizing: border-box;
+    max-width: 100%;
+    height: $select__height;
     padding: $select__padding;
     border: $select__border;
 
@@ -24,7 +25,10 @@ $select__font-size: if( variable-exists(form-font-size), $form-font-size, inheri
 
     font-family: $select__font-family;
     font-size: $select__font-size;
+
     user-select: none;
+
+    -webkit-user-select: none;
 
     select {
         position: absolute;
@@ -57,6 +61,8 @@ $select__font-size: if( variable-exists(form-font-size), $form-font-size, inheri
 .c-select__label {
     flex-shrink: 1;
     margin-right: $select__h-space;
+
+    white-space: nowrap;
 }
 
 .c-select__value {
