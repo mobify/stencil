@@ -67,5 +67,28 @@
         </div>
     </article>
 
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-select.c--inner-label &mdash; Ellipsis</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should create a custom styled select box with an inner label that overflows with an ellipsis.</p>
+            <div class="c-test__run">
+
+                <div class="c-select c--inner-label">
+                    <label class="c-select__label" for="select-inner-label">Label</label>
+                    <span class="c-select__value">Value 1 Value 1 Value 1 Value 1 Value 1 Value 1 Value 1 Value 1 Value 1 </span>
+
+                    <select id="select-inner-label">
+                        <option value="" disabled selected hidden>Select your option&hellip;</option>
+                        <option>Value 1</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
 </body>
 </html>

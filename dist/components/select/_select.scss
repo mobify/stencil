@@ -13,6 +13,7 @@ $select__font-size: if( variable-exists(form-font-size), $form-font-size, inheri
     position: relative;
 
     display: flex;
+    align-items: center;
     height: $select__height;
     max-width: 100%;
     box-sizing: border-box;
@@ -53,19 +54,15 @@ $select__font-size: if( variable-exists(form-font-size), $form-font-size, inheri
 // These elements are only used when an inner label is needed. Otherwise we rely
 // on the select element for the value.
 
-.c-select__label,
-.c-select__value {
-    display: flex;
-    align-items: center;
-}
-
 .c-select__label {
+    flex-shrink: 1;
     margin-right: $select__h-space;
 }
 
 .c-select__value {
     overflow: hidden;
-    flex: 1 0 auto;
+    flex: 1;
+    min-width: 0;
 
     white-space: nowrap;
     text-overflow: ellipsis;
