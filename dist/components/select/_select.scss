@@ -1,0 +1,72 @@
+$select__height: 3rem;
+$select__v-space: if( variable-exists(v-space), $v-space, 0.5rem ) !default;
+$select__h-space: if( variable-exists(h-space), $h-space, 1rem ) !default;;
+$select__padding: $select__v-space $select__h-space !default;
+$select__border: if( variable-exists(border), $border, 1px solid hsl(0, 0%, 80%) ) !default;
+$select__border-radius: if( variable-exists(form-border-radius), $form-border-radius, 0 ) !default;
+$select__background-color: white;
+$select__font-color: inherit !default;
+$select__font-family: if( variable-exists(form-font-family), $form-font-family, inherit ) !default;
+$select__font-size: if( variable-exists(form-font-size), $form-font-size, inherit ) !default;
+
+.c-select {
+    position: relative;
+
+    display: flex;
+    height: $select__height;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: $select__padding;
+    border: $select__border;
+
+    border-radius: $select__border-radius;
+
+    font-family: $select__font-family;
+    font-size: $select__font-size;
+    user-select: none;
+
+    select {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        padding: $select__padding;
+        border: 0;
+
+        background: none;
+
+        -webkit-appearance: none;
+    }
+
+    &.c--inner-label {
+        select {
+            opacity: 0;
+        }
+    }
+}
+
+// Modifier: Inner Label
+// ---
+//
+// These elements are only used when an inner label is needed. Otherwise we rely
+// on the select element for the value.
+
+.c-select__label,
+.c-select__value {
+    display: flex;
+    align-items: center;
+}
+
+.c-select__label {
+    margin-right: $select__h-space;
+}
+
+.c-select__value {
+    overflow: hidden;
+    flex: 1 0 auto;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
