@@ -61,6 +61,13 @@ $h-space: 1.5rem !default;
     align-items: flex-end;
 }
 
+
+// Horizontal alignment
+
+.c-arrange.c--justify-content-space-between {
+    justify-content: space-between;
+}
+
 // Re-arrange the display order of up to six items. Add additional modifiers in
 // your own stylesheet to re-order more.
 
