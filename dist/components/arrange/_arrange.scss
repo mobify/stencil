@@ -19,22 +19,31 @@ $h-space: 1.5rem !default;
 
 .c-arrange {
     display: flex;
-    list-style: none;
     margin: 0;
     padding: 0;
+
+    list-style: none;
 }
 
+// 1. Ensure inline elements are treated as block-level.
+// 2. Prevent width collapsing in old implementations.
+
 .c-arrange__item {
+    display: block; // 1
     flex: 1;
+    width: 100%; // 2
 }
 
 
 // Item proportion modifiers
 //
 // Apply these to arrange items.
+//
+// 1. Ensure width collapses in old implementations.
 
 .c-arrange__item.c--shrink {
     flex: initial;
+    width: auto; // 1
 }
 
 
@@ -66,8 +75,8 @@ $h-space: 1.5rem !default;
 // With gutters
 
 .c-arrange.c--gutters {
-    margin-left: ($h-space * -0.5);
     margin-right: ($h-space * -0.5);
+    margin-left: ($h-space * -0.5);
 }
 
 .c-arrange.c--gutters > .c-arrange__item {

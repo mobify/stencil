@@ -1,18 +1,28 @@
-
-// Visually Hidden
-//
-// Remove from flow but leave available to screen readers.
+// Visibility Utils
+// ===
 //
 // Attribution:
-// https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
-// https://github.com/suitcss/utils-state/
+//
+// - https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
+// - https://github.com/suitcss/utils-state/
+
+// Hide visually and from screen readers. The html5 `hidden` attribute is
+// preferred to a `u-hidden` class because it exactly matches our intent and
+// has machine-readable semantics.
+
+[hidden] {
+    display: none !important;
+}
+
+// Remove from flow but leave available to screen readers.
 
 .u-visually-hidden {
     position: absolute !important;
+
     overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
     width: 1px !important;
     height: 1px !important;
     padding: 0 !important;
     border: 0 !important;
-    clip: rect(1px, 1px, 1px, 1px) !important;
 }
