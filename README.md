@@ -6,7 +6,7 @@ Stencil provides a set of building blocks for mobile UI that helps you implement
 
 ## Requirements
 
-Stencil is written in Sass (SCSS syntax), and requires Sass 3.3. It also relies on [Spline](http://github.com/mobify/spline) and works best when included with [Vellum](http://github.com/mobify/vellum).
+Stencil is written in Sass (SCSS syntax), and requires Sass 3.4. It also relies on [Spline](http://github.com/mobify/spline) and works best when included with [Vellum](http://github.com/mobify/vellum).
 
 ## Installation
 
