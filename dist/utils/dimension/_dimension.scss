@@ -55,5 +55,5 @@
 // when inside a flexbox, preventing them from growing or shrinking.
 
 [class*="u-width-"] {
-    flex: none !important;
+    flex: initial !important;
 }
