@@ -13,7 +13,7 @@ Stencil is written in Sass (SCSS syntax), and requires Sass 3.4. It also relies 
 Install with [Bower](http://bower.io):
 
 ```
-bower install --save mobify/stencil
+bower install mobify-stencil --save
 ```
 
 Once installed, the Stencil library lives in your project’s `bower_components` directory. Individual components will provide a stylesheet partial (Sass) including example markup and (optionally) JavaScript.
