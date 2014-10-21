@@ -1,7 +1,7 @@
 // Alert
 // =====
 //
-// Alert messages intended to bring attention to important information
+// Alert messages are intended to bring attention to important information.
 
 
 // Configurable Variables
@@ -31,8 +31,6 @@ $alert__error-color: if(variable-exists(error-color), $error-color, red) !defaul
 
 // Alert Modifier: Success
 // -----------------------
-//
-// Typically for confirmation messages
 
 .c-alert.c--success {
     border-color: $alert__success-color;
@@ -43,8 +41,6 @@ $alert__error-color: if(variable-exists(error-color), $error-color, red) !defaul
 
 // Alert Modifier: Error
 // ---------------------
-//
-// Typically for error messages
 
 .c-alert.c--error {
     border-color: $alert__error-color;
