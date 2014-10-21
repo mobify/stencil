@@ -8,12 +8,13 @@
 
     <link rel="stylesheet" href="ratio.css">
     <style>
-        .u-margin-above-m {
-            margin-top: 1.4rem;
+        iframe {
+            margin: 0;
+            border: 0;
         }
 
-        .c-ratio.c--max-height {
-            max-height: 300px;
+        .u-margin-above-m {
+            margin-top: 1.4rem;
         }
     </style>
 </head>
@@ -31,33 +32,18 @@
             <div class="c-test__run">
 
                 <div class="c-ratio">
-                    <div class="c-ratio__item c-fixture-box"></div>
+                    <div class="c-ratio__item c-fixture-box">1 × 1</div>
                 </div>
 
             </div>
         </div>
 
         <div class="c-test__case">
-            <p class="c-test__should">It work automatically with children that are <code>&lt;iframe&gt;</code>, <code>&lt;object&gt;</code> or <code>&lt;embed&gt;</code>.</p>
+            <p class="c-test__should">It should allow max-height to constrain the ratio.</p>
             <div class="c-test__run">
 
-                <div class="c-ratio">
-                    <iframe src="http://mobify.com" width="320px" height="480px"></iframe>
-                </div>
-
-                <div class="c-ratio u-margin-above-m">
-                    <object type="image/svg+xml" data="../../fixture.svg">Hello World from an SVG file!</object>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="c-test__case">
-            <p class="c-test__should">It should support max-height.</p>
-            <div class="c-test__run">
-
-                <div class="c-ratio c--max-height">
-                    <div class="c-ratio__item c-fixture-box"></div>
+                <div class="c-ratio" style="max-height: 200px">
+                    <div class="c-ratio__item c-fixture-box">1 × 1, max-height 200px</div>
                 </div>
 
             </div>
@@ -68,11 +54,11 @@
         <h2 class="c-test__describe">.c-ratio.c--4by3</h2>
 
         <div class="c-test__case">
-            <p class="c-test__should">It should render width a width:height ratio of 4:3 (SD video).</p>
+            <p class="c-test__should">It should render with a width:height ratio of 4:3 (SD video).</p>
             <div class="c-test__run">
 
                 <div class="c-ratio c--4by3">
-                    <div class="c-ratio__item c-fixture-box"></div>
+                    <div class="c-ratio__item c-fixture-box">4 × 3</div>
                 </div>
 
             </div>
@@ -83,11 +69,11 @@
         <h2 class="c-test__describe">.c-ratio.c--16by9</h2>
 
         <div class="c-test__case">
-            <p class="c-test__should">It should render width a width:height ratio of 16:9 (HD video).</p>
+            <p class="c-test__should">It should render with a width:height ratio of 16:9 (HD video).</p>
             <div class="c-test__run">
 
                 <div class="c-ratio c--16by9">
-                    <div class="c-ratio__item c-fixture-box"></div>
+                    <div class="c-ratio__item c-fixture-box">16 × 9</div>
                 </div>
 
             </div>
