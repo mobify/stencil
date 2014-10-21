@@ -7,15 +7,15 @@
 // Configurable Variables
 // ----------------------
 
-$alert__v-space: if( variable-exists(space), $space, 10px ) !default;
-$alert__h-space: if( variable-exists(space), $space, 10px ) !default;
+$alert__v-space: if(variable-exists(v-space), $v-space, 10px) !default;
+$alert__h-space: if(variable-exists(h-space), $h-space, 10px) !default;
 
-$alert__border-width: 1px   !default;
+$alert__border-width: 1px !default;
 $alert__border-style: solid !default;
 
-$alert__neutral-color: if( variable-exists(border-color),  $border-color,  gray )  !default;
-$alert__success-color: if( variable-exists(success-color), $success-color, green ) !default;
-$alert__error-color:   if( variable-exists(error-color),   $error-color,   red )   !default;
+$alert__neutral-color: if(variable-exists(border-color), $border-color, gray) !default;
+$alert__success-color: if(variable-exists(success-color), $success-color, green) !default;
+$alert__error-color: if(variable-exists(error-color), $error-color, red) !default;
 
 
 // Alert Root
@@ -24,8 +24,8 @@ $alert__error-color:   if( variable-exists(error-color),   $error-color,   red )
 .c-alert {
     padding: $alert__v-space $alert__h-space;
     border-width: $alert__border-width;
-    border-color: $alert__neutral-color;
     border-style: $alert__border-style;
+    border-color: $alert__neutral-color;
 }
 
 
