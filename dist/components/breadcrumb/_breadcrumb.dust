@@ -2,14 +2,14 @@
 
     Breadcrumb Component Template
     =============================
-    
-    This is the Breadcrumb component, which is used to display messages of
-    varying importance.
-    
-    
+
+    This is the Breadcrumb component. Breadcrumbs are a group of navigation
+    links that helps users keep track of their location within the site.
+
+
     How to Use
     ----------
-    
+
     1. Copy and Paste the below markup into your Adaptive.js project's
        template directory
     2. Add the template via includes in views or templates as needed
@@ -17,10 +17,12 @@
 
 {!}
 
-<ol class="c-breadcrumb" role="navigation" aria-label="Site Breadcrumbs">
-    {#breadcrumb}
-        <li class="c-breadcrumb__item {class}">
-            <a href="{url}">{label}</a>
-        </li>
-    {/breadcrumb}
-</ol>
+<nav class="c-breadcrumb" role="navigation" aria-label="Site Breadcrumbs">
+    <ol>
+        {#breadcrumb}
+            <li class="c-breadcrumb__item {class}">
+                <a href="{url}">{label}</a>
+            </li>
+        {/breadcrumb}
+    </ol>
+</nav>
