@@ -1,3 +1,6 @@
+$breadcrumb__alternate-style: bold !default;
+$breadcrumb__divider-content: '>' !default;
+
 // Breadcrumb
 // ==========
 //
@@ -5,6 +8,7 @@
 // location within the site.
 
 .c-breadcrumb {
+    
 }
 
 
@@ -19,21 +23,24 @@
 // 1. Ensure that the breadcrumb links flow beside either other
 // 2. Remove <a>'s default underline style
 //
-// To Do
-//
-// - [ ] Change pseudo element to be a CSS shape rather than icon font
 
 .c-breadcrumb__item {
     display: inline-block; // 1
 
-    a#{&} {
+    &,
+    a {
         text-decoration: none; // 2
     }
 
     &::after {
-        content: icon-content(chevron-right);
+        content: $breadcrumb__divider-content;
+    }
+
+    &:last-child::after {
+        display: none;
     }
 }
 
 .c-breadcrumb__item.c--current {
+    font-weight: $breadcrumb__alternate-style;
 }
