@@ -2,10 +2,10 @@ define(['$'], function ($) {
 
     return {
         'breadcrumb': [
-            {'label': 'Home', 'url': '#'},
-            {'label': 'Homeware', 'url': '#'},
-            {'label': 'Kitchen', 'url': '#'},
-            {'label': 'Cooking & Baking', 'url': '#'}
+            {'label': 'Home', 'url': '#', 'class': ''},
+            {'label': 'Homeware', 'url': '#', 'class': ''},
+            {'label': 'Kitchen', 'url': '#', 'class': ''},
+            {'label': 'Cooking & Baking', 'url': '#', 'class': 'c--current'}
         ]
     };
 });
