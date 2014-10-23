@@ -1,1 +1,10 @@
 @import 'dist/components/breadcrumb/breadcrumb';
+
+.c-breadcrumb__item {
+
+    // remove underline styles
+    
+    a {
+        background-image: none;
+    }
+}
