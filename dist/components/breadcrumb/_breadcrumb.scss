@@ -1,4 +1,4 @@
-$breadcrumb__alternate-style: bold !default;
+$breadcrumb__active-style: bold !default;
 $breadcrumb__divider-content: '>' !default;
 
 // Breadcrumb
@@ -8,7 +8,7 @@ $breadcrumb__divider-content: '>' !default;
 // location within the site.
 
 .c-breadcrumb {
-    
+
 }
 
 
@@ -42,5 +42,5 @@ $breadcrumb__divider-content: '>' !default;
 }
 
 .c-breadcrumb__item.c--current {
-    font-weight: $breadcrumb__alternate-style;
+    font-weight: $breadcrumb__active-style;
 }
