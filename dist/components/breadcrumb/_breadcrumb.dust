@@ -1,4 +1,4 @@
-<nav class="c-breadcrumb" role="navigation" aria-label="Site Breadcrumbs">
+<nav class="c-breadcrumb" role="navigation">
     <ol>
         {#breadcrumb}
             <li class="c-breadcrumb__item {class}">
