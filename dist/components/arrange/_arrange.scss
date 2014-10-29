@@ -64,8 +64,24 @@ $h-space: 1.5rem !default;
 
 // Horizontal alignment
 
-.c-arrange.c--justify-content-space-between {
+.c-arrange.c--justify-start {
+    justify-content: flex-start;
+}
+
+.c-arrange.c--justify-end {
+    justify-content: flex-end;
+}
+
+.c-arrange.c--justify-between {
     justify-content: space-between;
+}
+
+.c-arrange.c--justify-center {
+    justify-content: center;
+}
+
+.c-arrange.c--justify-around {
+    justify-content: space-around;
 }
 
 
