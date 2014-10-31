@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         autoprefixer: {
             options: {
                 browsers: [
-                    'last 3 iOS versions',
+                    'iOS >= 6.0',
                     'Android 2.3',
                     'Android 4',
                     'last 2 Chrome versions'
