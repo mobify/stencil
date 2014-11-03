@@ -73,3 +73,23 @@ $select__font-size: if( variable-exists(form-font-size), $form-font-size, inheri
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+// Fix for Firefox
+// Attribution: http://filamentgroup.github.io/select-css/
+
+// Hide the native select arrow by clipping it with overflow: hidden
+
+@-moz-document url-prefix() {
+    .c-select {
+        overflow: hidden;
+
+        select {
+            width: calc(100% + 3em);
+
+            &:-moz-focusring {
+              color: transparent;
+              text-shadow: 0 0 0 #000;
+            }
+        }
+    }
+}
