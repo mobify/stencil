@@ -42,7 +42,7 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
 
 @for $n from 2 through 6 {
     .c-grid.c--#{$n}up .c-grid__span {
-        clear: both;
+        clear: none;
         width: (100%/$n);
 
         &:nth-child(#{$n}n+1) {
