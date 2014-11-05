@@ -1,5 +1,11 @@
 // Progress
 // ========
+//
+// Helps show users where they exist within a multiple-page workflow, such as a
+// checkout flow.
+
+$progress__current-bg-color: hsl(0, 0%, 90%) !default;
+$progress__completed-bg-color: hsl(0, 0%, 85%) !default;
 
 .c-progress {
 }
@@ -9,12 +15,24 @@
 // --------------
 
 .c-progress__step {
+
+    display: flex;
+    justify-content: space-between;
+
+    overflow: hidden;
 }
 
-.c-progress__step.c--current {
+.c-progress-step__item {
+    flex: 1;
+    display: block;
 }
 
-.c-progress__step.c--completed {
+.c-progress-step__item.c--current {
+    background-color: $progress__current-bg-color;
+}
+
+.c-progress-step__item.c--completed {
+    background-color: $progress__completed-bg-color;
 }
 
 
