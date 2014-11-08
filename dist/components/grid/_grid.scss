@@ -1,14 +1,10 @@
 
-$v-space: 1.5rem !default;
-$grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
-
-
 // Grid
+// ===
 //
-// Simple grid layout without gutters. Allows single or multiple grid rows.
-// For asymmetrical grids, add modifiers to grid spans.
+// Provides a framework for laying out items in a regular grid.
 //
-// Markup:
+// Example Markup:
 // <div class="c-grid c--{n}up">
 //     <div class="c-grid__span">
 //     <div class="c-grid__span">
@@ -16,9 +12,12 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
 // </div>
 //
 // Attribution:
-// https://github.com/suitcss/components-grid/
+//
+// - https://github.com/suitcss/components-grid/
 
 .c-grid {
+    @include clearfix;
+
     box-sizing: border-box;
 
     &:before,
@@ -32,6 +31,17 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
         clear: both;
     }
 }
+
+
+// Configurable variables
+// ---
+
+$grid__h-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
+$grid__v-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
+
+
+// Grid items
+// ---
 
 .c-grid__span {
     display: block;
@@ -51,29 +61,22 @@ $grid-gutter: if( variable-exists(grid-gutter), $grid-gutter, $v-space );
 }
 
 
-
-// Grid with horizontal and vertical gutters
+// Modifier: horizontal and vertical gutters
+// ---
 //
 // 1. Prevent horizontal gutters from creating extra space above the top row by
 //    pulling the grid up. Applying the negative margin using generated content
 //    frees us to apply spacing utils to the grid without breaking it.
-//
-// Markup:
-// <div class="c-grid c--gutters">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
-// </div>
 
 .c-grid.c--gutters {
-    margin-right: $grid-gutter * -0.5;
-    margin-left: $grid-gutter * -0.5;
+    margin-right: $grid__h-gutter * -0.5;
+    margin-left: $grid__h-gutter * -0.5;
 
     &:before {
-        margin-top: $grid-gutter * -1; // 1
+        margin-top: $grid__v-gutter * -1; // 1
     }
 }
 
 .c-grid.c--gutters > .c-grid__span {
-    padding: ($grid-gutter * 1) ($grid-gutter * 0.5) 0;
+    padding: ($grid__v-gutter * 1) ($grid__h-gutter * 0.5) 0;
 }
