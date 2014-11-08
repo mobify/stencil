@@ -1,0 +1,9 @@
+<nav class="c-breadcrumb" role="navigation">
+    <ol>
+        {#breadcrumb}
+            <li class="c-breadcrumb__item {class}">
+                <a href="{url}">{label}</a>
+            </li>
+        {/breadcrumb}
+    </ol>
+</nav>
