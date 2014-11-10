@@ -1,0 +1,23 @@
+.c-align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-align.c--top {
+  align-items: flex-start;
+}
+
+.c-align.c--bottom {
+  align-items: flex-end;
+}
+
+.c-align.c--start {
+  justify-content: flex-start;
+}
+
+.c-align.c--end {
+  justify-content: flex-end;
+}
+
+/*# sourceMappingURL=align.css.map */
