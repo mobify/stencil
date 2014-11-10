@@ -99,8 +99,8 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 // Add standard horizontal space between items.
 
 .c-arrange.c--gutters {
-    margin-right: ($h-space * -0.5);
-    margin-left: ($h-space * -0.5);
+    margin-right: ($arrange__h-gutter * -0.5);
+    margin-left: ($arrange__h-gutter * -0.5);
 }
 
 .c-arrange.c--gutters > .c-arrange__item {
