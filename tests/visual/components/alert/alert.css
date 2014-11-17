@@ -1,0 +1,18 @@
+.c-alert {
+  padding: 10px 10px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: gray;
+}
+
+.c-alert.c--success {
+  border-color: green;
+  color: green;
+}
+
+.c-alert.c--error {
+  border-color: red;
+  color: red;
+}
+
+/*# sourceMappingURL=alert.css.map */

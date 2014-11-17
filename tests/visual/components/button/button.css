@@ -1,0 +1,26 @@
+.c-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: normal;
+  white-space: normal;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+}
+.c-button, .c-button:focus, .c-button:active {
+  color: inherit;
+  text-decoration: none;
+}
+.c-button:disabled, .c-button.is-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=button.css.map */
