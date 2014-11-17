@@ -1,0 +1,16 @@
+{
+    "alert": [
+        {
+            "message": "Hmm, you might want to keep something in mind!",
+            "class": ""
+        },
+        {
+            "message": "Hurray! Something was successful!",
+            "class": "c--success"
+        },
+        {
+            "message": "Uh oh, something went terribly wrong!",
+            "class": "c--error"
+        }
+    ]
+}

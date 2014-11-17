@@ -1,15 +1,15 @@
 
-$h-space: 1.5rem !default;
-$v-space: 1.5rem !default;
-
-$test-border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
-
+// TODO: Remove margins from component; sibling spacing can likely stay, but
+// should be configurable.
+// TODO: Test theme should be a separate import.
 
 // Test
+// ===
 //
 // Component for structuring visual tests for other components.
 //
-// Markup:
+// Example Markup:
+//
 // <article class="c-test">
 //     <h2 class="c-test__describe">.c-component</h2>
 //     <div class="c-test__case">
@@ -23,12 +23,27 @@ $test-border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
 // </article>
 //
 // Attribution:
-// https://github.com/suitcss/components-test/
+//
+// - https://github.com/suitcss/components-test/
+
+
+// Configurable variables
+// ---
+
+$h-space: 1.5rem !default;
+$v-space: 1.5rem !default;
+
+$test__border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
+
+
+// Test root
+// ---
 
 .c-test {
-    margin-left: ($h-space * -0.75);
     margin-right: ($h-space * -0.75);
-    border: $test-border;
+    margin-left: ($h-space * -0.75);
+    border: $test__border;
+
     border-radius: 3px;
 }
 
@@ -36,31 +51,51 @@ $test-border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
     margin-top: $v-space * 1.5;
 }
 
+
+// Test title/description
+// ---
+
 .c-test__describe {
     margin: 0;
     padding: $v-space * 0.5 $h-space * 0.75;
-    border-bottom: $test-border;
+    border-bottom: $test__border;
 }
 
+
+// Test case
+// ---
+
 .c-test__case + .c-test__case {
-    border-top: $test-border;
+    border-top: $test__border;
 }
+
+
+// Test case assertion
+// ---
 
 .c-test__should {
     margin: 0;
     padding: ($v-space * 0.5) ($h-space * 0.75);
+
     font-weight: bold;
 }
 
+
+// A/B comparison container
+// --
+
 .c-test__a-b {
-    width: 100%;
     table-layout: fixed;
+    width: 100%;
     margin-top: $v-space * 0.25;
+
     font-size: 0.9em;
 
     th {
         position: relative;
+
         padding: 0.25em 0 0.5em;
+
         font-weight: normal;
     }
 
@@ -70,9 +105,15 @@ $test-border: 1px solid hsla(0, 0%, 0%, 0.2) !default;
     }
 }
 
+
+// Test run container
+// ---
+
 .c-test__run {
     margin: 0;
     padding: ($h-space * 0.75);
+
     background: hsl(0, 0%, 96%);
+
     color: hsl(0, 0%, 45%);
 }

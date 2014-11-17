@@ -1,6 +1,6 @@
 {
   "name": "stencil",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A set of common, reusable style patterns for Mobify’s client services team",
   "authors": [
     "Mobify",
@@ -15,7 +15,7 @@
   ],
   "main": "",
   "dependencies": {
-    "spline": "~0.2.1"
+    "spline": "1.0.0"
   },
   "devDependencies": {
     "modularized-normalize-scss": "~3.0.1"
