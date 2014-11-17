@@ -1,28 +1,3 @@
-{!}
-
-    Icon Component Template
-    =======================
-    
-    This is the Icon component.
-    
-    An element is made into an icon by adding either the c-icon class, and/or
-    adding the data-icon-name attribute with an existing value from the
-    $icon-list map.
-    
-    Optionally, you can set any icon to replace any text by adding the c-icon--replace
-    class, or by setting the attribute data-icon-replace to true
-    
-    
-    How to Use
-    ----------
-    
-    1. Copy and Paste the below markup into your Adaptive.js project's
-       template directory
-    2. Add the template via includes in views or templates as needed
-    3. If relevant, it may be helpful to include in Almanac (Living Styleguide)
-
-{!}
-
 <p><span data-icon-name="question"></span> question</p>
 <p><span data-icon-name="exclamation"></span> exclamation</p>
 <p><span data-icon-name="information"></span> information</p>

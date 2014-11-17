@@ -1,7 +1,7 @@
 // Icon
 // ====
 //
-// For icons to work, the bellow dependencies are required. The dependencies are
+// For icons to work, the below dependencies are required. The dependencies are
 // what load the fonts, apply default font settings, and add the default list
 // of available icons.
 //
@@ -18,6 +18,19 @@
 //     * $font-formats
 
 
+// Icon Settings
+// ---
+//
+// Exists in 'bower_components/spline/dist/settings/icon-font.scss' but can be
+// overriden, allowing you to customize the icons as you please.
+
+
+// Icon Font Face
+// ---
+
+@include web-font($icon-font, $icon-font-path);
+
+
 // Icon Component
 // --------------
 //
@@ -25,7 +38,7 @@
 
 .c-icon,
 [data-icon-name] {
-    @include icon-base;
+    @include icon-font;
 }
 
 
@@ -34,7 +47,7 @@
 
 .c-icon--replace,
 [data-icon-replace="true"] {
-    @include icon-replace;
+    @include icon-font-replace;
 }
 
 
