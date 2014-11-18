@@ -1,0 +1,26 @@
+.c-progress__step {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.c-progress-step__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  display: block;
+}
+
+.c-progress-step__item.c--current {
+  background-color: #e6e6e6;
+}
+
+.c-progress-step__item.c--completed {
+  background-color: #d9d9d9;
+}
+
+/*# sourceMappingURL=progress.css.map */
