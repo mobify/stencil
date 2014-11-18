@@ -15,7 +15,6 @@ $progress__completed-bg-color: hsl(0, 0%, 85%) !default;
 // --------------
 
 .c-progress__step {
-
     display: flex;
     justify-content: space-between;
 
@@ -23,7 +22,6 @@ $progress__completed-bg-color: hsl(0, 0%, 85%) !default;
 }
 
 .c-progress-step__item {
-    flex: 1;
     display: block;
 }
 
