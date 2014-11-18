@@ -3,5 +3,9 @@ node_modules
 bower_components
 .sass-cache
 *.css
-
+*.css.map
 .DS_Store
+*.diff.png
+*.fail.png
+
+!tests/**/*.css

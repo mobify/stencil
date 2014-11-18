@@ -1,0 +1,19 @@
+.c-breadcrumb__item {
+  display: inline-block;
+}
+.c-breadcrumb__item,
+.c-breadcrumb__item a {
+  text-decoration: none;
+}
+.c-breadcrumb__item::after {
+  content: ">";
+}
+.c-breadcrumb__item:last-child::after {
+  display: none;
+}
+
+.c-breadcrumb__item.c--current {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=breadcrumb.css.map */

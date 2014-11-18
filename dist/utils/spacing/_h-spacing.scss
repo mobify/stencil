@@ -1,0 +1,58 @@
+
+// Horizontal Spacing utils
+// ===
+//
+// Granular control of horizontal spacing independent of a component. Suggested
+// spacing sizes:
+//
+// 0:  none
+// th: thick space (about 1.5× a “normal” word space)
+// en: en space (half an em)
+// em: em space
+// s:  small
+// m:  medium
+// l:  large
+//
+// Example markup:
+//
+// <span class="c-icon u-margin-right-en"></span> Menu
+
+
+// Private variables
+// ---
+
+$h-spacing__unit: if( variable-exists(h-unit), $h-unit, 8px );
+
+
+// Configurable variables
+// ---
+
+$h-spacing__map: (
+    0: 0,
+    th: 0.333em,
+    en: 0.5em,
+    em: 1em,
+    s: round($h-spacing__unit),
+    m: round($h-spacing__unit) * 2,
+    l: round($h-spacing__unit) * 3
+) !default;
+
+
+// Margins
+// ---
+//
+// `start` and `end` are writing-direction independent forms for `left` and
+// `right`. For right-to-left localizations, create an alternate version of this
+// stylesheet with the property directions reversed, e.g.
+//
+// .u-margin-start-#{$size} { margin-right: $value !important; }
+
+@each $size, $value in $h-spacing__map {
+    .u-margin-start-#{$size} {
+        margin-left: $value !important;
+    }
+
+    .u-margin-end-#{$size} {
+        margin-right: $value !important;
+    }
+}
