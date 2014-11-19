@@ -28,7 +28,7 @@ Set the display order of Arrange items with the `.c--order-{number}` modifier, r
 
 Apply gutters with the `.c--gutters` modifier.
 
-Additionally, Arrange items support the use of [dimension utilities](https://mobify.github.io/stencil/visual/utils/dimension/) such as `.u-width-1of2`
+Additionally, Arrange items support the use of [dimension utilities](https://mobify.github.io/stencil/visual/utils/dimension/) such as `.u-width-1of2`.
 
 
 ### Example Markup
@@ -36,11 +36,10 @@ Additionally, Arrange items support the use of [dimension utilities](https://mob
 ```
     <div class="c-arrange c--align-middle c--gutters">
         <div class="c-arrange__item">…</div>
-        <div class="c-arrange__item u-width-1of2">…</div>
+        <div class="c-arrange__item">…</div>
         <div class="c-arrange__item c--shrink">…</div>
     </div>
 ```
-
 
 ## Demo
 
