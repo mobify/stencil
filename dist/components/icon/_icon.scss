@@ -63,6 +63,5 @@
 @each $name, $character in $icon-list {
     [data-icon-name="#{$name}"]::before {
         content: icon-address($name);
-        speak: none;
     }
 }
