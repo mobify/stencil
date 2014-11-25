@@ -45,7 +45,7 @@
 // Replace Icon
 // ------------
 
-.c-icon--replace,
+.c-icon.c--replace,
 [data-icon-replace="true"] {
     @include icon-font-replace;
 }
