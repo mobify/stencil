@@ -7,6 +7,12 @@ Icons are font-based symbols with a wide array of meaning and utility. They can 
 
 Refer to the main [installation instructions for Stencil](https://github.com/mobify/stencil#installation).
 
+Spline is required when using the icon stencil, so be sure to include the following import:
+
+```
+@import '../bower_components/spline/spline/dist/spline'
+```
+
 Use the following to import the Icon Component into your project with Sass:
 
 ```
