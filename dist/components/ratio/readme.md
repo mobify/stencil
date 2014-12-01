@@ -15,9 +15,9 @@ Use the following to import the Ratio Component into your project with Sass:
 
 ## Using the Ratio Component
 
-### Example Markup
-
 The ratio is 1×1 by default. `max-height` can be used to constrain the ratio.
+
+### Example Markup
 
 ```
 <div class="c-ratio c--16by9">
