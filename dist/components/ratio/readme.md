@@ -13,9 +13,11 @@ Use the following to import the Ratio Component into your project with Sass:
 @import '../bower_components/stencil/dist/components/ratio';
 ```
 
+
 ## Using the Ratio Component
 
 The ratio is 1×1 by default. `max-height` can be used to constrain the ratio.
+
 
 ### Example Markup
 
@@ -24,6 +26,7 @@ The ratio is 1×1 by default. `max-height` can be used to constrain the ratio.
     [<el class="c-ratio__item">|<iframe>|<object>|<embed>]
 </div>
 ```
+
 
 ### Options
 
@@ -35,6 +38,7 @@ To constrain the ratio to 16:9 (HD Video) `.c--16by9` modifier can be used.
 ## Demo
 
 Visual examples of the [Ratio Component](https://mobify.github.io/stencil/visual/components/ratio/index.html)
+
 
 ## Attribution
 
