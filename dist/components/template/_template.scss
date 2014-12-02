@@ -1,20 +1,33 @@
-// If necessary, define any variables that will be used
-$component__variable-description: {property} !default;
-
-
 // Component Name
 // ===
 //
-// Short description
+// Add a short description
 
 
-// Component base
+// Component Variables
+// ---
+//
+// If necessary, define any variables that will be used. For example:
+//
+// $component__variable-description: {property} !default;
+
+
+// Component Base
 // ---
 
 .c-component {
-
 }
 
 
-// Modifiers:
+// Component Modifiers
 // ---
+
+.c-component.c--modifier {
+}
+
+
+// Sub-Components
+// ---
+
+.c-component__sub-component {
+}
