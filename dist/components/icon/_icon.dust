@@ -1,0 +1,24 @@
+<div class="example-1">
+    <p><span data-icon-name="question"></span> question</p>
+    <p><span data-icon-name="exclamation"></span> exclamation</p>
+    <p><span data-icon-name="information"></span> information</p>
+    <p><span data-icon-name="checkmark"></span> checkmark</p>
+    <p><span data-icon-name="phone"></span> phone</p>
+    <p><span data-icon-name="chevron-down"></span> chevron-down</p>
+    <p><span data-icon-name="chevron-right"></span> chevron-right</p>
+    <p><span data-icon-name="plus"></span> plus</p>
+    <p><span data-icon-name="minus"></span> minus</p>
+</div>
+
+
+<div class="example-2">
+    <p><span class="c-icon c--replace" data-icon-name="question">question</span></p>
+    <p><span class="c-icon c--replace" data-icon-name="exclamation">exclamation</span></p>
+    <p><span class="c-icon c--replace" data-icon-name="information">information</span></p>
+    <p><span class="c-icon c--replace" data-icon-name="checkmark">checkmark</span></p>
+    <p><span class="c-icon c--replace" data-icon-name="phone">phone</span></p>
+    <p><span class="c-icon c--replace" data-icon-name="chevron-down">chevron-down</span></p>
+    <p><span class="c-icon c--replace" data-icon-name="chevron-right">chevron-right</span></p>
+    <p><span class="c-icon c--replace" data-icon-name="plus">plus</span></p>
+    <p><span class="c-icon c--replace" data-icon-name="minus">minus</span></p>
+</div>
