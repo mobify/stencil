@@ -30,6 +30,19 @@ Use the following to import the Media Component into your project with Sass:
 <button class="c-button">Button Button</button>
 ```
 
+### Caution
+
+Be sure not to flow block level button elements like `<a>` inline with form elements like `button` tags, because you will run into vertical alignment issues when their text wraps to multiple lines. For example...
+
+```html
+<div>
+    <button class="c-button" style="width: 150px;">Button with long, wrapping text</button>
+    <a href="#" class="c-button">Anchor Button</a>
+</div>
+```
+
+If you must, you can set the buttons to `vertical-align: middle` as a workaround.
+
 
 ### Options
 
