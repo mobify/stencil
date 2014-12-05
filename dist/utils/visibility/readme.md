@@ -20,7 +20,7 @@ Use the following to import the utility into your project with Sass:
 ### Example Markup
 
 ```html
-<i class='c-icon' data-icon-name="twitter"><span class="u-visually-hidden">Twitter</span></i>
+<i class="c-icon" data-icon-name="twitter"><span class="u-visually-hidden">Twitter</span></i>
 ```
 
 
