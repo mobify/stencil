@@ -1,0 +1,99 @@
+// Select
+// ===
+
+
+// Configurable Variables
+// ---
+
+$select__height: 3rem;
+$select__v-space: if(variable-exists(v-space), $v-space, 0.5rem) !default;
+$select__h-space: if(variable-exists(h-space), $h-space, 1rem) !default;
+$select__padding: $select__v-space $select__h-space !default;
+$select__border-color: hsl(0, 0%, 80%);
+$select__border: if(variable-exists(border), $border, 1px solid $select__border-color) !default;
+$select__border-radius: if(variable-exists(form-border-radius), $form-border-radius, 0) !default;
+$select__font-family: if(variable-exists(form-font-family), $form-font-family, inherit) !default;
+$select__font-size: if(variable-exists(form-font-size), $form-font-size, inherit) !default;
+$select__triangle-size: 6px;
+$select__triangle-position: $select__h-space;
+
+
+// Select Root
+// ---
+//
+// 1. Absolutely position select element and triangle relative to the parent .c-select
+// 2. Vertical center the triangle
+
+.c-select {
+    position: relative; // 1
+
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: $select__height;
+    padding: $select__padding;
+    border: $select__border;
+
+    border-radius: $select__border-radius;
+
+    font-family: $select__font-family;
+    font-size: $select__font-size;
+
+    -webkit-user-select: none;
+
+    user-select: none;
+
+    select {
+        position: absolute; // 1
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        padding: $select__padding;
+        border: 0;
+
+        background: none;
+
+        -webkit-appearance: none;
+    }
+
+    // "Down" Triangle
+    &::after {
+        @include triangle($type: 'triangle', $direction: 'down', $size: $select__triangle-size, $color: $select__border-color);
+
+        content: '';
+
+        position: absolute; // 1, 2
+        top: 0; // 2,
+        right: $select__triangle-position;
+        bottom: 0; // 2
+
+        margin: auto; // 2
+    }
+}
+
+
+// Platform Fixes
+// ---
+
+// Fix for Firefox
+// Attribution: http://filamentgroup.github.io/select-css/
+//
+// Hide the native select arrow by clipping it with overflow: hidden
+@-moz-document url-prefix() {
+    .c-select {
+        overflow: hidden;
+
+        select {
+            width: calc(100% + 3em);
+
+            &:-moz-focusring {
+              color: transparent;
+              text-shadow: 0 0 0 #000;
+            }
+        }
+    }
+}
