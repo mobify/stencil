@@ -1,6 +1,6 @@
 {
   "name": "stencil",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A set of common, reusable style patterns for Mobify’s client services team",
   "main": "",
   "scripts": {

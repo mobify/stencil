@@ -6,14 +6,14 @@ Stencil provides a set of building blocks for mobile UI that helps you implement
 
 ## Requirements
 
-Stencil is written in Sass (SCSS syntax), and requires Sass 3.3. It also relies on [Spline](http://github.com/mobify/spline) and works best when included with [Vellum](http://github.com/mobify/vellum).
+Stencil is written in Sass (SCSS syntax), and requires Sass 3.4. It also relies on [Spline](http://github.com/mobify/spline) and works best when included with [Vellum](http://github.com/mobify/vellum).
 
 ## Installation
 
 Install with [Bower](http://bower.io):
 
 ```
-bower install --save mobify/stencil
+bower install mobify-stencil --save
 ```
 
 Once installed, the Stencil library lives in your project’s `bower_components` directory. Individual components will provide a stylesheet partial (Sass) including example markup and (optionally) JavaScript.

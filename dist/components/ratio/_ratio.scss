@@ -1,19 +1,23 @@
 
 // Ratio
+// ===
 //
 // Fluid-width element with an intrinsic width/height ratio. Create custom
 // ratios by defining additional modifiers.
 //
-// Markup:
+// Example markup:
+//
 // <div class="c-ratio c--16by9">
 //     [<el class="c-ratio__item">|<iframe>|<object>|<embed>]
 // </div>
 //
 // Attribution:
-// https://github.com/suitcss/components-flex-embed
+//
+// - https://github.com/suitcss/components-flex-embed
 
 
-// Ratio container
+// Ratio root
+// ---
 //
 // 1. The aspect-ratio hack is applied to a pseudo-element because it allows
 //    the component to accept `min/max-height`.
@@ -36,10 +40,11 @@
 
 
 // Ratio item
+// ---
 //
 // Should be the sole child of a Ratio container.
 //
-// @todo There are issues in iOS when placing <iframe> or <object> elements
+// TODO: There are issues in iOS when placing <iframe> or <object> elements
 // within a ratio component. Solutions depend on context, but we need a good
 // one, at least for iframes.
 
@@ -55,6 +60,7 @@
 
 
 // Modifier: 4 × 3 ratio
+// ---
 
 .c-ratio.c--4by3::before {
     padding-bottom: 75%;
@@ -62,6 +68,7 @@
 
 
 // Modifier: 16 × 9 ratio
+// ---
 
 .c-ratio.c--16by9::before {
     padding-bottom: 56.25%;
