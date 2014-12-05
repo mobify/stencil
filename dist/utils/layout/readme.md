@@ -58,5 +58,5 @@ Visual examples of the [Layout Utility](https://mobify.github.io/stencil/visual/
 
 ## Attribution
 
-// - https://github.com/suitcss/utils-layout
-// - http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/
+- https://github.com/suitcss/utils-layout
+- http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/
