@@ -26,7 +26,7 @@ Use the following to import the Media Component into your project with Sass:
 <!-- Using an Input Tag -->
 <input class="c-button" type="submit" value="Submit Button" />
 
-<!-- Using an Button Tag -->
+<!-- Using a Button Tag -->
 <button class="c-button">Button Button</button>
 ```
 
