@@ -20,10 +20,28 @@ Use the following to import the utility into your project with Sass:
 ### Example Markup
 
 ```html
-<!-- Goes from u-width-1of6 up to u-width-5of6, then lastly u-width-full -->
 <div class="u-width-1of6">
 </div>
 ```
+
+
+### Options
+
+`.u-width-1of3` or `.u-width-2of6`
+
+`.u-width-2of3` or `.u-width-4of6`
+
+`.u-width-1of4`
+
+`.u-width-1of2` or `.u-width-2of4` or `.u-width-3of6`
+
+`.u-width-3of4`
+
+`.u-width-1of6`
+
+`.u-width-5of6`
+
+`.u-width-full`
 
 
 ## Demo
