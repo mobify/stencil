@@ -10,19 +10,19 @@ Spacing applies a margins in any of the four directions:
 This spacing can be applied in a range of sizes. Default settings allow for the following sizes:
 
 - Horizontal Spacing `u-margin-top-{size}` or `u-margin-bottom-{size}`
-    - 0:  none
-    - th: thick space (about 1.5× a “normal” word space)
-    - en: en space (half an em)
-    - em: em space
-    - s:  small
-    - m:  medium
-    - l:  large
+    - `0`:  none
+    - `th`: thick space (about 1.5× a “normal” word space)
+    - `en`: en space (half an em)
+    - `em`: em space
+    - `s`:  small
+    - `m`:  medium
+    - `l`:  large
 
 - Vertical Spacing  `u-margin-start-{size}` or `u-margin-end-{size}`
-    - 0: none
-    - s: small
-    - m: medium
-    - l: large
+    - `0`: none
+    - `s`: small
+    - `m`: medium
+    - `l`: large
 
 
 ## Installation
