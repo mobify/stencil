@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="icon.css">
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Icon Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-icon</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render icons at inline block width by default.</p>
+            <div class="c-test__run">
+                <span class="c-icon" data-icon-name="question"></span>
+                <span class="c-icon" data-icon-name="exclamation"></span>
+                <span class="c-icon" data-icon-name="information"></span>
+                <span class="c-icon" data-icon-name="checkmark"></span>
+                <span class="c-icon" data-icon-name="phone"></span>
+                <span class="c-icon" data-icon-name="chevron-down"></span>
+                <span class="c-icon" data-icon-name="chevron-right"></span>
+                <span class="c-icon" data-icon-name="plus"></span>
+                <span class="c-icon" data-icon-name="minus"></span>
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should flow with the text the wrapper surrounds.</p>
+            <div class="c-test__run">
+                <span class="c-icon" data-icon-name="question"> Question</span>
+                <span class="c-icon" data-icon-name="exclamation"> Exclamation</span>
+                <span class="c-icon" data-icon-name="information"> Information</span>
+                <span class="c-icon" data-icon-name="checkmark"> Checkmark</span>
+                <span class="c-icon" data-icon-name="phone"> Phone</span>
+                <span class="c-icon" data-icon-name="chevron-down"> Chevron-Down</span>
+                <span class="c-icon" data-icon-name="chevron-right"> Chevron-Right</span>
+                <span class="c-icon" data-icon-name="plus"> Plus</span>
+                <span class="c-icon" data-icon-name="minus"> Minus</span>
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should flow with the text outside of the wrapper.</p>
+            <div class="c-test__run">
+                <span class="c-icon" data-icon-name="question"></span> Question
+                <span class="c-icon" data-icon-name="exclamation"></span> Exclamation
+                <span class="c-icon" data-icon-name="information"></span> Information
+                <span class="c-icon" data-icon-name="checkmark"></span> Checkmark
+                <span class="c-icon" data-icon-name="phone"></span> Phone
+                <span class="c-icon" data-icon-name="chevron-down"></span> Down-Chevron
+                <span class="c-icon" data-icon-name="chevron-right"></span> Right-Chevron
+                <span class="c-icon" data-icon-name="plus"></span> Plus
+                <span class="c-icon" data-icon-name="minus"></span> Minus
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should work on block level elements</p>
+            <div class="c-test__run">
+                <p class="c-icon" data-icon-name="question"></p>
+                <p class="c-icon" data-icon-name="exclamation"></p>
+                <p class="c-icon" data-icon-name="information"></p>
+                <p class="c-icon" data-icon-name="checkmark"></p>
+                <p class="c-icon" data-icon-name="phone"></p>
+                <p class="c-icon" data-icon-name="chevron-down"></p>
+                <p class="c-icon" data-icon-name="chevron-right"></p>
+                <p class="c-icon" data-icon-name="plus"></p>
+                <p class="c-icon" data-icon-name="minus"></p>
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should inherit font values from its context.</p>
+            <div class="c-test__run">
+                <p style="color: red; font-size: 24px;">
+                    Paragraph with its own font styles!
+
+                    <span class="c-icon" data-icon-name="question"></span>
+                    <span class="c-icon" data-icon-name="exclamation"></span>
+                    <span class="c-icon" data-icon-name="information"></span>
+                    <span class="c-icon" data-icon-name="checkmark"></span>
+                    <span class="c-icon" data-icon-name="phone"></span>
+                    <span class="c-icon" data-icon-name="chevron-down"></span>
+                    <span class="c-icon" data-icon-name="chevron-right"></span>
+                    <span class="c-icon" data-icon-name="plus"></span>
+                    <span class="c-icon" data-icon-name="minus"></span>
+                </p>
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-icon.c--replace</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should hide any text the icon element contains, but still show the icon</p>
+            <div class="c-test__run">
+                <span class="c-icon c--replace" data-icon-name="question"> Question</span>
+                <span class="c-icon c--replace" data-icon-name="exclamation"> Exclamation</span>
+                <span class="c-icon c--replace" data-icon-name="information"> Information</span>
+                <span class="c-icon c--replace" data-icon-name="checkmark"> Checkmark</span>
+                <span class="c-icon c--replace" data-icon-name="phone"> Phone</span>
+                <span class="c-icon c--replace" data-icon-name="chevron-down"> Chevron-Down</span>
+                <span class="c-icon c--replace" data-icon-name="chevron-right"> Chevron-Right</span>
+                <span class="c-icon c--replace" data-icon-name="plus"> Plus</span>
+                <span class="c-icon c--replace" data-icon-name="minus"> Minus</span>
+            </div>
+        </div>
+    </article>
+
+</body>
+</html>
