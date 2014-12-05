@@ -1,0 +1,26 @@
+.u-text-all-caps {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.u-text-align-start {
+  text-align: left !important;
+}
+
+.u-text-align-center {
+  text-align: center !important;
+}
+
+.u-text-align-end {
+  text-align: right !important;
+}
+
+.u-align-middle {
+  vertical-align: middle !important;
+}
+
+.u-align-baseline {
+  vertical-align: baseline !important;
+}
+
+/*# sourceMappingURL=text.css.map */

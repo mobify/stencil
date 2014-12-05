@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Utility Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="text.css">
+    <style>
+    .c-fixture-box {
+        min-height: 1.4rem;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Text Utility Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">u-text-all-caps</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">There should be text in all-caps:</p>
+            <div class="c-test__run">
+                <p class="u-text-all-caps">I should be in all-caps</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">u-text-align-start</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">There should be left aligned text:</p>
+            <div class="c-test__run">
+                <p class="u-text-align-start">I should be left aligned</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">u-text-align-center</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">There should be center aligned text:</p>
+            <div class="c-test__run">
+                <p class="u-text-align-center">I should be center aligned text</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">u-text-align-end</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">There should be right aligned text:</p>
+            <div class="c-test__run">
+                <p class="u-text-align-end">I should be right aligned text</p>
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">u-align-middle</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">There should be vertically middle aligned button:</p>
+            <div class="c-test__run">
+                This <button style="width: 125px" class="u-align-middle">glorous looking button</button> should be vertically middle aligned
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">u-align-baseline</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">There should be baseline aligned button:</p>
+            <div class="c-test__run">
+                This <button style="width: 125px" class="u-align-baseline">glorous looking button</button> should be baseline aligned
+            </div>
+        </div>
+    </article>
+</body>
+</html>
