@@ -1,7 +1,13 @@
 # Ratio Component
 
-Fluid-width element with an intrinsic width/height ratio. Create custom ratios by defining additional modifiers.
+Fluid-width element with an intrinsic width/height ratio. Can also be used to fit make video content fit the width of its container. Also works well for featured areas with small and predictable text content – for example, a hero block with a background image and (maybe) a title.
 
+Ratio is square by default and ships with 4 × 3 and 16 × 9 ratios as modifier classes. Create custom ratios by defining additional modifiers.
+
+Additional background on this technique and example use cases can be found in the following articles:
+
+http://alistapart.com/article/creating-intrinsic-ratios-for-video/
+http://daverupert.com/2012/04/uncle-daves-ol-padded-box/
 
 ## Installation
 
