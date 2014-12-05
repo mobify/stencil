@@ -1,11 +1,11 @@
 # Layout Utility
 
-Layout utities are classes that aid in achieving layout positioning. These include:
+Layout utilities are classes that aid in achieving layout positioning. These include:
 
-* Floating
-* Clearfix
-* Positioning
-* Overflow (Box Context)
+* Floating: Float elements left or right
+* Clearfix: Clearfix your floats
+* Positioning: Add relative positioning
+* Box Context: Control the behaviour of floats by declaring a block context boundary
 
 
 ## Installation
