@@ -7,6 +7,7 @@ Ratio is square by default and ships with 4 × 3 and 16 × 9 ratios as modifier 
 Additional background on this technique and example use cases can be found in the following articles:
 
 http://alistapart.com/article/creating-intrinsic-ratios-for-video/
+
 http://daverupert.com/2012/04/uncle-daves-ol-padded-box/
 
 ## Installation
@@ -36,9 +37,9 @@ The ratio is 1×1 by default. `max-height` can be used to constrain the ratio.
 
 ### Options
 
-To constrain the ratio to 4:3 (SD Video) `.c--4by3` modifier can be used.
+To constrain the ratio to 4:3 (SD Video) the `.c--4by3` modifier can be used.
 
-To constrain the ratio to 16:9 (HD Video) `.c--16by9` modifier can be used.
+To constrain the ratio to 16:9 (HD Video) the `.c--16by9` modifier can be used.
 
 
 ## Demo
