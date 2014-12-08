@@ -1,1 +1,7 @@
 @import 'dist/components/progress/progress';
+
+// Add spacing between 2 adjacent progress bars
+
+.c-progress + .c-progress {
+    margin-top: 1em;
+}
