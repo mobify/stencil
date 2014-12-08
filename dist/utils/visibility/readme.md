@@ -1,6 +1,6 @@
-# Visiblity Utility
+# Visiblity Utilities
 
-Visiblity utilities allows you to visually hide elements, but still allow them by the likes of screenreaders and other assistive technology.
+Visibility utilities allow you to control the visibility of elements. This can either be hiding an element completely, or only visually (allowing screen readers to still access the hidden element).
 
 
 ## Installation

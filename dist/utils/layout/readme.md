@@ -1,4 +1,4 @@
-# Layout Utility
+# Layout Utilities
 
 Layout utilities are classes that aid in achieving layout positioning. These include:
 
@@ -33,9 +33,7 @@ Use the following to import the utility into your project with Sass:
 
 <!-- Position Context (applies position: relative) -->
 <div class="u-position-context">
-    <div style="position: absolute; top: 0; right: 0;">
-        Absolutely positioned top right
-    </div>
+    <!-- An absolutely positioned element -->
 </div>
 
 <!-- Block Context (applies overflow: hidden) -->

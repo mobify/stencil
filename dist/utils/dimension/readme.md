@@ -1,4 +1,4 @@
-# Dimensions Utility
+# Dimensions Utilities
 
 Applies a fluid width that is equal to the chosen ratio, relative to its parent container. Can be applied to components and sub-components.
 

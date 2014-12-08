@@ -1,4 +1,4 @@
-# Text Utility
+# Text Utilities
 
 Text utilities apply text and font formatting styles such as...
 

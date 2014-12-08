@@ -1,4 +1,4 @@
-# Spacing Utility
+# Spacing Utilities
 
 Spacing applies a margins in any of the four directions:
 
