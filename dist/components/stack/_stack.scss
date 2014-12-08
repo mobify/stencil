@@ -4,15 +4,13 @@
 //
 // A vertical set of items separated by space with optional dividers.
 //
-// Example Markup:
-//
-// <div class="c-stack c--ruled">
-//     <div class="c-stack__item">
-//     <div class="c-stack__item">
-// </div>
 
-$stack__gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
-$stack__border: if( variable-exists(border), $border, 1px solid hsl(0, 0%, 80%) ) !default;
+
+// Configurable Variables
+// ---
+
+$stack__gutter: if(variable-exists(v-space), $v-space, 10px) !default;
+$stack__border: if(variable-exists(border), $border, 1px solid hsl(0, 0%, 80%)) !default;
 
 
 // Stack root
