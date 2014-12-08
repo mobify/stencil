@@ -14,7 +14,7 @@ Use the following to import the utility into your project with Sass:
 ```
 
 
-## Using the Visiblity Utility
+## Using the Visibility Utility
 
 
 ### Example Markup
