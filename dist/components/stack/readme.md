@@ -10,12 +10,14 @@ Refer to the main [installation instructions for Stencil](https://github.com/mob
 Use the following to import the Stack Component into your project with Sass:
 
 ```
-    @import '../bower_components/stencil/dist/components/stack';
+@import '../bower_components/stencil/dist/components/stack';
 ```
+
 
 ## Using the Stack Component
 
 Gutter size and border style can be set by configuring the variables `$stack__gutter` and `$stack__border`.
+
 
 ### Example Markup
 
@@ -25,6 +27,7 @@ Gutter size and border style can be set by configuring the variables `$stack__gu
     <div class="c-stack__item">
 </div>
 ```
+
 
 ### Options
 
@@ -38,5 +41,3 @@ Both modifiers can be combined to apply both a border and horizontal rules `.c--
 ## Demo
 
 Visual examples of the [Stack Component](https://mobify.github.io/stencil/visual/components/stack/index.html)
-
-## Attribution
