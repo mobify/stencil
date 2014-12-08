@@ -4,6 +4,9 @@
 // Helps show users where they exist within a multiple-page workflow, such as a
 // checkout flow.
 
+// Configurable Variables
+// ---
+
 $progress__current-bg-color: hsl(0, 0%, 90%) !default;
 $progress__completed-bg-color: hsl(0, 0%, 85%) !default;
 
@@ -12,7 +15,7 @@ $progress__completed-bg-color: hsl(0, 0%, 85%) !default;
 
 
 // Progress: Step
-// --------------
+// ---
 
 .c-progress__step {
     display: flex;
@@ -35,21 +38,21 @@ $progress__completed-bg-color: hsl(0, 0%, 85%) !default;
 
 
 // Progress: Index
-// ---------------
+// ---
 
 .c-progress__index {
 }
 
 
 // Progress: Label
-// ---------------
+// ---
 
 .c-progress__label {
 }
 
 
 // Progress: Inbetween
-// -------------------
+// ---
 
 .c-progress__inbetween,
 %c-progress__inbetween {
