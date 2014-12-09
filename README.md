@@ -134,6 +134,22 @@ Some things to note about utility classes:
 - Verbose terminal output is on by default. You can suppress this by appending `:terse` to the end of your grunt command, e.g. `grunt test:components/arrange:terse`.
 
 
+## `gh-pages` Docs
+
+We use the `gh-pages` branch to host Stencil's visual test and make them accessible via the interwebs. In order to maintain these docs, we use [git-subtree](https://github.com/git/git/tree/master/contrib/subtree) to keep the `gh-pages` tests in sync with `master`.
+
+Before you update the docs, make sure that `master` is fully up to date with all the latest tests and documentation. Also, you must install git-subtree tool by following just the Setup directions in this [Creating Project Pages using git-subtree](https://gist.github.com/waylan/4505033) gist.
+
+The process is as follows:
+
+1. Checkout the `master` branch
+2. Run `git subtree split --branch gh-pages --prefix tests/`
+3. Run `git push origin gh-pages`
+3. Done!
+
+**WARNING** do NOT directly commit to the `gh-pages` branch! This will break our ability to use the git-subtree tool.
+
+
 ## License
 
 *MIT License. Stencil is Copyright © 2014 Mobify. It is free software and may be redistributed under the terms specified in the LICENSE file.*
