@@ -1,34 +1,44 @@
 # Stencil
 
-Customizable, composable and testable UI components for mobile browsers.
+Customizable, composable and testable UI components and utilities for mobile browsers.
 
 Stencil provides a set of building blocks for mobile UI that helps you implement common patterns faster, more reliably, and without dictating design specifics. It also provides a set of conventions based on modular and object-oriented approaches to CSS that allow you to build your own robust, testable components.
 
+
 ## Table of Contents
 
-* Components
-    * [Alert](https://github.com/mobify/stencil/tree/master/dist/components/alert)
-    * [Align](https://github.com/mobify/stencil/tree/master/dist/components/align)
-    * [Arrange](https://github.com/mobify/stencil/tree/master/dist/components/arrange)
-    * [Breadcrumb](https://github.com/mobify/stencil/tree/master/dist/components/breadcrumb)
-    * [Button](https://github.com/mobify/stencil/tree/master/dist/components/button)
-    * [Grid](https://github.com/mobify/stencil/tree/master/dist/components/grid)
-    * [Icon](https://github.com/mobify/stencil/tree/master/dist/components/icon)
-    * [Media](https://github.com/mobify/stencil/tree/master/dist/components/media)
-    * [Ratio](https://github.com/mobify/stencil/tree/master/dist/components/ratio)
-    * [Select](https://github.com/mobify/stencil/tree/master/dist/components/select)
-    * [Stack](https://github.com/mobify/stencil/tree/master/dist/components/stack)
-* Utilities
-    * [Dimension](https://github.com/mobify/stencil/tree/master/dist/utils/dimension)
-    * [Layout](https://github.com/mobify/stencil/tree/master/dist/utils/layout)
-    * [Spacing](https://github.com/mobify/stencil/tree/master/dist/utils/spacing)
-    * [Text](https://github.com/mobify/stencil/tree/master/dist/utils/text)
-    * [Visibility](https://github.com/mobify/stencil/tree/master/dist/utils/visibility)
+### Components
+
+Stencil components are common, frequently used patterns that either make up UI elements (i.e. breadcrumb, button, etc.) or can be used to structure UI layouts (i.e. align, grid, etc.)
+
+* [Alert](https://github.com/mobify/stencil/tree/master/dist/components/alert)
+* [Align](https://github.com/mobify/stencil/tree/master/dist/components/align)
+* [Arrange](https://github.com/mobify/stencil/tree/master/dist/components/arrange)
+* [Breadcrumb](https://github.com/mobify/stencil/tree/master/dist/components/breadcrumb)
+* [Button](https://github.com/mobify/stencil/tree/master/dist/components/button)
+* [Grid](https://github.com/mobify/stencil/tree/master/dist/components/grid)
+* [Icon](https://github.com/mobify/stencil/tree/master/dist/components/icon)
+* [Media](https://github.com/mobify/stencil/tree/master/dist/components/media)
+* [Ratio](https://github.com/mobify/stencil/tree/master/dist/components/ratio)
+* [Select](https://github.com/mobify/stencil/tree/master/dist/components/select)
+* [Stack](https://github.com/mobify/stencil/tree/master/dist/components/stack)
+
+
+### Utilities
+
+Utilities are basic CSS patterns or frequently used properties that can be used in various one-off situations to apply simple, straight-forward changes in appearance or spacing.
+
+* [Dimension](https://github.com/mobify/stencil/tree/master/dist/utils/dimension)
+* [Layout](https://github.com/mobify/stencil/tree/master/dist/utils/layout)
+* [Spacing](https://github.com/mobify/stencil/tree/master/dist/utils/spacing)
+* [Text](https://github.com/mobify/stencil/tree/master/dist/utils/text)
+* [Visibility](https://github.com/mobify/stencil/tree/master/dist/utils/visibility)
 
 
 ## Requirements
 
 Stencil is written in Sass (SCSS syntax), and requires Sass 3.4. It also relies on [Spline](http://github.com/mobify/spline) and works best when included with [Vellum](http://github.com/mobify/vellum).
+
 
 ## Installation
 
@@ -48,6 +58,7 @@ Use the Sass `@import` directive to include a component’s styles. For example,
 
 Always import Stencil components *after* your Sass variables and *before* any of your own components. This ensures that Stencil receives the values you want for any of its configurable variables while allowing you to reliably build on what it provides.
 
+
 ## Using a Stencil component
 
 Stencil components are like any component you build yourself, except (as with all dependecies) you should never modify them directly. You can *configure* a Stencil component’s CSS by overriding its configurable variables in your own stylesheets. You can also *extend* components by styling them as you see fit and creating new variations on existing components. Feel free to override Stencil styles as well, although Stencil tries to be as minimal as possible so you shouldn’t often need to.
@@ -55,6 +66,7 @@ Stencil components are like any component you build yourself, except (as with al
 One of Stencil’s advantages is that you can work more with HTML and write less custom CSS. Once your theming is in place and you’ve build any custom components you need, you might find you can compose whole screens of UI by simply writing HTML implementing the markup patterns (structure and classes) defined by the component.
 
 Note that Stencil’s components are designed to be robust. As long as you *structure* your markup as according to a component’s example markup and apply the correct classes, you should be free to use the most appropriate, semantic HTML elements for your use case.
+
 
 ### Configuring and extending
 
@@ -114,11 +126,13 @@ Some things to note about utility classes:
 - Verify that Casper is installed by typing `casperjs` on the command line. You should see a message with the Casper and Phantom version numbers
 - In the Stencil directory, run `npm install`.
 
+
 ### Running tests
 
 - In the stencil directory, run `grunt test` to run all tests. This may take some time as it will run through visual diffs for all components provided in Stencil.
 - If you want to test a single component, run `grunt test:components/arrange` where `components/arrange` is the directory of the component you want to test.
 - Verbose terminal output is on by default. You can suppress this by appending `:terse` to the end of your grunt command, e.g. `grunt test:components/arrange:terse`.
+
 
 ## License
 
