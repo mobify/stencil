@@ -138,7 +138,7 @@ Some things to note about utility classes:
 
 We use the `gh-pages` branch to host Stencil's visual test and make them accessible via the interwebs. In order to maintain these docs, we use [git-subtree](https://github.com/git/git/tree/master/contrib/subtree) to keep the `gh-pages` tests in sync with `master`.
 
-Before you update the docs, make sure that `master` is fully up to date with all the latest tests and documentation. Also, you must install git-subtree tool by following just the Setup directions in this [Creating Project Pages using git-subtree](https://gist.github.com/waylan/4505033) gist.
+Before you update the docs, make sure that `master` is fully up to date with all the latest tests and documentation.
 
 The process is as follows:
 
