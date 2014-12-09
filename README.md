@@ -147,7 +147,9 @@ The process is as follows:
 3. Run `git push origin gh-pages`
 3. Done!
 
-**WARNING** do NOT directly commit to the `gh-pages` branch! This will break our ability to use the git-subtree tool.
+What did that do? Well a subtree split effectively takes a sub-directory (in our case `tests/`) and creates a new branch (`gh-pages`) for just that directory. Of course, instead of creating a new branch, we simply pulled over only the commits from master that apply to that directory and added it to the sub-tree branch. That's why when you check out the `gh-pages` branch, the root directory consists of all the files found in the `tests/` directory of `master`.
+
+**WARNING** do NOT directly commit to the `gh-pages` branch! This will break our ability to use the git-subtree tool. Only apply changes to `gh-pages` using the subtree tool.
 
 
 ## License
