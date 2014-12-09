@@ -8,34 +8,59 @@
 // ---
 
 .u-width-1of3,
-.u-width-2of6 {
+.u-width-2of6,
+%u-width-1of3,
+%u-width-2of6 {
+    @extend %u-width--flex-initial;
+
     width: (100%/3) !important;
 }
 
 .u-width-2of3,
-.u-width-4of6 {
+.u-width-4of6,
+%u-width-2of3,
+%u-width-4of6 {
+    @extend %u-width--flex-initial;
+
     width: 2 * (100%/3) !important;
 }
 
-.u-width-1of4 {
+.u-width-1of4,
+%u-width-1of4 {
+    @extend %u-width--flex-initial;
+
     width: 25% !important;
 }
 
 .u-width-1of2,
 .u-width-2of4,
-.u-width-3of6 {
+.u-width-3of6,
+%u-width-1of2,
+%u-width-2of4,
+%u-width-3of6 {
+    @extend %u-width--flex-initial;
+
     width: 50% !important;
 }
 
-.u-width-3of4 {
+.u-width-3of4,
+%u-width-3of4 {
+    @extend %u-width--flex-initial;
+
     width: 75% !important;
 }
 
-.u-width-1of6 {
+.u-width-1of6,
+%u-width-1of6 {
+    @extend %u-width--flex-initial;
+
     width: (100%/6) !important;
 }
 
-.u-width-5of6 {
+.u-width-5of6,
+%u-width-5of6 {
+    @extend %u-width--flex-initial;
+
     width: 5 * (100%/6) !important;
 }
 
@@ -45,7 +70,10 @@
 //
 // 1. Override some browser quirks, e.g. with <button>.
 
-.u-width-full {
+.u-width-full,
+%u-width-full {
+    @extend %u-width--flex-initial;
+
     display: block !important;
     width: 100% !important; // 1
 }
@@ -54,9 +82,9 @@
 // Flexbox Fix
 // ---
 //
-// Ensure all `.u-width-` classes keep their explicit width
+// `@extend` all `.u-width-` classes with this to keep their explicit width
 // when inside a flexbox, preventing them from growing or shrinking.
 
-[class*="u-width-"] {
+%u-width--flex-initial {
     flex: initial !important;
 }

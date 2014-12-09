@@ -32,11 +32,13 @@ $v-spacing__map: (
 // ---
 
 @each $size, $value in $v-spacing__map {
-    .u-margin-top-#{$size} {
+    .u-margin-top-#{$size},
+    %u-margin-top-#{$size} {
         margin-top: $value !important;
     }
 
-    .u-margin-bottom-#{$size} {
+    .u-margin-bottom-#{$size},
+    %u-margin-bottom-#{$size} {
         margin-bottom: $value !important;
     }
 }
