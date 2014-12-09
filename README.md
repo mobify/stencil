@@ -4,6 +4,28 @@ Customizable, composable and testable UI components for mobile browsers.
 
 Stencil provides a set of building blocks for mobile UI that helps you implement common patterns faster, more reliably, and without dictating design specifics. It also provides a set of conventions based on modular and object-oriented approaches to CSS that allow you to build your own robust, testable components.
 
+## Table of Contents
+
+* Components
+    * [Alert](https://github.com/mobify/stencil/tree/master/dist/components/alert)
+    * [Align](https://github.com/mobify/stencil/tree/master/dist/components/align)
+    * [Arrange](https://github.com/mobify/stencil/tree/master/dist/components/arrange)
+    * [Breadcrumb](https://github.com/mobify/stencil/tree/master/dist/components/breadcrumb)
+    * [Button](https://github.com/mobify/stencil/tree/master/dist/components/button)
+    * [Grid](https://github.com/mobify/stencil/tree/master/dist/components/grid)
+    * [Icon](https://github.com/mobify/stencil/tree/master/dist/components/icon)
+    * [Media](https://github.com/mobify/stencil/tree/master/dist/components/media)
+    * [Ratio](https://github.com/mobify/stencil/tree/master/dist/components/ratio)
+    * [Select](https://github.com/mobify/stencil/tree/master/dist/components/select)
+    * [Stack](https://github.com/mobify/stencil/tree/master/dist/components/stack)
+* Utilities
+    * [Dimension](https://github.com/mobify/stencil/tree/master/dist/utils/dimension)
+    * [Layout](https://github.com/mobify/stencil/tree/master/dist/utils/layout)
+    * [Spacing](https://github.com/mobify/stencil/tree/master/dist/utils/spacing)
+    * [Text](https://github.com/mobify/stencil/tree/master/dist/utils/text)
+    * [Visibility](https://github.com/mobify/stencil/tree/master/dist/utils/visibility)
+
+
 ## Requirements
 
 Stencil is written in Sass (SCSS syntax), and requires Sass 3.4. It also relies on [Spline](http://github.com/mobify/spline) and works best when included with [Vellum](http://github.com/mobify/vellum).
