@@ -33,6 +33,35 @@
   align-items: flex-end;
 }
 
+.c-arrange.c--justify-start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.c-arrange.c--justify-end {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.c-arrange.c--justify-between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.c-arrange.c--justify-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.c-arrange.c--justify-around {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
 .c-arrange__item.c--shrink {
   -webkit-box-flex: initial;
   -webkit-flex: initial;
