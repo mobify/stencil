@@ -9,6 +9,18 @@
 
 $progress__current-bg-color: hsl(0, 0%, 90%) !default;
 $progress__completed-bg-color: hsl(0, 0%, 85%) !default;
+$progress__item-bg-color: hsl(0, 0%, 95%) !default;
+$progress__item-padding: if(variable-exists(v-space), $v-space, 10px) !default;
+$progress__stage-layer: if(variable-exists(stage-layer), $stage-layer, 10) !default;
+$progress__bg-color: hsl(360, 100%, 100%) !default;
+$progress__border-color: hsl(0, 0%, 70%) !default;
+
+// Arrow Divider Variables
+
+$progress__divider-angle: 60px !default;
+$progress__divider-width: 30px !default;
+$progress__divider-position: 100% !default;
+
 
 .c-progress {
 }
@@ -19,21 +31,70 @@ $progress__completed-bg-color: hsl(0, 0%, 85%) !default;
 
 .c-progress__step {
     display: flex;
-    justify-content: space-between;
 
     overflow: hidden;
 }
 
 .c-progress-step__item {
+    position: relative; // For the absolutely positioned arrows
     display: block;
+    padding: $progress__item-padding;
+
+    background-color: $progress__item-bg-color;
+
+    // Adjust padding to account for the arrows
+    &:not(:first-child) {
+        padding-left: $progress__divider-width + $progress__item-padding;
+        padding-right: 0;
+    }
+
+    // Arrows
+    &::after,
+    &::before {
+        content: '';
+        display: block;
+
+        position: absolute;
+        top: 50%;
+        left: $progress__divider-position;
+        z-index: $progress__stage-layer;
+
+        display: block;
+        width: 0;
+        height: 0;
+        transform: translateY(-50%);
+
+        border-top: $progress__divider-angle solid transparent;
+        border-bottom: $progress__divider-angle solid transparent;
+        border-right: $progress__divider-width solid transparent;
+    }
+
+    // coloured triangle
+    &::after {
+        border-left: $progress__divider-width solid $progress__item-bg-color;
+    }
+
+    // background color spacing
+    &::before {
+        margin-left: 2px; // pull the white triangle out to make it appear as a border
+        border-left: $progress__divider-width solid $progress__bg-color;
+    }
 }
 
 .c-progress-step__item.c--current {
     background-color: $progress__current-bg-color;
+
+    &::after {
+        border-left-color: $progress__current-bg-color;
+    }
 }
 
 .c-progress-step__item.c--completed {
     background-color: $progress__completed-bg-color;
+
+    &::after {
+        border-left-color: $progress__completed-bg-color;
+    }
 }
 
 
