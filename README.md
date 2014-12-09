@@ -134,7 +134,7 @@ Some things to note about utility classes:
 - Verbose terminal output is on by default. You can suppress this by appending `:terse` to the end of your grunt command, e.g. `grunt test:components/arrange:terse`.
 
 
-## `gh-pages` Docs
+## Updating `gh-pages` Online Docs
 
 We use the `gh-pages` branch to host Stencil's visual test and make them accessible via the interwebs. In order to maintain these docs, we use [git-subtree](https://github.com/git/git/tree/master/contrib/subtree) to keep the `gh-pages` tests in sync with `master`.
 
