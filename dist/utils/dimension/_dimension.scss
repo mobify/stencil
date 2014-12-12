@@ -6,12 +6,15 @@
 
 // Fractional Widths
 // ---
+//
+// 1. Force elements to keep their explicit width when inside a flexbox to
+//    prevent them from growing or shrinking.
 
 .u-width-1of3,
 .u-width-2of6,
 %u-width-1of3,
 %u-width-2of6 {
-    @extend %u-width--flex-initial;
+    flex: initial; // 1
 
     width: (100%/3) !important;
 }
@@ -20,14 +23,14 @@
 .u-width-4of6,
 %u-width-2of3,
 %u-width-4of6 {
-    @extend %u-width--flex-initial;
+    flex: initial; // 1
 
     width: 2 * (100%/3) !important;
 }
 
 .u-width-1of4,
 %u-width-1of4 {
-    @extend %u-width--flex-initial;
+    flex: initial; // 1
 
     width: 25% !important;
 }
@@ -38,28 +41,28 @@
 %u-width-1of2,
 %u-width-2of4,
 %u-width-3of6 {
-    @extend %u-width--flex-initial;
+    flex: initial; // 1
 
     width: 50% !important;
 }
 
 .u-width-3of4,
 %u-width-3of4 {
-    @extend %u-width--flex-initial;
+    flex: initial; // 1
 
     width: 75% !important;
 }
 
 .u-width-1of6,
 %u-width-1of6 {
-    @extend %u-width--flex-initial;
+    flex: initial; // 1
 
     width: (100%/6) !important;
 }
 
 .u-width-5of6,
 %u-width-5of6 {
-    @extend %u-width--flex-initial;
+    flex: initial; // 1
 
     width: 5 * (100%/6) !important;
 }
@@ -68,23 +71,14 @@
 // Full Width
 // ---
 //
-// 1. Override some browser quirks, e.g. with <button>.
+// 1. Force elements to keep their explicit width when inside a flexbox to
+//    prevent them from growing or shrinking.
+// 2. Override some browser quirks, e.g. with <button>.
 
 .u-width-full,
 %u-width-full {
-    @extend %u-width--flex-initial;
+    flex: initial; // 1
 
     display: block !important;
-    width: 100% !important; // 1
-}
-
-
-// Flexbox Fix
-// ---
-//
-// `@extend` all `.u-width-` classes with this to keep their explicit width
-// when inside a flexbox, preventing them from growing or shrinking.
-
-%u-width--flex-initial {
-    flex: initial !important;
+    width: 100% !important; // 2
 }
