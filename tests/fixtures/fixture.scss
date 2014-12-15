@@ -1,5 +1,6 @@
 
 @import 'bower_components/modularized-normalize-scss/normalize';
+@import '../vellum/vellum'; // change to bower component when there is one
 
 @font-face {
     font-family: 'Stencil';
@@ -8,14 +9,14 @@
     font-style: normal;
 }
 
-body {
+@import 'dist/components/test/test';
+
+.c-fixture-body {
     max-width: 43rem;
     margin: auto;
     padding-right: 1rem;
     padding-left: 1rem;
 }
-
-@import 'dist/components/test/test';
 
 .c-fixture-title {
     margin: 1em 0;
