@@ -20,12 +20,18 @@ $alert__error-color: if(variable-exists(error-color), $error-color, red) !defaul
 
 // Alert Root
 // ----------
+//
+// 1. Remove margin-bottom to last children element eg. add margin-bottom to last <p> in content
 
 .c-alert {
     padding: $alert__v-space $alert__h-space;
     border-width: $alert__border-width;
     border-style: $alert__border-style;
     border-color: $alert__neutral-color;
+
+    > *:last-child { // 1
+        margin-bottom: 0;
+    }
 }
 
 

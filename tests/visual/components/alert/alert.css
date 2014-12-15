@@ -4,6 +4,9 @@
   border-style: solid;
   border-color: gray;
 }
+.c-alert > *:last-child {
+  margin-bottom: 0;
+}
 
 .c-alert.c--success {
   border-color: green;
