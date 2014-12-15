@@ -402,68 +402,11 @@ td {
   font-weight: bold;
   font-style: normal;
 }
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  padding: 1.4rem 3% 2.8rem;
-  line-height: 1.4;
-  color: #333333;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
 body {
   max-width: 32rem;
   margin: auto;
-  padding-left: 1rem;
   padding-right: 1rem;
-}
-
-h1 {
-  margin: 0 0 2.8rem 0;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 2.1rem;
-}
-
-h2 {
-  margin: 0.7rem 0;
-  font-size: 1.4rem;
-}
-
-h2:first-child {
-  margin-top: 0;
-}
-
-h3 {
-  margin: 0.7rem 0;
-  font-size: 1.15rem;
-}
-
-h3:first-child {
-  margin-top: 0;
-}
-
-p {
-  margin: 0 0 0.7rem 0;
-}
-
-p:last-child {
-  margin-bottom: 0;
-}
-
-a {
-  color: #1791cf;
-}
-a:focus, a:hover {
-  color: #30abe8;
-}
-a:active {
-  color: #1481b8;
+  padding-left: 1rem;
 }
 
 .c-test {
@@ -521,16 +464,16 @@ a:active {
   background: none;
   font-family: Stencil, Georgia, serif;
   text-decoration: none;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 .c-fixture-box {
   padding: 0.5rem;
   border: 1px solid #a3b8c2;
   background: #c2cfd6;
-  font-size: 0.8em;
   color: rgba(0, 0, 0, 0.65);
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=fixture.css.map */
