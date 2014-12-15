@@ -17,7 +17,9 @@ body {
 
 @import 'dist/components/test/test';
 
-.c-fixture-title {}
+.c-fixture-title {
+    margin: 1em 0;
+}
 
 .c-fixture-title__sub {
     display: inline-block;
