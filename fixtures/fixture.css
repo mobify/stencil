@@ -459,6 +459,10 @@ body {
   color: #737373;
 }
 
+.c-fixture-title {
+  margin: 1em 0;
+}
+
 .c-fixture-title__sub {
   display: inline-block;
   background: none;
