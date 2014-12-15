@@ -43,6 +43,7 @@ $button__font-size: inherit !default;
 
 .c-button {
     display: inline-block;
+    width: auto;
     margin: 0;
     padding: $button__padding;
     border: $button__border;
