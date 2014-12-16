@@ -18,6 +18,7 @@
     "spline": "1.0.1"
   },
   "devDependencies": {
+    "mobify/vellum": "~0.1.0",
     "modularized-normalize-scss": "~3.0.1"
   },
   "ignore": [
