@@ -8,11 +8,13 @@
 // Writing-direction independent floats. For RTL stylesheets, re-define
 // these styles with the opposite direction. Templates need not be changed.
 
-.u-float-start {
+.u-float-start,
+%u-float-start {
     float: left !important;
 }
 
-.u-float-end {
+.u-float-end,
+%u-float-end {
     float: right !important;
 }
 
@@ -27,7 +29,8 @@
 // - Mixin `clearfix` from Spline.
 
 @if mixin-exists(clearfix) {
-    .u-clearfix {
+    .u-clearfix,
+    %u-clearfix {
         @include clearfix;
     }
 } @else {
@@ -40,7 +43,8 @@
 //
 // Create a new positioning context.
 
-.u-position-context {
+.u-position-context,
+%u-position-context {
     position: relative !important;
 }
 
@@ -57,6 +61,7 @@
 //
 // - https://github.com/suitcss/utils-layout
 
-.u-block-context {
+.u-block-context,
+%u-block-context {
     overflow: hidden !important;
 }

@@ -35,11 +35,13 @@ $h-spacing__map: (
 // .u-margin-start-#{$size} { margin-right: $value !important; }
 
 @each $size, $value in $h-spacing__map {
-    .u-margin-start-#{$size} {
+    .u-margin-start-#{$size},
+    %u-margin-start-#{$size} {
         margin-left: $value !important;
     }
 
-    .u-margin-end-#{$size} {
+    .u-margin-end-#{$size},
+    %u-margin-end-#{$size} {
         margin-right: $value !important;
     }
 }
