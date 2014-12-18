@@ -1,62 +1,60 @@
 .u-width-1of3,
 .u-width-2of6 {
-  -webkit-box-flex: initial;
-  -webkit-flex: initial;
-  flex: initial;
+  -webkit-box-flex: initial !important;
+  -webkit-flex: initial !important;
+          flex: initial !important;
   width: 33.33333% !important;
 }
 
 .u-width-2of3,
 .u-width-4of6 {
-  -webkit-box-flex: initial;
-  -webkit-flex: initial;
-  flex: initial;
+  -webkit-box-flex: initial !important;
+  -webkit-flex: initial !important;
+          flex: initial !important;
   width: 66.66667% !important;
 }
 
 .u-width-1of4 {
-  -webkit-box-flex: initial;
-  -webkit-flex: initial;
-  flex: initial;
+  -webkit-box-flex: initial !important;
+  -webkit-flex: initial !important;
+          flex: initial !important;
   width: 25% !important;
 }
 
 .u-width-1of2,
 .u-width-2of4,
 .u-width-3of6 {
-  -webkit-box-flex: initial;
-  -webkit-flex: initial;
-  flex: initial;
+  -webkit-box-flex: initial !important;
+  -webkit-flex: initial !important;
+          flex: initial !important;
   width: 50% !important;
 }
 
 .u-width-3of4 {
-  -webkit-box-flex: initial;
-  -webkit-flex: initial;
-  flex: initial;
+  -webkit-box-flex: initial !important;
+  -webkit-flex: initial !important;
+          flex: initial !important;
   width: 75% !important;
 }
 
 .u-width-1of6 {
-  -webkit-box-flex: initial;
-  -webkit-flex: initial;
-  flex: initial;
+  -webkit-box-flex: initial !important;
+  -webkit-flex: initial !important;
+          flex: initial !important;
   width: 16.66667% !important;
 }
 
 .u-width-5of6 {
-  -webkit-box-flex: initial;
-  -webkit-flex: initial;
-  flex: initial;
+  -webkit-box-flex: initial !important;
+  -webkit-flex: initial !important;
+          flex: initial !important;
   width: 83.33333% !important;
 }
 
 .u-width-full {
-  -webkit-box-flex: initial;
-  -webkit-flex: initial;
-  flex: initial;
   display: block !important;
+  -webkit-box-flex: initial !important;
+  -webkit-flex: initial !important;
+          flex: initial !important;
   width: 100% !important;
 }
-
-/*# sourceMappingURL=dimension.css.map */
