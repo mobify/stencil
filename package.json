@@ -30,6 +30,7 @@
     "grunt-autoprefixer": "~0.7.2",
     "grunt-contrib-sass": "~0.7.3",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-serve": "^0.1.6",
     "grunt-shell": "~0.7.0",
     "load-grunt-tasks": "~0.4.0",
     "mobify-code-style": "^0.1.1",

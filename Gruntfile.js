@@ -76,8 +76,17 @@ module.exports = function(grunt) {
                     }
                 }
             }
+        },
+
+        serve: {
+            options: {
+                port: 9000
+            }
         }
     });
+
+    // Message to show user to install `grunt-serve`
+    grunt.loadNpmTasks('grunt-serve');
 
     // Default task
 
