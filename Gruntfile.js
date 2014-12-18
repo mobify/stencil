@@ -76,6 +76,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+
         connect: {
             server: {
                 options: {
@@ -86,6 +87,7 @@ module.exports = function(grunt) {
             }
         }
     });
+
     // Default task
     grunt.registerTask('default', ['sass', 'autoprefixer']);
     grunt.registerTask('serve', ['default', 'connect:server', 'watch']);
