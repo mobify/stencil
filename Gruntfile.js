@@ -26,9 +26,8 @@ module.exports = function(grunt) {
             options: {
                 browsers: [
                     'iOS >= 6.0',
-                    'Android 2.3',
-                    'Android 4',
-                    'last 2 Chrome versions'
+                    'Android >= 2.3',
+                    'last 4 ChromeAndroid versions'
                 ]
             },
             prefix_tests: {
@@ -77,20 +76,19 @@ module.exports = function(grunt) {
                 }
             }
         },
-
-        serve: {
-            options: {
-                port: 9000
+        connect: {
+            server: {
+                options: {
+                    hostname: '0.0.0.0',
+                    port: 3000,
+                    base: '.'
+                }
             }
         }
     });
-
-    // Message to show user to install `grunt-serve`
-    grunt.loadNpmTasks('grunt-serve');
-
     // Default task
-
     grunt.registerTask('default', ['sass', 'autoprefixer']);
+    grunt.registerTask('serve', ['default', 'connect:server', 'watch']);
 
     // Run all tests or only one. Examples:
     //
@@ -106,6 +104,6 @@ module.exports = function(grunt) {
             task = scope ? (task + ':' + scope) : task;
             task = verbosity ? (task + ':' + verbosity) : task;
 
-            grunt.task.run(['sass', 'autoprefixer', task]);
+            grunt.task.run(['default', task]);
     });
 };

@@ -1,6 +1,6 @@
 .c-grid {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 .c-grid::before, .c-grid::after {
   content: ' ';
@@ -21,7 +21,7 @@
   display: block;
   float: left;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
 }
 
@@ -71,5 +71,3 @@
 .c-grid.c--gutters > .c-grid__span {
   padding: 10px 5px 0;
 }
-
-/*# sourceMappingURL=grid.css.map */
