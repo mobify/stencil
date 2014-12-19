@@ -12,15 +12,14 @@ $progress__completed-bg-color: hsl(0, 0%, 85%) !default;
 $progress__item-bg-color: hsl(0, 0%, 95%) !default;
 $progress__item-padding: if(variable-exists(v-space), $v-space, 10px) !default;
 $progress__stage-layer: if(variable-exists(stage-layer), $stage-layer, 10) !default;
-$progress__bg-color: hsl(360, 100%, 100%) !default;
-$progress__border-color: hsl(0, 0%, 70%) !default;
 
 // Arrow Divider Variables
 // 1. These two variables together determine the angle of the arrow dividers
 
 $progress__divider-angle: 90px !default; // 1
 $progress__divider-width: 20px !default; // 1
-$progress__divider-position: 100% !default;
+$progress__divider-border-thickness: 2px !default;
+$progress__divider-border-color: hsl(360, 100%, 100%) !default;
 
 
 .c-progress {
@@ -57,7 +56,7 @@ $progress__divider-position: 100% !default;
 
         position: absolute;
         top: 50%;
-        left: $progress__divider-position;
+        left: 100%;
         z-index: $progress__stage-layer;
 
         display: block;
@@ -76,8 +75,8 @@ $progress__divider-position: 100% !default;
 
     // background color spacing
     &::before {
-        margin-left: 2px; // pull the white triangle out to make it appear as a border
-        border-left: $progress__divider-width solid $progress__bg-color;
+        margin-left: $progress__divider-border-thickness; // offset to create the appearance of a border
+        border-left: $progress__divider-width solid $progress__divider-border-color;
     }
 }
 
