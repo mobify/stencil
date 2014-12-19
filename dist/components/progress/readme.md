@@ -30,10 +30,17 @@ Use the following to import the Progress Component into your project with Sass:
 
 ### Options
 
+The padding of a step can be set with the configurable variable `$progress__item-padding`
+
+The background color of the steps can be set with the configurable variable `$progress__item-bg-color`
+
 The background color of the current step can be set with the configurable variable  `$progress__current-bg-color`
 
-The background color of a completed step can be set with the configurable variable  `$progress__completed-bg-color`
+The background color of completed steps can be set with the configurable variable  `$progress__completed-bg-color`
 
+The angle of the chevron arrow can be configured with the configurable variables `$progress__divider-angle` and `$progress__divider-width`
+
+The dividing line of the chevron can be configured with the configurable variables `$progress__divider-thickness` and `$progress__divider-border-color`
 
 ## Demo
 
