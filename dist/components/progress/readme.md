@@ -45,5 +45,3 @@ The dividing line of the chevron can be configured with the configurable variabl
 ## Demo
 
 Visual examples of the [Progress Component](https://mobify.github.io/stencil/visual/components/progress/index.html)
-
-## Attribution
