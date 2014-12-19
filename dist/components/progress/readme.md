@@ -40,7 +40,7 @@ The background color of completed steps can be set with the configurable variabl
 
 The angle of the chevron arrow can be configured with the configurable variables `$progress__divider-angle` and `$progress__divider-width`
 
-The dividing line of the chevron can be configured with the configurable variables `$progress__divider-thickness` and `$progress__divider-border-color`
+The dividing line of the chevron can be configured with the configurable variables `$progress__divider-border-thickness` and `$progress__divider-border-color`
 
 ## Demo
 
