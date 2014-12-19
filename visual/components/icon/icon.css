@@ -1,0 +1,73 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "spline";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../../../../bower_components/spline/test/fixtures/fonts/icon/spline.woff") format("woff"), url("../../../../bower_components/spline/test/fixtures/fonts/icon/spline.ttf") format("truetype"), url("../../../../bower_components/spline/test/fixtures/fonts/icon/spline.svg") format("svg");
+}
+.c-icon::before,
+[data-icon-name]::before {
+  display: inline-block;
+  font-family: "spline";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  vertical-align: middle;
+}
+
+.c-icon.c--replace,
+[data-icon-replace="true"] {
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 1em;
+}
+.c-icon.c--replace::before,
+[data-icon-replace="true"]::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  text-align: center;
+  text-indent: 0;
+}
+
+[data-icon-name="question"]::before {
+  content: "";
+}
+
+[data-icon-name="exclamation"]::before {
+  content: "";
+}
+
+[data-icon-name="information"]::before {
+  content: "";
+}
+
+[data-icon-name="checkmark"]::before {
+  content: "";
+}
+
+[data-icon-name="phone"]::before {
+  content: "";
+}
+
+[data-icon-name="plus"]::before {
+  content: "";
+}
+
+[data-icon-name="minus"]::before {
+  content: "";
+}
+
+[data-icon-name="chevron-down"]::before {
+  content: "";
+}
+
+[data-icon-name="chevron-right"]::before {
+  content: "";
+}
