@@ -2,25 +2,58 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
   overflow: hidden;
 }
 
 .c-progress-step__item {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
+  position: relative;
   display: block;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+.c-progress-step__item:not(:first-child) {
+  padding-left: 30px;
+  padding-right: 0;
+}
+.c-progress-step__item::after, .c-progress-step__item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index: 10;
+  display: block;
+  width: 0;
+  height: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-top: 90px solid transparent;
+  border-bottom: 90px solid transparent;
+}
+.c-progress-step__item::after {
+  border-left: 20px solid #f2f2f2;
+}
+.c-progress-step__item::before {
+  margin-left: 2px;
+  border-left: 20px solid white;
 }
 
 .c-progress-step__item.c--current {
   background-color: #e6e6e6;
 }
+.c-progress-step__item.c--current::after {
+  border-left-color: #e6e6e6;
+}
 
 .c-progress-step__item.c--completed {
   background-color: #d9d9d9;
+}
+.c-progress-step__item.c--completed::after {
+  border-left-color: #d9d9d9;
+}
+
+.c-progress + .c-progress {
+  margin-top: 1em;
 }
 
 /*# sourceMappingURL=progress.css.map */
