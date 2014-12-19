@@ -1,27 +1,14 @@
-
 // Horizontal Spacing utils
 // ===
 //
 // Granular control of horizontal spacing independent of a component. Suggested
 // spacing sizes:
-//
-// 0:  none
-// th: thick space (about 1.5× a “normal” word space)
-// en: en space (half an em)
-// em: em space
-// s:  small
-// m:  medium
-// l:  large
-//
-// Example markup:
-//
-// <span class="c-icon u-margin-right-en"></span> Menu
 
 
 // Private variables
 // ---
 
-$h-spacing__unit: if( variable-exists(h-unit), $h-unit, 8px );
+$h-spacing__unit: if(variable-exists(h-unit), $h-unit, 8px);
 
 
 // Configurable variables
@@ -48,11 +35,13 @@ $h-spacing__map: (
 // .u-margin-start-#{$size} { margin-right: $value !important; }
 
 @each $size, $value in $h-spacing__map {
-    .u-margin-start-#{$size} {
+    .u-margin-start-#{$size},
+    %u-margin-start-#{$size} {
         margin-left: $value !important;
     }
 
-    .u-margin-end-#{$size} {
+    .u-margin-end-#{$size},
+    %u-margin-end-#{$size} {
         margin-right: $value !important;
     }
 }

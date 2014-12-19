@@ -1,4 +1,3 @@
-
 // Vertical Spacing utils
 // ===
 //
@@ -9,16 +8,13 @@
 // s: small
 // m: medium
 // l: large
-//
-// Example markup:
-//
-// <h1 class="u-margin-top-s u-margin-bottom-l">Welcome</h1>
+
 
 
 // Private variables
 // ---
 
-$v-spacing__unit: if( variable-exists(v-unit), $v-unit, 5px );
+$v-spacing__unit: if(variable-exists(v-unit), $v-unit, 5px);
 
 
 // Configurable variables
@@ -36,11 +32,13 @@ $v-spacing__map: (
 // ---
 
 @each $size, $value in $v-spacing__map {
-    .u-margin-top-#{$size} {
+    .u-margin-top-#{$size},
+    %u-margin-top-#{$size} {
         margin-top: $value !important;
     }
 
-    .u-margin-bottom-#{$size} {
+    .u-margin-bottom-#{$size},
+    %u-margin-bottom-#{$size} {
         margin-bottom: $value !important;
     }
 }
