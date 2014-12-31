@@ -11,7 +11,7 @@ Refer to the main [installation instructions for Stencil](https://github.com/mob
 Use the following to import the Breadcrumb Component into your project with Sass:
 
 ```
-    @import '../bower_components/stencil/dist/components/breadcrumb';
+    @import '../bower_components/mobify-stencil/dist/components/breadcrumb/breadcrumb';
 ```
 
 ## Using the Breadcrumb Component

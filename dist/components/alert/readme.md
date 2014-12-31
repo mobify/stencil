@@ -9,7 +9,7 @@ Refer to the main [installation instructions for Stencil](https://github.com/mob
 Use the following to import the Alert Component into your project with Sass:
 
 ```
-    @import '../bower_components/stencil/dist/components/alert';
+    @import '../bower_components/mobify-stencil/dist/components/alert/alert';
 ```
 
 ## Using the Alert Component

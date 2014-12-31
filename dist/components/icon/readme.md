@@ -16,7 +16,7 @@ Spline is required when using the icon stencil, so be sure to include the follow
 Use the following to import the Icon Component into your project with Sass:
 
 ```
-@import '../bower_components/stencil/dist/components/icon';
+@import '../bower_components/mobify-stencil/dist/components/icon/icon';
 ```
 
 
