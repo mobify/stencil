@@ -10,7 +10,7 @@ Refer to the main [installation instructions for Stencil](https://github.com/mob
 Use the following to import the utility into your project with Sass:
 
 ```
-@import '../bower_components/stencil/dist/utils/visibility';
+@import '../bower_components/mobify-stencil/dist/utils/visibility/visibility';
 ```
 
 

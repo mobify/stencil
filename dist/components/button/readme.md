@@ -10,7 +10,7 @@ Refer to the main [installation instructions for Stencil](https://github.com/mob
 Use the following to import the Media Component into your project with Sass:
 
 ```scss
-@import '../bower_components/stencil/dist/components/button';
+@import '../bower_components/mobify-stencil/dist/components/button/button';
 ```
 
 
