@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="../icon/icon.css">
+    <link rel="stylesheet" href="tabs.css">
+</head>
+<body class="c-fixture-body">
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Tabs Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-tabs</h2>
+
+        <div class="c-test__case">
+            <div class="c-test__run">
+                <div class="c-tabs">
+                    <ul class="c-tabs__controls" role="tablist" aria-label="Site Tabs">
+                        <li class="c-tabs__controls-item">
+                            <button class="c-tabs__button" data-target="home" aria-label="Home">Home</button>
+                        </li>
+                        <li class="c-tabs__controls-item c--current">
+                            <button class="c-tabs__button" data-target="homeware" aria-label="Homeware">Homeware</button>
+                        </li>
+                        <li class="c-tabs__controls-item">
+                            <button class="c-tabs__button" data-target="kitchen" aria-label="Kitchen">Kitchen</button>
+                        </li>
+
+                        <li class="c-tabs__controls-item">
+                            <button class="c-tabs__button" data-target="cooking-baking" aria-label="Cooking & Baking">Cooking & Baking</button>
+                        </li>
+                    </ul>
+
+                    <div class="c-tabs__body">
+                        <section class="c-tabs__item" id="home">
+                            <h2 class="c-tabs__title u-hide-visually">Home</h2>
+                            <div class="c-tabs__content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
+                            </div>
+                        </section>
+
+                        <section class="c-tabs__item c--current" id="homeware">
+                            <h2 class="c-tabs__title u-hide-visually">Homeware</h2>
+                            <div class="c-tabs__content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
+                            </div>
+                        </section>
+
+                        <section class="c-tabs__item" id="kitchen">
+                            <h2 class="c-tabs__title u-hide-visually">Kitchen</h2>
+                            <div class="c-tabs__content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
+                            </div>
+                        </section>
+
+                        <section class="c-tabs__item" id="cooking-baking">
+                            <h2 class="c-tabs__title u-hide-visually">Cooking & Baking</h2>
+                            <div class="c-tabs__content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+</html>

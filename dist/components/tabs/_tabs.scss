@@ -1,0 +1,156 @@
+// Tabs
+// ====
+//
+// Tabs component with tabs controls and tabs body.
+// Horizontal controls tabs items placed in one line.
+
+
+// Configurable Variables
+// ---
+
+$tabs__item-size: 150px !default;
+$tabs__padding: 10px 5px !default;
+$tabs__body-space: 20px !default;
+$tabs__active-background: hotpink;
+
+
+// Tabs
+// ---
+//
+
+.c-tabs {
+
+}
+
+
+// Tabs: Controls
+// ---
+//
+// List of tabs buttons
+//
+// Notes:
+//
+// 1. Add overflow scroll to avoid squished tabs
+//
+
+.c-tabs__controls {
+    display: flex;
+    overflow: scroll; // 1
+}
+
+
+// Tabs: Controls item
+// ---
+//
+// Items inside controls
+//
+// Notes:
+//
+// 1. Set width for button min width
+//
+
+.c-tabs__controls-item {
+    display: flex;
+    flex: 1 0 $tabs__item-size; // 1
+
+    text-align: center;
+}
+
+
+// Tabs: Controls item - current style
+// ---
+//
+
+.c-tabs__controls-item.c--current {
+
+    .c-tabs__button {
+        background: $tabs__active-background;
+    }
+}
+
+
+// Tabs: Tabs button
+// ---
+//
+// Tabs button placed inside controls
+//
+// Notes:
+//
+// 1. Vertically center text
+//
+
+.c-tabs__button {
+    display: flex;
+    justify-content: center; // 1
+
+    padding: $tabs__padding;
+
+    text-align: center; // 1
+}
+
+
+// Tabs: Tabs body
+// ---
+//
+// Tabs body content
+//
+
+.c-tabs__body {
+    margin-top: $tabs__body-space;
+}
+
+
+// Tabs: Tabs item
+// ---
+//
+// Tabs item inside tabs body, content of tabs
+//
+// Notes:
+//
+// 1. Hide content, use current to display content, only one at time.
+//
+
+.c-tabs__item {
+    display: none; // 1
+}
+
+
+// Tabs: Tabs item - current
+// ---
+//
+// 1. Hide content, use current to display content, only one at time.
+//
+
+.c-tabs__item.c--current {
+    display: block; // 1
+}
+
+
+// Tabs: Tabs Title
+// ---
+//
+// Title in tab item inside tabs body, only useful for screen readers,
+// there is u-visually-hidden class to hide content
+//
+
+.c-tabs__title {
+
+}
+
+
+// Tabs: Tabs Content
+// ---
+//
+// Main body content in tab item inside tabs body
+//
+
+.c-tabs__content {
+
+}
+
+
+// JS TO DO:
+// ---
+//
+// 1. Change c--current on click for c-tabs__button and c-tabs__item, use data-target attribute.
+// 2. Scroll to current tab item in tabs controls to display current tab item all the time.

@@ -1,0 +1,22 @@
+{#tabs}
+<div class="c-tabs">
+    <ul class="c-tabs__controls" role="tablist" aria-label="{tabsLabel}">
+        {#tabsControlsItems}
+        <li class="c-tabs__controls-item {currentClass}">
+            <button class="c-tabs__button" data-target="{tabsTarget}" aria-label="{tabsTitle}">{tabsTitle}</button>
+        </li>
+        {/tabsControlsItems}
+    </ul>
+
+    <div class="c-tabs__body">
+        {#tabsBody}
+        <section class="c-tabs__item {currentClass}" id="{tabsTrigger}">
+            <h2 class="c-tabs__title u-hide-visually">{tabsTitle}</h2>
+            <div class="c-tabs__content">
+                {tabsContent}
+            </div>
+        </section>
+        {/tabsBody}
+    </div>
+</div>
+{/tabs}
