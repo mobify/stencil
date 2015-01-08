@@ -190,7 +190,7 @@ figure {
  */
 hr {
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 
@@ -307,7 +307,7 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -402,7 +402,7 @@ td {
 
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -568,7 +568,7 @@ textarea:focus,
 
 input[type="search"] {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-appearance: none;
 }
 
@@ -607,7 +607,7 @@ select {
 [type="radio"]:checked {
   background: #ecf0f1;
   -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
+          box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
 }
 [type="checkbox"]:checked::after,
 [type="radio"]:checked::after {
@@ -782,5 +782,3 @@ th {
   color: rgba(0, 0, 0, 0.65);
   font-size: 0.8em;
 }
-
-/*# sourceMappingURL=fixture.css.map */
