@@ -100,16 +100,12 @@ $tabs__active-background: hotpink;
 //
 // Tabs item inside tabs body, content of tabs
 //
-// Notes:
-//
-// 1. Hide content, use current to display content, only one at time.
-//
 
-.c-tabs__content { // maybe "__content" might be clearer? yeah I have same issue with item, not clear to me, I think its good idea to change to content
-    display: none; // 1
+.c-tabs__content {
+    display: none;
 
     &.c--current {
-        display: block; // 1
+        display: block;
     }
 }
 
