@@ -77,7 +77,6 @@ $tabs__active-background: if(variable-exists(active-link-color), $active-link-co
 .c-tabs__button {
     display: flex;
     justify-content: center; // 1
-
     padding: $tabs__padding;
 
     text-align: center; // 1
@@ -113,5 +112,15 @@ $tabs__active-background: if(variable-exists(active-link-color), $active-link-co
 // JS TO DO:
 // ---
 //
-// 1. Change c--current on click for c-tabs__button and c-tabs__item, use data-target attribute.
-// 2. Scroll to current tab item in tabs controls to display current tab item all the time.
+// 1. 'c-tabs__button' on click, add 'c--current' to 'c-tabs__controls-item' and 'c-tabs__item'
+
+// 2. 'c-tabs__button' set aria-selected="false" to all tabs buttons, when parent hasClass 'c--current'
+//    change aria-selected="true"
+
+// 3. 'c-tabs__button' set tabindex="-1" to all tab buttons, when parent hasClass 'c--current'
+//    change tabindex="0"
+
+// 4. 'c-tabs__content' set aria-hidden="true" to all tabs content, when hasClass 'c--current'
+//    change aria-hidden="false"
+
+// 5. 'c-tabs__button' scroll to button that hasClass 'c--current'  to display current tab item all the time.
