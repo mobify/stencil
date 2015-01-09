@@ -30,7 +30,7 @@ scroll in tabs controls so the content in tabs wont be squished.
             <ul id="c-tab-controls" class="c-tabs__controls" role="tablist">
                 {#tabs}
                     <li class="c-tabs__controls-item {class}">
-                        <button class="c-tabs__button" data-target="{id}" aria-label="{title}">{title}</button>
+                        <button class="c-tabs__button" data-target="{id}" aria-label="{title}" type="button">{title}</button>
                     </li>
                 {/tabs}
             </ul>
