@@ -1,6 +1,6 @@
 # Tabs Component
 
-There are two parts with tabs component, one is tabs controls and tabs body.
+There are two parts with tabs component: tabs controls and tabs body.
 Tabs controls list all tab buttons, placed in one line. Tabs body is tabs
 content in tabs body.
 
@@ -25,27 +25,25 @@ scroll in tabs controls so the content in tabs wont be squished.
 ### Markup
 
 ```
-    {#tabs}
-    <div class="c-tabs">
-        <ul class="c-tabs__controls" role="tablist" aria-label="{tabsLabel}">
-            {#tabsControlsItems}
-            <li class="c-tabs__controls-item {currentClass}">
-                <button class="c-tabs__button" data-target="{tabsTarget}" aria-label="{tabsTitle}">{tabsTitle}</button>
-            </li>
-            {/tabsControlsItems}
-        </ul>
+    {?tabs}
+        <div class="c-tabs" role="tab">
+            <ul id="c-tab-controls" class="c-tabs__controls" role="tablist">
+                {#tabs}
+                    <li class="c-tabs__controls-item {class}">
+                        <button class="c-tabs__button" data-target="{id}" aria-label="{title}">{title}</button>
+                    </li>
+                {/tabs}
+            </ul>
 
-        <div class="c-tabs__body">
-            {#tabsBody}
-            <section class="c-tabs__item {currentClass}" id="{tabsTrigger}">
-                <h2 class="c-tabs__title u-hide-visually">{tabsTitle}</h2>
-                <div class="c-tabs__content">
-                    {tabsContent}
-                </div>
-            </section>
-            {/tabsBody}
+            <div class="c-tabs__body" role="tabpanel" aria-controls="c-tab-controls">
+                {#tabs}
+                    <section class="c-tabs__content {class}" id="{id}">
+                        <h2 class="u-hide-visually">{title}</h2>
+                        {content}
+                    </section>
+                {/tabs}
+            </div>
         </div>
-    </div>
     {/tabs}
 ```
 
