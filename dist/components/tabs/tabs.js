@@ -2,18 +2,32 @@ define(['$'], function ($) {
 
     return {
         'tabs': [
-            'tabsLabel': 'Site Tabs',
-            'tabsControlsItems': {
-                {'tabsTarget': 'home', 'tabsTitle': 'Home', 'currentClass': ''},
-                {'tabsTarget': 'homeware', 'tabsTitle': 'Homeware', 'currentClass': 'c--current'},
-                {'tabsTarget': 'kitchen', 'tabsTitle': 'Kitchen', 'currentClass': ''},
-                {'tabsTarget': 'cooking-baking', 'tabsTitle': 'Cooking & Baking', 'currentClass': ''}
+            {
+                'id': 'home',
+                'title': 'Home',
+                'content': '<p>Content Here</p>',
+                'class': ''
             },
-            'tabsBody': {
-                {'tabsTrigger': 'home', 'tabsTitle': 'Home', 'tabsContent': '<p>Content Here</p>', 'currentClass': ''},
-                {'tabsTrigger': 'homeware', 'tabsTitle': 'Homeware', 'tabsContent': '<p>Content Here</p>', 'currentClass': 'c--current'},
-                {'tabsTrigger': 'kitchen', 'tabsTitle': 'Kitchen', 'tabsContent': '<p>Content Here</p>', 'currentClass': ''},
-                {'tabsTrigger': 'cooking-baking', 'tabsTitle': 'Cooking & Baking', 'tabsContent': '<p>Content Here</p>', 'currentClass': ''}
+
+            {
+                'id': 'homeware',
+                'title': 'Homeware',
+                'content': '<p>Content Here</p>',
+                'class': 'c--current'
+            },
+
+            {
+                'id': 'kitchen',
+                'title': 'Kitchen',
+                'content': '<p>Content Here</p>',
+                'class': ''
+            },
+
+            {
+                'id': 'cooking-baking',
+                'title': 'Cooking & Baking',
+                'content': '<p>Content Here</p>',
+                'class': ''
             }
         ]
     };

@@ -11,10 +11,9 @@
   display: flex;
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 150px;
-          flex: 1 0 150px;
+  flex: 1 0 150px;
   text-align: center;
 }
-
 .c-tabs__controls-item.c--current .c-tabs__button {
   background: hotpink;
 }
@@ -25,7 +24,7 @@
   display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-          justify-content: center;
+  justify-content: center;
   padding: 10px 5px;
   text-align: center;
 }
@@ -34,10 +33,11 @@
   margin-top: 20px;
 }
 
-.c-tabs__item {
+.c-tabs__content {
   display: none;
 }
-
-.c-tabs__item.c--current {
+.c-tabs__content.c--current {
   display: block;
 }
+
+/*# sourceMappingURL=tabs.css.map */

@@ -54,17 +54,12 @@ $tabs__active-background: hotpink;
     flex: 1 0 $tabs__item-size; // 1
 
     text-align: center;
-}
 
+    &.c--current {
 
-// Tabs: Controls item - current style
-// ---
-//
-
-.c-tabs__controls-item.c--current {
-
-    .c-tabs__button {
-        background: $tabs__active-background;
+        .c-tabs__button {
+            background: $tabs__active-background;
+        }
     }
 }
 
@@ -100,7 +95,7 @@ $tabs__active-background: hotpink;
 }
 
 
-// Tabs: Tabs item
+// Tabs: Tabs content
 // ---
 //
 // Tabs item inside tabs body, content of tabs
@@ -110,42 +105,12 @@ $tabs__active-background: hotpink;
 // 1. Hide content, use current to display content, only one at time.
 //
 
-.c-tabs__item {
+.c-tabs__content { // maybe "__content" might be clearer? yeah I have same issue with item, not clear to me, I think its good idea to change to content
     display: none; // 1
-}
 
-
-// Tabs: Tabs item - current
-// ---
-//
-// 1. Hide content, use current to display content, only one at time.
-//
-
-.c-tabs__item.c--current {
-    display: block; // 1
-}
-
-
-// Tabs: Tabs Title
-// ---
-//
-// Title in tab item inside tabs body, only useful for screen readers,
-// there is u-visually-hidden class to hide content
-//
-
-.c-tabs__title {
-
-}
-
-
-// Tabs: Tabs Content
-// ---
-//
-// Main body content in tab item inside tabs body
-//
-
-.c-tabs__content {
-
+    &.c--current {
+        display: block; // 1
+    }
 }
 
 
