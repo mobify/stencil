@@ -8,10 +8,10 @@
 // Configurable Variables
 // ---
 
-$tabs__item-size: 150px !default;
-$tabs__padding: 10px 5px !default;
-$tabs__body-space: 20px !default;
-$tabs__active-background: hotpink;
+$tabs__item-size: 12rem !default;
+$tabs__padding: 0.5rem 0.75rem !default;
+$tabs__body-space: if(variable-exists(v-space), $v-space, 10px) !default;
+$tabs__active-background: if(variable-exists(active-link-color), $active-link-color, #16a085) !default;
 
 
 // Tabs

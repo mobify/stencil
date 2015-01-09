@@ -10,12 +10,12 @@
   display: -webkit-flex;
   display: flex;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 0 150px;
-  flex: 1 0 150px;
+  -webkit-flex: 1 0 12rem;
+  flex: 1 0 12rem;
   text-align: center;
 }
 .c-tabs__controls-item.c--current .c-tabs__button {
-  background: hotpink;
+  background: #16a085;
 }
 
 .c-tabs__button {
@@ -25,12 +25,12 @@
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  padding: 10px 5px;
+  padding: 0.5rem 0.75rem;
   text-align: center;
 }
 
 .c-tabs__body {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .c-tabs__content {
