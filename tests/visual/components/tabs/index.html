@@ -20,42 +20,42 @@
 
         <div class="c-test__case">
             <div class="c-test__run">
-                <div class="c-tabs" role="tab">
+                <div class="c-tabs">
                     <ul id="c-tab-controls" class="c-tabs__controls" role="tablist">
-                        <li class="c-tabs__controls-item">
-                            <button class="c-tabs__button" data-target="home" aria-label="Home" type="button">Home</button>
+                        <li class="c-tabs__controls-item" role="presentation">
+                            <button class="c-tabs__button" role="tab" data-target="home" aria-label="Home" type="button">Home</button>
                         </li>
 
-                        <li class="c-tabs__controls-item c--current">
-                            <button class="c-tabs__button" data-target="homeware" aria-label="Homeware" type="button">Homeware</button>
+                        <li class="c-tabs__controls-item c--current" role="presentation">
+                            <button class="c-tabs__button" role="tab" data-target="homeware" aria-label="Homeware" type="button">Homeware</button>
                         </li>
 
-                        <li class="c-tabs__controls-item">
-                            <button class="c-tabs__button" data-target="kitchen" aria-label="Kitchen" type="button">Kitchen</button>
+                        <li class="c-tabs__controls-item" role="presentation">
+                            <button class="c-tabs__button" role="tab" data-target="kitchen" aria-label="Kitchen" type="button">Kitchen</button>
                         </li>
 
-                        <li class="c-tabs__controls-item">
-                            <button class="c-tabs__button" data-target="cooking-baking" aria-label="Cooking & Baking" type="button">Cooking & Baking</button>
+                        <li class="c-tabs__controls-item" role="presentation">
+                            <button class="c-tabs__button" role="tab" data-target="cooking-baking" aria-label="Cooking & Baking" type="button">Cooking & Baking</button>
                         </li>
                     </ul>
 
-                    <div class="c-tabs__body" role="tabpanel" aria-controls="c-tab-controls">
-                        <section class="c-tabs__content" id="home">
+                    <div class="c-tabs__body" aria-controls="c-tab-controls">
+                        <section id="home" class="c-tabs__content" role="tabpanel">
                             <h2 class="u-hide-visually">Home</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
                         </section>
 
-                        <section class="c-tabs__content c--current" id="homeware">
+                        <section id="kitchen" class="c-tabs__content c--current" role="tabpanel">
                             <h2 class="u-hide-visually">Homeware</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
                         </section>
 
-                        <section class="c-tabs__content" id="kitchen">
+                        <section id="kitchen" class="c-tabs__content" role="tabpanel">
                             <h2 class="u-hide-visually">Kitchen</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
                         </section>
 
-                        <section class="c-tabs__content" id="cooking-baking">
+                        <section id="cooking-baking" class="c-tabs__content" role="tabpanel">
                             <h2 class="u-hide-visually">Cooking & Baking</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
                         </section>
