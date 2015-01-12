@@ -640,7 +640,6 @@ select {
 button,
 [type="submit"] {
   display: block;
-  width: 100%;
   padding: 10px 15px;
   border: 1px solid #bcc2c6;
   background: #ecf0f1 -webkit-gradient(linear, left top, left bottom, from(white), to(#ecf0f1));
