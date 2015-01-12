@@ -12,7 +12,7 @@ Refer to the main [installation instructions for Stencil](https://github.com/mob
 Use the following to import the Tabs Component into your project with Sass:
 
 ```
-    @import '../bower_components/stencil/dist/components/tabs';
+    @import '../bower_components/mobify-stencil/dist/components/tabs/tabs';
 ```
 
 
