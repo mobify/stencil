@@ -26,4 +26,4 @@ Use the following to import the Media Component into your project with Sass:
 
 ## Demo
 
-Visual examples of the [<!-- Component Name --> Component](https://mobify.github.io/stencil/visual/components/badge/index.html)
+Visual examples of the [Badge Component](https://mobify.github.io/stencil/visual/components/badge/index.html)
