@@ -23,6 +23,16 @@ Use the following to import the Media Component into your project with Sass:
 </div>
 ```
 
+### Options
+
+The following variables can be used to customize the appearance of the badge:
+
+* `$badge__background-color`
+* `$badge__text-color`
+* `$badge__border-radius`
+* `$badge__size`
+* `$badge__font-size`
+
 
 ## Demo
 
