@@ -31,11 +31,13 @@ $tabs__active-background: if(variable-exists(active-link-color), $active-link-co
 // Notes:
 //
 // 1. Add overflow scroll to avoid squished tabs
+// 2. Smooth scrolling on device
 //
 
 .c-tabs__controls {
     display: flex;
-    overflow: scroll; // 1
+    overflow-y: scroll; // 1
+    -webkit-overflow-scrolling: touch; // 2
 }
 
 
