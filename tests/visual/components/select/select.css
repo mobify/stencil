@@ -6,9 +6,9 @@
   overflow: hidden;
   -webkit-box-align: center;
   -webkit-align-items: center;
-          align-items: center;
+  align-items: center;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   max-width: 100%;
   height: 3rem;
   padding: 0.5rem 1rem;
@@ -57,3 +57,5 @@
     text-shadow: 0 0 0 #000;
   }
 }
+
+/*# sourceMappingURL=select.css.map */

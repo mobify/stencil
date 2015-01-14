@@ -38,5 +38,7 @@
 [class*="u-width-"] {
   -webkit-box-flex: initial !important;
   -webkit-flex: initial !important;
-          flex: initial !important;
+  flex: initial !important;
 }
+
+/*# sourceMappingURL=dimension.css.map */
