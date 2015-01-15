@@ -21,10 +21,10 @@
     {/isDiscount}
 
     <div class="c-product__controls">
-        {colors} <!-- its own component -->
-        {sizes} <!-- its own component -->
-        {quantity} <!-- its own component -->
-        {ratings} <!-- its own component -->
+        {colors} <!-- colors component -->
+        {sizes} <!-- sizes component -->
+        {quantity} <!-- quantity component -->
+        {ratings} <!-- ratings component -->
     </div>
 
     <div class="c-product__information">
