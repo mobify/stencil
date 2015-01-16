@@ -1,5 +1,6 @@
 
 @import 'bower_components/modularized-normalize-scss/normalize';
+@import 'bower_components/vellum/dist/vellum';
 
 @font-face {
     font-family: 'Stencil';
@@ -8,86 +9,37 @@
     font-style: normal;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-html {
-    padding: 1.4rem 3% 2.8rem;
-    line-height: 1.4;
-    color: hsl(0, 0%, 20%);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-body {
-    max-width: 32rem;
-    margin: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-h1 {
-    margin: 0 0 2.8rem 0;
-    font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 2.1rem;
-}
-
-h2 {
-    margin: 0.7rem 0;
-    font-size: 1.4rem;
-}
-h2:first-child {
-    margin-top: 0;
-}
-
-h3 {
-    margin: 0.7rem 0;
-    font-size: 1.15rem;
-}
-h3:first-child {
-    margin-top: 0;
-}
-
-p {
-    margin: 0 0 0.7rem 0;
-}
-p:last-child {
-    margin-bottom: 0;
-}
-
-a {
-    color: hsl(200, 80%, 45%);
-
-    &:focus,
-    &:hover {
-        color: hsl(200, 80%, 55%);
-    }
-
-    &:active {
-        color: hsl(200, 80%, 40%);
-    }
-}
-
 @import 'dist/components/test/test';
 
-.c-fixture-title {}
+.c-fixture-body {
+    max-width: 43rem;
+    margin: auto;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.c-fixture-title {
+    margin: 1em 0;
+}
 
 .c-fixture-title__sub {
     display: inline-block;
+
     background: none;
+
     font-family: Stencil, Georgia, serif;
     text-decoration: none;
-    -webkit-font-smoothing: antialiased;
+
     -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 .c-fixture-box {
     padding: 0.5rem;
     border: 1px solid hsl(200, 20%, 70%);
+
     background: hsl(200, 20%, 80%);
-    font-size: 0.8em;
+
     color: hsla(0, 0%, 0%, 0.65);
+    font-size: 0.8em;
 }
