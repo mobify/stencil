@@ -53,7 +53,7 @@ Once installed, the Stencil library lives in your project’s `bower_components`
 Use the Sass `@import` directive to include a component’s styles. For example, in `my-project/styles/stylesheet.scss`, I can import the Grid component like so:
 
 ```scss
-@import '../bower_components/stencil/dist/components/grid/grid';
+@import '../bower_components/mobify-stencil/dist/components/grid/grid';
 ```
 
 Always import Stencil components *after* your Sass variables and *before* any of your own components. This ensures that Stencil receives the values you want for any of its configurable variables while allowing you to reliably build on what it provides.
@@ -74,7 +74,7 @@ Components are customizable in two ways: *configuration* and *extension*. Config
 
 ```scss
 @import 'variables'; // Do this first, so Stencil is aware of your settings.
-@import '../bower_components/stencil/dist/components/button/button'; // Import Stencil components before yours.
+@import '../bower_components/mobify-stencil/dist/components/button/button'; // Import Stencil components before yours.
 @import 'my-components/button'; // Add styles to Stencil components after importing them.
 ```
 

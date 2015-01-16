@@ -10,7 +10,7 @@ Refer to the main [installation instructions for Stencil](https://github.com/mob
 Use the following to import the Arrange Component into your project with Sass:
 
 ```
-    @import '../bower_components/stencil/dist/components/arrange';
+    @import '../bower_components/mobify-stencil/dist/components/arrange/arrange';
 ```
 
 

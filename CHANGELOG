@@ -1,0 +1,14 @@
+0.1.0
+    - We should start managing versions for Stencil. This is a start.
+    - Added Alert component
+
+0.2.0
+    - An initial "template" that new stencil components can start off with
+    - Tests for all existing components
+    - The following components:
+        * Breadcrumb
+        * Icon
+        * Select
+        * Test (technically not a stencil, it's for scaffolding)
+    - Added Readme files for all stencils, utilities and to the project root
+    - Cleaned up most (although not all) SCSS style inconsistencies
