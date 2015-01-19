@@ -15,9 +15,9 @@
     <span class="c-product__price" aria-label="Price is {price}">{price}</span>
 
     {#isPromo}
-        <span class="c-product__price" aria-label="Old price is {price}">{oldPrice}</span>
+        <span class="c-product__price" aria-label="Old price is {oldPrice}">{oldPrice}</span>
 
-        <s class="c-product__price c--{promo}" aria-label="New {promo} price is {price}">{promoPrice}</s>
+        <s class="c-product__price c--{promo}" aria-label="New {promo} price is {promoPrice}">{promoPrice}</s>
     {/isPromo}
 
     <div class="c-product__controls">
