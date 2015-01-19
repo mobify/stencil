@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="product.css">
+</head>
+<body class="c-fixture-body">
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Align Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-product</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">Information here</p>
+            <div class="c-test__run">
+
+                <div class="c-product" role="group">
+                    <a class="c-product__title" href="#" title="Product Title">
+                        <h2>Product Title</h2>
+                    </a>
+
+                    <div class="c-product__image">
+                        <a href="#" title="Image Title">
+                            <img src="http://lorempixel.com/300/300/" alt="Image Title" />
+                        </a>
+                    </div>
+
+                    <span class="c-product__price" aria-label="Old price is $29.99">$29.99</span>
+
+                    <s class="c-product__price c--promo" aria-label="New discounted price is $19.99">$19.99</s>
+
+                    <div class="c-product__controls">
+
+                    </div>
+
+                    <div class="c-product__information">
+                        <p>Information here</p>
+                    </div>
+
+                    <div class="c-product__action">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-product.c--highlight</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">Information herea</p>
+            <div class="c-test__run">
+
+                <div class="c-product c--highlight" role="group">
+                    <a class="c-product__title" href="#" title="Product Title">
+                        <h2>Product Title</h2>
+                    </a>
+
+                    <div class="c-product__image">
+                        <a href="#" title="Image Title">
+                            <img src="http://lorempixel.com/300/300/" alt="Image Title" />
+                        </a>
+                    </div>
+
+                    <span class="c-product__price" aria-label="Price is $29.99">$29.99</span>
+
+                    <div class="c-product__controls">
+                    </div>
+
+                    <div class="c-product__information">
+                        <p>Information here</p>
+                    </div>
+
+                    <div class="c-product__action">
+                        <code>{button}</code> <!-- button component -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </article>
+</body>
+</html>

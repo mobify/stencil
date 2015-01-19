@@ -1,0 +1,37 @@
+{#product}
+<div class="c-product {?isHighlight}c--highlight{/isHighlight}">
+    <a class="c-product__title" href="{url}" title="{title}">
+        <h2>{title}</h2>
+    </a>
+
+    {#image}
+        <div class="c-product__image">
+            <a href="{url}" title="{title}">
+                <img src="{path}" alt="{title}" />
+            </a>
+        </div>
+    {/image}
+
+    <span class="c-product__price" aria-label="Price is {price}">{price}</span>
+
+    {#isPromo}
+        <span class="c-product__price" aria-label="Old price is {oldPrice}">{oldPrice}</span>
+
+        <s class="c-product__price c--{promo}" aria-label="New {promo} price is {promoPrice}">{promoPrice}</s>
+    {/isPromo}
+
+    <div class="c-product__controls">
+
+    </div>
+
+    {?info}
+        <div class="c-product__information">
+            {info}
+        </div>
+    {/info}
+
+    <div class="c-product__action">
+
+    </div>
+</div>
+{/product}
