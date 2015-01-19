@@ -11,7 +11,13 @@ Use the following to import the Product Component into your project with Sass:
     @import '../bower_components/stencil/dist/components/product';
 ```
 
+
 ## Using the Product Component
+
+In product controls, there are different kind of options for product, eg.
+colors, sizes, quantity, ratings, etc. In product actions, it will be
+buttons to add cart or any action to product.
+
 
 ### Example Markup
 
@@ -31,17 +37,13 @@ Use the following to import the Product Component into your project with Sass:
 
     <span class="c-product__price" aria-label="Price is {price}">{price}</span>
 
-    {#isDiscount}
+    {#isPromo}
         <span class="c-product__price" aria-label="Old price is {price}">{oldPrice}</span>
 
-        <s class="c-product__price c--discount" aria-label="New discounted price is {price}">{discountPrice}</s>
-    {/isDiscount}
+        <s class="c-product__price c--{promo}" aria-label="New discounted price is {price}">{promoPrice}</s>
+    {/isPromo}
 
     <div class="c-product__controls">
-        {colors} <!-- its own component -->
-        {sizes} <!-- its own component -->
-        {quantity} <!-- its own component -->
-        {ratings} <!-- its own component -->
     </div>
 
     <div class="c-product__information">
@@ -54,9 +56,11 @@ Use the following to import the Product Component into your project with Sass:
 </div>
 ```
 
+
 ### Options
 
-`c--highlight` modifier will highlight product item
+`c--highlight` modifier will highlight product item. Promo modifier class
+can be discount, sale, promo, etc. eg. c--discount, c--sale.
 
 
 ## Demo

@@ -12,10 +12,11 @@ define(['$'], function ($) {
                     'title': 'Image Title'
                 },
                 'price': '$29.99',
-                'isDiscount': {
+                'isPromo': {
                     'oldPrice': '$39.99',
-                    'discountPrice': '$29.99'
-                }
+                    'promoPrice': '$29.99'
+                },
+                'info': "<p>Information here</p>"
             }
         ]
     };

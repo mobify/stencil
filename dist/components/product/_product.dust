@@ -1,12 +1,12 @@
 {#product}
-<div class="c-product {?isHighlight}c--highlight{/isHighlight}" role="group">
-    <a class="c-product__title" href="{url}" title="{title}" rel="external">
+<div class="c-product {?isHighlight}c--highlight{/isHighlight}">
+    <a class="c-product__title" href="{url}" title="{title}">
         <h2>{title}</h2>
     </a>
 
     {#image}
         <div class="c-product__image">
-            <a href="{url}" title="{title}" rel="external">
+            <a href="{url}" title="{title}">
                 <img src="{path}" alt="{title}" />
             </a>
         </div>
@@ -14,25 +14,24 @@
 
     <span class="c-product__price" aria-label="Price is {price}">{price}</span>
 
-    {#isDiscount}
+    {#isPromo}
         <span class="c-product__price" aria-label="Old price is {price}">{oldPrice}</span>
 
-        <s class="c-product__price c--discount" aria-label="New discounted price is {price}">{discountPrice}</s>
-    {/isDiscount}
+        <s class="c-product__price c--{promo}" aria-label="New {promo} price is {price}">{promoPrice}</s>
+    {/isPromo}
 
     <div class="c-product__controls">
-        {colors} <!-- colors component -->
-        {sizes} <!-- sizes component -->
-        {quantity} <!-- quantity component -->
-        {ratings} <!-- ratings component -->
+
     </div>
 
-    <div class="c-product__information">
-        <p>Information here</p>
-    </div>
+    {?info}
+        <div class="c-product__information">
+            {info}
+        </div>
+    {/info}
 
     <div class="c-product__action">
-        {addToCart} <!-- button component -->
+
     </div>
 </div>
 {/product}
