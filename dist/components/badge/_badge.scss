@@ -18,7 +18,9 @@ $badge__font-size: 10px !default;
 // ---
 
 .c-badge {
-    width: $badge__size;
+    display: inline-block;
+
+    min-width: $badge__size;
     height: $badge__size;
 
     border-radius: $badge__border-radius;
