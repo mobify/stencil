@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinner Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+    <link rel="stylesheet" href="spinner.css">
+
+    <!-- Test component styles are already included with fixture CSS. -->
+    <!-- <link rel="stylesheet" href="test.css"> -->
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Spinner Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-spinner</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should show a spinner.</p>
+            <div class="c-test__run">
+
+                <div class="c-spinner">Loading...</div>
+
+            </div>
+        </div>
+
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-spinner.c--scale</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">Use the scale modifier to scale the spinner size, scale can be defined with $spinner__scale variable</p>
+            <div class="c-test__run">
+
+                <div class="c-spinner c--scale">Loading...</div>
+
+            </div>
+        </div>
+
+    </article>
+</body>
+</html>
