@@ -1,0 +1,74 @@
+// Spinner Loader
+// ===
+//
+// A single element CSS loading spinner that can be displayed while content is loading.
+
+
+// Component Variables
+// ---
+
+$spinner__size: 1em !default;
+$spinner__color: $brand-color !default;
+
+$spinner__spacer: $spinner__size * 2.6;
+$spinner__spacer2: $spinner__size * 1.8;
+$spinner__spacer3: $spinner__size * 2.5;
+$spinner__spacer4: $spinner__size * 1.75;
+
+$spinner__scale: 0.5 !default;
+
+
+// Component Base
+// ---
+// Notes:
+// [1] Hides loading text
+// [2] Triggers GPU acceleration in mobile browsers
+
+.c-spinner {
+    position: relative;
+
+    width: $spinner__size;
+    height: $spinner__size;
+    overflow: hidden; // [1]
+    margin: ($spinner__size * 8) auto;
+
+    border-radius: 50%;
+
+    text-indent: -100%; // [1]
+
+    animation: c-spinner 1s infinite ease;
+    transform: translate3d(0, 0, 0); // [2]
+}
+
+.c-spinner.c--scale {
+    transform: scale($spinner__scale);
+}
+
+
+@keyframes c-spinner {
+    0%,
+    100% {
+        box-shadow: 0em (-$spinner__spacer) 0em 0em $spinner__color, $spinner__spacer2 (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2), $spinner__spacer3 0em 0 0em rgba($spinner__color, 0.2), $spinner__spacer4 $spinner__spacer4 0 0em rgba($spinner__color, 0.2), 0em $spinner__spacer3 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) $spinner__spacer2 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer) 0em 0 0em rgba($spinner__color, 0.5), (-$spinner__spacer2) (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.7);
+    }
+    12.5% {
+        box-shadow: 0em (-$spinner__spacer) 0em 0em rgba($spinner__color, 0.7), $spinner__spacer2 (-$spinner__spacer2) 0 0em $spinner__color, $spinner__spacer3 0em 0 0em rgba($spinner__color, 0.2), $spinner__spacer4 $spinner__spacer4 0 0em rgba($spinner__color, 0.2), 0em $spinner__spacer3 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) $spinner__spacer2 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer) 0em 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.5);
+    }
+    25% {
+        box-shadow: 0em (-$spinner__spacer) 0em 0em rgba($spinner__color, 0.5), $spinner__spacer2 (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.7), $spinner__spacer3 0em 0 0em $spinner__color, $spinner__spacer4 $spinner__spacer4 0 0em rgba($spinner__color, 0.2), 0em $spinner__spacer3 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) $spinner__spacer2 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer) 0em 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2);
+    }
+    37.5% {
+        box-shadow: 0em (-$spinner__spacer) 0em 0em rgba($spinner__color, 0.2), $spinner__spacer2 (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.5), $spinner__spacer3 0em 0 0em rgba($spinner__color, 0.7), $spinner__spacer4 $spinner__spacer4 0 0em $spinner__color, 0em $spinner__spacer3 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) $spinner__spacer2 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer) 0em 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2);
+    }
+    50% {
+        box-shadow: 0em (-$spinner__spacer) 0em 0em rgba($spinner__color, 0.2), $spinner__spacer2 (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2), $spinner__spacer3 0em 0 0em rgba($spinner__color, 0.5), $spinner__spacer4 $spinner__spacer4 0 0em rgba($spinner__color, 0.7), 0em $spinner__spacer3 0 0em $spinner__color, (-$spinner__spacer2) $spinner__spacer2 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer) 0em 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2);
+    }
+    62.5% {
+        box-shadow: 0em (-$spinner__spacer) 0em 0em rgba($spinner__color, 0.2), $spinner__spacer2 (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2), $spinner__spacer3 0em 0 0em rgba($spinner__color, 0.2), $spinner__spacer4 $spinner__spacer4 0 0em rgba($spinner__color, 0.5), 0em $spinner__spacer3 0 0em rgba($spinner__color, 0.7), (-$spinner__spacer2) $spinner__spacer2 0 0em $spinner__color, (-$spinner__spacer) 0em 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2);
+    }
+    75% {
+        box-shadow: 0em (-$spinner__spacer) 0em 0em rgba($spinner__color, 0.2), $spinner__spacer2 (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2), $spinner__spacer3 0em 0 0em rgba($spinner__color, 0.2), $spinner__spacer4 $spinner__spacer4 0 0em rgba($spinner__color, 0.2), 0em $spinner__spacer3 0 0em rgba($spinner__color, 0.5), (-$spinner__spacer2) $spinner__spacer2 0 0em rgba($spinner__color, 0.7), (-$spinner__spacer) 0em 0 0em $spinner__color, (-$spinner__spacer2) (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2);
+    }
+    87.5% {
+        box-shadow: 0em (-$spinner__spacer) 0em 0em rgba($spinner__color, 0.2), $spinner__spacer2 (-$spinner__spacer2) 0 0em rgba($spinner__color, 0.2), $spinner__spacer3 0em 0 0em rgba($spinner__color, 0.2), $spinner__spacer4 $spinner__spacer4 0 0em rgba($spinner__color, 0.2), 0em $spinner__spacer3 0 0em rgba($spinner__color, 0.2), (-$spinner__spacer2) $spinner__spacer2 0 0em rgba($spinner__color, 0.5), (-$spinner__spacer) 0em 0 0em rgba($spinner__color, 0.7), (-$spinner__spacer2) (-$spinner__spacer2) 0 0em $spinner__color;
+    }
+}
