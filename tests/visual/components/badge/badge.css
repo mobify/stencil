@@ -1,10 +1,11 @@
 .c-badge {
-  width: 15px;
+  display: inline-block;
+  min-width: 15px;
   height: 15px;
+  padding: 0 1px;
   border-radius: 50%;
   background-color: red;
   color: white;
   font-size: 10px;
-  text-align: center; }
-
-/*# sourceMappingURL=badge.css.map */
+  text-align: center;
+}
