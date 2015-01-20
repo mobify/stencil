@@ -10,18 +10,18 @@
 $spinner__size: 1em !default;
 $spinner__color: $brand-color !default;
 
+$spinner__scale: 0.5 !default;
+
 $spinner__spacer: $spinner__size * 2.6;
 $spinner__spacer2: $spinner__size * 1.8;
 $spinner__spacer3: $spinner__size * 2.5;
 $spinner__spacer4: $spinner__size * 1.75;
 
-$spinner__scale: 0.5 !default;
-
 
 // Component Base
 // ---
 // Notes:
-// [1] Hides loading text
+// [1] Hides 'Loading...' text
 // [2] Triggers GPU acceleration in mobile browsers
 
 .c-spinner {
@@ -30,7 +30,7 @@ $spinner__scale: 0.5 !default;
     width: $spinner__size;
     height: $spinner__size;
     overflow: hidden; // [1]
-    margin: ($spinner__size * 8) auto;
+    margin: ($spinner__size * 4) auto;
 
     border-radius: 50%;
 
