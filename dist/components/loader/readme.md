@@ -7,7 +7,7 @@ A CSS loader consisting of four horizontal dots that animate.
 
 Refer to the main [installation instructions for Stencil](https://github.com/mobify/stencil#installation).
 
-Use the following to import the Media Component into your project with Sass:
+Use the following to import the Loader Component into your project with Sass:
 
 ```
     @import '../bower_components/mobify-stencil/dist/components/loader/loader';
@@ -28,7 +28,12 @@ Use the following to import the Media Component into your project with Sass:
 
 ### Options
 
-<!-- Explain options and modifiers here. Remove this section if not needed. -->
+Use the following variables to customize the loader:
+
+* `$loader__color`
+* `$loader__dot-size`
+* `$loader__dot-spacing`
+* `$loader__dot-speed`
 
 
 ## Demo
