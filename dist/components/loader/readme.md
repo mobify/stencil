@@ -38,10 +38,8 @@ Use the following variables to customize the loader:
 
 ## Demo
 
-<!-- Update the name and correct directory for the url -->
-
 Visual examples of the [Loader Component](https://mobify.github.io/stencil/visual/components/loader/index.html)
 
 ## Attribution
 
-<!-- Any attribution links go here. Remove this section if not needed. -->
+https://github.com/tobiasahlin/SpinKit
