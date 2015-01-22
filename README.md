@@ -134,6 +134,23 @@ Some things to note about utility classes:
 - Verbose terminal output is on by default. You can suppress this by appending `:terse` to the end of your grunt command, e.g. `grunt test:components/arrange:terse`.
 
 
+### Working with components and utilities locally
+
+1. Ensure you have Sass 3.4+: run `sass -v`. If you have Sass < 3.4, run `gem update sass`.
+
+2. Ensure you have Bower: run `bower -v`. If not, run `npm install -g bower`.
+
+3. Clone git@github.com:mobify/stencil.git. Tests should be done on master.
+
+4. On stencil directory and run `npm install && bower install`.
+
+5. Run `grunt serve` to run testing environment locally. It will automatically recompile your stylesheets when you change them.
+
+6. Navigate to localhost:3000.
+
+7. Components and utilities are found in tests/visual/ directory.
+
+
 ## Updating `gh-pages` Online Docs
 
 We use the `gh-pages` branch to host Stencil's visual test and make them accessible via the interwebs. In order to maintain these docs, we use [git-subtree](https://github.com/git/git/tree/master/contrib/subtree) to keep the `gh-pages` tests in sync with `master`.
