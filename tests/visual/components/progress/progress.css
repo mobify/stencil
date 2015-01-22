@@ -26,7 +26,7 @@
   width: 0;
   height: 0;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   border-top: 90px solid transparent;
   border-bottom: 90px solid transparent;
 }
@@ -39,21 +39,19 @@
 }
 
 .c-progress-step__item.c--current {
-  background-color: #e6e6e6;
+  background-color: #d9d9d9;
 }
 .c-progress-step__item.c--current::after {
-  border-left-color: #e6e6e6;
+  border-left-color: #d9d9d9;
 }
 
 .c-progress-step__item.c--completed {
-  background-color: #d9d9d9;
+  background-color: #bfbfbf;
 }
 .c-progress-step__item.c--completed::after {
-  border-left-color: #d9d9d9;
+  border-left-color: #bfbfbf;
 }
 
 .c-progress + .c-progress {
   margin-top: 1em;
 }
-
-/*# sourceMappingURL=progress.css.map */

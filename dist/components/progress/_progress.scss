@@ -10,8 +10,8 @@
 $progress__item-bg-color: hsl(0, 0%, 95%) !default;
 $progress__item-padding: if(variable-exists(v-space), $v-space, 10px) !default;
 $progress__stage-layer: if(variable-exists(stage-layer), $stage-layer, 10) !default;
-$progress__current-bg-color: darken($progress__item-bg-color, 5%) !default;
-$progress__completed-bg-color: darken($progress__item-bg-color, 10%) !default;
+$progress__current-bg-color: darken($progress__item-bg-color, 10%) !default;
+$progress__completed-bg-color: darken($progress__item-bg-color, 20%) !default;
 
 // Arrow Divider Variables
 // 1. These two variables together determine the angle of the arrow dividers
