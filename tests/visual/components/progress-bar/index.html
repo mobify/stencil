@@ -20,32 +20,46 @@
         <h2 class="c-test__describe">.c-progress-bar</h2>
 
         <div class="c-test__case">
-            <p class="c-test__should">It should render a progress-bar indicator</p>
+            <p class="c-test__should">It should render a progress-bar default indicator styles</p>
             <div class="c-test__run">
-
                 <div class="c-progress-bar">
                     <span class="c-progress-bar__progress" style="width: 65%">65%</span>
                 </div>
             </div>
 
             <div class="c-test__run">
+                <div class="c-progress-bar c--round">
+                    <span class="c-progress-bar__progress" style="width: 65%" role="progressbar" aria-valuenow="65%"></span>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-progress-bar.c--radius</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render a progress-bar with a radius corners</p>
+            <div class="c-test__run">
                 <div class="c-progress-bar c--radius">
                     <span class="c-progress-bar__progress" style="width: 45%">45%</span>
                 </div>
             </div>
+        </div>
+    </article>
 
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-progress-bar.c--round</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render a progress-bar with a rounded corners</p>
             <div class="c-test__run">
                 <div class="c-progress-bar c--round">
                     <span class="c-progress-bar__progress" style="width: 80%">80%</span>
                 </div>
             </div>
-
-            <div class="c-test__run">
-                <div class="c-progress-bar c--round">
-                    <span class="c-progress-bar__progress" style="width: 20%" role="progressbar" aria-valuenow="20%"></span>
-                </div>
-            </div>
         </div>
+
     </article>
 
 </body>
