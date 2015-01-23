@@ -10,7 +10,7 @@
     <style>
     </style>
 </head>
-<body>
+<body class="c-fixture-body">
     <h1 class="c-fixture-title">
         <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
         <div>Progress-Bar Component Tests</div>
@@ -22,7 +22,10 @@
         <div class="c-test__case">
             <p class="c-test__should">It should render a progress-bar indicator.</p>
             <div class="c-test__run">
-                <div class="c-progress-bar"></div>
+
+                <div class="c-progress-bar">
+                    <span class="c-progress-bar__progress" style="width: 57%">57%</span>
+                </div>
 
                <!--
                <div class="c-progress" role="progressbar" aria-valuetext="Step 2 of 4" aria-valuenow="2">

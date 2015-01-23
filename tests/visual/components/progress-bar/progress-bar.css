@@ -302,4 +302,14 @@ th {
 
 .c-progress-bar {
   width: 100%;
+  height: 100%;
+  background: #bdc3c7;
+}
+
+.c-progress-bar__progress {
+  display: block;
+  padding-right: 5px;
+  background: #16a085;
+  color: #22e1bb;
+  text-align: right;
 }

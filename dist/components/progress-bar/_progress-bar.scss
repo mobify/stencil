@@ -1,6 +1,27 @@
 // Progress Bar
 // ============
+//
+// Progress Bar shows you the progress of
+
+
+$progress-bar__bar-color: if(variable-exists(grey-20), $grey-20, grey) !default;
+$progress-bar__progress-color: if(variable-exists(accent-color), $accent-color, yellow) !default;
+$progress-bar__spacing: if(variable-exists(h-small-space), $h-small-space, 5px) !default;
+$progress-bar__color: if(variable-exists(light-accent-color), $light-accent-color, white) !default;
 
 .c-progress-bar {
     width: 100%;
+    height: 100%;
+
+    background: $progress-bar__bar-color;
+}
+
+.c-progress-bar__progress {
+    display: block;
+    padding-right: $progress-bar__spacing;
+
+    background: $progress-bar__progress-color;
+
+    color: $progress-bar__color;
+    text-align: right;
 }
