@@ -306,10 +306,25 @@ th {
   background: #bdc3c7;
 }
 
+.c-progress-bar.c--radius {
+  border-radius: 4px;
+}
+
+.c-progress-bar.c--round {
+  border-radius: 100px;
+}
+
 .c-progress-bar__progress {
   display: block;
-  padding-right: 5px;
+  padding: 0 5px;
   background: #16a085;
-  color: #22e1bb;
+  color: #0d5d4d;
+  font-size: 14px;
   text-align: right;
+}
+.c-progress-bar.c--radius .c-progress-bar__progress {
+  border-radius: 4px;
+}
+.c-progress-bar.c--round .c-progress-bar__progress {
+  border-radius: 100px;
 }
