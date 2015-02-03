@@ -21,15 +21,30 @@
 
         <div class="c-test__case">
             <p class="c-test__should">It should render a progress-bar default indicator styles</p>
+
             <div class="c-test__run">
                 <div class="c-progress-bar">
-                    <span class="c-progress-bar__progress" style="width: 65%">65%</span>
+                    <span class="c-progress-bar__progress" style="width: 65%" >
+                        <span class="u-visually-hidden">Progress is</span>
+                        65%
+                    </span>
                 </div>
             </div>
+        </div>
+    </article>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-progress-bar</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">If % should be hidden apply .c-progress-bar__progress.c--text-hidden</p>
 
             <div class="c-test__run">
                 <div class="c-progress-bar c--round">
-                    <span class="c-progress-bar__progress" style="width: 65%" role="progressbar" aria-valuenow="65%"></span>
+                    <span class="c-progress-bar__progress c--text-hidden" style="width: 65%" aria-label="Progress is 65%">
+                        <span class="u-visually-hidden">Progress is</span>
+                        65%
+                    </span>
                 </div>
             </div>
         </div>
@@ -40,9 +55,13 @@
 
         <div class="c-test__case">
             <p class="c-test__should">It should render a progress-bar with a radius corners</p>
+
             <div class="c-test__run">
                 <div class="c-progress-bar c--radius">
-                    <span class="c-progress-bar__progress" style="width: 45%">45%</span>
+                    <span class="c-progress-bar__progress" style="width: 45%">
+                        <span class="u-visually-hidden">Progress is</span>
+                        45%
+                    </span>
                 </div>
             </div>
         </div>
@@ -53,9 +72,13 @@
 
         <div class="c-test__case">
             <p class="c-test__should">It should render a progress-bar with a rounded corners</p>
+
             <div class="c-test__run">
                 <div class="c-progress-bar c--round">
-                    <span class="c-progress-bar__progress" style="width: 80%">80%</span>
+                    <span class="c-progress-bar__progress" style="width: 80%">
+                        <span class="u-visually-hidden">Progress is</span>
+                        80%
+                    </span>
                 </div>
             </div>
         </div>

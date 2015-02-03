@@ -301,8 +301,7 @@ th {
 }
 
 .c-progress-bar {
-  width: 100%;
-  height: 100%;
+  display: block;
   background: #bdc3c7;
 }
 
@@ -329,11 +328,14 @@ th {
   background: #16a085;
   color: #0d5d4d;
   font-size: 14px;
-  text-align: right;
 }
 .c-progress-bar.c--radius .c-progress-bar__progress {
   border-radius: 4px;
 }
 .c-progress-bar.c--round .c-progress-bar__progress {
   border-radius: 100px;
+}
+.c-progress-bar__progress.c--text-hidden {
+  font-size: 0;
+  line-height: 0;
 }
