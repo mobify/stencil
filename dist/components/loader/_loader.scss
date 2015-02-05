@@ -11,7 +11,7 @@
 //
 // $component__variable-description: {value} !default;
 
-$loader__color: $brand-color !default;
+$loader__color: if(variable-exists(brand-color), $brand-color, MediumTurquoise) !default;
 $loader__dot-size: 1em !default;
 $loader__dot-spacing: $loader__dot-size/4 !default;
 $loader__dot-speed: 1.15s !default;
