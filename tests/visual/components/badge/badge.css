@@ -1,11 +1,10 @@
 .c-badge {
   display: inline-block;
-  min-width: 15px;
-  height: 15px;
-  padding: 0 1px;
-  border-radius: 50%;
-  background-color: red;
+  padding: 0.25em 0.7em;
+  border-radius: 4em;
+  background-color: #ccc;
   color: white;
-  font-size: 10px;
+  font-size: 0.75em;
+  font-weight: 600;
   text-align: center;
 }

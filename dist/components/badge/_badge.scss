@@ -1,34 +1,34 @@
 // Badge Component
 // ===
 //
-// A badge that shows the quantity of items in the cart, often used with a cart icon in the header.
+// A badge icon with content. Often used to show a the quantity of items in a
+// cart and paired visually with the cart icon in the header.
 
 
 // Component Variables
 // ---
 //
 
-$badge__background-color: red !default;
+$badge__vertical-padding: 0.25em !default;
+$badge__horizontal-padding: 0.7em !default;
+$badge__background-color: #ccc !default;
+$badge__border-radius: 4em !default;
 $badge__text-color: white !default;
-$badge__border-radius: 50% !default;
-$badge__size: 15px !default;
-$badge__font-size: 10px !default;
+$badge__font-size: 0.75em !default;
+$badge__font-weight: 600;
 
 // Component Base
 // ---
 
 .c-badge {
     display: inline-block;
-
-    min-width: $badge__size;
-    height: $badge__size;
-
-    padding: 0 1px;
+    padding: $badge__vertical-padding $badge__horizontal-padding;
 
     border-radius: $badge__border-radius;
     background-color: $badge__background-color;
 
     color: $badge__text-color;
     font-size: $badge__font-size;
+    font-weight: $badge__font-weight;
     text-align: center;
 }
