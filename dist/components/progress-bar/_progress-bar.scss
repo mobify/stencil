@@ -7,23 +7,19 @@
 //
 // Notes:
 //
-// 1. Can't use formula because border radius is applied to container and to the progress
-//    Containers doesn't have fixed height and stretched by the content
-// 2. Font size sets the height of progress bar. By 10 px we add vertical space on the edges
+// 1. Font size sets the height of progress bar. By 10 px we add vertical space on the edges
 
 $progress-bar__bar-background-color: if(variable-exists(grey-20), $grey-20, grey) !default;
 $progress-bar__progress-color: if(variable-exists(accent-color), $accent-color, yellow) !default;
 
-
-$progress-bar__spacing: if(variable-exists(h-small-space), 0 $h-small-space, 0 5px) !default;
-$progress-bar__radius-corner: if(variable-exists(border-radius), $border-radius, 15px) !default;
-$progress-bar__round-corner: 100px !default; // 1
-
-$progress-bar__color: if(variable-exists(dark-accent-color), $dark-accent-color, white) !default;
+$progress-bar__color: if(variable-exists(dark-accent-color), $dark-accent-color, black) !default;
 $progress-bar__font-size: if(variable-exists(font-size), $font-size, 14px) !default;
 
-$progress-bar__height: $progress-bar__font-size + 10px !default; // 2
+$progress-bar__spacing: if(variable-exists(h-small-space), 0 $h-small-space, 0 5px) !default;
+$progress-bar__height: $progress-bar__font-size + 10px !default; // 1
 
+$progress-bar__radius-corner: if(variable-exists(border-radius), $border-radius, 15px) !default;
+$progress-bar__round-corner: $progress-bar__height !default;
 
 // Progress bar background
 // ---

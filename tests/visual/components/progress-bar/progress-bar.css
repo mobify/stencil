@@ -310,7 +310,7 @@ th {
 }
 
 .c-progress-bar.c--round {
-  border-radius: 100px;
+  border-radius: 24px;
 }
 
 .c-progress-bar__progress {
@@ -333,7 +333,7 @@ th {
   border-radius: 4px;
 }
 .c-progress-bar.c--round .c-progress-bar__progress {
-  border-radius: 100px;
+  border-radius: 24px;
 }
 .c-progress-bar__progress.c--text-hidden {
   font-size: 0;
