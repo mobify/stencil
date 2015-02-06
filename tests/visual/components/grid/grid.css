@@ -330,35 +330,35 @@ th {
 .c-grid.c--2up .c-grid__span {
   width: 50%;
 }
-.c-grid.c--2up .c-grid__span:nth-child(2n+1) {
+.c-grid.c--2up .c-grid__span:nth-of-type(2n+1) {
   clear: both;
 }
 
 .c-grid.c--3up .c-grid__span {
   width: 33.33333%;
 }
-.c-grid.c--3up .c-grid__span:nth-child(3n+1) {
+.c-grid.c--3up .c-grid__span:nth-of-type(3n+1) {
   clear: both;
 }
 
 .c-grid.c--4up .c-grid__span {
   width: 25%;
 }
-.c-grid.c--4up .c-grid__span:nth-child(4n+1) {
+.c-grid.c--4up .c-grid__span:nth-of-type(4n+1) {
   clear: both;
 }
 
 .c-grid.c--5up .c-grid__span {
   width: 20%;
 }
-.c-grid.c--5up .c-grid__span:nth-child(5n+1) {
+.c-grid.c--5up .c-grid__span:nth-of-type(5n+1) {
   clear: both;
 }
 
 .c-grid.c--6up .c-grid__span {
   width: 16.66667%;
 }
-.c-grid.c--6up .c-grid__span:nth-child(6n+1) {
+.c-grid.c--6up .c-grid__span:nth-of-type(6n+1) {
   clear: both;
 }
 
