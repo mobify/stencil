@@ -23,19 +23,16 @@ $progress__divider-border-color: hsl(360, 100%, 100%) !default;
 
 
 .c-progress {
-}
-
-
-// Progress: Step
-// ---
-
-.c-progress__step {
     display: flex;
 
     overflow: hidden;
 }
 
-.c-progress-step__item {
+
+// Progress: Steps
+// ---
+
+.c-progress__step-item {
     position: relative; // For the absolutely positioned arrows
     display: block;
     padding: $progress__item-padding;
@@ -80,7 +77,7 @@ $progress__divider-border-color: hsl(360, 100%, 100%) !default;
     }
 }
 
-.c-progress-step__item.c--current {
+.c-progress__step-item.c--current {
     background-color: $progress__current-bg-color;
 
     &::after {
@@ -88,7 +85,7 @@ $progress__divider-border-color: hsl(360, 100%, 100%) !default;
     }
 }
 
-.c-progress-step__item.c--completed {
+.c-progress__step-item.c--completed {
     background-color: $progress__completed-bg-color;
 
     &::after {

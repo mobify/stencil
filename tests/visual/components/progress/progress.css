@@ -1,21 +1,21 @@
-.c-progress__step {
+.c-progress {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   overflow: hidden;
 }
 
-.c-progress-step__item {
+.c-progress__step-item {
   position: relative;
   display: block;
   padding: 10px;
   background-color: #f2f2f2;
 }
-.c-progress-step__item:not(:first-child) {
+.c-progress__step-item:not(:first-child) {
   padding-left: 30px;
   padding-right: 0;
 }
-.c-progress-step__item::after, .c-progress-step__item::before {
+.c-progress__step-item::after, .c-progress__step-item::before {
   content: '';
   display: block;
   position: absolute;
@@ -30,25 +30,25 @@
   border-top: 90px solid transparent;
   border-bottom: 90px solid transparent;
 }
-.c-progress-step__item::after {
+.c-progress__step-item::after {
   border-left: 20px solid #f2f2f2;
 }
-.c-progress-step__item::before {
+.c-progress__step-item::before {
   margin-left: 2px;
   border-left: 20px solid white;
 }
 
-.c-progress-step__item.c--current {
+.c-progress__step-item.c--current {
   background-color: #d9d9d9;
 }
-.c-progress-step__item.c--current::after {
+.c-progress__step-item.c--current::after {
   border-left-color: #d9d9d9;
 }
 
-.c-progress-step__item.c--completed {
+.c-progress__step-item.c--completed {
   background-color: #bfbfbf;
 }
-.c-progress-step__item.c--completed::after {
+.c-progress__step-item.c--completed::after {
   border-left-color: #bfbfbf;
 }
 
