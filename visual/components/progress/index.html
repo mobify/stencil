@@ -22,33 +22,27 @@
         <div class="c-test__case">
             <p class="c-test__should">It should render a progress indicator.</p>
             <div class="c-test__run">
-
                 <div class="c-progress" role="progressbar" aria-valuetext="Step 2 of 4" aria-valuenow="2">
-                    <div class="c-progress__step" aria-hidden="true">
+                    <div class="c-progress__step-item c--completed" aria-hidden="true">
+                        <span class="c-progress__step-index">1</span>
+                        <span class="c-progress__step-label">Your Details</span>
+                    </div>
 
-                        <div class="c-progress-step__item c--completed">
-                            <span class="c-progress-step__index">1</span>
-                            <div class="c-progress-step__label">Your Details</div>
-                        </div>
+                    <div class="c-progress__step-item c--current" aria-hidden="true">
+                        <span class="c-progress__step-index">2</span>
+                        <span class="c-progress__step-label">Delivery Address</span>
+                    </div>
 
-                        <div class="c-progress-step__item c--current">
-                            <span class="c-progress-step__index">2</span>
-                            <div class="c-progress-step__label">Delivery Address</div>
-                        </div>
+                    <div class="c-progress__step-item" aria-hidden="true">
+                        <span class="c-progress__step-index">3</span>
+                        <span class="c-progress__step-label">Secure Payment</span>
+                    </div>
 
-                        <div class="c-progress-step__item">
-                            <span class="c-progress-step__index">3</span>
-                            <div class="c-progress-step__label">Secure Payment</div>
-                        </div>
-
-                        <div class="c-progress-step__item">
-                            <span class="c-progress-step__index">4</span>
-                            <div class="c-progress-step__label">Confirmation</div>
-                        </div>
-
+                    <div class="c-progress__step-item" aria-hidden="true">
+                        <span class="c-progress__step-index">4</span>
+                        <span class="c-progress__step-label">Confirmation</span>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -57,65 +51,61 @@
             <div class="c-test__run">
 
                 <div class="c-progress u-margin-bottom-md" role="progressbar" aria-valuetext="Step 2 of 4" aria-valuenow="2">
-                    <div class="c-progress__step" aria-hidden="true">
 
-                        <div class="c-progress-step__item c--completed">
-                            <span class="c-progress-step__index">Step 1</span>
-                            <div class="c-progress-step__label">The Ingredients</div>
-                        </div>
-
-                        <div class="c-progress-step__item c--current">
-                            <span class="c-progress-step__index">Step 2</span>
-                            <div class="c-progress-step__label">The Process</div>
-                        </div>
-
-                        <div class="c-progress-step__item">
-                            <span class="c-progress-step__index">Step 3</span>
-                            <div class="c-progress-step__label">Enjoy the best damn bowl of oatmeal you've ever had in your life.</div>
-                        </div>
-
+                    <div class="c-progress__step-item c--completed" aria-hidden="true">
+                        <span class="c-progress__step-index">Step 1</span>
+                        <span class="c-progress__step-label">The Ingredients</span>
                     </div>
+
+                    <div class="c-progress__step-item c--current" aria-hidden="true">
+                        <span class="c-progress__step-index">Step 2</span>
+                        <span class="c-progress__step-label">The Process</span>
+                    </div>
+
+                    <div class="c-progress__step-item" aria-hidden="true">
+                        <span class="c-progress__step-index">Step 3</span>
+                        <span class="c-progress__step-label">Enjoy the best damn bowl of oatmeal you've ever had in your life.</span>
+                    </div>
+
                 </div>
 
                 <div class="c-progress" role="progressbar" aria-valuetext="Step 5 of 7" aria-valuenow="5">
-                    <div class="c-progress__step" aria-hidden="true">
 
-                        <div class="c-progress-step__item c--completed">
-                            <span class="c-progress-step__index">1</span>
-                            <div class="c-progress-step__label">One</div>
-                        </div>
-
-                        <div class="c-progress-step__item c--completed">
-                            <span class="c-progress-step__index">2</span>
-                            <div class="c-progress-step__label">Two</div>
-                        </div>
-
-                        <div class="c-progress-step__item c--completed">
-                            <span class="c-progress-step__index">3</span>
-                            <div class="c-progress-step__label">Three</div>
-                        </div>
-
-                        <div class="c-progress-step__item c--completed">
-                            <span class="c-progress-step__index">4</span>
-                            <div class="c-progress-step__label">Four</div>
-                        </div>
-
-                        <div class="c-progress-step__item c--current">
-                            <span class="c-progress-step__index">5</span>
-                            <div class="c-progress-step__label">Five</div>
-                        </div>
-
-                        <div class="c-progress-step__item">
-                            <span class="c-progress-step__index">6</span>
-                            <div class="c-progress-step__label">Six</div>
-                        </div>
-
-                        <div class="c-progress-step__item">
-                            <span class="c-progress-step__index">7</span>
-                            <div class="c-progress-step__label">Seven</div>
-                        </div>
-
+                    <div class="c-progress__step-item c--completed" aria-hidden="true">
+                        <span class="c-progress__step-index">1</span>
+                        <div class="c-progress__step-label">One</div>
                     </div>
+
+                    <div class="c-progress__step-item c--completed" aria-hidden="true">
+                        <span class="c-progress__step-index">2</span>
+                        <div class="c-progress__step-label">Two</div>
+                    </div>
+
+                    <div class="c-progress__step-item c--completed" aria-hidden="true">
+                        <span class="c-progress__step-index">3</span>
+                        <div class="c-progress__step-label">Three</div>
+                    </div>
+
+                    <div class="c-progress__step-item c--completed" aria-hidden="true">
+                        <span class="c-progress__step-index">4</span>
+                        <div class="c-progress__step-label">Four</div>
+                    </div>
+
+                    <div class="c-progress__step-item c--current" aria-hidden="true">
+                        <span class="c-progress__step-index">5</span>
+                        <div class="c-progress__step-label">Five</div>
+                    </div>
+
+                    <div class="c-progress__step-item" aria-hidden="true">
+                        <span class="c-progress__step-index">6</span>
+                        <div class="c-progress__step-label">Six</div>
+                    </div>
+
+                    <div class="c-progress__step-item" aria-hidden="true">
+                        <span class="c-progress__step-index">7</span>
+                        <div class="c-progress__step-label">Seven</div>
+                    </div>
+
                 </div>
 
             </div>
