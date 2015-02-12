@@ -136,6 +136,8 @@ Some things to note about utility classes:
 
 ### Working with components and utilities locally
 
+#### Previewing Stencil
+
 1. Ensure you have Sass 3.4+: run `sass -v`. If you have Sass < 3.4, run `gem update sass`.
 
 2. Ensure you have Bower: run `bower -v`. If not, run `npm install -g bower`.
@@ -150,6 +152,53 @@ Some things to note about utility classes:
 
 7. Components and utilities are found in tests/visual/ directory.
 
+#### Working process
+
+Described below process is about creating a new Component. If you're creating a new Util simply replace *component* with *util*.
+
+1. Create a new component folder in the **/dist/component** and name it after the new component name.
+
+2. In the new component folder create next files (you can find files templates in the **/templates** folder):
+
+    ```
+    /dist/components/component-name
+    -- _component-name.scss
+    -- component-name.dust
+    -- component-name.json
+    -- readme.md
+    ```
+    Notice that `*.scss` file should have underscore to avoid creating unnecessary css file.
+
+2. Create Component folder in the **/tests/visual/** with `index.html` file in it. You can find template in the **/templates** folder.
+
+3. Create `component-name.scss` file and import vellum and your new component styles in it. Notice that this file should NOT have underscore in the file name because we need `*.css` and `*css.map` files that sass will create.
+
+    ```
+    @import 'bower_components/vellum/dist/vellum';
+    @import 'dist/components/component-name/component-name';
+    ```
+
+4. The test folder should have this structure:
+
+    ```
+    /tests/visual/components/component-name
+    -- index.html
+    -- component-name.css
+    -- component-name.css.map
+    -- component-name.scss
+
+    ```
+5. Files descriptions:
+
+    Write your SCSS styles in the **/dist/components/component-name.scss**
+
+    Create and test your markup in the **/tests/visual/index.html**
+
+    When markup is done create its dust template in the **/dist/components/component-name.dust**
+
+    Fill json file with dummy data for dust template in **/dist/components/component-name.json**
+
+    Write instucrions how to use this component in **/dist/components/readme.md**
 
 ## Updating `gh-pages` Online Docs
 
