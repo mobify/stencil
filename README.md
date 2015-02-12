@@ -156,7 +156,7 @@ Some things to note about utility classes:
 
 Described below process is about creating a New Component. If you're creating a new Utility simply replace *Component* with *Util*.
 
-1. Create a new component folder in the **/dist/component** and name it after a new component.
+1. Create a new component folder in **/dist/component** and name it after a new component.
 
 2. In a new component folder create next files (you can find files templates in the **/templates** folder):
 
@@ -169,7 +169,7 @@ Described below process is about creating a New Component. If you're creating a 
     ```
     Notice that `*.scss` file should have underscore to avoid creating unnecessary css file.
 
-3. Create Component folder in the **/tests/visual/** with `index.html` file in it (you can find `index.html` template in the **/templates** folder).
+3. Create Component folder in **/tests/visual/components** with `index.html` file in it (you can find index.html template in the **/templates** folder).
 
 4. In the newly created test folder create `component-name.scss` file and import **Vellum** and your **New Component styles** in it. Notice that this file should NOT have underscore in the file name because we need `*.css` and `*css.map` files that sass will create.
 
