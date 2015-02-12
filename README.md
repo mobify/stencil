@@ -154,11 +154,11 @@ Some things to note about utility classes:
 
 #### Working process
 
-Described below process is about creating a new Component. If you're creating a new Util simply replace *component* with *util*.
+Described below process is about creating a New Component. If you're creating a new Utility simply replace *Component* with *Util*.
 
-1. Create a new component folder in the **/dist/component** and name it after the new component name.
+1. Create a new component folder in the **/dist/component** and name it after a new component.
 
-2. In the new component folder create next files (you can find files templates in the **/templates** folder):
+2. In a new component folder create next files (you can find files templates in the **/templates** folder):
 
     ```
     /dist/components/component-name
@@ -169,16 +169,16 @@ Described below process is about creating a new Component. If you're creating a 
     ```
     Notice that `*.scss` file should have underscore to avoid creating unnecessary css file.
 
-2. Create Component folder in the **/tests/visual/** with `index.html` file in it. You can find template in the **/templates** folder.
+3. Create Component folder in the **/tests/visual/** with `index.html` file in it (you can find `index.html` template in the **/templates** folder).
 
-3. Create `component-name.scss` file and import vellum and your new component styles in it. Notice that this file should NOT have underscore in the file name because we need `*.css` and `*css.map` files that sass will create.
+4. In the newly created test folder create `component-name.scss` file and import **Vellum** and your **New Component styles** in it. Notice that this file should NOT have underscore in the file name because we need `*.css` and `*css.map` files that sass will create.
 
     ```
     @import 'bower_components/vellum/dist/vellum';
     @import 'dist/components/component-name/component-name';
     ```
 
-4. The test folder should have this structure:
+5. Test folder should have this structure:
 
     ```
     /tests/visual/components/component-name
@@ -188,7 +188,7 @@ Described below process is about creating a new Component. If you're creating a 
     -- component-name.scss
 
     ```
-5. Files descriptions:
+6. Files descriptions:
 
     Write your SCSS styles in the **/dist/components/component-name.scss**
 
