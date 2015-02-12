@@ -171,7 +171,7 @@ Described below process is about creating a New Component. If you're creating a 
 
 3. Create Component folder in **/tests/visual/components** with `index.html` file in it (you can find index.html template in the **/templates** folder).
 
-4. In the newly created test folder create `component-name.scss` file and import **Vellum** and your **New Component styles** in it. Notice that this file should NOT have underscore in the file name because we need `*.css` and `*css.map` files that sass will create.
+4. In the newly created test folder create `component-name.scss` file and import **Vellum** and your **New Component styles** in it. Notice that this file should NOT have underscore in the file name because we need `*.css` and `*.css.map` files that sass will create.
 
     ```
     @import 'bower_components/vellum/dist/vellum';
@@ -190,7 +190,7 @@ Described below process is about creating a New Component. If you're creating a 
     ```
 6. Files descriptions:
 
-    Write your SCSS styles in the **/dist/components/component-name.scss**
+    Write your SCSS styles in the **/dist/components/_component-name.scss**
 
     Create and test your markup in the **/tests/visual/index.html**
 
