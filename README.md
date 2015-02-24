@@ -154,7 +154,7 @@ Some things to note about utility classes:
 
 #### Working process
 
-Described below process is about creating a New Component. If you're creating a new Utility simply replace *Component* with *Util*.
+The process below describes how to create a new component. The steps are described using `components` but the process is identical for `utils`. When building a new utility, simply replace all references to `components` with `utils`. For example: instead of `/dist/components/component-name/component-name.scss`, it's `/dist/utils/utils-name/utils-name.scss`.
 
 1. Create a new component folder in **/dist/component** and name it after a new component.
 
