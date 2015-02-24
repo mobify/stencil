@@ -156,10 +156,12 @@ Some things to note about utility classes:
 
 The process below describes how to create a new component. The steps are described using `components` but the process is identical for `utils`. When building a new utility, simply replace all references to `components` with `utils`. For example: instead of `/dist/components/component-name/component-name.scss`, it's `/dist/utils/utils-name/utils-name.scss`.
 
-1. Create a new component folder in **/dist/component** and name it after a new component.
+1. Create a new component folder in **/dist/component/{name-of-your-component}**
 
-2. In a new component folder create next files (you can find files templates in the **/templates** folder):
+2. In your new component folder create the following files:
 
+    _(For a good starting place, see the template files in **/templates**)_
+    
     ```
     /dist/components/component-name
     -- _component-name.scss
@@ -169,16 +171,24 @@ The process below describes how to create a new component. The steps are describ
     ```
     Notice that `*.scss` file should have underscore to avoid creating unnecessary css file.
 
-3. Create Component folder in **/tests/visual/components** with `index.html` file in it (you can find index.html template in the **/templates** folder).
+3. Create another component folder, but this time in **/tests/visual/components**
 
-4. In the newly created test folder create `component-name.scss` file and import **Vellum** and your **New Component styles** in it. Notice that this file should NOT have underscore in the file name because we need `*.css` and `*.css.map` files that sass will create.
+4. In your new component test folder, create an `index.html` file
+
+    _(For a good starting place, see the `index.html` template in **/templates**)_
+
+5. Now create a `component-name.scss` file
+
+    _(Notice that this file should NOT have underscore in the file name. This is because we do want the `*.css` and `*.css.map` files that Sass will create)_
+
+6. In your newly created `scss` file, import **Vellum** and your **New Component styles**
 
     ```
     @import 'bower_components/vellum/dist/vellum';
     @import 'dist/components/component-name/component-name';
     ```
 
-5. Test folder should have this structure:
+7. Test folder should have this structure:
 
     ```
     /tests/visual/components/component-name
@@ -188,7 +198,8 @@ The process below describes how to create a new component. The steps are describ
     -- component-name.scss
 
     ```
-6. Files descriptions:
+
+8. Files descriptions:
 
     Write your SCSS styles in the **/dist/components/_component-name.scss**
 
