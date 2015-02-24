@@ -161,7 +161,7 @@ The process below describes how to create a new component. The steps are describ
 2. In your new component folder create the following files:
 
     _(For a good starting place, see the template files in **/templates**)_
-    
+
     ```
     /dist/components/component-name
     -- _component-name.scss
@@ -169,7 +169,7 @@ The process below describes how to create a new component. The steps are describ
     -- component-name.json
     -- readme.md
     ```
-    Notice that `*.scss` file should have underscore to avoid creating unnecessary css file.
+    Note that the `*.scss` file should be prefixed with an underscore to avoid creating an unnecessary css file.
 
 3. Create another component folder, but this time in **/tests/visual/components**
 
@@ -188,7 +188,7 @@ The process below describes how to create a new component. The steps are describ
     @import 'dist/components/component-name/component-name';
     ```
 
-7. Test folder should have this structure:
+7. The Test folder should have the following structure:
 
     ```
     /tests/visual/components/component-name
