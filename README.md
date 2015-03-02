@@ -152,7 +152,7 @@ Some things to note about utility classes:
 
 7. Components and utilities are found in tests/visual/ directory.
 
-#### Working process
+#### Creating New Stencils
 
 The process below describes how to create a new component. The steps are described using `components` but the process is identical for `utils`. When building a new utility, simply replace all references to `components` with `utils`. For example: instead of `/dist/components/component-name/component-name.scss`, it's `/dist/utils/utils-name/utils-name.scss`.
 
@@ -171,7 +171,7 @@ The process below describes how to create a new component. The steps are describ
     ```
     Note that the `*.scss` file should be prefixed with an underscore to avoid creating an unnecessary css file.
 
-3. Create another component folder, but this time in **/tests/visual/components**
+3. Next, we should write some visual tests for our component. Create another component folder, but this time in **/tests/visual/components**
 
 4. In your new component test folder, create an `index.html` file
 
