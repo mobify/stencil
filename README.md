@@ -196,7 +196,6 @@ The process below describes how to create a new component. The steps are describ
     -- component-name.css
     -- component-name.css.map
     -- component-name.scss
-
     ```
 
 7. Files descriptions:
