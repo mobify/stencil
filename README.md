@@ -136,6 +136,8 @@ Some things to note about utility classes:
 
 ### Working with components and utilities locally
 
+#### Previewing Stencil
+
 1. Ensure you have Sass 3.4+: run `sass -v`. If you have Sass < 3.4, run `gem update sass`.
 
 2. Ensure you have Bower: run `bower -v`. If not, run `npm install -g bower`.
@@ -150,6 +152,63 @@ Some things to note about utility classes:
 
 7. Components and utilities are found in tests/visual/ directory.
 
+#### Creating New Stencils
+
+The process below describes how to create a new component. The steps are described using `components` but the process is identical for `utils`. When building a new utility, simply replace all references to `components` with `utils`. For example: instead of `/dist/components/component-name/component-name.scss`, it's `/dist/utils/utils-name/utils-name.scss`.
+
+1. Create a new component folder in **/dist/component/{name-of-your-component}**
+
+2. In your new component folder create the following files:
+
+    _(For a good starting place, see the template files in **/templates**)_
+
+    ```
+    /dist/components/component-name
+    -- _component-name.scss
+    -- component-name.dust
+    -- component-name.json
+    -- readme.md
+    ```
+    Note that the `*.scss` file should be prefixed with an underscore to avoid creating an unnecessary css file.
+
+3. Next, we should write some visual tests for our component. Create another component folder, but this time in **/tests/visual/components**
+
+4. In your new component test folder, create an `index.html` file
+
+    _(For a good starting place, see the `index.html` template in **/templates**)_
+
+5. Now create a `component-name.scss` file
+
+    _(Notice that this file should NOT have underscore in the file name. This is because we do want the `*.css` and `*.css.map` files that Sass will create)_
+
+6. In your newly created `scss` file, import **Vellum** and your **New Component styles**
+
+    ```
+    @import 'bower_components/vellum/dist/vellum';
+    @import 'dist/components/component-name/component-name';
+    ```
+
+    If you did everything correct saving `component-name.scss` will create `component-name.css` and `component-name.css.map` files and the Test folder will have the following structure:
+
+    ```
+    /tests/visual/components/component-name
+    -- index.html
+    -- component-name.css
+    -- component-name.css.map
+    -- component-name.scss
+    ```
+
+7. Files descriptions:
+
+    Write your SCSS styles in the **/dist/components/_component-name.scss**
+
+    Create and test your markup in the **/tests/visual/index.html**
+
+    When markup is done create its dust template in the **/dist/components/component-name.dust**
+
+    Fill json file with dummy data for dust template in **/dist/components/component-name.json**
+
+    Write instucrions how to use this component in **/dist/components/readme.md**
 
 ## Updating `gh-pages` Online Docs
 
