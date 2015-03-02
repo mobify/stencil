@@ -188,7 +188,7 @@ The process below describes how to create a new component. The steps are describ
     @import 'dist/components/component-name/component-name';
     ```
 
-7. The Test folder should have the following structure:
+    If you did everything correct `component-name.scss` will create `component-name.css` and `component-name.css.map` files and the Test folder will have the following structure:
 
     ```
     /tests/visual/components/component-name
@@ -199,7 +199,7 @@ The process below describes how to create a new component. The steps are describ
 
     ```
 
-8. Files descriptions:
+7. Files descriptions:
 
     Write your SCSS styles in the **/dist/components/_component-name.scss**
 
