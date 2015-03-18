@@ -31,7 +31,7 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
 // Progress: Steps
 // ---
 
-.c-progress-steps__step-item {
+.c-progress-steps__item {
     position: relative; // For the absolutely positioned arrows
 
     display: block;
@@ -77,7 +77,7 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
     }
 }
 
-.c-progress-steps__step-item.c--current {
+.c-progress-steps__item.c--current {
     background-color: $progress-steps__current-bg-color;
 
     &::after {
@@ -85,7 +85,7 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
     }
 }
 
-.c-progress-steps__step-item.c--completed {
+.c-progress-steps__item.c--completed {
     background-color: $progress-steps__completed-bg-color;
 
     &::after {
@@ -105,12 +105,4 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
 // ---
 
 .c-progress-steps__label {
-}
-
-
-// Progress: Inbetween
-// ---
-
-.c-progress-steps__inbetween,
-%c-progress-steps__inbetween {
 }
