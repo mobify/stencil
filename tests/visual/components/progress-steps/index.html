@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="progress-steps.css">
+    <style>
+    </style>
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Progress Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-progress-steps-steps</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render a progress steps indicator.</p>
+            <div class="c-test__run">
+                <div class="c-progress-steps" role="progressbar" aria-valuetext="Step 2 of 4" aria-valuenow="2">
+                    <div class="c-progress-steps__item c--completed" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">1</span>
+                        <span class="c-progress-steps__step-label">Your Details</span>
+                    </div>
+
+                    <div class="c-progress-steps__item c--current" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">2</span>
+                        <span class="c-progress-steps__step-label">Delivery Address</span>
+                    </div>
+
+                    <div class="c-progress-steps__item" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">3</span>
+                        <span class="c-progress-steps__step-label">Secure Payment</span>
+                    </div>
+
+                    <div class="c-progress-steps__item" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">4</span>
+                        <span class="c-progress-steps__step-label">Confirmation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should support a varying number of steps.</p>
+            <div class="c-test__run">
+
+                <div class="c-progress-steps u-margin-bottom-md" role="progressbar" aria-valuetext="Step 2 of 4" aria-valuenow="2">
+
+                    <div class="c-progress-steps__item c--completed" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">Step 1</span>
+                        <span class="c-progress-steps__step-label">The Ingredients</span>
+                    </div>
+
+                    <div class="c-progress-steps__item c--current" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">Step 2</span>
+                        <span class="c-progress-steps__step-label">The Process</span>
+                    </div>
+
+                    <div class="c-progress-steps__item" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">Step 3</span>
+                        <span class="c-progress-steps__step-label">Enjoy the best damn bowl of oatmeal you've ever had in your life.</span>
+                    </div>
+
+                </div>
+
+                <div class="c-progress-steps" role="progressbar" aria-valuetext="Step 5 of 7" aria-valuenow="5">
+
+                    <div class="c-progress-steps__item c--completed" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">1</span>
+                        <div class="c-progress-steps__step-label">One</div>
+                    </div>
+
+                    <div class="c-progress-steps__item c--completed" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">2</span>
+                        <div class="c-progress-steps__step-label">Two</div>
+                    </div>
+
+                    <div class="c-progress-steps__item c--completed" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">3</span>
+                        <div class="c-progress-steps__step-label">Three</div>
+                    </div>
+
+                    <div class="c-progress-steps__item c--completed" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">4</span>
+                        <div class="c-progress-steps__step-label">Four</div>
+                    </div>
+
+                    <div class="c-progress-steps__item c--current" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">5</span>
+                        <div class="c-progress-steps__step-label">Five</div>
+                    </div>
+
+                    <div class="c-progress-steps__item" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">6</span>
+                        <div class="c-progress-steps__step-label">Six</div>
+                    </div>
+
+                    <div class="c-progress-steps__item" aria-hidden="true">
+                        <span class="c-progress-steps__step-index">7</span>
+                        <div class="c-progress-steps__step-label">Seven</div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+</body>
+</html>
