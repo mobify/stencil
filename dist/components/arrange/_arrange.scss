@@ -31,6 +31,7 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 
 .c-arrange {
     display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
 
