@@ -4,6 +4,7 @@
 // Helps show users where they exist within a multiple-page workflow, such as a
 // checkout flow.
 
+
 // Configurable Variables
 // ---
 
@@ -14,10 +15,11 @@ $progress-steps__current-bg-color: darken($progress-steps__item-bg-color, 10%) !
 $progress-steps__completed-bg-color: darken($progress-steps__item-bg-color, 20%) !default;
 
 // Arrow Divider Variables
-// 1. These two variables together determine the angle of the arrow dividers
+//
+// [1] These two variables together determine the angle of the arrow dividers
 
-$progress-steps__divider-angle: 90px !default; // 1
-$progress-steps__divider-width: 20px !default; // 1
+$progress-steps__divider-angle: 90px !default; // [1]
+$progress-steps__divider-width: 20px !default; // [1]
 $progress-steps__divider-border-thickness: 2px !default;
 $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
 
@@ -30,22 +32,31 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
 
 // Progress: Steps
 // ---
+//
+// Notes:
+// [1] For the absolutely positioned arrows
+// [2] Adjust padding to account for the arrows
+// [3] Coloured triangle
+// [4] Background color spacing
+// [5] Offset to create the appearance of a border
 
 .c-progress-steps__item {
-    position: relative; // For the absolutely positioned arrows
+    position: relative; // [1]
 
     display: block;
     padding: $progress-steps__item-padding;
 
     background-color: $progress-steps__item-bg-color;
 
-    // Adjust padding to account for the arrows
+    // [2]
     &:not(:first-child) {
         padding-right: 0;
         padding-left: $progress-steps__divider-width + $progress-steps__item-padding;
     }
 
+
     // Arrows
+
     &::after,
     &::before {
         content: '';
@@ -65,17 +76,20 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
         transform: translateY(-50%);
     }
 
-    // coloured triangle
+    // [3]
     &::after {
         border-left: $progress-steps__divider-width solid $progress-steps__item-bg-color;
     }
 
-    // background color spacing
+    // [4]
     &::before {
-        margin-left: $progress-steps__divider-border-thickness; // offset to create the appearance of a border
+        margin-left: $progress-steps__divider-border-thickness; // [5]
         border-left: $progress-steps__divider-width solid $progress-steps__divider-border-color;
     }
 }
+
+// Current Item
+// ---
 
 .c-progress-steps__item.c--current {
     background-color: $progress-steps__current-bg-color;
@@ -85,24 +99,13 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
     }
 }
 
+// Completed Items
+// ---
+
 .c-progress-steps__item.c--completed {
     background-color: $progress-steps__completed-bg-color;
 
     &::after {
         border-left-color: $progress-steps__completed-bg-color;
     }
-}
-
-
-// Progress: Index
-// ---
-
-.c-progress-steps__index {
-}
-
-
-// Progress: Label
-// ---
-
-.c-progress-steps__label {
 }
