@@ -36,9 +36,6 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
 // Notes:
 // 1. For the absolutely positioned arrows
 // 2. Adjust padding to account for the arrows
-// 3. Coloured triangle
-// 4. Background color spacing
-// 5. Offset to create the appearance of a border
 
 .c-progress-steps__item {
     position: relative; // 1
@@ -48,14 +45,28 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
 
     background-color: $progress-steps__item-bg-color;
 
-    // 2
     &:not(:first-child) {
-        padding-right: 0;
-        padding-left: $progress-steps__divider-width + $progress-steps__item-padding;
+        padding-right: 0; // 2
+        padding-left: $progress-steps__divider-width + $progress-steps__item-padding; //2
     }
+}
 
 
-    // Arrows
+// Arrow Shape
+// ---
+//
+// We are using the two (before/after) pseudo elements to create a CSS triangle
+// for our progress step item arrow. We use two on top of each other to create
+// visual separation appearing as either a border or space.
+//
+// The `before` is used as the border or space
+//
+// The `after` is used to create the arrow shape of the `.c-progress-steps__item`
+//
+// 1. The "thickness" of the border/seperator is an illusion created by
+//    this margin-left property
+
+.c-progress-steps__item {
 
     &::after,
     &::before {
@@ -75,17 +86,18 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
         transform: translateY(-50%);
     }
 
-    // 3
+    // Item extendor
     &::after {
         border-left: $progress-steps__divider-width solid $progress-steps__item-bg-color;
     }
 
-    // 4
+    // Separator or Border
     &::before {
-        margin-left: $progress-steps__divider-border-thickness; // 5
+        margin-left: $progress-steps__divider-border-thickness; // 1
         border-left: $progress-steps__divider-width solid $progress-steps__divider-border-color;
     }
 }
+
 
 // Current Item
 // ---
