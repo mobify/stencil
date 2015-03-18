@@ -29,9 +29,6 @@ The following variables can be used to customize the appearance of the badge:
 
 * `$badge__background-color`
 * `$badge__text-color`
-* `$badge__border-radius`
-* `$badge__size`
-* `$badge__font-size`
 
 
 ## Demo

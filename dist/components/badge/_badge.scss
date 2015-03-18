@@ -9,26 +9,23 @@
 // ---
 //
 
-$badge__vertical-padding: 0.25em !default;
-$badge__horizontal-padding: 0.7em !default;
 $badge__background-color: #ccc !default;
-$badge__border-radius: 4em !default;
 $badge__text-color: white !default;
-$badge__font-size: 0.75em !default;
-$badge__font-weight: 600;
 
 // Component Base
 // ---
 
 .c-badge {
     display: inline-block;
-    padding: $badge__vertical-padding $badge__horizontal-padding;
+    min-width: 1.5em;
+    height: 1.5em;
+    padding: 0.1em 0.5em;
 
-    border-radius: $badge__border-radius;
+    border-radius: 3em;
     background-color: $badge__background-color;
 
     color: $badge__text-color;
-    font-size: $badge__font-size;
-    font-weight: $badge__font-weight;
+    font-weight: 600;
+    font-size: 0.75em;
     text-align: center;
 }
