@@ -5,17 +5,17 @@
   overflow: hidden;
 }
 
-.c-progress-steps__step-item {
+.c-progress-steps__item {
   position: relative;
   display: block;
   padding: 10px;
   background-color: #f2f2f2;
 }
-.c-progress-steps__step-item:not(:first-child) {
+.c-progress-steps__item:not(:first-child) {
   padding-right: 0;
   padding-left: 30px;
 }
-.c-progress-steps__step-item::after, .c-progress-steps__step-item::before {
+.c-progress-steps__item::after, .c-progress-steps__item::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -30,25 +30,25 @@
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.c-progress-steps__step-item::after {
+.c-progress-steps__item::after {
   border-left: 20px solid #f2f2f2;
 }
-.c-progress-steps__step-item::before {
+.c-progress-steps__item::before {
   margin-left: 2px;
   border-left: 20px solid white;
 }
 
-.c-progress-steps__step-item.c--current {
+.c-progress-steps__item.c--current {
   background-color: #d9d9d9;
 }
-.c-progress-steps__step-item.c--current::after {
+.c-progress-steps__item.c--current::after {
   border-left-color: #d9d9d9;
 }
 
-.c-progress-steps__step-item.c--completed {
+.c-progress-steps__item.c--completed {
   background-color: #bfbfbf;
 }
-.c-progress-steps__step-item.c--completed::after {
+.c-progress-steps__item.c--completed::after {
   border-left-color: #bfbfbf;
 }
 
