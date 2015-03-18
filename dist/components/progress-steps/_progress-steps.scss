@@ -9,7 +9,7 @@
 
 $progress-steps__item-bg-color: hsl(0, 0%, 95%) !default;
 $progress-steps__item-padding: if(variable-exists(v-space), $v-space, 10px) !default;
-$progress-steps__stage-layer: if(variable-exists(stage-layer), $stage-layer, 10) !default;
+$progress-steps__layer: if(variable-exists(stage-layer), $stage-layer, 10) !default;
 $progress-steps__current-bg-color: darken($progress-steps__item-bg-color, 10%) !default;
 $progress-steps__completed-bg-color: darken($progress-steps__item-bg-color, 20%) !default;
 
@@ -53,7 +53,7 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
         position: absolute;
         top: 50%;
         left: 100%;
-        z-index: $progress-steps__stage-layer;
+        z-index: $progress-steps__layer;
 
         display: block;
         display: block;
