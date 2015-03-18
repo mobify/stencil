@@ -31,8 +31,9 @@ The progress-bar progress (i.e. 45%) indicator is displayed by default. If you d
 
 ```
     <div class="c-progress-bar">
-        <span class="c-progress-bar__progress c--round" style="width: 45%" >
-            <span class="u-visually-hidden">Progress is</span> 45%
+        <span class="c-progress-bar__progress" style="width: 45%" >
+            <span class="u-visually-hidden">Progress is </span>
+            <span class="c-progress-bar__progress-value">45%</span>
         </span>
     </div>
 ```

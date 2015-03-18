@@ -1,8 +1,8 @@
 {#progress-bar}
 <div class="c-progress-bar">
     <span class="c-progress-bar__progress {modifierClass}" style="width: {value}%" >
-        <span class="u-visually-hidden">Progress is</span>
-        {value}%
+        <span class="u-visually-hidden">Progress is </span>
+        <span class="c-progress-bar__progress-value">{value}%</span>
     </span>
 </div>
 {/progress-bar}
