@@ -67,7 +67,6 @@ $progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
 //    this margin-left property
 
 .c-progress-steps__item {
-
     &::after,
     &::before {
         content: '';

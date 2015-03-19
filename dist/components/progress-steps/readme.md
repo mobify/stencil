@@ -10,7 +10,7 @@ Refer to the main [installation instructions for Stencil](https://github.com/mob
 Use the following to import the Progress Component into your project with Sass:
 
 ```
-@import '../bower_components/stencil/dist/components/progress';
+@import '../bower_components/stencil/dist/components/progress-steps';
 ```
 
 ## Using the Progress Component
@@ -18,30 +18,28 @@ Use the following to import the Progress Component into your project with Sass:
 ### Example Markup
 
 ```
-<div class="c-progress" role="progressbar" aria-valuetext="Step {currentStep} of {maxStep}" aria-valuenow="{currentStep}">
-    <div class="c-progress__step" aria-hidden="true">
-        <div class="c-progress-step__item {stepClass} {?isComplete}c--completed{/isComplete}">
-            <span class="c-progress-step__index">{index}</span>
-            <div class="c-progress-step__label">{label}</div>
-        </div>
+<div class="c-progress-steps" role="progressbar" aria-valuetext="Step {currentStep} of {maxStep}" aria-valuenow="{currentStep}">
+    <div class="c-progress-steps__item {stepClass} {?isComplete}c--completed{/isComplete}" aria-hidden="true">
+        <span class="c-progress-steps__step-index">{index}</span>
+        <span class="c-progress-steps__step-label">{label}</span>
     </div>
 </div>
 ```
 
 ### Options
 
-The padding of a step can be set with the configurable variable `$progress__item-padding`
+The padding of a step can be set with the configurable variable `$progress-steps__item-padding`
 
-The background color of the steps can be set with the configurable variable `$progress__item-bg-color`
+The background color of the steps can be set with the configurable variable `$progress-steps__item-bg-color`
 
-The background color of the current step can be set with the configurable variable  `$progress__current-bg-color`
+The background color of the current step can be set with the configurable variable  `$progress-steps__current-bg-color`
 
-The background color of completed steps can be set with the configurable variable  `$progress__completed-bg-color`
+The background color of completed steps can be set with the configurable variable  `$progress-steps__completed-bg-color`
 
-The angle of the chevron arrow can be configured with the configurable variables `$progress__divider-angle` and `$progress__divider-width`
+The angle of the chevron arrow can be configured with the configurable variables `$progress-steps__divider-angle` and `$progress-steps__divider-width`
 
-The dividing line of the chevron can be configured with the configurable variables `$progress__divider-border-thickness` and `$progress__divider-border-color`
+The dividing line of the chevron can be configured with the configurable variables `$progress-steps__divider-border-thickness` and `$progress-steps__divider-border-color`
 
 ## Demo
 
-Visual examples of the [Progress Component](https://mobify.github.io/stencil/visual/components/progress/index.html)
+Visual examples of the [Progress Component](https://mobify.github.io/stencil/visual/components/progress-steps/index.html)
