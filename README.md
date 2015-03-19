@@ -14,6 +14,7 @@ Stencil components are common, frequently used patterns that either make up UI e
 * [Alert](https://github.com/mobify/stencil/tree/master/dist/components/alert)
 * [Align](https://github.com/mobify/stencil/tree/master/dist/components/align)
 * [Arrange](https://github.com/mobify/stencil/tree/master/dist/components/arrange)
+* [Badge](https://github.com/mobify/stencil/tree/master/dist/components/badge)
 * [Breadcrumb](https://github.com/mobify/stencil/tree/master/dist/components/breadcrumb)
 * [Button](https://github.com/mobify/stencil/tree/master/dist/components/button)
 * [Grid](https://github.com/mobify/stencil/tree/master/dist/components/grid)
