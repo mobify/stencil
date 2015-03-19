@@ -1,4 +1,4 @@
-# Progress Component
+# Progress Steps Component
 
 Helps to show users where they exist within a multiple-page workflow, such as a checkout flow.
 
@@ -7,7 +7,7 @@ Helps to show users where they exist within a multiple-page workflow, such as a 
 
 Refer to the main [installation instructions for Stencil](https://github.com/mobify/stencil#installation).
 
-Use the following to import the Progress Component into your project with Sass:
+Use the following to import the Progress Steps Component into your project with Sass:
 
 ```
 @import '../bower_components/stencil/dist/components/progress-steps';
