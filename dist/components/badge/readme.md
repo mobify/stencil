@@ -1,6 +1,6 @@
 # Badge Component
 
-A badge that shows the quantity of items in the cart, often used with a cart icon in the header.
+A small badge that can accommodate varying lengths of content. Can be used to show the quantity of items in a cart, often paired with a cart icon in the header.
 
 
 ## Installation
