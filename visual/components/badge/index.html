@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badge Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="badge.css">
+    <style>
+        .u-fixture-alt-font {
+            color: hsl(30, 60%, 50%);
+            font-family: Georgia, serif;
+            font-size: 14px;
+        }
+
+        .u-fixture-cap-width {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Badge Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-badge</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should render a small badge with content.</p>
+            <div class="c-test__run">
+                <div class="c-badge">
+                    1
+                </div>
+            </div>
+        </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should accomodate any length of content.</p>
+            <div class="c-test__run">
+                <div class="c-badge">
+                    28
+                </div>
+
+                <div class="c-badge">
+                    Success
+                </div>
+            </div>
+        </div>
+
+    </article>
+</body>
+</html>
