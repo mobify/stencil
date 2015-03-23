@@ -307,6 +307,10 @@ th {
   font-style: normal;
   src: url("../../../../bower_components/spline/test/fixtures/fonts/icon/spline.woff") format("woff"), url("../../../../bower_components/spline/test/fixtures/fonts/icon/spline.ttf") format("truetype"), url("../../../../bower_components/spline/test/fixtures/fonts/icon/spline.svg") format("svg");
 }
+.c-icon,
+[data-icon-name] {
+  min-width: 0;
+}
 .c-icon::before,
 [data-icon-name]::before {
   display: inline-block;
