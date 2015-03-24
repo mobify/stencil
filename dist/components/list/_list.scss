@@ -1,0 +1,39 @@
+// List
+// ===
+//
+// Add a short description
+
+
+// Component Variables
+// ---
+//
+// If necessary, define any configurable variables that will be used. For example:
+//
+// $component__variable-description: {value} !default;
+
+
+// Component Base
+// ---
+
+.c-list {
+    margin: $v-space 0;
+    padding-left: 18px; // 1
+    list-style-type: disc;
+
+    & & {
+        margin-top: 0;
+        list-style: circle;
+    }
+}
+
+
+// Sub-Components
+// ---
+
+.c-list__item {
+    margin: $v-space/2 0;
+
+    &.c--nested-list {
+        list-style-type: none;
+    }
+}

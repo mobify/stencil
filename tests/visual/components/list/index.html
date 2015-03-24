@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="list.css">
+
+    <style>
+    </style>
+</head>
+<body class="c-fixture-body">
+
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>List Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-list</h2>
+
+        <div class="c-test__case">
+            <p class="c-test__should">It should… Description what this component should do</p>
+
+            <div class="c-test__run">
+                <ul class="c-list">
+                    <li class="c-list__item">Item 1</li>
+                    <li class="c-list__item">Item 2</li>
+                    <li class="c-list__item">Item 3</li>
+                    <li class="c-list__item c--nested-list">
+                        <ul class="c-list">
+                            <li class="c-list__item">Item 3.1</li>
+                            <li class="c-list__item">Item 3.2</li>
+                            <li class="c-list__item">Item 3.3</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+
+</body>
+</html>
