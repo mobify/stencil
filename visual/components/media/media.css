@@ -309,8 +309,10 @@ th {
           align-items: flex-start;
 }
 
-.c-media__figure {
-  margin-right: 21px;
+.c-media.c--align-middle {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 
 .c-media__body {
@@ -319,10 +321,8 @@ th {
           flex: 1 0 0;
 }
 
-.c-media.c--align-middle {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
+.c-media__figure {
+  margin-right: 21px;
 }
 
 .c-media.c--reversed > .c-media__figure {
