@@ -1,11 +1,11 @@
 // Alert
-// =====
+// ===
 //
 // Alert messages are intended to bring attention to important information.
 
 
 // Configurable Variables
-// ----------------------
+// ---
 
 $alert__v-space: if(variable-exists(v-space), $v-space, 10px) !default;
 $alert__h-space: if(variable-exists(h-space), $h-space, 10px) !default;
@@ -18,8 +18,8 @@ $alert__success-color: if(variable-exists(success-color), $success-color, green)
 $alert__error-color: if(variable-exists(error-color), $error-color, red) !default;
 
 
-// Alert Root
-// ----------
+// Alert root
+// ---
 //
 // 1. Remove margin-bottom to last children element eg. add margin-bottom to last <p> in content
 
@@ -35,8 +35,8 @@ $alert__error-color: if(variable-exists(error-color), $error-color, red) !defaul
 }
 
 
-// Alert Modifier: Success
-// -----------------------
+// Alert modifier: Success
+// ---
 
 .c-alert.c--success {
     border-color: $alert__success-color;
@@ -45,8 +45,8 @@ $alert__error-color: if(variable-exists(error-color), $error-color, red) !defaul
 }
 
 
-// Alert Modifier: Error
-// ---------------------
+// Alert modifier: Error
+// ---
 
 .c-alert.c--error {
     border-color: $alert__error-color;

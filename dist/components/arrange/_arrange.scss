@@ -1,4 +1,3 @@
-
 // Arrange
 // ===
 //
@@ -84,7 +83,7 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Item modifier: Shrink
+// Arrange Item modifier: Shrink
 // ---
 //
 // Shrink Arrange items to a minimum size.
@@ -97,7 +96,7 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Item modifiers: Display order
+// Arrange Item modifiers: Display order
 // ---
 //
 // Re-arrange the display order of up to six items. Add additional modifiers in

@@ -1,4 +1,3 @@
-
 // Grid
 // ===
 //
@@ -10,7 +9,7 @@
 // - https://github.com/suitcss/components-grid/
 
 
-// Configurable variables
+// Configurable Variables
 // ---
 
 $grid__h-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
@@ -38,7 +37,7 @@ $grid__v-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
 }
 
 
-// Grid items
+// Grid Item
 // ---
 
 .c-grid__span {
@@ -59,7 +58,7 @@ $grid__v-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
 }
 
 
-// Modifier: horizontal and vertical gutters
+// Combined modifier: Horizontal and vertical gutters
 // ---
 //
 // 1. Prevent horizontal gutters from creating extra space above the top row by
