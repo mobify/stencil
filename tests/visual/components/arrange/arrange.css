@@ -304,6 +304,10 @@ th {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -354,6 +358,13 @@ th {
 .c-arrange.c--justify-around {
   -webkit-justify-content: space-around;
           justify-content: space-around;
+}
+
+.c-arrange.c--row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .c-arrange__item {
