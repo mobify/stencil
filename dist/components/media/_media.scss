@@ -1,4 +1,3 @@
-
 // Media
 // ===
 //
@@ -26,11 +25,13 @@ $media__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Media Figure
+// Media modifier: Align middle
 // ---
+//
+// Vertically center figure and body
 
-.c-media__figure {
-    margin-right: $media__h-gutter;
+.c-media.c--align-middle {
+    align-items: center;
 }
 
 
@@ -42,17 +43,15 @@ $media__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Media modifier: Align Middle
+// Media Figure
 // ---
-//
-// Vertically center figure and body.
 
-.c-media.c--align-middle {
-    align-items: center;
+.c-media__figure {
+    margin-right: $media__h-gutter;
 }
 
 
-// Media modifier: Reversed Display Order
+// Combined modifier: Reversed display order
 // ---
 //
 // Reverse the display order of figure and body.

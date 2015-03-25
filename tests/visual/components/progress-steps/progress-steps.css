@@ -15,7 +15,6 @@
   padding-right: 0;
   padding-left: 30px;
 }
-
 .c-progress-steps__item::after, .c-progress-steps__item::before {
   content: '';
   position: absolute;
