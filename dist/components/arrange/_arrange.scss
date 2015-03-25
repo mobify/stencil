@@ -31,20 +31,7 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Arrange Item
-// ---
-//
-// 1. Ensure inline elements are treated as block-level.
-// 2. Prevent width collapsing in old implementations.
-
-.c-arrange__item {
-    display: block; // 1
-    flex: 1;
-    width: 100%; // 2
-}
-
-
-// Modifiers: vertical alignment
+// Arrange modifiers: Vertical alignment
 // ---
 
 .c-arrange.c--align-top {
@@ -60,7 +47,8 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Horizontal alignment
+// Arrange mofifiers: Horizontal alignment
+// ---
 
 .c-arrange.c--justify-start {
     justify-content: flex-start;
@@ -83,7 +71,20 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Item modifier: shrink
+// Arrange Item
+// ---
+//
+// 1. Ensure inline elements are treated as block-level.
+// 2. Prevent width collapsing in old implementations.
+
+.c-arrange__item {
+    display: block; // 1
+    flex: 1;
+    width: 100%; // 2
+}
+
+
+// Item modifier: Shrink
 // ---
 //
 // Shrink Arrange items to a minimum size.
@@ -96,7 +97,7 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Item modifiers: display order
+// Item modifiers: Display order
 // ---
 //
 // Re-arrange the display order of up to six items. Add additional modifiers in
@@ -110,7 +111,8 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 .c-arrange__item.c--order-6 { order: 6; }
 
 
-// Modifier: gutters
+// Combined modifier: Gutters
+// ---
 //
 // Add standard horizontal space between items.
 
