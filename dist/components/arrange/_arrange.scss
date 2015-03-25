@@ -28,14 +28,16 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 // ---
 //
 // 1. Remove default styles present on common root elements.
+// 2. Ensure in iOS 5 and 6 that flex-direction isn't inherited from
+//    any flexbox parents that has flex-direction set to row-reverse
 
 .c-arrange {
     display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
+    flex-direction: row; // 2
+    margin: 0; // 1
+    padding: 0; // 1
 
-    list-style: none;
+    list-style: none; // 1
 }
 
 
@@ -116,6 +118,15 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 .c-arrange__item.c--order-4 { order: 4; }
 .c-arrange__item.c--order-5 { order: 5; }
 .c-arrange__item.c--order-6 { order: 6; }
+
+
+// Item modifiers: flex direction
+// ---
+//
+
+.c-arrange.c--row-reverse {
+    flex-direction: row-reverse;
+}
 
 
 // Modifier: gutters
