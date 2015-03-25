@@ -69,6 +69,33 @@
 
             </div>
         </div>
+
+        <div class="c-test__case">
+            <p class="c-test__should">Nested arrange should not inherit flex-direction row-reverse from parents</p>
+            <div class="c-test__run">
+
+                <div class="c-arrange c--row-reverse">
+                    <div class="c-arrange__item c-fixture-box">
+                        1
+                        <div class="c-arrange">
+                            <div class="c-arrange__item c-fixture-box">
+                                1
+                            </div>
+                            <div class="c-arrange__item c-fixture-box">
+                                2
+                            </div>
+                            <div class="c-arrange__item c-fixture-box">
+                                3
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-arrange__item c-fixture-box">
+                        2
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </article>
 
     <article class="c-test">
