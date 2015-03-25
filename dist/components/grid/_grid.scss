@@ -4,16 +4,21 @@
 //
 // Provides a framework for laying out items in a regular grid.
 //
-// Example Markup:
-// <div class="c-grid c--{n}up">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
-//     <div class="c-grid__span">
-// </div>
 //
 // Attribution:
 //
 // - https://github.com/suitcss/components-grid/
+
+
+// Configurable variables
+// ---
+
+$grid__h-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
+$grid__v-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
+
+
+// Grid root
+// ---
 
 .c-grid {
     @include clearfix;
@@ -31,13 +36,6 @@
         clear: both;
     }
 }
-
-
-// Configurable variables
-// ---
-
-$grid__h-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
-$grid__v-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
 
 
 // Grid items

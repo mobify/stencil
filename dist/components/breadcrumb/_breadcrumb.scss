@@ -1,14 +1,21 @@
-$breadcrumb__active-style: bold !default;
-$breadcrumb__divider-content: '>' !default;
-
 // Breadcrumb
 // ==========
 //
 // Breadcrumbs are a group of navigation links that helps users keep track of their
 // location within the site.
 
-.c-breadcrumb {
 
+// Configurable Variables
+// ----------------------
+
+$breadcrumb__active-style: bold !default;
+$breadcrumb__divider-content: '>' !default;
+
+
+// Breadcrumb root
+// ---
+
+.c-breadcrumb {
 }
 
 
