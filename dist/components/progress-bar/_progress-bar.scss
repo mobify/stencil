@@ -10,7 +10,7 @@ $progress-bar__progress-color: if(variable-exists(accent-color), $accent-color, 
 
 $progress-bar__spacing: if(variable-exists(h-small-space), 0 $h-small-space, 0 5px) !default;
 $progress-bar__height: 30px !default; // 1
-
+$c-progress-bar__progress-value-color: white;
 
 // Progress bar background
 // ---
@@ -28,7 +28,6 @@ $progress-bar__height: 30px !default; // 1
 // Notes:
 //
 // 1. Horizontal paddings required when there is a % value displayed
-// 2. Test colour
 
 .c-progress-bar__progress {
     display: flex;
@@ -39,7 +38,7 @@ $progress-bar__height: 30px !default; // 1
 
     background: $progress-bar__progress-color;
 
-    color: white; // 2
+    color: $c-progress-bar__progress-value-color;
 
     // Hidden text
     // ---
