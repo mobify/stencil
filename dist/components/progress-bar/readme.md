@@ -22,9 +22,7 @@ Use the following to import the Icon Component into your project with Sass:
 
 ## Using the Progress Bar Component
 
-Progress-bar requires `u-visually-hidden` utility imported to the project. This utility is used for accessibility reason - it visually hides **'Progress is'** words that are remained for the screen-readers.
-
-The progress-bar progress (i.e. 45%) indicator is displayed by default. If you don't want to have a progress-bar indicator apply `c--text-hidden` modifier to the `c-progress-bar__progress` element.
+Progress-bar requires `u-visually-hidden` utility imported to the project. This utility is used for accessibility reason - it visually hides **'Progress is 45%'** that is remained for the screen-readers.
 
 
 ### Example Markup
@@ -32,8 +30,7 @@ The progress-bar progress (i.e. 45%) indicator is displayed by default. If you d
 ```
     <div class="c-progress-bar">
         <span class="c-progress-bar__progress" style="width: 45%" >
-            <span class="u-visually-hidden">Progress is </span>
-            <span class="c-progress-bar__progress-value">45%</span>
+            <span class="u-visually-hidden">Progress is 45%</span>
         </span>
     </div>
 ```

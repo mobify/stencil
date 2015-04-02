@@ -316,11 +316,5 @@ th {
   -webkit-align-items: center;
           align-items: center;
   height: 30px;
-  padding: 0 5px;
   background: #16a085;
-  color: white;
-}
-.c-progress-bar__progress.c--text-hidden {
-  font-size: 0;
-  line-height: 0;
 }

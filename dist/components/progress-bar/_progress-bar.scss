@@ -5,14 +5,17 @@
 //
 // It can have text inside of progress sub-component
 
+
+// Configurable variables
+// ---
+
 $progress-bar__bar-background-color: if(variable-exists(grey-20), $grey-20, grey) !default;
 $progress-bar__progress-color: if(variable-exists(accent-color), $accent-color, yellow) !default;
 
-$progress-bar__spacing: if(variable-exists(h-small-space), 0 $h-small-space, 0 5px) !default;
-$progress-bar__height: 30px !default; // 1
-$c-progress-bar__progress-value-color: white;
+$progress-bar__height: 30px !default;
 
-// Progress bar background
+
+// Progress Bar root
 // ---
 
 .c-progress-bar {
@@ -22,31 +25,14 @@ $c-progress-bar__progress-value-color: white;
 }
 
 
-// Progress bar progress
+// Progress Bar: Progress
 // ---
-//
-// Notes:
-//
-// 1. Horizontal paddings required when there is a % value displayed
 
 .c-progress-bar__progress {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: $progress-bar__height;
-    padding: $progress-bar__spacing; // 1
 
     background: $progress-bar__progress-color;
-
-    color: $c-progress-bar__progress-value-color;
-
-    // Hidden text
-    // ---
-    &.c--text-hidden {
-        font-size: 0;
-        line-height: 0
-    }
-}
-
-.c-progress-bar__progress-value {
 }
