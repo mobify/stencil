@@ -22,3 +22,15 @@
 .u-align-baseline {
   vertical-align: baseline !important;
 }
+
+.u-text-accent {
+  color: blue;
+}
+
+.u-text-success {
+  color: green;
+}
+
+.u-text-error {
+  color: red;
+}

@@ -1,6 +1,10 @@
 // Text utils
 // ===
 
+$text__accent: if(variable-exists(accent-colot), $accent-color, blue) !default;
+$text__success: if(variable-exists(success-color), $success-color, green) !default;
+$text__error: if(variable-exists(error-color), $error-color, red) !default;
+
 
 // All Caps
 // ---
@@ -49,4 +53,25 @@
 .u-align-baseline,
 %u-align-baseline {
     vertical-align: baseline !important;
+}
+
+
+// Colour accents
+// ---
+//
+// When we need to mark text with colour
+
+.u-text-accent,
+%u-text-accent {
+    color: $text__accent;
+}
+
+.u-text-success,
+%u-text-success {
+    color: $text__success;
+}
+
+.u-text-error,
+%u-text-error {
+    color: $text__error;
 }
