@@ -1,0 +1,121 @@
+// Progress
+// ========
+//
+// Helps show users where they exist within a multiple-page workflow, such as a
+// checkout flow.
+
+
+// Configurable Variables
+// ---
+
+$progress-steps__item-bg-color: hsl(0, 0%, 95%) !default;
+$progress-steps__item-padding: if(variable-exists(v-space), $v-space, 10px) !default;
+$progress-steps__layer: if(variable-exists(stage-layer), $stage-layer, 10) !default;
+$progress-steps__current-bg-color: darken($progress-steps__item-bg-color, 10%) !default;
+$progress-steps__completed-bg-color: darken($progress-steps__item-bg-color, 20%) !default;
+
+// Arrow Divider Variables
+//
+// 1. These two variables together determine the angle of the arrow dividers
+
+$progress-steps__divider-angle: 90px !default; // 1
+$progress-steps__divider-width: 20px !default; // 1
+$progress-steps__divider-border-thickness: 2px !default;
+$progress-steps__divider-border-color: hsl(360, 100%, 100%) !default;
+
+
+.c-progress-steps {
+    display: flex;
+    overflow: hidden;
+}
+
+
+// Progress: Steps
+// ---
+//
+// Notes:
+// 1. For the absolutely positioned arrows
+// 2. Adjust padding to account for the arrows
+
+.c-progress-steps__item {
+    position: relative; // 1
+
+    display: block;
+    padding: $progress-steps__item-padding;
+
+    background-color: $progress-steps__item-bg-color;
+
+    &:not(:first-child) {
+        padding-right: 0; // 2
+        padding-left: $progress-steps__divider-width + $progress-steps__item-padding; //2
+    }
+}
+
+
+// Arrow Shape
+// ---
+//
+// We are using the two (before/after) pseudo elements to create a CSS triangle
+// for our progress step item arrow. We use two on top of each other to create
+// visual separation appearing as either a border or space.
+//
+// The `before` is used as the border or space
+//
+// The `after` is used to create the arrow shape of the `.c-progress-steps__item`
+//
+// 1. The "thickness" of the border/seperator is an illusion created by
+//    this margin-left property
+
+.c-progress-steps__item {
+    &::after,
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        z-index: $progress-steps__layer;
+
+        display: block;
+        width: 0;
+        height: 0;
+        border-top: $progress-steps__divider-angle solid transparent;
+        border-bottom: $progress-steps__divider-angle solid transparent;
+
+        transform: translateY(-50%);
+    }
+
+    // Item extendor
+    &::after {
+        border-left: $progress-steps__divider-width solid $progress-steps__item-bg-color;
+    }
+
+    // Separator or Border
+    &::before {
+        margin-left: $progress-steps__divider-border-thickness; // 1
+        border-left: $progress-steps__divider-width solid $progress-steps__divider-border-color;
+    }
+}
+
+
+// Current Item
+// ---
+
+.c-progress-steps__item.c--current {
+    background-color: $progress-steps__current-bg-color;
+
+    &::after {
+        border-left-color: $progress-steps__current-bg-color;
+    }
+}
+
+// Completed Items
+// ---
+
+.c-progress-steps__item.c--completed {
+    background-color: $progress-steps__completed-bg-color;
+
+    &::after {
+        border-left-color: $progress-steps__completed-bg-color;
+    }
+}

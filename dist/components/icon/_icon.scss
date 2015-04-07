@@ -35,10 +35,17 @@
 // --------------
 //
 // This is the base icon class which must be applied to the element first.
+//
+// Notes:
+//
+// 1. This property fixes iOS6 icon-font issue when we have several
+//    icons in a row and they all display the same icon
 
 .c-icon,
 [data-icon-name] {
     @include icon-font;
+
+    min-width: 0; // 1
 }
 
 
