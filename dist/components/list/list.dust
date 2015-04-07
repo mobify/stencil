@@ -1,1 +1,15 @@
-<!-- Include component markup here. -->
+<ul class="c-list">
+    {#outerItems}
+        <li class="c-list__item"> {.text}
+            {?hasInnerItems}
+                <ul class="c-list">
+                    {#innerItems}
+                        <li class="c-list__item"> {.text} </li>
+                    {/innerItems}
+                </ul>
+            </li>
+            {:else}
+        </li>
+        {/hasInnerItems}
+    {/outerItems}
+</ul>

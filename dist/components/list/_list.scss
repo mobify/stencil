@@ -15,8 +15,6 @@ $list__item-margin: if(variable_exists(v-space), $v-space/2 0, 5px 0) !default;
 // List
 // ---
 //
-// Notes:
-//
 // 1. Keep bullets on the same vertical line as content
 // 2. Use parent <li> margin
 
@@ -34,15 +32,7 @@ $list__item-margin: if(variable_exists(v-space), $v-space/2 0, 5px 0) !default;
 
 // List item
 // ---
-//
-// Notes:
-//
-// 1. Remove parent <li> bullet
 
 .c-list__item {
     margin: $list__item-margin;
-
-    &.c--nested-list {
-        list-style-type: none; // 1
-    }
 }

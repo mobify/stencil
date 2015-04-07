@@ -313,6 +313,3 @@ th {
 .c-list__item {
   margin: 5.5px 0;
 }
-.c-list__item.c--nested-list {
-  list-style-type: none;
-}
