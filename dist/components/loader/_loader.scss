@@ -1,0 +1,93 @@
+// Loader Component
+// ===
+//
+// A CSS loader consisting of four horizontal dots that animate.
+
+
+// Component Variables
+// ---
+//
+// If necessary, define any configurable variables that will be used. For example:
+//
+// $component__variable-description: {value} !default;
+
+$loader__color: if(variable-exists(brand-color), $brand-color, MediumTurquoise) !default;
+$loader__dot-size: 10px !default;
+$loader__dot-spacing: $loader__dot-size/5 !default;
+$loader__dot-speed: 1.8s !default;
+
+// Component Base
+// ---
+
+.c-loader {
+    text-align: center;
+}
+
+
+// Loader Dots
+// ---
+//
+// Notes
+// 1. Prevent first frame from flickering when animation starts
+
+.c-loader__dot-1,
+.c-loader__dot-2,
+.c-loader__dot-3,
+.c-loader__dot-4 {
+    display: inline-block;
+    width: $loader__dot-size;
+    height: $loader__dot-size;
+    margin: 0 $loader__dot-spacing;
+
+    border-radius: 50%;
+    background-color: $loader__color;
+
+    animation: bouncedelay1 $loader__dot-speed infinite ease-in-out;
+    animation-fill-mode: both; // 1
+}
+
+.c-loader__dot-1 {
+    animation: bouncedelay1 $loader__dot-speed infinite ease-in-out;
+}
+
+.c-loader__dot-2 {
+    animation: bouncedelay2 $loader__dot-speed infinite ease-in-out;
+}
+
+.c-loader__dot-3 {
+    animation: bouncedelay3 $loader__dot-speed infinite ease-in-out;
+}
+
+.c-loader__dot-4 {
+    animation: bouncedelay4 $loader__dot-speed infinite ease-in-out;
+}
+
+
+// Animation
+// ---
+
+@keyframes bouncedelay1 {
+
+    0% {transform: scale(1)}
+    24% {transform: scale(1.5) }
+    48% {transform: scale(1) }
+
+}
+
+@keyframes bouncedelay2 {
+    24% {transform: scale(1)}
+    48% {transform: scale(1.5) }
+    72% {transform: scale(1) }
+}
+
+@keyframes bouncedelay3 {
+    24% {transform: scale(1)}
+    49% {transform: scale(1.5) }
+    74% {transform: scale(1)}
+}
+
+@keyframes bouncedelay4 {
+    37% {transform: scale(1)}
+    62% {transform: scale(1.5) }
+    87% {transform: scale(1)}
+}
