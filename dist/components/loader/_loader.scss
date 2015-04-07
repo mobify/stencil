@@ -12,9 +12,9 @@
 // $component__variable-description: {value} !default;
 
 $loader__color: if(variable-exists(brand-color), $brand-color, MediumTurquoise) !default;
-$loader__dot-size: 1em !default;
-$loader__dot-spacing: $loader__dot-size/4 !default;
-$loader__dot-speed: 1.15s !default;
+$loader__dot-size: 10px !default;
+$loader__dot-spacing: $loader__dot-size/5 !default;
+$loader__dot-speed: 1.8s !default;
 
 // Component Base
 // ---
@@ -42,32 +42,52 @@ $loader__dot-speed: 1.15s !default;
     border-radius: 50%;
     background-color: $loader__color;
 
-    animation: bouncedelay $loader__dot-speed infinite ease-in-out;
+    animation: bouncedelay1 $loader__dot-speed infinite ease-in-out;
     animation-fill-mode: both; // 1
 }
 
 .c-loader__dot-1 {
-    animation-delay: -0.64s;
+    animation: bouncedelay1 $loader__dot-speed infinite ease-in-out;
 }
 
 .c-loader__dot-2 {
-    animation-delay: -0.32s;
+    animation: bouncedelay2 $loader__dot-speed infinite ease-in-out;
 }
 
 .c-loader__dot-3 {
-    animation-delay: -0.16s;
+    animation: bouncedelay3 $loader__dot-speed infinite ease-in-out;
+}
+
+.c-loader__dot-4 {
+    animation: bouncedelay4 $loader__dot-speed infinite ease-in-out;
 }
 
 
 // Animation
 // ---
 
-@keyframes bouncedelay {
-    0%,
-    80%,
-    100% {
-        transform: scale(0.6);
-    } 40% {
-        transform: scale(1.0);
-    }
+@keyframes bouncedelay1 {
+
+    0% {transform: scale(1)}
+    24% {transform: scale(1.5) }
+    48% {transform: scale(1) }
+
+}
+
+@keyframes bouncedelay2 {
+    24% {transform: scale(1)}
+    48% {transform: scale(1.5) }
+    72% {transform: scale(1) }
+}
+
+@keyframes bouncedelay3 {
+    24% {transform: scale(1)}
+    49% {transform: scale(1.5) }
+    74% {transform: scale(1)}
+}
+
+@keyframes bouncedelay4 {
+    37% {transform: scale(1)}
+    62% {transform: scale(1.5) }
+    87% {transform: scale(1)}
 }
