@@ -29,6 +29,9 @@ $loader__dot-timing: ease-in-out;
 // Loader Dots
 // ---
 //
+// Each dot runs a unique animation in order to avoid animation-delay timing buggyness
+// in Android 4.1.x
+//
 // Notes
 // 1. Prevent first frame from flickering when animation starts
 
