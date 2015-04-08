@@ -39,7 +39,3 @@ Use the following variables to customize the loader:
 ## Demo
 
 Visual examples of the [Loader Component](https://mobify.github.io/stencil/visual/components/loader/index.html)
-
-## Attribution
-
-https://github.com/tobiasahlin/SpinKit
