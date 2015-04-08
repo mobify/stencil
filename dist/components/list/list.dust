@@ -1,15 +1,11 @@
 <ul class="c-list">
-    {#outerItems}
-        <li class="c-list__item"> {.text}
-            {?hasInnerItems}
-                <ul class="c-list">
-                    {#innerItems}
-                        <li class="c-list__item"> {.text} </li>
-                    {/innerItems}
-                </ul>
-            </li>
-            {:else}
+    {#items}
+        <li class="c-list__item"> {.item}
+            <ul class="c-list">
+                {#nestedList}
+                    <li class="c-list__item"> {.item} </li>
+                {/nestedList}
+            </ul>
         </li>
-        {/hasInnerItems}
-    {/outerItems}
+    {/items}
 </ul>

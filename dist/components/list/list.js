@@ -1,35 +1,32 @@
 define(['$'], function ($) {
 
     return {
-        outerItems: [
+        items: [
             {
-                text: 'Item 1',
-                hasInnerItems: false
+                item: 'Item 1'
             },
             {
-                text: 'Item 2',
-                hasInnerItems: true,
-                innerItems: [
+                item: 'Item 2',
+                nestedList: [
                     {
-                        text: 'Item 2.1'
+                        item: 'Item 2.1'
                     },
                     {
-                        text: 'Item 2.2'
+                        item: 'Item 2.2'
                     }
                 ]
             },
             {
-                text: 'Item 3',
-                hasInnerItems: true,
-                innerItems: [
+                item: 'Item 3',
+                nestedList: [
                     {
-                        text: '3.1'
+                        item: '3.1'
                     },
                     {
-                        text: '3.2'
+                        item: '3.2'
                     },
                     {
-                        text: '3.3'
+                        item: '3.3'
                     }
                 ]
             }
