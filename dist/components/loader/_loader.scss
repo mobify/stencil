@@ -14,7 +14,9 @@
 $loader__color: if(variable-exists(brand-color), $brand-color, MediumTurquoise) !default;
 $loader__dot-size: 10px !default;
 $loader__dot-spacing: $loader__dot-size/5 !default;
-$loader__dot-speed: 1.8s !default;
+$loader__dot-speed: 1s !default;
+$loader__dot-timing: ease-in-out;
+
 
 // Component Base
 // ---
@@ -42,24 +44,26 @@ $loader__dot-speed: 1.8s !default;
     border-radius: 50%;
     background-color: $loader__color;
 
-    animation: bouncedelay1 $loader__dot-speed infinite ease-in-out;
+    animation-duration: $loader__dot-speed;
     animation-fill-mode: both; // 1
+    animation-iteration-count: infinite;
+    animation-timing-function: $loader__dot-timing;
 }
 
 .c-loader__dot-1 {
-    animation: bouncedelay1 $loader__dot-speed infinite ease-in-out;
+    animation-name: bouncedelay1;
 }
 
 .c-loader__dot-2 {
-    animation: bouncedelay2 $loader__dot-speed infinite ease-in-out;
+    animation-name: bouncedelay2;
 }
 
 .c-loader__dot-3 {
-    animation: bouncedelay3 $loader__dot-speed infinite ease-in-out;
+    animation-name: bouncedelay3;
 }
 
 .c-loader__dot-4 {
-    animation: bouncedelay4 $loader__dot-speed infinite ease-in-out;
+    animation-name: bouncedelay4;
 }
 
 
@@ -67,27 +71,25 @@ $loader__dot-speed: 1.8s !default;
 // ---
 
 @keyframes bouncedelay1 {
-
-    0% {transform: scale(1)}
-    24% {transform: scale(1.5) }
-    48% {transform: scale(1) }
-
+    0% { transform: scale(0.8) }
+    20% { transform: scale(1) }
+    100% { transform: scale(0.6) }
 }
 
 @keyframes bouncedelay2 {
-    24% {transform: scale(1)}
-    48% {transform: scale(1.5) }
-    72% {transform: scale(1) }
+    0% { transform: scale(0.6) }
+    40% { transform: scale(1) }
+    100% { transform: scale(0.6) }
 }
 
 @keyframes bouncedelay3 {
-    24% {transform: scale(1)}
-    49% {transform: scale(1.5) }
-    74% {transform: scale(1)}
+    0% { transform: scale(0.6) }
+    60% { transform: scale(1) }
+    100% { transform: scale(0.6) }
 }
 
 @keyframes bouncedelay4 {
-    37% {transform: scale(1)}
-    62% {transform: scale(1.5) }
-    87% {transform: scale(1)}
+    0% { transform: scale(0.6) }
+    80% { transform: scale(1) }
+    100% { transform: scale(0.6) }
 }

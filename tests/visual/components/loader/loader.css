@@ -12,142 +12,146 @@
   margin: 0 2px;
   border-radius: 50%;
   background-color: MediumTurquoise;
-  -webkit-animation: bouncedelay1 1.8s infinite ease-in-out;
-          animation: bouncedelay1 1.8s infinite ease-in-out;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .c-loader__dot-1 {
-  -webkit-animation: bouncedelay1 1.8s infinite ease-in-out;
-          animation: bouncedelay1 1.8s infinite ease-in-out;
+  -webkit-animation-name: bouncedelay1;
+          animation-name: bouncedelay1;
 }
 
 .c-loader__dot-2 {
-  -webkit-animation: bouncedelay2 1.8s infinite ease-in-out;
-          animation: bouncedelay2 1.8s infinite ease-in-out;
+  -webkit-animation-name: bouncedelay2;
+          animation-name: bouncedelay2;
 }
 
 .c-loader__dot-3 {
-  -webkit-animation: bouncedelay3 1.8s infinite ease-in-out;
-          animation: bouncedelay3 1.8s infinite ease-in-out;
+  -webkit-animation-name: bouncedelay3;
+          animation-name: bouncedelay3;
 }
 
 .c-loader__dot-4 {
-  -webkit-animation: bouncedelay4 1.8s infinite ease-in-out;
-          animation: bouncedelay4 1.8s infinite ease-in-out;
+  -webkit-animation-name: bouncedelay4;
+          animation-name: bouncedelay4;
 }
 
 @-webkit-keyframes bouncedelay1 {
   0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  20% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  24% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  48% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 
 @keyframes bouncedelay1 {
   0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  20% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  24% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  48% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 @-webkit-keyframes bouncedelay2 {
-  24% {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  40% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  48% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  72% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 @keyframes bouncedelay2 {
-  24% {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  40% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  48% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  72% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 @-webkit-keyframes bouncedelay3 {
-  24% {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  60% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  49% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  74% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 @keyframes bouncedelay3 {
-  24% {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  60% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  49% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  74% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 @-webkit-keyframes bouncedelay4 {
-  37% {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  80% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  62% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  87% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 @keyframes bouncedelay4 {
-  37% {
+  0% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  80% {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-  62% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-  }
-  87% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  100% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
