@@ -1,9 +1,9 @@
 <ul class="c-list">
     {#items}
-        <li class="c-list__item"> {.item}
+        <li class="c-list__item {modifierClass}"> {.item}
             <ul class="c-list">
                 {#nestedList}
-                    <li class="c-list__item"> {.item} </li>
+                    <li class="c-list__item {modifierClass}"> {.item} </li>
                 {/nestedList}
             </ul>
         </li>

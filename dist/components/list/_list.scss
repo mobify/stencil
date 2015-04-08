@@ -16,16 +16,40 @@ $list__item-margin: if(variable_exists(v-space), $v-space/2 0, 5px 0) !default;
 // ---
 //
 // 1. Keep bullets on the same vertical line as content
-// 2. Use parent <li> margin
 
 .c-list {
     margin: $list__margin;
     padding-left: $list__padding-left; // 1
-    list-style-type: disc;
+
+
+    // Unordered list
+    // ---
+
+    &.c--ul {
+
+        list-style-type: disc;
+
+        & & {
+            list-style: circle;
+        }
+    }
+
+
+    // Ordered list
+    // ---
+
+    &.c--ol {
+        list-style: decimal;
+    }
+
+
+    // Nested list styles
+    // ---
+    //
+    // 1. Let element use parent <li> margin
 
     & & {
-        margin-top: 0; // 2
-        list-style: circle;
+        margin-top: 0; // 1
     }
 }
 

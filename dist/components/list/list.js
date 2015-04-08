@@ -7,6 +7,7 @@ define(['$'], function ($) {
             },
             {
                 item: 'Item 2',
+                modifierClass: 'c--ul',
                 nestedList: [
                     {
                         item: 'Item 2.1'
@@ -18,6 +19,7 @@ define(['$'], function ($) {
             },
             {
                 item: 'Item 3',
+                modifierClass: 'c--ol',
                 nestedList: [
                     {
                         item: '3.1'
