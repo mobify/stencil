@@ -1,7 +1,7 @@
 // Text utils
 // ===
 
-$text__accent: if(variable-exists(accent-colot), $accent-color, blue) !default;
+$text__accent: if(variable-exists(accent-color), $accent-color, blue) !default;
 $text__success: if(variable-exists(success-color), $success-color, green) !default;
 $text__error: if(variable-exists(error-color), $error-color, red) !default;
 
