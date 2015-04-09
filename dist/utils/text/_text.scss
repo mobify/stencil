@@ -1,8 +1,8 @@
 // Text utils
 // ===
 
-$text__success: if(variable-exists(success-color), $success-color, green) !default;
-$text__error: if(variable-exists(error-color), $error-color, red) !default;
+$u-text__success: if(variable-exists(success-color), $success-color, green) !default;
+$u-text__error: if(variable-exists(error-color), $error-color, red) !default;
 
 
 // All Caps
@@ -62,10 +62,10 @@ $text__error: if(variable-exists(error-color), $error-color, red) !default;
 
 .u-text-success,
 %u-text-success {
-    color: $text__success;
+    color: $u-text__success;
 }
 
 .u-text-error,
 %u-text-error {
-    color: $text__error;
+    color: $u-text__error;
 }
