@@ -1,0 +1,79 @@
+// Spinner Loader
+// ===
+//
+// A single element CSS loading spinner that can be displayed while content is loading.
+
+
+// Component Variables
+// ---
+
+$spinner__size: 1em !default;
+$spinner__color: $brand-color !default;
+
+$spinner__scale: 0.5 !default;
+
+// Private Variables
+// ---
+
+$spinner: $spinner__size * 2.6;
+$spinner2: $spinner__size * 1.8;
+$spinner3: $spinner__size * 2.5;
+$spinner4: $spinner__size * 1.75;
+
+
+// Component Base
+// ---
+//
+// Notes:
+// [1] Hides 'Loading...' text
+// [2] Triggers GPU acceleration in mobile browsers
+
+.c-spinner {
+    position: relative;
+
+    overflow: hidden; // [1]
+    width: $spinner__size;
+    height: $spinner__size;
+    margin: ($spinner__size * 4) auto;
+
+    border-radius: 50%;
+
+    text-indent: -100%; // [1]
+
+    transform: translate3d(0, 0, 0); // [2]
+
+    animation: stencil-spinner 1s infinite ease;
+}
+
+.c-spinner.c--scale {
+    transform: scale($spinner__scale);
+}
+
+
+@keyframes stencil-spinner {
+    0%,
+    100% {
+        box-shadow: 0 (-$spinner) 0 0 $spinner__color, $spinner2 (-$spinner2) 0 0 rgba($spinner__color, 0.2), $spinner3 0 0 0 rgba($spinner__color, 0.2), $spinner4 $spinner4 0 0 rgba($spinner__color, 0.2), 0 $spinner3 0 0 rgba($spinner__color, 0.2), (-$spinner2) $spinner2 0 0 rgba($spinner__color, 0.2), (-$spinner) 0 0 0 rgba($spinner__color, 0.5), (-$spinner2) (-$spinner2) 0 0 rgba($spinner__color, 0.7);
+    }
+    12.5% {
+        box-shadow: 0 (-$spinner) 0 0 rgba($spinner__color, 0.7), $spinner2 (-$spinner2) 0 0 $spinner__color, $spinner3 0 0 0 rgba($spinner__color, 0.2), $spinner4 $spinner4 0 0 rgba($spinner__color, 0.2), 0 $spinner3 0 0 rgba($spinner__color, 0.2), (-$spinner2) $spinner2 0 0 rgba($spinner__color, 0.2), (-$spinner) 0 0 0 rgba($spinner__color, 0.2), (-$spinner2) (-$spinner2) 0 0 rgba($spinner__color, 0.5);
+    }
+    25% {
+        box-shadow: 0 (-$spinner) 0 0 rgba($spinner__color, 0.5), $spinner2 (-$spinner2) 0 0 rgba($spinner__color, 0.7), $spinner3 0 0 0 $spinner__color, $spinner4 $spinner4 0 0 rgba($spinner__color, 0.2), 0 $spinner3 0 0 rgba($spinner__color, 0.2), (-$spinner2) $spinner2 0 0 rgba($spinner__color, 0.2), (-$spinner) 0 0 0 rgba($spinner__color, 0.2), (-$spinner2) (-$spinner2) 0 0 rgba($spinner__color, 0.2);
+    }
+    37.5% {
+        box-shadow: 0 (-$spinner) 0 0 rgba($spinner__color, 0.2), $spinner2 (-$spinner2) 0 0 rgba($spinner__color, 0.5), $spinner3 0 0 0 rgba($spinner__color, 0.7), $spinner4 $spinner4 0 0 $spinner__color, 0 $spinner3 0 0 rgba($spinner__color, 0.2), (-$spinner2) $spinner2 0 0 rgba($spinner__color, 0.2), (-$spinner) 0 0 0 rgba($spinner__color, 0.2), (-$spinner2) (-$spinner2) 0 0 rgba($spinner__color, 0.2);
+    }
+    50% {
+        box-shadow: 0 (-$spinner) 0 0 rgba($spinner__color, 0.2), $spinner2 (-$spinner2) 0 0 rgba($spinner__color, 0.2), $spinner3 0 0 0 rgba($spinner__color, 0.5), $spinner4 $spinner4 0 0 rgba($spinner__color, 0.7), 0 $spinner3 0 0 $spinner__color, (-$spinner2) $spinner2 0 0 rgba($spinner__color, 0.2), (-$spinner) 0 0 0 rgba($spinner__color, 0.2), (-$spinner2) (-$spinner2) 0 0 rgba($spinner__color, 0.2);
+    }
+    62.5% {
+        box-shadow: 0 (-$spinner) 0 0 rgba($spinner__color, 0.2), $spinner2 (-$spinner2) 0 0 rgba($spinner__color, 0.2), $spinner3 0 0 0 rgba($spinner__color, 0.2), $spinner4 $spinner4 0 0 rgba($spinner__color, 0.5), 0 $spinner3 0 0 rgba($spinner__color, 0.7), (-$spinner2) $spinner2 0 0 $spinner__color, (-$spinner) 0 0 0 rgba($spinner__color, 0.2), (-$spinner2) (-$spinner2) 0 0 rgba($spinner__color, 0.2);
+    }
+    75% {
+        box-shadow: 0 (-$spinner) 0 0 rgba($spinner__color, 0.2), $spinner2 (-$spinner2) 0 0 rgba($spinner__color, 0.2), $spinner3 0 0 0 rgba($spinner__color, 0.2), $spinner4 $spinner4 0 0 rgba($spinner__color, 0.2), 0 $spinner3 0 0 rgba($spinner__color, 0.5), (-$spinner2) $spinner2 0 0 rgba($spinner__color, 0.7), (-$spinner) 0 0 0 $spinner__color, (-$spinner2) (-$spinner2) 0 0 rgba($spinner__color, 0.2);
+    }
+    87.5% {
+        box-shadow: 0 (-$spinner) 0 0 rgba($spinner__color, 0.2), $spinner2 (-$spinner2) 0 0 rgba($spinner__color, 0.2), $spinner3 0 0 0 rgba($spinner__color, 0.2), $spinner4 $spinner4 0 0 rgba($spinner__color, 0.2), 0 $spinner3 0 0 rgba($spinner__color, 0.2), (-$spinner2) $spinner2 0 0 rgba($spinner__color, 0.5), (-$spinner) 0 0 0 rgba($spinner__color, 0.7), (-$spinner2) (-$spinner2) 0 0 $spinner__color;
+    }
+}

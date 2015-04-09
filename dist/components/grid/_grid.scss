@@ -54,7 +54,7 @@ $grid__v-gutter: if( variable-exists(v-space), $v-space, 10px ) !default;
     .c-grid.c--#{$n}up .c-grid__span {
         width: (100%/$n);
 
-        &:nth-child(#{$n}n+1) {
+        &:nth-of-type(#{$n}n+1) {
             clear: both;
         }
     }
