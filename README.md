@@ -6,11 +6,9 @@ Stencil provides a set of building blocks for mobile UI that helps you implement
 
 ## Warnings
 
-| Branch | Description |
-| ------ | ----------- |
-| master   | do **NOT** dirrectly commit to the `master` branch! |
-| gh-pages | do **NOT** directly commit to the `gh-pages` branch! This will break our ability to use the git-subtree tool. Only apply changes to `gh-pages` using the subtree tool. |
-| master    | **Never** make a branch from any other branch but `master`. If you create `my-branch` and PR for it from `example` branch and then remove `example` branch, `my-branch` PR will be closed automatically |
+* Do **NOT** dirrectly commit to the `master` branch!
+* Do **NOT** directly commit to the `gh-pages` branch! This will break our ability to use the git-subtree tool. Only apply changes to `gh-pages` using the subtree tool.
+* **Never** make a branch from any other branch but `master`. If you create `my-branch` and PR for it from `example` branch and then remove `example` branch, `my-branch` PR will be closed automatically
 
 
 ## Table of Contents
