@@ -9,6 +9,13 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: "spline";
+  font-weight: normal;
+  font-style: normal;
+  src: url("spline.woff") format("woff"), url("spline.ttf") format("truetype"), url("spline.svg") format("svg");
+}
+
 @import 'dist/components/test/test';
 
 .c-fixture-body {
