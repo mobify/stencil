@@ -65,3 +65,19 @@
 %u-block-context {
     overflow: hidden !important;
 }
+
+
+// Display layout
+// ---
+
+.u-display-block {
+    display: block;
+}
+
+.u-display-inline-block {
+    display: inline-block;
+}
+
+.u-display-inline {
+    display: inline;
+}
