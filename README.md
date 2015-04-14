@@ -4,6 +4,12 @@ Customizable, composable and testable UI components and utilities for mobile bro
 
 Stencil provides a set of building blocks for mobile UI that helps you implement common patterns faster, more reliably, and without dictating design specifics. It also provides a set of conventions based on modular and object-oriented approaches to CSS that allow you to build your own robust, testable components.
 
+## Warnings
+
+* Do **NOT** directly commit to the `master` branch!
+* Do **NOT** directly commit to the `gh-pages` branch! This will break our ability to use the git-subtree tool. Only apply changes to `gh-pages` using the subtree tool.
+* **Never** make a branch from any other branch but `master`. If you create `my-branch` and PR for it from `example` branch and then remove `example` branch, `my-branch` PR will be closed automatically
+
 
 ## Table of Contents
 
@@ -19,6 +25,7 @@ Stencil components are common, frequently used patterns that either make up UI e
 * [Button](https://github.com/mobify/stencil/tree/master/dist/components/button)
 * [Grid](https://github.com/mobify/stencil/tree/master/dist/components/grid)
 * [Icon](https://github.com/mobify/stencil/tree/master/dist/components/icon)
+* [Loader](https://github.com/mobify/stencil/tree/master/dist/components/loader)
 * [Media](https://github.com/mobify/stencil/tree/master/dist/components/media)
 * [Progress-bar](https://github.com/mobify/stencil/tree/master/dist/components/progress-bar)
 * [Progress Steps](https://github.com/mobify/stencil/tree/master/dist/components/progress-steps)

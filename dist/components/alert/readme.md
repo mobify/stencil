@@ -23,9 +23,9 @@ Text that a sense of serious urgency, or "failure" (and generally requires user 
 ### Markup
 
 ```
-    <div class="c-alert">
-        {message}
-    </div>
+<div class="c-alert">
+    {message}
+</div>
 ```
 
 ## Demo

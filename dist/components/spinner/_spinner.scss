@@ -9,8 +9,8 @@
 
 $spinner__size: 1em !default;
 $spinner__color: $brand-color !default;
-
 $spinner__scale: 0.5 !default;
+
 
 // Private Variables
 // ---
@@ -21,34 +21,40 @@ $spinner3: $spinner__size * 2.5;
 $spinner4: $spinner__size * 1.75;
 
 
-// Component Base
+// Spinner root
 // ---
 //
-// Notes:
-// [1] Hides 'Loading...' text
-// [2] Triggers GPU acceleration in mobile browsers
+// 1. Hides 'Loading...' text
+// 2. Triggers GPU acceleration in mobile browsers
 
 .c-spinner {
     position: relative;
 
-    overflow: hidden; // [1]
+    overflow: hidden; // 1
     width: $spinner__size;
     height: $spinner__size;
     margin: ($spinner__size * 4) auto;
 
     border-radius: 50%;
 
-    text-indent: -100%; // [1]
+    text-indent: -100%; // 1
 
-    transform: translate3d(0, 0, 0); // [2]
+    transform: translate3d(0, 0, 0); // 2
 
     animation: stencil-spinner 1s infinite ease;
 }
+
+
+// Spinner modifider: Scale
+// ---
 
 .c-spinner.c--scale {
     transform: scale($spinner__scale);
 }
 
+
+// Spinner animation
+// ---
 
 @keyframes stencil-spinner {
     0%,

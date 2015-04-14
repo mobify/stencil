@@ -1,12 +1,3 @@
-{!}
-
-    Alert Component Template
-    ========================
-
-    Alert messages are intended to bring attention to important information.
-
-{!}
-
 {#alert}
     <div class="c-alert {class}">
         {message}
