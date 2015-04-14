@@ -734,7 +734,7 @@ th {
 
 @font-face {
   font-family: 'Stencil';
-  src: url("stencil.woff") format("woff");
+  src: url("font/stencil.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -742,7 +742,7 @@ th {
   font-family: "spline";
   font-weight: normal;
   font-style: normal;
-  src: url("spline.woff") format("woff"), url("spline.ttf") format("truetype"), url("spline.svg") format("svg");
+  src: url("font/spline.woff") format("woff"), url("font/spline.ttf") format("truetype");
 }
 .c-test {
   margin-right: -15px;
