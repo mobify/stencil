@@ -339,7 +339,7 @@ th {
   font-family: "spline";
   font-weight: normal;
   font-style: normal;
-  src: url("../../../../bower_components/spline/test/fixtures/fonts/icon/spline.woff") format("woff"), url("../../../../bower_components/spline/test/fixtures/fonts/icon/spline.ttf") format("truetype"), url("../../../../bower_components/spline/test/fixtures/fonts/icon/spline.svg") format("svg");
+  src: url("../../../fixtures/fonts/spline.woff") format("woff"), url("../../../fixtures/fonts/spline.ttf") format("truetype"), url("../../../fixtures/fonts/spline.svg") format("svg");
 }
 .c-icon,
 [data-icon-name] {

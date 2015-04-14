@@ -738,12 +738,6 @@ th {
   font-weight: bold;
   font-style: normal;
 }
-@font-face {
-  font-family: "spline";
-  font-weight: normal;
-  font-style: normal;
-  src: url("font/spline.woff") format("woff"), url("font/spline.ttf") format("truetype");
-}
 .c-test {
   margin-right: -15px;
   margin-left: -15px;
