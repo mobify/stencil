@@ -1,28 +1,32 @@
-$breadcrumb__active-style: bold !default;
-$breadcrumb__divider-content: '>' !default;
-
 // Breadcrumb
-// ==========
+// ===
 //
 // Breadcrumbs are a group of navigation links that helps users keep track of their
 // location within the site.
 
-.c-breadcrumb {
 
+// Configurable Variables
+// ---
+
+$breadcrumb__active-style: bold !default;
+$breadcrumb__divider-content: '>' !default;
+
+
+// Breadcrumb root
+// ---
+
+.c-breadcrumb {
 }
 
 
-// Breadcrumb: Link
-// ----------------
+// Breadcrumb Item
+// ---
 //
 // The breadcrumb item class is most often put on either the breadcrumb anchor
 // tag itself, or the breadcrumb anchor's <li> tag.
 //
-// Notes:
-//
 // 1. Ensure that the breadcrumb links flow beside either other
 // 2. Remove <a>'s default underline style
-//
 
 .c-breadcrumb__item {
     display: inline-block; // 1
@@ -40,6 +44,9 @@ $breadcrumb__divider-content: '>' !default;
         display: none;
     }
 }
+
+// Breadcrumb Item modifier: Current page
+// ---
 
 .c-breadcrumb__item.c--current {
     font-weight: $breadcrumb__active-style;
