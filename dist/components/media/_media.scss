@@ -1,24 +1,7 @@
-
 // Media
 // ===
 //
 // The media object, implemented using flexbox.
-//
-// Example markup:
-//
-// <div class="c-media">
-//     <div class="c-media__figure">
-//         <img src="{src}" alt="{alt}">
-//     </div>
-//     <div class="c-media__body">
-//         {content}
-//     </div>
-// </div>
-//
-// Attribution:
-//
-// - http://philipwalton.github.io/solved-by-flexbox/demos/media-object/
-// - http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
 
 
 // Configurable variables
@@ -36,15 +19,17 @@ $media__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Media image
+// Media modifier: Align middle
 // ---
+//
+// Vertically center figure and body
 
-.c-media__figure {
-    margin-right: $media__h-gutter;
+.c-media.c--align-middle {
+    align-items: center;
 }
 
 
-// Media body container
+// Media Body container
 // ---
 
 .c-media__body {
@@ -52,17 +37,15 @@ $media__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Modifier: align middle
+// Media Figure
 // ---
-//
-// Vertically center figure and body.
 
-.c-media.c--align-middle {
-    align-items: center;
+.c-media__figure {
+    margin-right: $media__h-gutter;
 }
 
 
-// Modifier: reversed display order
+// Combined modifier: Reversed display order
 // ---
 //
 // Reverse the display order of figure and body.

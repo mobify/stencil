@@ -18,14 +18,14 @@ Use the following to import the Media Component into your project with Sass:
 ### Example Markup
 
 ```
-    <div class="c-media">
-        <div class="c-media__figure">
-            <img src="{src}" alt="{alt}">
-        </div>
-        <div class="c-media__body">
-            {content}
-        </div>
+<div class="c-media">
+    <div class="c-media__figure">
+        <img src="{src}" alt="{alt}">
     </div>
+    <div class="c-media__body">
+        {content}
+    </div>
+</div>
 ```
 
 ### Options

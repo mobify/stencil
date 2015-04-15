@@ -1,5 +1,8 @@
 // Select
 // ===
+//
+// The select element is a native element that is difficult to style.
+// This component helps fix that by wrapping the select, and forcing custom styles on top of it.
 
 
 // Configurable Variables
@@ -22,7 +25,6 @@ $select__triangle-position: $select__h-space;
 // ---
 //
 // 1. Absolutely position select element and triangle relative to the parent .c-select
-// 2. Vertical center the triangle
 
 .c-select {
     position: relative; // 1
@@ -45,6 +47,37 @@ $select__triangle-position: $select__h-space;
 
     user-select: none;
 
+
+    // "Down" Triangle
+    // ---
+    //
+    // 1. Absolutely position select element and triangle relative to the parent .c-select
+    // 2. Vertical center the triangle
+
+    &::after {
+        @include triangle(
+            $type: 'triangle',
+            $direction: 'down',
+            $size: $select__triangle-size,
+            $color: $select__border-color
+        );
+
+        content: '';
+
+        position: absolute; // 1, 2
+        top: 0; // 2,
+        right: $select__triangle-position;
+        bottom: 0; // 2
+
+        margin: auto; // 2
+    }
+
+
+    // Select
+    // ---
+    //
+    // 1. Absolutely position select element and triangle relative to the parent .c-select
+
     select {
         position: absolute; // 1
         top: 0;
@@ -59,30 +92,17 @@ $select__triangle-position: $select__h-space;
 
         -webkit-appearance: none;
     }
-
-    // "Down" Triangle
-    &::after {
-        @include triangle($type: 'triangle', $direction: 'down', $size: $select__triangle-size, $color: $select__border-color);
-
-        content: '';
-
-        position: absolute; // 1, 2
-        top: 0; // 2,
-        right: $select__triangle-position;
-        bottom: 0; // 2
-
-        margin: auto; // 2
-    }
 }
 
 
 // Platform Fixes
 // ---
-
+//
 // Fix for Firefox
 // Attribution: http://filamentgroup.github.io/select-css/
 //
 // Hide the native select arrow by clipping it with overflow: hidden
+
 @-moz-document url-prefix() {
     .c-select {
         overflow: hidden;

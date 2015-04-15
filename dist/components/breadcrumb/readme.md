@@ -23,15 +23,15 @@ For alternate styling of the current item, the modifier `.c--current` can be use
 ### Example Markup
 
 ```
-    <nav class="c-breadcrumb">
-        <ol>
-            {#breadcrumb}
-                <li class="c-breadcrumb__item">
-                    <a href="…">…</a>
-                </li>
-            {/breadcrumb}
-        </ol>
-    </nav>
+<nav class="c-breadcrumb">
+    <ol>
+        {#breadcrumb}
+            <li class="c-breadcrumb__item">
+                <a href="…">…</a>
+            </li>
+        {/breadcrumb}
+    </ol>
+</nav>
 ```
 
 

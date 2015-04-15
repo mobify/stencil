@@ -1,6 +1,9 @@
 // Text utils
 // ===
 
+$u-text__success: if(variable-exists(success-color), $success-color, green) !default;
+$u-text__error: if(variable-exists(error-color), $error-color, red) !default;
+
 
 // All Caps
 // ---
@@ -49,4 +52,20 @@
 .u-align-baseline,
 %u-align-baseline {
     vertical-align: baseline !important;
+}
+
+
+// Colour accents
+// ---
+//
+// When we need to mark text with colour
+
+.u-text-success,
+%u-text-success {
+    color: $u-text__success;
+}
+
+.u-text-error,
+%u-text-error {
+    color: $u-text__error;
 }

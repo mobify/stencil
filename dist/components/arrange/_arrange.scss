@@ -1,21 +1,8 @@
-
 // Arrange
 // ===
 //
 // Arrange and align a row of items with a lot of control. Provides a
 // declarative, robust cross-browser way of using flexbox.
-//
-// Example markup:
-//
-// <div class="c-arrange c--align-middle c--gutters">
-//     <div class="c-arrange__item">…</div>
-//     <div class="c-arrange__item u-width-1of2">…</div>
-//     <div class="c-arrange__item c--shrink">…</div>
-// </div>
-//
-// Attribution:
-//
-// - https://github.com/suitcss/components-arrange/
 
 
 // Configurable variables
@@ -41,20 +28,7 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Arrange Item
-// ---
-//
-// 1. Ensure inline elements are treated as block-level.
-// 2. Prevent width collapsing in old implementations.
-
-.c-arrange__item {
-    display: block; // 1
-    flex: 1;
-    width: 100%; // 2
-}
-
-
-// Modifiers: vertical alignment
+// Arrange modifiers: Vertical alignment
 // ---
 
 .c-arrange.c--align-top {
@@ -70,7 +44,8 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Horizontal alignment
+// Arrange modifiers: Horizontal alignment
+// ---
 
 .c-arrange.c--justify-start {
     justify-content: flex-start;
@@ -93,7 +68,28 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Item modifier: shrink
+// Arrange modifier: Flex direction
+// ---
+
+.c-arrange.c--row-reverse {
+    flex-direction: row-reverse;
+}
+
+
+// Arrange Item
+// ---
+//
+// 1. Ensure inline elements are treated as block-level.
+// 2. Prevent width collapsing in old implementations.
+
+.c-arrange__item {
+    display: block; // 1
+    flex: 1;
+    width: 100%; // 2
+}
+
+
+// Arrange Item modifier: Shrink
 // ---
 //
 // Shrink Arrange items to a minimum size.
@@ -106,7 +102,7 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 }
 
 
-// Item modifiers: display order
+// Arrange Item modifiers: Display order
 // ---
 //
 // Re-arrange the display order of up to six items. Add additional modifiers in
@@ -120,16 +116,9 @@ $arrange__h-gutter: if( variable-exists(h-space), $h-space, 21px ) !default;
 .c-arrange__item.c--order-6 { order: 6; }
 
 
-// Item modifiers: flex direction
+
+// Combined modifier: Gutters
 // ---
-//
-
-.c-arrange.c--row-reverse {
-    flex-direction: row-reverse;
-}
-
-
-// Modifier: gutters
 //
 // Add standard horizontal space between items.
 

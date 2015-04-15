@@ -3,7 +3,6 @@
 // ===
 //
 // A vertical set of items separated by space with optional dividers.
-//
 
 
 // Configurable Variables
@@ -42,7 +41,7 @@ $stack__border: if(variable-exists(border), $border, 1px solid hsl(0, 0%, 80%)) 
 }
 
 
-// Modifier: ruled
+// Combined modifier: Ruled
 // ---
 //
 // Adds horizontal rules (borders) between the items.
@@ -56,7 +55,7 @@ $stack__border: if(variable-exists(border), $border, 1px solid hsl(0, 0%, 80%)) 
 }
 
 
-// Modifier: bordered
+// Combined modifider: Bordered
 // ---
 //
 // Adds outer borders around the entire stack.
