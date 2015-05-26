@@ -237,6 +237,11 @@ What did that do? Well a subtree split effectively takes a sub-directory (in our
 
 **WARNING** do NOT directly commit to the `gh-pages` branch! This will break our ability to use the git-subtree tool. Only apply changes to `gh-pages` using the subtree tool.
 
+In case if you commited directly to to GH-Pages:
+
+1. Remove `gh-pages` branch
+2. Run `git push origin gh-pages`
+
 
 ## License
 
