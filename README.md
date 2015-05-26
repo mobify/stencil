@@ -237,9 +237,10 @@ What did that do? Well a subtree split effectively takes a sub-directory (in our
 
 **WARNING** do NOT directly commit to the `gh-pages` branch! This will break our ability to use the git-subtree tool. Only apply changes to `gh-pages` using the subtree tool.
 
-In case if you committed directly to to GH-Pages:
+In case if you committed directly to to GH-Pages you will see errors running `git push origin gh-pages` command. To fix this repeat these steps:
 
-1. Delete the `gh-pages` branch from the Github repo (remote origin)
+1. Revert your commit and push it (so you have 2 commits in total - one with changes and one that cancels these changes)
+2. Delete the `gh-pages` branch from the Github repo (remote origin)
 2. Run `git push origin gh-pages`
 
 
