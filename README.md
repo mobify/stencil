@@ -239,7 +239,7 @@ What did that do? Well a subtree split effectively takes a sub-directory (in our
 
 In case if you committed directly to to GH-Pages:
 
-1. Remove `gh-pages` branch
+1. Delete the `gh-pages` branch from the Github repo (remote origin)
 2. Run `git push origin gh-pages`
 
 
