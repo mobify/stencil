@@ -22,11 +22,11 @@ Horizontal and vertical gutter sizes can be set by configuring the `$grid__h-gut
 ### Example Markup
 
 ```
-    <div class="c-grid c--{n}up">
-        <div class="c-grid__span">
-        <div class="c-grid__span">
-        <div class="c-grid__span">
-    </div>
+<div class="c-grid c--{n}up">
+    <div class="c-grid__span">
+    <div class="c-grid__span">
+    <div class="c-grid__span">
+</div>
 ```
 
 

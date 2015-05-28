@@ -34,11 +34,11 @@ Additionally, Arrange items support the use of [dimension utilities](https://mob
 ### Example Markup
 
 ```
-    <div class="c-arrange c--align-middle c--gutters">
-        <div class="c-arrange__item">…</div>
-        <div class="c-arrange__item">…</div>
-        <div class="c-arrange__item c--shrink">…</div>
-    </div>
+<div class="c-arrange c--align-middle c--gutters">
+     <div class="c-arrange__item">…</div>
+     <div class="c-arrange__item u-width-1of2">…</div>
+     <div class="c-arrange__item c--shrink">…</div>
+</div>
 ```
 
 ## Demo

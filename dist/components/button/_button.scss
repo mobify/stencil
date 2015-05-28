@@ -1,22 +1,11 @@
-
 // Button
 // ===
 //
 // Style an element as a button. Best applied to native interactive elements
 // such as form controls and links.
-//
-// Example Markup:
-//
-// <button class="c-button" type="[button|submit]">{buttonText}</button>
-// <input class="c-button" type="submit" value="{submitText}">
-// <a class="c-button" href="{url}">{linkText}</a>
-//
-// Attribution:
-//
-// - https://github.com/suitcss/components-button/
 
 
-// Configurable variables
+// Configurable Variables
 // ---
 
 $button__padding: 0.5rem 0.75rem !default;
@@ -27,7 +16,7 @@ $button__font-family: inherit !default;
 $button__font-size: inherit !default;
 
 
-// Button element
+// Button root
 // ---
 //
 // 1. Normalize border-radius across element types in iOS.

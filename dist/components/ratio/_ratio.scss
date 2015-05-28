@@ -32,10 +32,6 @@
 // ---
 //
 // Should be the sole child of a Ratio container.
-//
-// TODO: There are issues in iOS when placing <iframe> or <object> elements
-// within a ratio component. Solutions depend on context, but we need a good
-// one, at least for iframes.
 
 .c-ratio__item {
     position: absolute;

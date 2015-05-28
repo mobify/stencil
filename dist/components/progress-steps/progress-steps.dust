@@ -1,12 +1,3 @@
-{!}
-
-    Progress Component Template
-    ===========================
-
-    Progress steps are intended to give visibility as to where one is in a multi step process.
-
-{!}
-
 {#progressStep}
     <div class="c-progress-steps" role="progressbar" aria-valuetext="Step {currentStep} of {maxStep}" aria-valuenow="{currentStep}">
         {#items}

@@ -1,8 +1,8 @@
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change,
- *    without disabling user zoom.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
  */
 html {
   font-family: sans-serif;
@@ -69,7 +69,7 @@ audio:not([controls]) {
 
 /*
  * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
 [hidden],
 template {
@@ -86,8 +86,7 @@ a {
 }
 
 /**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
+ * Improve readability when focused and also mouse hovered in all browsers.
  */
 a:active,
 a:hover {
@@ -326,14 +325,15 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
  */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
   /* 2 */
+  box-sizing: content-box;
 }
 
 /**
@@ -403,7 +403,7 @@ td {
 
 html {
   background: white;
-  color: #343839;
+  color: #333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -449,7 +449,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 11px;
+  margin: 0 0 10px;
 }
 
 a {
@@ -461,8 +461,8 @@ a:active, a:focus {
 }
 
 hr {
-  margin: 22px 0;
-  border: 1px solid #bdc3c7;
+  margin: 20px 0;
+  border: 1px solid #BBB;
   border-width: 0 0 1px;
 }
 
@@ -472,15 +472,15 @@ img {
 }
 
 blockquote {
-  margin: 22px 0;
-  padding-left: 21px;
-  border-left: 2px solid #bdc3c7;
-  color: #585f61;
+  margin: 20px 0;
+  padding-left: 10px;
+  border-left: 2px solid #BBB;
+  color: #595959;
 }
 
 fieldset {
   min-width: 0;
-  margin: 0 0 11px;
+  margin: 0 0 10px;
   padding: 0;
   border: 0;
 }
@@ -495,7 +495,7 @@ select {
 }
 
 label {
-  margin-bottom: 5.5px;
+  margin-bottom: 5px;
   font-weight: bold;
   -webkit-tap-highlight-color: transparent;
 }
@@ -522,12 +522,30 @@ textarea,
   width: 100%;
   height: 40px;
   padding: 10px 15px;
-  border: 1px solid #bdc3c7;
+  border: 1px solid #BBB;
   border-radius: 4px;
   background-color: #fff;
   line-height: 21px;
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
+}
+select::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+[type="text"]::-webkit-input-placeholder,
+[type="search"]::-webkit-input-placeholder,
+[type="password"]::-webkit-input-placeholder,
+[type="datetime"]::-webkit-input-placeholder,
+[type="datetime-local"]::-webkit-input-placeholder,
+[type="date"]::-webkit-input-placeholder,
+[type="month"]::-webkit-input-placeholder,
+[type="time"]::-webkit-input-placeholder,
+[type="week"]::-webkit-input-placeholder,
+[type="number"]::-webkit-input-placeholder,
+[type="email"]::-webkit-input-placeholder,
+[type="url"]::-webkit-input-placeholder,
+[type="tel"]::-webkit-input-placeholder,
+[type="color"]::-webkit-input-placeholder {
+  color: #888;
 }
 select:active,
 textarea:active,
@@ -545,7 +563,7 @@ textarea:active,
 [type="url"]:active,
 [type="tel"]:active,
 [type="color"]:active {
-  border-color: #a1aab0;
+  border-color: #a2a2a2;
 }
 select:focus,
 textarea:focus,
@@ -566,20 +584,19 @@ textarea:focus,
   border-color: #16a085;
 }
 
+textarea {
+  height: auto;
+}
+
 input[type="search"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -webkit-appearance: none;
 }
 
-textarea {
-  height: auto;
-}
-
 select {
   padding: 8px 15px;
-  border-color: #bcc2c6;
-  text-indent: 5px;
+  border-color: #bababa;
   -webkit-appearance: menulist-button;
 }
 
@@ -590,22 +607,22 @@ select {
   display: inline-block;
   width: 24px;
   height: 24px;
-  margin-right: 10.5px;
-  border: 1px solid #bcc2c6;
-  background: #ecf0f1 -webkit-gradient(linear, left top, left bottom, from(white), to(#ecf0f1));
-  background: #ecf0f1 -webkit-linear-gradient(white, #ecf0f1);
-  background: #ecf0f1 linear-gradient(white, #ecf0f1);
+  margin-right: 10px;
+  border: 1px solid #bababa;
+  background: #E8E8E8 -webkit-gradient(linear, left top, left bottom, from(white), to(#E8E8E8));
+  background: #E8E8E8 -webkit-linear-gradient(white, #E8E8E8);
+  background: #E8E8E8 linear-gradient(white, #E8E8E8);
   vertical-align: middle;
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
 }
 [type="checkbox"]:active,
 [type="radio"]:active {
-  background: #bdc3c7 reverse-gradient(linear-gradient(white, #ecf0f1));
+  background: #BBB reverse-gradient(linear-gradient(white, #E8E8E8));
 }
 [type="checkbox"]:checked,
 [type="radio"]:checked {
-  background: #ecf0f1;
+  background: #E8E8E8;
   -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
           box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.1);
 }
@@ -625,13 +642,13 @@ select {
   bottom: 20%;
   left: 20%;
   border-radius: 24px;
-  background: #343839;
+  background: #333;
 }
 
 [type="checkbox"]:checked:after {
   content: '\2714';
   top: 0;
-  color: #343839;
+  color: #333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 32px;
   line-height: 14px;
@@ -641,16 +658,33 @@ button,
 [type="submit"] {
   display: block;
   padding: 10px 15px;
-  border: 1px solid #bcc2c6;
-  background: #ecf0f1 -webkit-gradient(linear, left top, left bottom, from(white), to(#ecf0f1));
-  background: #ecf0f1 -webkit-linear-gradient(white, #ecf0f1);
-  background: #ecf0f1 linear-gradient(white, #ecf0f1);
+  border: 1px solid #bababa;
+  background: #E8E8E8 -webkit-gradient(linear, left top, left bottom, from(white), to(#E8E8E8));
+  background: #E8E8E8 -webkit-linear-gradient(white, #E8E8E8);
+  background: #E8E8E8 linear-gradient(white, #E8E8E8);
   -webkit-tap-highlight-color: transparent;
   -webkit-appearance: none;
 }
 button:active,
 [type="submit"]:active {
-  background: #bdc3c7 reverse-gradient(linear-gradient(white, #ecf0f1));
+  background: #BBB reverse-gradient(linear-gradient(white, #E8E8E8));
+}
+
+[disabled] {
+  opacity: 1;
+  background: #E8E8E8;
+  color: #BBB;
+  -webkit-text-fill-color: #BBB;
+}
+[disabled]:active, [disabled]:checked {
+  border-color: #BBB;
+  background: #E8E8E8;
+}
+[disabled]:active::after, [disabled]:checked::after {
+  color: #BBB;
+}
+[disabled][type="radio"]:after {
+  background-color: #BBB;
 }
 
 ul,
@@ -662,12 +696,12 @@ ol {
 
 dl {
   line-height: 21px;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 }
 
 dt {
   font-weight: bold;
-  margin-top: 11px;
+  margin-top: 10px;
 }
 
 dd {
@@ -677,19 +711,19 @@ dd {
 table {
   border-collapse: collapse;
   width: 100%;
-  margin: 11px 0;
+  margin: 10px 0;
 }
 
 th {
-  padding: 11px 0;
-  border-bottom: 1px solid #949da4;
+  padding: 10px 0;
+  border-bottom: 1px solid #959595;
   font-weight: bold;
   text-align: left;
 }
 
 td {
-  padding: 11px 0;
-  border-bottom: 1px solid #bdc3c7;
+  padding: 10px 0;
+  border-bottom: 1px solid #BBB;
 }
 
 tr,
@@ -700,24 +734,24 @@ th {
 
 @font-face {
   font-family: 'Stencil';
-  src: url("stencil.woff") format("woff");
+  src: url("fonts/stencil.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 .c-test {
-  margin-right: -15.75px;
-  margin-left: -15.75px;
+  margin-right: -15px;
+  margin-left: -15px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
 
 .c-test + .c-test {
-  margin-top: 16.5px;
+  margin-top: 15px;
 }
 
 .c-test__describe {
   margin: 0;
-  padding: 5.5px 15.75px;
+  padding: 5px 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -727,14 +761,14 @@ th {
 
 .c-test__should {
   margin: 0;
-  padding: 5.5px 15.75px;
+  padding: 5px 15px;
   font-weight: bold;
 }
 
 .c-test__a-b {
   table-layout: fixed;
   width: 100%;
-  margin-top: 2.75px;
+  margin-top: 2.5px;
   font-size: 0.9em;
 }
 .c-test__a-b th {
@@ -749,7 +783,7 @@ th {
 
 .c-test__run {
   margin: 0;
-  padding: 15.75px;
+  padding: 15px;
   background: whitesmoke;
   color: #737373;
 }

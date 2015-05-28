@@ -1,5 +1,5 @@
 // Icon
-// ====
+// ===
 //
 // For icons to work, the below dependencies are required. The dependencies are
 // what load the fonts, apply default font settings, and add the default list
@@ -31,12 +31,10 @@
 @include web-font($icon-font, $icon-font-path);
 
 
-// Icon Component
-// --------------
+// Icon root
+// ---
 //
 // This is the base icon class which must be applied to the element first.
-//
-// Notes:
 //
 // 1. This property fixes iOS6 icon-font issue when we have several
 //    icons in a row and they all display the same icon
@@ -49,8 +47,8 @@
 }
 
 
-// Replace Icon
-// ------------
+// Icon modifier: Replace Icon
+// ---
 
 .c-icon.c--replace,
 [data-icon-replace="true"] {
@@ -59,7 +57,7 @@
 
 
 // Icon Names
-// ----------
+// ---
 //
 // The icon name is a data attribute added to the element in tandem with the
 // icon component class (.c-icon)
