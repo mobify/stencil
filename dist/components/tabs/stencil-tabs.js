@@ -7,7 +7,7 @@ $(document).ready(function() {
 
         $('.c-tabs__content').attr('aria-hidden', true);
 
-        
+
         bindEvents();
 
         // If there is a tab that already had .c--current select it
@@ -107,8 +107,20 @@ $(document).ready(function() {
                     e.preventDefault();
                 }
 
+                // down arrow key
+                if (e.which == 40) {
+                    showNext($parentTabs);
+                    e.preventDefault();
+                }
+
                 // left arrow key
                 if (e.which == 37) {
+                    showPrev($parentTabs);
+                    e.preventDefault();
+                }
+
+                // up arrow key
+                if (e.which == 38) {
                     showPrev($parentTabs);
                     e.preventDefault();
                 }
