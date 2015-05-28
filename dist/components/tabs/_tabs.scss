@@ -126,3 +126,5 @@ $tabs__active-background: if(variable-exists(active-link-color), $active-link-co
 //    change aria-hidden="false"
 
 // 5. On load: 'c-tabs__button' scroll to button that hasClass 'c--current'  to display current tab item all the time.
+
+// 6. When user is on active tab item (focus), then when user click arrow right and arrow left button on keyboard and it will move to next/prev tab item and content will change. Check out http://hanshillen.github.io/jqtest/#goto_checkbox it will be same behaviour.
