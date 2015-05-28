@@ -62,18 +62,20 @@ $(document).ready(function() {
 
     var showNext = function($parent) {
         var currentIndex = $parent.find('.c-tabs__content.c--current').index();
-        var length = $parent.find('.c-tabs__content').length;
+        var lastTabIndex = $parent.find('.c-tabs__content').length - 1;
 
-        var nextIndex = currentIndex < length - 1 ? currentIndex + 1 : currentIndex;
+        // If the next index is not valid, wrap around to the first tab
+        var nextIndex = currentIndex < lastTabIndex ? currentIndex + 1 : 0;
 
         showTab($parent, nextIndex);
     };
 
     var showPrev = function($parent) {
         var currentIndex = $parent.find('.c-tabs__content.c--current').index();
-        var length = $parent.find('.c-tabs__content').length;
+        var lastTabIndex = $parent.find('.c-tabs__content').length - 1;
 
-        var nextIndex = currentIndex > 0 ? currentIndex - 1 : 0;
+        // If the previous index is not valid, wrap around to the last tab
+        var nextIndex = currentIndex > 0 ? currentIndex - 1 : lastTabIndex;
 
         showTab($parent, nextIndex);
     };
