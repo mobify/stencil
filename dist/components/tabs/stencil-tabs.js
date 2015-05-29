@@ -7,7 +7,6 @@ $(document).ready(function() {
 
         $('.c-tabs__content').attr('aria-hidden', true);
 
-
         bindEvents();
 
         // If there is a tab that already had .c--current select it
