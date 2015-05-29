@@ -102,26 +102,14 @@ $(document).ready(function() {
             var $parentTabs = $focusedButton.parents('.c-tabs');
 
             if ($focusedButton.length) {
-                // right arrow key
-                if (e.which == 39) {
+                // right/down arrow key
+                if (e.which == 39 || e.which == 40) {
                     showNext($parentTabs);
                     e.preventDefault();
                 }
 
-                // down arrow key
-                if (e.which == 40) {
-                    showNext($parentTabs);
-                    e.preventDefault();
-                }
-
-                // left arrow key
-                if (e.which == 37) {
-                    showPrev($parentTabs);
-                    e.preventDefault();
-                }
-
-                // up arrow key
-                if (e.which == 38) {
+                // left/up arrow key
+                if (e.which == 37 || e.which == 38) {
                     showPrev($parentTabs);
                     e.preventDefault();
                 }
