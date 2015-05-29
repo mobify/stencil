@@ -4,6 +4,7 @@ define(['$'], function ($) {
         'tabs': [
             {
                 'id': 'home',
+                'labelId': 'label-home',
                 'title': 'Home',
                 'content': '<p>Content Here</p>',
                 'class': '',
@@ -13,6 +14,7 @@ define(['$'], function ($) {
 
             {
                 'id': 'homeware',
+                'labelId': 'label-homeware',
                 'title': 'Homeware',
                 'content': '<p>Content Here</p>',
                 'class': 'c--current',
@@ -23,6 +25,7 @@ define(['$'], function ($) {
             {
                 'id': 'kitchen',
                 'title': 'Kitchen',
+                'labelId': 'label-kitchen',
                 'content': '<p>Content Here</p>',
                 'class': '',
                 'hidden': 'true',
@@ -31,6 +34,7 @@ define(['$'], function ($) {
 
             {
                 'id': 'cooking-baking',
+                'labelId': 'label-cooking-baking',
                 'title': 'Cooking & Baking',
                 'content': '<p>Content Here</p>',
                 'class': '',
