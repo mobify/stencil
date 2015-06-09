@@ -7,7 +7,6 @@
 // Component Variables
 // ---
 
-$list__margin: if(variable_exists(v-space), $v-space 0, 10px 0) !default;
 $list__padding-left: 15px !default;
 $list__item-margin: if(variable_exists(v-space), $v-space/2 0, 5px 0) !default;
 
@@ -18,7 +17,6 @@ $list__item-margin: if(variable_exists(v-space), $v-space/2 0, 5px 0) !default;
 // 1. Keep bullets on the same vertical line as content
 
 .c-list {
-    margin: $list__margin;
     padding-left: $list__padding-left; // 1
 
 
@@ -26,12 +24,7 @@ $list__item-margin: if(variable_exists(v-space), $v-space/2 0, 5px 0) !default;
     // ---
 
     &.c--ul {
-
         list-style-type: disc;
-
-        & & {
-            list-style: circle;
-        }
     }
 
 
@@ -40,16 +33,6 @@ $list__item-margin: if(variable_exists(v-space), $v-space/2 0, 5px 0) !default;
 
     &.c--ol {
         list-style: decimal;
-    }
-
-
-    // Nested list styles
-    // ---
-    //
-    // 1. Let element use parent <li> margin
-
-    & & {
-        margin-top: 0; // 1
     }
 }
 
