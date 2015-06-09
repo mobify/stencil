@@ -1,0 +1,5 @@
+<div class="c-progress-bar">
+    <span class="c-progress-bar__progress" style="width: {value}%" >
+        <span class="u-visually-hidden">{label} {value}</span>
+    </span>
+</div>

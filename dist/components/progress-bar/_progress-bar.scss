@@ -1,0 +1,38 @@
+// Progress Bar
+// ===
+//
+// Progress Bar shows your progress indicator
+//
+// It can have text inside of progress sub-component
+
+
+// Configurable variables
+// ---
+
+$progress-bar__bar-background-color: if(variable-exists(grey-20), $grey-20, grey) !default;
+$progress-bar__progress-color: if(variable-exists(accent-color), $accent-color, yellow) !default;
+
+$progress-bar__height: 30px !default;
+
+
+// Progress Bar root
+// ---
+
+.c-progress-bar {
+    display: block;
+
+    background: $progress-bar__bar-background-color;
+}
+
+
+// Progress Bar: Progress
+// ---
+
+.c-progress-bar__progress {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: $progress-bar__height;
+
+    background: $progress-bar__progress-color;
+}
