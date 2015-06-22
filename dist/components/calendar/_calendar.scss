@@ -6,7 +6,7 @@
 // Configurable Variables
 // ---
 // A lof of these are placeholders and can probably be swapped for vellum variables when we port to Stencil 2.0
-$calendar__item-bg-color: hsl(0, 0%, 95%) !default;
+$calendar__item-bg-color: hsl(0, 0%, 90%) !default;
 $calendar__border-color: hsl(0, 0%, 90%) !default;
 $calendar__box-color: white !default;
 $calendar__tap-target-height: 45px !default;
@@ -49,7 +49,8 @@ $calendar__active-color: hotpink !default;
 
 .c-calendar__month {
     padding: $v-space 0;
-
+    
+    background-color: $calendar__item-bg-color;
     text-align: center;
 }
 
