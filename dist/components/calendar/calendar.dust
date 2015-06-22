@@ -1,0 +1,45 @@
+{#calendar}
+    <div class="c-calendar">
+        <div class="c-calendar__heading">
+            <div class="c-calendar__heading-day">Sun</div>
+            <div class="c-calendar__heading-day">Mon</div>
+            <div class="c-calendar__heading-day">Tue</div>
+            <div class="c-calendar__heading-day">Wed</div>
+            <div class="c-calendar__heading-day">Thu</div>
+            <div class="c-calendar__heading-day">Fri</div>
+            <div class="c-calendar__heading-day">Sat</div>
+        </div>
+        <div class="c-calendar__dates">
+            <div class="c-calendar__month">June</div>
+            <div class="c-calendar__day-wrapper">
+                <div class="c-calendar__day">
+                    <div class="c-calendar__day-content"></div>
+                </div>
+                <div class="c-calendar__day">
+                    <div class="c-calendar__day-content">1</div>
+                </div>
+                <div class="c-calendar__day">
+                    <div class="c-calendar__day-content">2</div>
+                </div>
+                <div class="c-calendar__day">
+                    <div class="c-calendar__day-content">3</div>
+                </div>
+                <div class="c-calendar__day">
+                    <div class="c-calendar__day-content">4</div>
+                </div>
+                <div class="c-calendar__day">
+                    <div class="c-calendar__day-content">5</div>
+                </div>
+                <div class="c-calendar__day">
+                    <div class="c-calendar__day-content">6</div>
+                </div>
+                <div class="c-calendar__day">
+                    <div class="c-calendar__day-content">7</div>
+                </div>
+                <div class="c-calendar__day">
+                    <div class="c-calendar__day-content">8</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{/calendar}

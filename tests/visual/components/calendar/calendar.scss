@@ -1,0 +1,7 @@
+@import 'bower_components/vellum/dist/vellum';
+@import 'bower_components/spline/dist/spline';
+@import 'dist/components/calendar/calendar';
+
+.c-calendar__dates {
+    max-height: 420px; // fix the height to reflex available space on mobile devices
+}

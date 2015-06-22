@@ -1,0 +1,86 @@
+// Calendar
+// ===
+//
+// A simple calendar.
+
+// Configurable Variables
+// ---
+// A lof of these are placeholders and can probably be swapped for vellum variables when we port to Stencil 2.0
+$calendar__item-bg-color: hsl(0, 0%, 95%) !default;
+$calendar__border-color: hsl(0, 0%, 90%) !default;
+$calendar__box-color: white !default;
+$calendar__tap-target-height: 45px !default;
+$calendar__highlight-color: hsl(330%, 100%, 70%) !default;
+$calendar__active-color: hotpink !default;
+
+//$v-space: 5px !default; // remove this once we incorporate base variables for stencils
+
+
+// Calendar root
+// ---
+
+.c-calendar {
+}
+
+// Calendar heading
+// ---
+// For days of the week
+
+.c-calendar__heading {
+    display: flex;
+    padding: $v-space 0;
+
+    background-color: $calendar__item-bg-color;
+}
+
+.c-calendar__heading-day {
+    flex: 1;
+
+    text-align: center;
+}
+
+// Calendar dates
+// ---
+// A scrollabe container
+
+.c-calendar__dates {
+    overflow: scroll;
+}
+
+.c-calendar__month {
+    padding: $v-space 0;
+
+    text-align: center;
+}
+
+.c-calendar__day-wrapper {
+    @include clearfix;
+}
+
+.c-calendar__day {
+    display: block;
+    float: left;
+    width: 14.28571%;
+    padding: 1px; // border thickness
+
+    background-color: $calendar__border-color;
+
+    &.c--selected {
+        background-color: $calendar__highlight-color;
+
+        .c-calendar__day-content {
+            background-color: initial;
+
+            color: $calendar__box-color;
+        }
+    }
+}
+
+.c-calendar__day-content {
+    height: $calendar__tap-target-height;
+
+    background-color: $calendar__box-color;
+
+    line-height: $calendar__tap-target-height; // vertically center numbers
+    text-align: center;
+}
