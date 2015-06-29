@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Component Tests · Stencil</title>
+    <link rel="stylesheet" href="../../../fixtures/fixture.css">
+
+    <link rel="stylesheet" href="../icon/icon.css">
+    <link rel="stylesheet" href="tabs.css">
+
+    <script src="http://zeptojs.com/zepto.js"></script>
+</head>
+<body class="c-fixture-body">
+    <h1 class="c-fixture-title">
+        <a class="c-fixture-title__sub" href="https://github.com/mobify/stencil">Stencil</a>
+        <div>Tabs Component Tests</div>
+    </h1>
+
+    <article class="c-test">
+        <h2 class="c-test__describe">.c-tabs</h2>
+
+        <div class="c-test__case">
+            <div class="c-test__run">
+                <div class="c-tabs">
+                    <ul id="c-tab-controls" class="c-tabs__controls" role="tablist">
+                        <li class="c-tabs__controls-item" role="presentation">
+                            <button id="label-home" class="c-tabs__button" role="tab" data-target="home" aria-selected="false" aria-label="Home" tabindex="-1" type="button">Home</button>
+                        </li>
+
+                        <li class="c-tabs__controls-item c--current" role="presentation">
+                            <button id="label-homeware" class="c-tabs__button" role="tab" data-target="homeware" aria-selected="true" aria-label="Homeware" tabindex="0" type="button">Homeware</button>
+                        </li>
+
+                        <li class="c-tabs__controls-item" role="presentation">
+                            <button id="label-kitchen" class="c-tabs__button" role="tab" data-target="kitchen" aria-selected="false" aria-label="Kitchen" tabindex="-1" type="button">Kitchen</button>
+                        </li>
+
+                        <li class="c-tabs__controls-item" role="presentation">
+                            <button id="label-cooking-baking" class="c-tabs__button" role="tab" data-target="cooking-baking" aria-selected="false" aria-label="Cooking & Baking" tabindex="-1" type="button">Cooking & Baking</button>
+                        </li>
+                    </ul>
+
+                    <div class="c-tabs__body" aria-controls="c-tab-controls">
+                        <section id="home" class="c-tabs__content" role="tabpanel" aria-labelledby="label-home" aria-hidden="true">
+                            <h2 class="u-hide-visually">Home</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
+                        </section>
+
+                        <section id="homeware" class="c-tabs__content c--current" role="tabpanel" aria-labelledby="label-homeware" aria-hidden="false">
+                            <h2 class="u-hide-visually">Homeware</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero <a href="#">Foo Boo</a> quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
+                        </section>
+
+                        <section id="kitchen" class="c-tabs__content" role="tabpanel" aria-labelledby="label-kitchen" aria-hidden="true">
+                            <h2 class="u-hide-visually">Kitchen</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
+                        </section>
+
+                        <section id="cooking-baking" class="c-tabs__content" role="tabpanel" aria-labelledby="label-cooking-baking" aria-hidden="true">
+                            <h2 class="u-hide-visually">Cooking & Baking</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis est animi, aut amet quod ea incidunt impedit vero quam a officiis atque non enim excepturi tempora earum dolore nostrum et.</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <script src="../../../../dist/components/tabs/stencil-tabs.js"></script>
+</body>
+</html>

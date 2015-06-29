@@ -33,6 +33,7 @@ Stencil components are common, frequently used patterns that either make up UI e
 * [Select](https://github.com/mobify/stencil/tree/master/dist/components/select)
 * [Spinner](https://github.com/mobify/stencil/tree/master/dist/components/spinner)
 * [Stack](https://github.com/mobify/stencil/tree/master/dist/components/stack)
+* [Tabs](https://github.com/mobify/stencil/tree/master/dist/components/tabs)
 
 
 ### Utilities

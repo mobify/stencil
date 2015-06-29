@@ -1,0 +1,43 @@
+.c-tabs__controls {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  overflow: scroll;
+}
+
+.c-tabs__controls-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 12rem;
+  flex: 1 0 12rem;
+  text-align: center;
+}
+.c-tabs__controls-item.c--current .c-tabs__button {
+  background: #16a085;
+}
+
+.c-tabs__button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+  text-align: center;
+}
+
+.c-tabs__body {
+  margin-top: 10px;
+}
+
+.c-tabs__content {
+  display: none;
+}
+.c-tabs__content.c--current {
+  display: block;
+}
+
+/*# sourceMappingURL=tabs.css.map */

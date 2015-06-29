@@ -1,0 +1,133 @@
+// Tabs
+// ====
+//
+// Tabs component with tabs controls and tabs body.
+// Horizontal controls tabs items placed in one line.
+
+
+// Configurable Variables
+// ---
+
+$tabs__item-size: 12rem !default;
+$tabs__padding: 0.5rem 0.75rem !default;
+$tabs__body-space: if(variable-exists(v-space), $v-space, 10px) !default;
+$tabs__active-background: if(variable-exists(active-link-color), $active-link-color, #16a085) !default;
+
+
+// Tabs
+// ---
+//
+
+.c-tabs {
+
+}
+
+
+// Tabs: Controls
+// ---
+//
+// List of tabs buttons
+//
+// Notes:
+//
+// 1. Add overflow scroll to avoid squished tabs
+// 2. Smooth scrolling on device
+// 3. Needed for correctly calculating the position to scroll to when the user has selected a tab
+//
+
+.c-tabs__controls {
+    position: relative; // 3
+
+    display: flex;
+    overflow-y: scroll; // 1
+    -webkit-overflow-scrolling: touch; // 2
+}
+
+
+// Tabs: Controls item
+// ---
+//
+// Items inside controls
+//
+// Notes:
+//
+// 1. Set width for button min width
+//
+
+.c-tabs__controls-item {
+    display: flex;
+    flex: 1 0 $tabs__item-size; // 1
+
+    text-align: center;
+
+    &.c--current {
+
+        .c-tabs__button {
+            background: $tabs__active-background;
+        }
+    }
+}
+
+
+// Tabs: Tabs button
+// ---
+//
+// Tabs button placed inside controls
+//
+// Notes:
+//
+// 1. Vertically center text
+//
+
+.c-tabs__button {
+    display: flex;
+    justify-content: center; // 1
+    padding: $tabs__padding;
+
+    text-align: center; // 1
+}
+
+
+// Tabs: Tabs body
+// ---
+//
+// Tabs body content
+//
+
+.c-tabs__body {
+    margin-top: $tabs__body-space;
+}
+
+
+// Tabs: Tabs content
+// ---
+//
+// Tabs item inside tabs body, content of tabs
+//
+
+.c-tabs__content {
+    display: none;
+
+    &.c--current {
+        display: block;
+    }
+}
+
+
+// JS TO DO:
+// ---
+//
+// 1. Click function: 'c-tabs__button' on click, add 'c--current' to 'c-tabs__controls-item'
+
+// 2. On load: 'c-tabs__button' set aria-selected="false" to all tabs buttons, when parent hasClass 'c--current'
+//    change aria-selected="true"
+
+// 3. On load: 'c-tabs__button' set tabindex="-1" to all tab buttons, when parent hasClass 'c--current'
+//    change tabindex="0"
+
+// 4. On load: 'c-tabs__content' set aria-hidden="true" to all tabs content, when hasClass 'c--current'
+//    change aria-hidden="false"
+
+// 5. On load: 'c-tabs__button' scroll to button that hasClass 'c--current'  to display current tab item all the time.
+
+// 6. When user is on active tab item (focus), then when user click arrow right and arrow left button on keyboard and it will move to next/prev tab item and content will change. Check out http://hanshillen.github.io/jqtest/#goto_checkbox it will be same behaviour.
