@@ -1,0 +1,45 @@
+// List
+// ===
+//
+// Style list as a list
+
+
+// Component Variables
+// ---
+
+$list__padding-left: 15px !default;
+$list__item-margin: if(variable_exists(v-space), $v-space/2 0, 5px 0) !default;
+
+
+// List
+// ---
+//
+// 1. Keep bullets on the same vertical line as content
+
+.c-list {
+    padding-left: $list__padding-left; // 1
+
+
+    // Unordered list
+    // ---
+
+    &.c--ul {
+        list-style-type: disc;
+    }
+
+
+    // Ordered list
+    // ---
+
+    &.c--ol {
+        list-style: decimal;
+    }
+}
+
+
+// List item
+// ---
+
+.c-list__item {
+    margin: $list__item-margin;
+}
